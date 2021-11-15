@@ -1,0 +1,236 @@
+@prefix : <http://purl.org/poso#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/poso/> .
+
+<http://purl.org/poso/> rdf:type owl:Ontology ;
+                         owl:versionIRI <http://purl.org/poso/1.0/> ;
+                         owl:imports <http://www.w3.org/ns/ssn/> ;
+                         <http://purl.org/dc/terms/abstract> "OpenHPS is an open source hybrid positioning system to help developers fuse various positioning technologies and algorithms. The system offers a modular data processing framework with each modules ranging from computer vision to common algorithms such as fingerprinting or data persistence of sampled data. The framework is maintained and used by the Web and Information Systems Engineering Lab at the Vrije Universiteit Brussel."@en ;
+                         <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology"^^xsd:string ;
+                         <http://purl.org/dc/terms/contributor> "Beat Signer"@en ;
+                         <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
+                         <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for OpenHPS." ;
+                         <http://purl.org/dc/terms/license> <https://www.apache.org/licenses/LICENSE-2.0.txt> ;
+                         <http://purl.org/dc/terms/modified> "2021-11-02T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
+                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso#" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/poso#hasOrientation
+:hasOrientation rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+                rdfs:comment "Property that"@en ;
+                rdfs:label "has orientation" .
+
+
+###  http://purl.org/poso#hasPosition
+:hasPosition rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+             rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+             rdfs:range :Position ;
+             rdfs:comment "Duid de absolute of relatieve positie van een object aan."@nl ,
+                          "Indicates the absolute or relative position of a feature of interest."@en ;
+             rdfs:label "has position"@en ,
+                        "heeft positie"@nl .
+
+
+###  http://purl.org/poso#isRelativeTo
+:isRelativeTo rdf:type owl:ObjectProperty ;
+              rdfs:domain :RelativePosition ;
+              rdfs:label "is relative to"@en .
+
+
+###  http://purl.org/poso/hasVelocity
+:hasVelocity rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+             rdfs:label "has velocity"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/poso#AbsolutePosition
+:AbsolutePosition rdf:type owl:Class ;
+                  rdfs:subClassOf :Position ;
+                  rdfs:comment "An absolute position describes the position of an entity based on a fixed point in space. Usually this space is the Earth and the position is expressed in latitude and longitude."@en ;
+                  rdfs:label "Absolute position"@en .
+
+
+###  http://purl.org/poso#DeadReckoning
+:DeadReckoning rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+               rdfs:comment "Dead reckoning is the procedure of applying the momentum of a feature to its last known position."@en ;
+               rdfs:label "Dead reckoning"@en .
+
+
+###  http://purl.org/poso#Landmark
+:Landmark rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                          <http://www.w3.org/ns/sosa/Result> ;
+          rdfs:comment "A landmark is a feature with a known position, that can be used to identify the position of an object that has a relative position with this feature."@en ;
+          rdfs:label "Landmark"@en .
+
+
+###  http://purl.org/poso#Movement
+:Movement rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/ssn/Stimulus> ;
+          rdfs:comment "Movement stimulus triggering an update of a position."@en ;
+          rdfs:label "Movement"@en .
+
+
+###  http://purl.org/poso#Orientation
+:Orientation rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+             rdfs:comment "De orientatie van een object in 2D of 3D."@nl ,
+                          "The orientation of a feature of interest in 2D or 3D space."@en ;
+             rdfs:label "Orientatie"@nl ,
+                        "Orientation"@en .
+
+
+###  http://purl.org/poso#Position
+:Position rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+          rdfs:comment "A position indicates where an entity is located."@en ;
+          rdfs:label "Positie"@nl ,
+                     "Position"@en .
+
+
+###  http://purl.org/poso#PositioningSystem
+:PositioningSystem rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+                   rdfs:comment "A positioning system is a system of instrumental and computational components for determining position."@en ;
+                   rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/349/"@en ;
+                   rdfs:label "Positioning system"@en .
+
+
+###  http://purl.org/poso#RelativeAngle
+:RelativeAngle rdf:type owl:Class ;
+               rdfs:subClassOf :RelativePosition ;
+               rdfs:label "Relative angle"@en .
+
+
+###  http://purl.org/poso#RelativeDistance
+:RelativeDistance rdf:type owl:Class ;
+                  rdfs:subClassOf :RelativePosition ;
+                  rdfs:label "Relative distance"@en .
+
+
+###  http://purl.org/poso#RelativePosition
+:RelativePosition rdf:type owl:Class ;
+                  rdfs:subClassOf :Position ;
+                  rdfs:comment "A relative position is a position of a feature of interest with respect to the positions of other objects that this position is relative to."@en ,
+                               "Een relatieve positie is een positie van een punt, met respect tot de posities van andere objecten die relatief zijn."@nl ;
+                  rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/377/"@en ;
+                  rdfs:label "Relatieve positie"@nl ,
+                             "Relative position"@en .
+
+
+###  http://purl.org/poso/CellIdentification
+:CellIdentification rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+                    rdfs:label "Cell identification"@en .
+
+
+###  http://purl.org/poso/Fingerprinting
+:Fingerprinting rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+                rdfs:label "Fingerprinting"@en .
+
+
+###  http://purl.org/poso/Multilateration
+:Multilateration rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+                 rdfs:label "Multilateration"@en .
+
+
+###  http://purl.org/poso/PedestrianDeadReckoning
+:PedestrianDeadReckoning rdf:type owl:Class ;
+                         rdfs:subClassOf :DeadReckoning ;
+                         rdfs:label "Pedestrian dead reckoning"@en .
+
+
+###  http://purl.org/poso/SLAM
+:SLAM rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+      rdfs:label "Simultaneous Localisation and Mapping"@en .
+
+
+###  http://purl.org/poso/Triangulation
+:Triangulation rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+               rdfs:label "Triangulation"@en .
+
+
+###  http://purl.org/poso/Velocity
+:Velocity rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+          rdfs:comment "Linear or angular velocity of a feature."@en ;
+          rdfs:label "Velocity"@en .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/ssn/System
+<http://www.w3.org/ns/ssn/System> rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
