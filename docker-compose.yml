@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  owlery:
+    image: phenoscape/owlery
+    volumes: 
+    - ./docker/owlery/application.conf:/srv/conf/application.conf
