@@ -1,8 +1,4 @@
 # POSO: A Generic Positioning System Ontology
-
-> THIS REPOSITORY IS TEMPORARILY RELEASED UNDER AN ANONYMISED USER WITHOUT ATTRIBUTIONS FOR BLIND REVIEWS.\
-> DO NOT SUBMIT ANY ISSUES OR CONTRIBUTIONS UNDER THIS URL.
-
 *POSO is a generic ontology positioning system ontology. Other than many geospatial ontologies, POSO focuses on 
 the semantics needed to express a position.*
 
@@ -23,7 +19,7 @@ In the context of a positioning system, a procedure is an algorithm or computati
 
 
 ## License
-POSO is licensed under the [MIT license](LICENSE) and maintained by \<REDACTED\>.
+POSO is licensed under the [MIT license](LICENSE) and maintained by Vrije Universiteit Brussel.
 
 ## References
 1. Haller, A., Janowicz, K., Cox, S. J., Lefrançois, M., Taylor, K., Le Phuoc, D., ... & Stadler, C. (2019). The modular SSN ontology: A joint W3C and OGC standard specifying the semantics of sensors, observations, sampling, and actuation. Semantic Web, 10(1), 9-32.

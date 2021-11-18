@@ -136,7 +136,9 @@
 :CellIdentification rdf:type owl:Class ;
                     rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
                     rdfs:comment "Cell identification is a positioning procedure using the position of one landmark that is within the cell."@en ;
-                    rdfs:label "Cell identification"@en .
+                    rdfs:label "Cell identification"@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "An example of CellIdentification is using the position of a Bluetooth beacon whenever this beacon has a high signal strength."@en ,
+                                                                  "An example of CellIdentification is using the position of a QR-code when this code is scanned (and the user is presumably within a short distance)."@en .
 
 
 ###  http://purl.org/poso#DeadReckoning
@@ -150,6 +152,7 @@
 ###  http://purl.org/poso#Fingerprinting
 :Fingerprinting rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+                rdfs:comment "Fingerprinting is a positioning Procedure where sensor data is collected at a specific position and orientation. During the offline-stage of a positioning system, the significant data features are extracted and stored for that position. In the online-stage, the closest match(es) of the features are determined to predict the position."@en ;
                 rdfs:label "Fingerprinting"@en .
 
 
@@ -193,7 +196,9 @@
 :Multilateration rdf:type owl:Class ;
                  rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
                  rdfs:comment "Multilateration is the procedure of determining a position using relative distances to other known positions."@en ;
-                 rdfs:label "Multilateration"@en .
+                 rdfs:label "Multilateration"@en ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Hyperbolic positioning"@en ,
+                                                                "Trilateration"@en .
 
 
 ###  http://purl.org/poso#Odometry
@@ -231,7 +236,8 @@
 ###  http://purl.org/poso#RelativeAngle
 :RelativeAngle rdf:type owl:Class ;
                rdfs:subClassOf :RelativePosition ;
-               rdfs:label "Relative angle"@en .
+               rdfs:label "Relative angle"@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "An example of relative angle is the Angle of Arrival."@en .
 
 
 ###  http://purl.org/poso#RelativeDistance
@@ -289,6 +295,18 @@
                 rdfs:subClassOf :Odometry ;
                 rdfs:comment "Visual odometry is the procedure of"@en ;
                 rdfs:label "Visual odometry"@en .
+
+
+###  http://purl.org/poso/AngularVelocity
+:AngularVelocity rdf:type owl:Class ;
+                 rdfs:subClassOf :Velocity ;
+                 rdfs:label "Angular velocity"@en .
+
+
+###  http://purl.org/poso/LinearVelocity
+:LinearVelocity rdf:type owl:Class ;
+                rdfs:subClassOf :Velocity ;
+                rdfs:label "Linear velocity"@en .
 
 
 ###  http://purl.org/poso/PositioningPlatform
