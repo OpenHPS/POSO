@@ -82,6 +82,13 @@
          rdfs:label "OpenHPS"@en .
 
 
+###  http://purl.org/poso/common/OpenVSLAM
+:OpenVSLAM rdf:type owl:NamedIndividual ,
+                    <http://purl.org/poso#VSLAM> ;
+           rdfs:label "OpenVSLAM"@en ;
+           rdfs:seeAlso "https://openvslam-community.readthedocs.io/en/latest/index.html"^^xsd:anyURI .
+
+
 ###  http://purl.org/poso/common/QZSS
 :QZSS rdf:type owl:NamedIndividual ,
                <http://purl.org/poso#SatellitePositioningSystem> ;

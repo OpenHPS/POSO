@@ -132,6 +132,12 @@
                  rdfs:label "Angular movement"@en .
 
 
+###  http://purl.org/poso#AngularVelocity
+:AngularVelocity rdf:type owl:Class ;
+                 rdfs:subClassOf :Velocity ;
+                 rdfs:label "Angular velocity"@en .
+
+
 ###  http://purl.org/poso#CellIdentification
 :CellIdentification rdf:type owl:Class ;
                     rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
@@ -185,6 +191,12 @@
                 rdfs:label "Linear movement"@en .
 
 
+###  http://purl.org/poso#LinearVelocity
+:LinearVelocity rdf:type owl:Class ;
+                rdfs:subClassOf :Velocity ;
+                rdfs:label "Linear velocity"@en .
+
+
 ###  http://purl.org/poso#Movement
 :Movement rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/ssn/Stimulus> ;
@@ -223,6 +235,13 @@
           rdfs:comment "A position indicates where an entity is located."@en ;
           rdfs:label "Positie"@nl ,
                      "Position"@en .
+
+
+###  http://purl.org/poso#PositioningPlatform
+:PositioningPlatform rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> ;
+                     rdfs:comment "A positioning platform is a framework, architecture or platform used to develop and host a PositioningSystem."@en ;
+                     rdfs:label "Positioning platform"@en .
 
 
 ###  http://purl.org/poso#PositioningSystem
@@ -280,6 +299,7 @@
 ###  http://purl.org/poso#VSLAM
 :VSLAM rdf:type owl:Class ;
        rdfs:subClassOf :SLAM ;
+       rdfs:comment "Visual simultaneous localisation and mapping (VSLAM)"@en ;
        rdfs:label "Visual simultaneous localisation and mapping"@en .
 
 
@@ -297,23 +317,44 @@
                 rdfs:label "Visual odometry"@en .
 
 
-###  http://purl.org/poso/AngularVelocity
-:AngularVelocity rdf:type owl:Class ;
-                 rdfs:subClassOf :Velocity ;
-                 rdfs:label "Angular velocity"@en .
+###  http://purl.org/poso/AuditoryLandmark
+:AuditoryLandmark rdf:type owl:Class ;
+                  rdfs:subClassOf :Landmark ;
+                  rdfs:label "Auditory landmark"@en .
 
 
-###  http://purl.org/poso/LinearVelocity
-:LinearVelocity rdf:type owl:Class ;
-                rdfs:subClassOf :Velocity ;
-                rdfs:label "Linear velocity"@en .
+###  http://purl.org/poso/IndoorDeployment
+:IndoorDeployment rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
+                  rdfs:comment "Describes the deployment of a System in an indoor environment."@en ;
+                  rdfs:label "Indoor deployment"@en .
 
 
-###  http://purl.org/poso/PositioningPlatform
-:PositioningPlatform rdf:type owl:Class ;
-                     rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> ;
-                     rdfs:comment "A positioning platform is a framework, architecture or platform used to develop and host a PositioningSystem."@en ;
-                     rdfs:label "Positioning platform"@en .
+###  http://purl.org/poso/MagneticOdometry
+:MagneticOdometry rdf:type owl:Class ;
+                  rdfs:subClassOf :Odometry ;
+                  rdfs:label "Magnetic odometry"@en .
+
+
+###  http://purl.org/poso/OutdoorDeployment
+:OutdoorDeployment rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
+                   rdfs:comment "Describes the deployment of a System in an outdoor environment."@en ;
+                   rdfs:label "Outdoor deployment"@en .
+
+
+###  http://purl.org/poso/RFLandmark
+:RFLandmark rdf:type owl:Class ;
+            rdfs:subClassOf :Landmark ;
+            rdfs:comment "A radio frequency landmark is a transmitting landmark."@en ;
+            rdfs:label "RF landmark"@en .
+
+
+###  http://purl.org/poso/VisualLandmark
+:VisualLandmark rdf:type owl:Class ;
+                rdfs:subClassOf :Landmark ;
+                rdfs:comment "A visual landmark is a feature of interest that visually present in the space."@en ;
+                rdfs:label "Visual landmark"@en .
 
 
 ###  http://www.w3.org/ns/sosa/FeatureOfInterest

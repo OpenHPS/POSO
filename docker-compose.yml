@@ -5,3 +5,4 @@ services:
     image: phenoscape/owlery
     volumes: 
     - ./docker/owlery/application.conf:/srv/conf/application.conf
+    - ./:/opt/poso/
