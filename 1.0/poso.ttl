@@ -138,26 +138,46 @@
                  rdfs:label "Angular velocity"@en .
 
 
+###  http://purl.org/poso#Angulation
+:Angulation rdf:type owl:Class ;
+            rdfs:subClassOf :Triangulation .
+
+
+###  http://purl.org/poso#AuditoryLandmark
+:AuditoryLandmark rdf:type owl:Class ;
+                  rdfs:subClassOf :Landmark ;
+                  rdfs:label "Auditory landmark"@en .
+
+
 ###  http://purl.org/poso#CellIdentification
 :CellIdentification rdf:type owl:Class ;
-                    rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+                    rdfs:subClassOf :PositioningTechnique ;
                     rdfs:comment "Cell identification is a positioning procedure using the position of one landmark that is within the cell."@en ;
                     rdfs:label "Cell identification"@en ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "Cell Of Origin (COO)"@en ;
                     <http://www.w3.org/2004/02/skos/core#example> "An example of CellIdentification is using the position of a Bluetooth beacon whenever this beacon has a high signal strength."@en ,
                                                                   "An example of CellIdentification is using the position of a QR-code when this code is scanned (and the user is presumably within a short distance)."@en .
 
 
 ###  http://purl.org/poso#DeadReckoning
 :DeadReckoning rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+               rdfs:subClassOf :PositioningTechnique ;
                rdfs:comment "Dead reckoning is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."@en ;
                rdfs:label "Dead reckoning"@en ;
                <http://www.w3.org/2004/02/skos/core#altLabel> "Deduced reckoning"@en .
 
 
+###  http://purl.org/poso#Fingerprint
+:Fingerprint rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                             <http://www.w3.org/ns/sosa/Result> ;
+             rdfs:comment "A fingerprint is a scene analysis"@en ;
+             rdfs:label "Fingerprint"@en .
+
+
 ###  http://purl.org/poso#Fingerprinting
 :Fingerprinting rdf:type owl:Class ;
-                rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+                rdfs:subClassOf :PositioningTechnique ;
                 rdfs:comment "Fingerprinting is a positioning Procedure where sensor data is collected at a specific position and orientation. During the offline-stage of a positioning system, the significant data features are extracted and stored for that position. In the online-stage, the closest match(es) of the features are determined to predict the position."@en ;
                 rdfs:label "Fingerprinting"@en .
 
@@ -167,6 +187,13 @@
                          rdfs:subClassOf :PositioningSystem ;
                          rdfs:comment "A hybrid positioning system is a positioning system that makes use of multiple procedures to obtain a result."@en ;
                          rdfs:label "Hybrid positioning system"@en .
+
+
+###  http://purl.org/poso#IndoorDeployment
+:IndoorDeployment rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
+                  rdfs:comment "Describes the deployment of a System in an indoor environment."@en ;
+                  rdfs:label "Indoor deployment"@en .
 
 
 ###  http://purl.org/poso#IndoorPositioningSystem
@@ -184,6 +211,11 @@
           rdfs:label "Landmark"@en .
 
 
+###  http://purl.org/poso#Lateration
+:Lateration rdf:type owl:Class ;
+            rdfs:subClassOf :Triangulation .
+
+
 ###  http://purl.org/poso#LinearMovement
 :LinearMovement rdf:type owl:Class ;
                 rdfs:subClassOf :Movement ;
@@ -197,6 +229,20 @@
                 rdfs:label "Linear velocity"@en .
 
 
+###  http://purl.org/poso#LocationBasedService
+:LocationBasedService rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+                      rdfs:comment "A location-based service (LBS) is a service that provides the location of a person or object. It provides this information without the required knowledge of the underlying technologies and algorithms."@en ;
+                      rdfs:label "Location-based service"@en .
+
+
+###  http://purl.org/poso#MagneticOdometry
+:MagneticOdometry rdf:type owl:Class ;
+                  rdfs:subClassOf :Odometry ;
+                  rdfs:comment "Magnetic field odometry is the procedure of detecting movement by analyizing how the magnetic field is changing from one Observation to another."@en ;
+                  rdfs:label "Magnetic odometry"@en .
+
+
 ###  http://purl.org/poso#Movement
 :Movement rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/ssn/Stimulus> ;
@@ -206,7 +252,7 @@
 
 ###  http://purl.org/poso#Multilateration
 :Multilateration rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+                 rdfs:subClassOf :Lateration ;
                  rdfs:comment "Multilateration is the procedure of determining a position using relative distances to other known positions."@en ;
                  rdfs:label "Multilateration"@en ;
                  <http://www.w3.org/2004/02/skos/core#altLabel> "Hyperbolic positioning"@en ,
@@ -215,7 +261,7 @@
 
 ###  http://purl.org/poso#Odometry
 :Odometry rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+          rdfs:subClassOf :PositioningTechnique ;
           rdfs:comment "Odometry is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."@en ;
           rdfs:label "Odometry"@en .
 
@@ -227,6 +273,13 @@
                           "The orientation of a feature of interest in 2D or 3D space."@en ;
              rdfs:label "Orientatie"@nl ,
                         "Orientation"@en .
+
+
+###  http://purl.org/poso#OutdoorDeployment
+:OutdoorDeployment rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
+                   rdfs:comment "Describes the deployment of a System in an outdoor environment."@en ;
+                   rdfs:label "Outdoor deployment"@en .
 
 
 ###  http://purl.org/poso#Position
@@ -250,6 +303,19 @@
                    rdfs:comment "A positioning system is a system of instrumental and computational components for determining position."@en ;
                    rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/349/"@en ;
                    rdfs:label "Positioning system"@en .
+
+
+###  http://purl.org/poso#PositioningTechnique
+:PositioningTechnique rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+                      rdfs:label "Positioning technique"@en .
+
+
+###  http://purl.org/poso#RFLandmark
+:RFLandmark rdf:type owl:Class ;
+            rdfs:subClassOf :Landmark ;
+            rdfs:comment "A radio frequency landmark is a transmitting landmark."@en ;
+            rdfs:label "RF landmark"@en .
 
 
 ###  http://purl.org/poso#RelativeAngle
@@ -277,7 +343,7 @@
 
 ###  http://purl.org/poso#SLAM
 :SLAM rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+      rdfs:subClassOf :PositioningTechnique ;
       rdfs:comment "Simultaneous localization and mapping (SLAM) is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it."@en ;
       rdfs:isDefinedBy "https://dbpedia.org/page/Simultaneous_localization_and_mapping"@en ;
       rdfs:label "Simultaneous localisation and mapping"@en .
@@ -291,7 +357,7 @@
 
 ###  http://purl.org/poso#Triangulation
 :Triangulation rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+               rdfs:subClassOf :PositioningTechnique ;
                rdfs:comment "Triangulation is the procedure of determining a position using relative angles to a feature of interest with a known position."@en ;
                rdfs:label "Triangulation"@en .
 
@@ -310,51 +376,18 @@
           rdfs:label "Velocity"@en .
 
 
-###  http://purl.org/poso#VisualOdometry
-:VisualOdometry rdf:type owl:Class ;
-                rdfs:subClassOf :Odometry ;
-                rdfs:comment "Visual odometry is the procedure of"@en ;
-                rdfs:label "Visual odometry"@en .
-
-
-###  http://purl.org/poso/AuditoryLandmark
-:AuditoryLandmark rdf:type owl:Class ;
-                  rdfs:subClassOf :Landmark ;
-                  rdfs:label "Auditory landmark"@en .
-
-
-###  http://purl.org/poso/IndoorDeployment
-:IndoorDeployment rdf:type owl:Class ;
-                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
-                  rdfs:comment "Describes the deployment of a System in an indoor environment."@en ;
-                  rdfs:label "Indoor deployment"@en .
-
-
-###  http://purl.org/poso/MagneticOdometry
-:MagneticOdometry rdf:type owl:Class ;
-                  rdfs:subClassOf :Odometry ;
-                  rdfs:label "Magnetic odometry"@en .
-
-
-###  http://purl.org/poso/OutdoorDeployment
-:OutdoorDeployment rdf:type owl:Class ;
-                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
-                   rdfs:comment "Describes the deployment of a System in an outdoor environment."@en ;
-                   rdfs:label "Outdoor deployment"@en .
-
-
-###  http://purl.org/poso/RFLandmark
-:RFLandmark rdf:type owl:Class ;
-            rdfs:subClassOf :Landmark ;
-            rdfs:comment "A radio frequency landmark is a transmitting landmark."@en ;
-            rdfs:label "RF landmark"@en .
-
-
-###  http://purl.org/poso/VisualLandmark
+###  http://purl.org/poso#VisualLandmark
 :VisualLandmark rdf:type owl:Class ;
                 rdfs:subClassOf :Landmark ;
                 rdfs:comment "A visual landmark is a feature of interest that visually present in the space."@en ;
                 rdfs:label "Visual landmark"@en .
+
+
+###  http://purl.org/poso#VisualOdometry
+:VisualOdometry rdf:type owl:Class ;
+                rdfs:subClassOf :Odometry ;
+                rdfs:comment "Visual odometry is the procedure of detecting movement by analyzing how visual features are moving from one Observation image frame to another."@en ;
+                rdfs:label "Visual odometry"@en .
 
 
 ###  http://www.w3.org/ns/sosa/FeatureOfInterest
