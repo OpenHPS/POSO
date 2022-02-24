@@ -10,7 +10,7 @@
                          owl:versionIRI <http://purl.org/poso/1.0/> ;
                          owl:imports <http://www.w3.org/ns/ssn/> ,
                                      <https://w3id.org/rdfp/rdfp-1.0> ;
-                         <http://purl.org/dc/terms/abstract> "Todo."@en ;
+                         <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning about how a system is deployed."@en ;
                          <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology"^^xsd:string ;
                          <http://purl.org/dc/terms/contributor> "Beat Signer"@en ;
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
@@ -321,14 +321,16 @@
 ###  http://purl.org/poso#RelativeAngle
 :RelativeAngle rdf:type owl:Class ;
                rdfs:subClassOf :RelativePosition ;
-               rdfs:label "Relative angle"@en ;
+               rdfs:label "Relatieve hoek"@nl ,
+                          "Relative angle"@en ;
                <http://www.w3.org/2004/02/skos/core#example> "An example of relative angle is the Angle of Arrival."@en .
 
 
 ###  http://purl.org/poso#RelativeDistance
 :RelativeDistance rdf:type owl:Class ;
                   rdfs:subClassOf :RelativePosition ;
-                  rdfs:label "Relative distance"@en .
+                  rdfs:label "Relatieve afstand"@nl ,
+                             "Relative distance"@en .
 
 
 ###  http://purl.org/poso#RelativePosition
@@ -339,6 +341,13 @@
                   rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/377/"@en ;
                   rdfs:label "Relatieve positie"@nl ,
                              "Relative position"@en .
+
+
+###  http://purl.org/poso#RelativeVelocity
+:RelativeVelocity rdf:type owl:Class ;
+                  rdfs:subClassOf :RelativePosition ;
+                  rdfs:label "Relatieve snelheid"@nl ,
+                             "Relative velocity"@en .
 
 
 ###  http://purl.org/poso#SLAM
@@ -365,7 +374,7 @@
 ###  http://purl.org/poso#VSLAM
 :VSLAM rdf:type owl:Class ;
        rdfs:subClassOf :SLAM ;
-       rdfs:comment "Visual simultaneous localisation and mapping (VSLAM)"@en ;
+       rdfs:comment "Visual simultaneous localisation and mapping (VSLAM) is a positioning techniques that uses visual imagery to map an environment. Positioning works by detecting features of interest in image frames and comparing how these features move from one frame to another."@en ;
        rdfs:label "Visual simultaneous localisation and mapping"@en .
 
 

@@ -44,12 +44,31 @@
          rdfs:label "Galileo"@en .
 
 
+###  http://purl.org/poso/common/GelocationAPI
+:GelocationAPI rdf:type owl:NamedIndividual ,
+                        <http://purl.org/poso#LocationBasedService> ;
+               rdfs:comment "The Geolocation API is a W3C specification that provides geographical location data based on the capabilities of the hosting device."@en ;
+               rdfs:isDefinedBy "https://www.w3.org/TR/geolocation/"@en ;
+               rdfs:label "Geolocation API" .
+
+
+###  http://purl.org/poso/common/HectorSLAM
+:HectorSLAM rdf:type owl:NamedIndividual ,
+                     <http://purl.org/poso#VSLAM> ;
+            rdfs:label "Hector SLAM"@en .
+
+
 ###  http://purl.org/poso/common/IRNSS
 :IRNSS rdf:type owl:NamedIndividual ,
                 <http://purl.org/poso#SatellitePositioningSystem> ;
        owl:sameAs :NavIC ;
        rdfs:comment "IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning \"sailor\" or \"navigator\")."@en ;
        rdfs:label "Indian Regional Navigation Satellite System"@en .
+
+
+###  http://purl.org/poso/common/IndoorAtlas
+:IndoorAtlas rdf:type owl:NamedIndividual ,
+                      <http://purl.org/poso#PositioningPlatform> .
 
 
 ###  http://purl.org/poso/common/KNNFingerprinting
@@ -85,6 +104,7 @@
 ###  http://purl.org/poso/common/OpenHPS
 :OpenHPS rdf:type owl:NamedIndividual ,
                   <http://purl.org/poso#PositioningPlatform> ;
+         rdfs:isDefinedBy "https://openhps.org"@en ;
          rdfs:label "OpenHPS"@en .
 
 
