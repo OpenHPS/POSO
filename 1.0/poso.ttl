@@ -114,6 +114,36 @@
               rdfs:label "is relative to"@en .
 
 
+###  http://purl.org/poso#usedSystem
+:usedSystem rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+            rdfs:range <http://www.w3.org/ns/ssn/System> ;
+            rdfs:comment "A relation to a re-usable system that computed the observation."@en ;
+            rdfs:label "used system"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/poso/xAxisResult
+:xAxisResult rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
+             rdfs:label "x-axis result"@en .
+
+
+###  http://purl.org/poso/yAxisResult
+:yAxisResult rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
+             rdfs:label "y-axis result"@en .
+
+
+###  http://purl.org/poso/zAxisResult
+:zAxisResult rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
+             rdfs:label "z-axis result"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -268,7 +298,8 @@
 
 ###  http://purl.org/poso#Orientation
 :Orientation rdf:type owl:Class ;
-             rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+             rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ,
+                             <http://www.w3.org/ns/sosa/Result> ;
              rdfs:comment "De orientatie van een object in 2D of 3D."@nl ,
                           "The orientation of a feature of interest in 2D or 3D space."@en ;
              rdfs:label "Orientatie"@nl ,
@@ -284,7 +315,8 @@
 
 ###  http://purl.org/poso#Position
 :Position rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+          rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ,
+                          <http://www.w3.org/ns/sosa/Result> ;
           rdfs:comment "A position indicates where an entity is located."@en ;
           rdfs:label "Positie"@nl ,
                      "Position"@en .
@@ -364,6 +396,19 @@
                             rdfs:label "Satellite positioning system"@en .
 
 
+###  http://purl.org/poso#SensorFusion
+:SensorFusion rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+              rdfs:comment "Sensor fusion is a procedure where multiple sensor data is combined to obtain a more reliable or accurate result."@en ;
+              rdfs:label "Sensor fusion"@en .
+
+
+###  http://purl.org/poso#TrackedFeature
+:TrackedFeature rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                rdfs:label "Tracked feature"@en .
+
+
 ###  http://purl.org/poso#Triangulation
 :Triangulation rdf:type owl:Class ;
                rdfs:subClassOf :PositioningTechnique ;
@@ -380,7 +425,8 @@
 
 ###  http://purl.org/poso#Velocity
 :Velocity rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ;
+          rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ,
+                          <http://www.w3.org/ns/sosa/Result> ;
           rdfs:comment "Linear or angular velocity of a feature."@en ;
           rdfs:label "Velocity"@en .
 
