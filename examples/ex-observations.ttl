@@ -1,0 +1,37 @@
+@prefix qudt: <http://qudt.org/2.1/schema/qudt/> .
+@prefix qudt-unit: <http://qudt.org/2.1/vocab/unit/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+# Observation 1: Outdoors
+<position/1646894700000> a sosa:Observation ;
+    sosa:hasFeatureOfInterest <me> ;
+    sosa:observedProperty  <me/position> ;
+    sosa:phenomenonTime "2022-03-10T06:45:00"^^xsd:dateTime ;
+    sosa:usedProcedure poso-common:Multilateration ;
+    poso:usedSystem <system/OutdoorCampusPositioning> ;
+    sosa:hasResult [ 
+        geo:asWKT """<http://www.opengis.net/def/crs/OGC/1.3/CRS84>
+            Point(30.26711513, 120.1430922)"""^^geo:wktLiteral] .
+
+# Observation 2: Indoors
+<position/1647516600000> a sosa:Observation ;
+    sosa:hasFeatureOfInterest <me> ;
+    sosa:observedProperty  <me/position> ;
+    sosa:phenomenonTime "2022-03-17T11:30:00"^^xsd:dateTime ;
+    sosa:usedProcedure poso-common:Multilateration ;
+    poso:usedSystem <system/IndoorCampusPositioning> ;
+    sosa:hasResult [
+        a poso:AbsolutePosition ;
+        poso:xAxisResult [
+            a qudt:QuantityValue ;
+            qudt:unit qudt-unit:M ;
+            qudt:numericValue "5"^^xsd:double ] ;
+        poso:yAxisResult [
+            a qudt:QuantityValue ;
+            qudt:unit qudt-unit:M ;
+            qudt:numericValue "6"^^xsd:double ] ;
+        poso:zAxisResult [
+            a qudt:QuantityValue ;
+            qudt:unit qudt-unit:M ;
+            qudt:numericValue "3.5"^^xsd:double ] ;
+    ] .

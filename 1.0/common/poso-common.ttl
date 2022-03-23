@@ -44,8 +44,8 @@
          rdfs:label "Galileo"@en .
 
 
-###  http://purl.org/poso/common/GelocationAPI
-:GelocationAPI rdf:type owl:NamedIndividual ,
+###  http://purl.org/poso/common/GeolocationAPI
+:GeolocationAPI rdf:type owl:NamedIndividual ,
                         <http://purl.org/poso#LocationBasedService> ;
                rdfs:comment "The Geolocation API is a W3C specification that provides geographical location data based on the capabilities of the hosting device."@en ;
                rdfs:isDefinedBy "https://www.w3.org/TR/geolocation/"@en ;
@@ -78,6 +78,12 @@
                             <http://purl.org/poso#Fingerprinting> ;
                    rdfs:comment "k-Neirest Neighbour fingerprinting is a fingerprinting technique where a number (k) of matches are selected, as opposed to one single fingerprint match. The final output position is the (weighted) average of the k-number of selected fingerprints."@en ;
                    rdfs:label "k-NN fingerprinting"@en .
+
+
+###  http://purl.org/poso/common/LDPL
+:LDPL rdf:type owl:NamedIndividual ,
+               <http://purl.org/poso/RadioPropagation> ;
+      rdfs:label "Log-distance path loss model"@en .
 
 
 ###  http://purl.org/poso/common/MidpointLateration
