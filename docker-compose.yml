@@ -1,8 +1,16 @@
 version: '3'
-
 services:
   owlery:
     image: phenoscape/owlery
     volumes: 
     - ./docker/owlery/application.conf:/srv/conf/application.conf
+    - ./:/opt/poso/
+    ports:
+    - 8999:8080
+  widoco:
+    build: ./docker/widoco/
+    environment:
+      ontFile: /opt/poso/1.0/poso.ttl
+      outFolder: /opt/poso/1.0/docs/
+    volumes:
     - ./:/opt/poso/
