@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://purl.oclc.org/NET/ssnx/ssn" uri="https://www.w3.org/2017/01/ssn-ssnx/"/>
-    <uri id="Imports Wizard Entry" name="http://purl.org/iot/vocab/m3-lite#" uri="http://smart-ics.ee.surrey.ac.uk/ontology/m3-lite.owl#"/>
-    <uri id="Imports Wizard Entry" name="http://purl.org/poso/1.0/" uri="file:/D:/maxim/workspace/POSO/1.0/poso.ttl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
-</catalog>

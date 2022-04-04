@@ -8,8 +8,10 @@
 
 <http://purl.org/poso#> rdf:type owl:Ontology ;
                          owl:versionIRI <http://purl.org/poso/1.0#> ;
-                         owl:imports <http://www.w3.org/ns/ssn/> ,
+                         owl:imports <http://qudt.org/2.1/schema/qudt> ,
                                      <http://www.opengis.net/ont/geosparql> ,
+                                     <http://www.w3.org/ns/ssn/> ,
+                                     <http://www.w3.org/ns/ssn/systems/> ,
                                      <https://w3id.org/rdfp/rdfp-1.0> ;
                          <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning about how a system is deployed."@en ;
                          <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology"^^xsd:string ;
@@ -70,6 +72,10 @@
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
+###  http://qudt.org/schema/qudt/hasQuantityKind
+<http://qudt.org/schema/qudt/hasQuantityKind> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
 
@@ -81,12 +87,24 @@
 ###  http://purl.org/poso#hasAcceleration
 :hasAcceleration rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+                 rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                  rdfs:label "has acceleration" .
+
+
+###  http://purl.org/poso#hasAccuracy
+:hasAccuracy rdf:type owl:ObjectProperty ;
+             owl:equivalentProperty <http://www.opengis.net/ont/geosparql#hasSpatialAccuracy> ;
+             rdfs:subPropertyOf <http://www.w3.org/ns/ssn/systems/qualityOfObservation> ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:comment "The accuracy of an observation or observation result."@en ;
+             rdfs:label "has accuracy"@en .
 
 
 ###  http://purl.org/poso#hasOrientation
 :hasOrientation rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+                rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                rdfs:range :Orientation ;
                 rdfs:comment "Property that"@en ;
                 rdfs:label "has orientation" .
 
@@ -105,6 +123,8 @@
 ###  http://purl.org/poso#hasVelocity
 :hasVelocity rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+             rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+             rdfs:range :Velocity ;
              rdfs:label "has velocity"@en .
 
 
@@ -112,6 +132,7 @@
 :isRelativeTo rdf:type owl:ObjectProperty ;
               rdfs:domain :RelativePosition ;
               rdfs:range <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+              rdfs:comment "Indicates a relative position to be relative to another feature."@en ;
               rdfs:label "is relative to"@en .
 
 
@@ -123,27 +144,28 @@
             rdfs:label "used system"@en .
 
 
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://purl.org/poso#xAxisResult
-:xAxisResult rdf:type owl:DatatypeProperty ;
-             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
-             rdfs:label "x-axis result"@en .
+###  http://purl.org/poso#xAxisValue
+:xAxisValue rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
+            rdfs:label "x-axis value"@en .
 
 
-###  http://purl.org/poso#yAxisResult
-:yAxisResult rdf:type owl:DatatypeProperty ;
-             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
-             rdfs:label "y-axis result"@en .
+###  http://purl.org/poso#yAxisValue
+:yAxisValue rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain <http://www.w3.org/ns/sosa/Value> ;
+            rdfs:label "y-axis value"@en .
 
 
-###  http://purl.org/poso#zAxisResult
-:zAxisResult rdf:type owl:DatatypeProperty ;
-             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
-             rdfs:label "z-axis result"@en .
+###  http://purl.org/poso#zAxisValue
+:zAxisValue rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain <http://www.w3.org/ns/sosa/Value> ;
+            rdfs:label "z-axis value"@en .
 
+
+###  http://www.opengis.net/ont/geosparql#hasSpatialAccuracy
 
 #################################################################
 #    Classes
@@ -157,6 +179,32 @@
                   rdfs:label "Absolute position"@en .
 
 
+###  http://purl.org/poso#AbsolutePositionProperty
+:AbsolutePositionProperty rdf:type owl:Class ;
+                          rdfs:comment "An observable absolute position property of a FeatureOfInterest."@en ;
+                          rdfs:label "Absolute Position Property"@en .
+
+
+###  http://purl.org/poso#Acceleration
+:Acceleration rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ,
+                              <http://www.w3.org/ns/sosa/Result> ;
+              <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/Acceleration> ;
+              rdfs:comment "Acceleration cceleration is the (instantaneous) rate of change of velocity."@en ;
+              rdfs:label "Acceleration"@en .
+
+
+###  http://purl.org/poso#AngularAcceleration
+:AngularAcceleration rdf:type owl:Class ;
+                     rdfs:subClassOf :Acceleration ;
+                     <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/AngularAcceleration> ;
+                     rdfs:label "Angular acceleration"@en .
+
+
+###  http://purl.org/poso#AngularAccelerationProperty
+:AngularAccelerationProperty rdf:type owl:Class .
+
+
 ###  http://purl.org/poso#AngularMovement
 :AngularMovement rdf:type owl:Class ;
                  rdfs:subClassOf :Movement ;
@@ -167,7 +215,12 @@
 ###  http://purl.org/poso#AngularVelocity
 :AngularVelocity rdf:type owl:Class ;
                  rdfs:subClassOf :Velocity ;
+                 <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/AngularVelocity> ;
                  rdfs:label "Angular velocity"@en .
+
+
+###  http://purl.org/poso#AngularVelocityProperty
+:AngularVelocityProperty rdf:type owl:Class .
 
 
 ###  http://purl.org/poso#Angulation
@@ -179,6 +232,11 @@
 :AuditoryLandmark rdf:type owl:Class ;
                   rdfs:subClassOf :Landmark ;
                   rdfs:label "Auditory landmark"@en .
+
+
+###  http://purl.org/poso#AxisAngleOrientation
+:AxisAngleOrientation rdf:type owl:Class ;
+                      rdfs:subClassOf :Orientation .
 
 
 ###  http://purl.org/poso#CellIdentification
@@ -199,9 +257,15 @@
                <http://www.w3.org/2004/02/skos/core#altLabel> "Deduced reckoning"@en .
 
 
+###  http://purl.org/poso#EulerOrientation
+:EulerOrientation rdf:type owl:Class ;
+                  rdfs:subClassOf :Orientation .
+
+
 ###  http://purl.org/poso#Fingerprint
 :Fingerprint rdf:type owl:Class ;
              rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                             <http://www.w3.org/ns/sosa/ObservableProperty> ,
                              <http://www.w3.org/ns/sosa/Result> ;
              rdfs:comment "A fingerprint is a scene analysis"@en ;
              rdfs:label "Fingerprint"@en .
@@ -217,8 +281,10 @@
 ###  http://purl.org/poso#HybridPositioningSystem
 :HybridPositioningSystem rdf:type owl:Class ;
                          rdfs:subClassOf :PositioningSystem ;
-                         rdfs:comment "A hybrid positioning system is a positioning system that makes use of multiple procedures to obtain a result."@en ;
-                         rdfs:label "Hybrid positioning system"@en .
+                         rdfs:comment "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en ;
+                         rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/250/> ;
+                         rdfs:label "Integrated positioning system"@en ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "Hybrid positioning system"@en .
 
 
 ###  http://purl.org/poso#IndoorDeployment
@@ -235,9 +301,18 @@
                          rdfs:label "Indoor positioning system"@en .
 
 
+###  http://purl.org/poso#InertialPositioningSystem
+:InertialPositioningSystem rdf:type owl:Class ;
+                           rdfs:subClassOf :PositioningSystem ;
+                           rdfs:comment "An inertial positioning system is a positioning system employing accelerometers, gyroscopes, and computer as integral components to determine coordinates of points or objects relative to an initial known reference point"@en ;
+                           rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/240/> ;
+                           rdfs:label "Inertial positioning system"@en .
+
+
 ###  http://purl.org/poso#Landmark
 :Landmark rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                          <http://www.w3.org/ns/sosa/ObservableProperty> ,
                           <http://www.w3.org/ns/sosa/Result> ;
           rdfs:comment "A landmark is a feature with a known position, that can be used to identify the position of an object that has a relative position with this feature."@en ;
           rdfs:label "Landmark"@en .
@@ -246,6 +321,17 @@
 ###  http://purl.org/poso#Lateration
 :Lateration rdf:type owl:Class ;
             rdfs:subClassOf :Triangulation .
+
+
+###  http://purl.org/poso#LinearAcceleration
+:LinearAcceleration rdf:type owl:Class ;
+                    rdfs:subClassOf :Acceleration ;
+                    <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/LinearAcceleration> ;
+                    rdfs:label "Linear acceleration"@en .
+
+
+###  http://purl.org/poso#LinearAccelerationProperty
+:LinearAccelerationProperty rdf:type owl:Class .
 
 
 ###  http://purl.org/poso#LinearMovement
@@ -258,14 +344,20 @@
 ###  http://purl.org/poso#LinearVelocity
 :LinearVelocity rdf:type owl:Class ;
                 rdfs:subClassOf :Velocity ;
+                <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/LinearVelocity> ;
                 rdfs:label "Linear velocity"@en .
+
+
+###  http://purl.org/poso#LinearVelocityProperty
+:LinearVelocityProperty rdf:type owl:Class .
 
 
 ###  http://purl.org/poso#LocationBasedService
 :LocationBasedService rdf:type owl:Class ;
                       rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
-                      rdfs:comment "A location-based service (LBS) is a service that provides the location of a person or object. It provides this information without the required knowledge of the underlying technologies and algorithms."@en ;
-                      rdfs:label "Location-based service"@en .
+                      rdfs:comment "A location based service (LBS) is a service that provides the location of a person or object. It provides this information without the required knowledge of the underlying technologies and algorithms."@en ;
+                      rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/278/> ;
+                      rdfs:label "Location based service"@en .
 
 
 ###  http://purl.org/poso#MagneticOdometry
@@ -296,6 +388,14 @@
           rdfs:subClassOf :PositioningTechnique ;
           rdfs:comment "Odometry is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."@en ;
           rdfs:label "Odometry"@en .
+
+
+###  http://purl.org/poso#OpticalPositioningSystem
+:OpticalPositioningSystem rdf:type owl:Class ;
+                          rdfs:subClassOf :PositioningSystem ;
+                          rdfs:comment "An optical positioning system is a positioning system that determines the position of an object by means of the properties of light."@en ;
+                          rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/320/> ;
+                          rdfs:label "Optical positioning system"@en .
 
 
 ###  http://purl.org/poso#Orientation
@@ -345,6 +445,11 @@
                       rdfs:label "Positioning technique"@en .
 
 
+###  http://purl.org/poso#QuaternionOrientation
+:QuaternionOrientation rdf:type owl:Class ;
+                       rdfs:subClassOf :Orientation .
+
+
 ###  http://purl.org/poso#RFLandmark
 :RFLandmark rdf:type owl:Class ;
             rdfs:subClassOf :Landmark ;
@@ -384,6 +489,12 @@
                              "Relative position"@en .
 
 
+###  http://purl.org/poso#RelativePositionProperty
+:RelativePositionProperty rdf:type owl:Class ;
+                          rdfs:comment "An observable relative position property of a FeatureOfInterest."@en ;
+                          rdfs:label "Relative Position Property"@en .
+
+
 ###  http://purl.org/poso#RelativeVelocity
 :RelativeVelocity rdf:type owl:Class ;
                   rdfs:subClassOf :RelativePosition ;
@@ -402,6 +513,7 @@
 ###  http://purl.org/poso#SatellitePositioningSystem
 :SatellitePositioningSystem rdf:type owl:Class ;
                             rdfs:subClassOf :PositioningSystem ;
+                            rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/392/> ;
                             rdfs:label "Satellite positioning system"@en .
 
 
@@ -436,6 +548,7 @@
 :Velocity rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ,
                           <http://www.w3.org/ns/sosa/Result> ;
+          <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/Velocity> ;
           rdfs:comment "Linear or angular velocity of a feature."@en ;
           rdfs:label "Velocity"@en .
 
@@ -453,12 +566,17 @@
                 rdfs:comment "Visual odometry is the procedure of detecting movement by analyzing how visual features are moving from one Observation image frame to another."@en ;
                 rdfs:label "Visual odometry"@en .
 
+
 ###  http://www.opengis.net/ont/geosparql#Geometry
 <http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/sosa/FeatureOfInterest
 <http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Value
+<http://www.w3.org/ns/sosa/Value> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/ssn/System
