@@ -120,6 +120,7 @@
 :BDS rdf:type owl:NamedIndividual ,
               <http://purl.org/poso#SatellitePositioningSystem> ;
      rdfs:comment "BeiDou, or BDS, is a global GNSS owned and operated by the People's Republic of China. BDS was formally commissioned in 2020. The operational system consists of 35 satellites. BDS was previously called Compass."@en ;
+     rdfs:isDefinedBy "https://www.gps.gov/systems/gnss/"^^xsd:anyURI ;
      rdfs:label "BeiDou Navigation Satellite System"@en .
 
 
@@ -127,6 +128,7 @@
 :GLONASS rdf:type owl:NamedIndividual ,
                   <http://purl.org/poso#SatellitePositioningSystem> ;
          rdfs:comment "GLONASS (Globalnaya Navigazionnaya Sputnikovaya Sistema, or Global Navigation Satellite System) is a global GNSS owned and operated by the Russian Federation. The fully operational system consists of 24+ satellites."@en ;
+         rdfs:isDefinedBy "https://www.gps.gov/systems/gnss/"^^xsd:anyURI ;
          rdfs:label "Global Navigation Satellite System"@en ,
                     "Globalnaya Navigazionnaya Sputnikovaya Sistema"@ru .
 
@@ -142,6 +144,7 @@
 ###  http://purl.org/poso/common#Galileo
 :Galileo rdf:type owl:NamedIndividual ,
                   <http://purl.org/poso#SatellitePositioningSystem> ;
+         rdfs:isDefinedBy "https://www.gps.gov/systems/gnss/"^^xsd:anyURI ;
          rdfs:comment "Galileo is a global GNSS owned and operated by the European Union. The EU declared the start of Galileo Initial Services in 2016 and plans to complete the system of 24+ satellites in 2021."@en ;
          rdfs:label "Galileo"@en .
 
@@ -150,14 +153,15 @@
 :GeolocationAPI rdf:type owl:NamedIndividual ,
                          <http://purl.org/poso#LocationBasedService> ;
                 rdfs:comment "The Geolocation API is a W3C specification that provides geographical location data based on the capabilities of the hosting device."@en ;
-                rdfs:isDefinedBy "https://www.w3.org/TR/geolocation/"@en ;
+                rdfs:isDefinedBy "https://www.w3.org/TR/geolocation/"^^xsd:anyURI ;
                 rdfs:label "Geolocation API" .
 
 
 ###  http://purl.org/poso/common#HectorSLAM
 :HectorSLAM rdf:type owl:NamedIndividual ,
                      <http://purl.org/poso#VSLAM> ;
-            rdfs:label "Hector SLAM"@en .
+            rdfs:label "Hector SLAM"@en ;
+            rdfs:seeAlso "http://wiki.ros.org/hector_slam"^^xsd:anyURI .
 
 
 ###  http://purl.org/poso/common#IRNSS
@@ -165,13 +169,15 @@
                 <http://purl.org/poso#SatellitePositioningSystem> ;
        owl:sameAs :NavIC ;
        rdfs:comment "IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning \"sailor\" or \"navigator\")."@en ;
+       rdfs:isDefinedBy "https://www.gps.gov/systems/gnss/"^^xsd:anyURI ;
        rdfs:label "Indian Regional Navigation Satellite System"@en .
 
 
 ###  http://purl.org/poso/common#IndoorAtlas
 :IndoorAtlas rdf:type owl:NamedIndividual ,
                       <http://purl.org/poso#PositioningPlatform> ;
-             rdfs:isDefinedBy "https://www.indooratlas.com/"@en ;
+             rdfs:comment "Cross-platform indoor positioning SDK powered by patented 6-layer sensor fusion core. Fast development cycles. Easy to set up. Proven by 10,000+ developers."@en ;
+             rdfs:isDefinedBy "https://www.indooratlas.com/"^^xsd:anyURI ;
              rdfs:label "IndoorAtlas"@en .
 
 
@@ -205,23 +211,29 @@
 :NavIC rdf:type owl:NamedIndividual ,
                 <http://purl.org/poso#SatellitePositioningSystem> ;
        rdfs:comment "IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning \"sailor\" or \"navigator\")."@en ;
+       rdfs:isDefinedBy "https://www.gps.gov/systems/gnss/"^^xsd:anyURI ;
        rdfs:label "Navigation Indian Constellation"@en .
 
 
 ###  http://purl.org/poso/common#ORB-SLAM2
-:ORB-SLAM2 rdf:type owl:NamedIndividual ,
-                    <http://purl.org/poso#VSLAM> .
+:ORBSLAM2 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/poso#VSLAM> ;
+           rdfs:label "ORB-SLAM2"@en ;
+           rdfs:seeAlso "https://github.com/raulmur/ORB_SLAM2"^^xsd:anyURI .
 
 
 ###  http://purl.org/poso/common#ORB-SLAM3
-:ORB-SLAM3 rdf:type owl:NamedIndividual ,
-                    <http://purl.org/poso#VSLAM> .
+:ORBSLAM3 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/poso#VSLAM> ;
+           rdfs:label "ORB-SLAM3"@en ;
+           rdfs:seeAlso "https://github.com/UZ-SLAMLab/ORB_SLAM3"^^xsd:anyURI .
 
 
 ###  http://purl.org/poso/common#OpenHPS
 :OpenHPS rdf:type owl:NamedIndividual ,
                   <http://purl.org/poso#PositioningPlatform> ;
-         rdfs:isDefinedBy "https://openhps.org"@en ;
+         rdfs:comment "OpenHPS is an open source hybrid positioning system to help developers fuse various positioning technologies and algorithms. The system offers a modular data processing framework with each modules ranging from computer vision to common algorithms such as fingerprinting or data persistence of sampled data."@en ;
+         rdfs:isDefinedBy "https://openhps.org"^^xsd:anyURI ;
          rdfs:label "OpenHPS"@en .
 
 
@@ -249,7 +261,16 @@
 :QZSS rdf:type owl:NamedIndividual ,
                <http://purl.org/poso#SatellitePositioningSystem> ;
       rdfs:comment "QZSS is a regional GNSS owned by the Government of Japan and operated by QZS System Service Inc. (QSS). QZSS complements GPS to improve coverage in East Asia and Oceania. Japan declared the official start of QZSS services in 2018 with 4 operational satellites, and plans to expand the constellation to 7 satellites by 2023 for autonomous capability."@en ;
+      rdfs:isDefinedBy "https://www.gps.gov/systems/gnss/"^^xsd:anyURI ;
       rdfs:label "Quasi-Zenith Satellite System"@en .
+
+
+###  http://purl.org/poso/common#ROS
+:ROS rdf:type owl:NamedIndividual ,
+              <http://purl.org/poso#PositioningPlatform> ;
+     rdfs:comment "ROS (Robot Operating System) provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more."@en ;
+     rdfs:isDefinedBy "https://www.ros.org/"^^xsd:anyURI ;
+     rdfs:label "Robotics Operating System"@en .
 
 
 ###  http://purl.org/poso/common#SMPFingerprinting

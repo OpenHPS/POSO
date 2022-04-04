@@ -136,32 +136,50 @@
               rdfs:label "is relative to"@en .
 
 
-###  http://purl.org/poso#usedSystem
-:usedSystem rdf:type owl:ObjectProperty ;
-            rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
-            rdfs:range <http://www.w3.org/ns/ssn/System> ;
-            rdfs:comment "A relation to a re-usable system that computed the observation."@en ;
-            rdfs:label "used system"@en .
+###  http://purl.org/poso#madeBySystem
+:madeBySystem rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
+              rdfs:range <http://www.w3.org/ns/ssn/System> ;
+              rdfs:comment "A relation to a re-usable system that computed the observation."@en ;
+              rdfs:label "used system"@en .
+
+
+###  http://purl.org/poso#pitch
+:pitch rdf:type owl:ObjectProperty ;
+       rdfs:label "Pitch"@en ;
+       rdfs:domain :EulerOrientation .
+
+
+###  http://purl.org/poso#roll
+:roll rdf:type owl:ObjectProperty ;
+      rdfs:label "Roll"@en ;
+      rdfs:domain :EulerOrientation .
 
 
 ###  http://purl.org/poso#xAxisValue
 :xAxisValue rdf:type owl:ObjectProperty ,
                      owl:FunctionalProperty ;
-            rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
+            rdfs:domain <http://www.w3.org/ns/sosa/Result>, :AxisAngleOrientation ;
             rdfs:label "x-axis value"@en .
 
 
 ###  http://purl.org/poso#yAxisValue
 :yAxisValue rdf:type owl:ObjectProperty ,
                      owl:FunctionalProperty ;
-            rdfs:domain <http://www.w3.org/ns/sosa/Value> ;
+            rdfs:domain <http://www.w3.org/ns/sosa/Result>, :AxisAngleOrientation ;
             rdfs:label "y-axis value"@en .
+
+
+###  http://purl.org/poso#yaw
+:yaw rdf:type owl:ObjectProperty ;
+     rdfs:label "Yaw"@en ;
+     rdfs:domain :EulerOrientation .
 
 
 ###  http://purl.org/poso#zAxisValue
 :zAxisValue rdf:type owl:ObjectProperty ,
                      owl:FunctionalProperty ;
-            rdfs:domain <http://www.w3.org/ns/sosa/Value> ;
+            rdfs:domain <http://www.w3.org/ns/sosa/Result>, :AxisAngleOrientation ;
             rdfs:label "z-axis value"@en .
 
 
@@ -311,7 +329,8 @@
 
 ###  http://purl.org/poso#Landmark
 :Landmark rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+          rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
+                          <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
                           <http://www.w3.org/ns/sosa/ObservableProperty> ,
                           <http://www.w3.org/ns/sosa/Result> ;
           rdfs:comment "A landmark is a feature with a known position, that can be used to identify the position of an object that has a relative position with this feature."@en ;
@@ -415,6 +434,12 @@
                    rdfs:label "Outdoor deployment"@en .
 
 
+###  http://purl.org/poso#PolygonalAccuracy
+:PolygonalAccuracy rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/ns/ssn/systems/Accuracy> ;
+                   rdfs:label "Polygonal accuracy"@en .
+
+
 ###  http://purl.org/poso#Position
 :Position rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ,
@@ -427,7 +452,7 @@
 ###  http://purl.org/poso#PositioningPlatform
 :PositioningPlatform rdf:type owl:Class ;
                      rdfs:subClassOf <http://www.w3.org/ns/sosa/Platform> ;
-                     rdfs:comment "A positioning platform is a framework, architecture or platform used to develop and host a PositioningSystem."@en ;
+                     rdfs:comment "A positioning platform is a framework, architecture or platform used to develop and host a positioning system."@en ;
                      rdfs:label "Positioning platform"@en .
 
 
@@ -461,6 +486,7 @@
 :RadioPropagation rdf:type owl:Class ;
                   rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
                   rdfs:comment "The radio propagation formulas cover the computation of the radio waves through a medium (e.g. air)."@en ;
+                  rdfs:isDefinedBy "https://en.wikipedia.org/wiki/Radio_propagation"^^xsd:anyURI ;
                   rdfs:label "Radio propagation"@en .
 
 
@@ -521,12 +547,14 @@
 :SensorFusion rdf:type owl:Class ;
               rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
               rdfs:comment "Sensor fusion is a procedure where multiple sensor data is combined to obtain a more reliable or accurate result."@en ;
+              rdfs:isDefinedBy "https://en.wikipedia.org/wiki/Sensor_fusion"^^xsd:anyURI ;
               rdfs:label "Sensor fusion"@en .
 
 
 ###  http://purl.org/poso#TrackedFeature
 :TrackedFeature rdf:type owl:Class ;
-                rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
+                                <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                 rdfs:label "Tracked feature"@en .
 
 
@@ -573,10 +601,6 @@
 
 ###  http://www.w3.org/ns/sosa/FeatureOfInterest
 <http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/sosa/Value
-<http://www.w3.org/ns/sosa/Value> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/ssn/System
