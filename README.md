@@ -9,6 +9,8 @@ the semantics needed to express a position.*
     - `/1.0/poso.ttl`: POSO core ontology
     - `/1.0/catelog-v001.xml`: Protege catalog used for the Owlery API
     - `/1.0/common/poso-common.ttl`: POSO-common ontology with individuals for algorithms, techniques and existing systems
+    - `/1.0/m3lite/poso-m3lite.ttl`: POSO-m3lite allignment
+    - `/1.0/hdgi/poso-hdgi.ttl`: POSO-hdgi allignment
 - `/docker/`: Docker related files
     - `/docker/owlery/application.conf`: Owlery API configuration
     - `/docker/widoco/Dockerfile`: WIDOCO document generator docker file
@@ -16,9 +18,14 @@ the semantics needed to express a position.*
     - `/docs/images/`: POSO ontology documentation images
     - `/docs/generated/`: Generated documentation of POSO
 - `/examples/`: Examples
-- `docker-compose.yml`: Docker services
+- `docker-compose.yml`: Docker services for development
 
 ## Classes
+
+### System
+
+#### `poso:SatellitePositioningSystem`
+
 
 ### Stimulus
 A positioning system can be triggered by movement. We identify linear and angular movement as two possible events that can
@@ -35,6 +42,9 @@ In the context of a positioning system, a procedure is an algorithm or computati
 POSO aims to observe the position, orientation and related properties needed in a positioning system. Classes are available for a position (i.e. absolute or relative), orientation and velocity.
 
 ## Properties
+### `poso:madeBySystem`
+SOSA and SSN offer properties for linking an Observation to a procedure that is implemented by a system. One single procedure
+can be implemented by multiple systems. In order to have a deterministic link between the observation and the system that observed it, we use `poso:madeBySystem`.
 
 ## Individuals
 
@@ -43,6 +53,9 @@ A positioning system is an established system for obtaining a position. Existing
 
 ## Documentation
 Documentation is provided using WIDOCO [2]. An Owlery configuration is provided
+
+## Development and Testing
+
 
 ## License
 POSO is licensed under the [MIT license](LICENSE) and maintained by the Web & Information Systems Engineering Lab at the Vrije Universiteit Brussel.
