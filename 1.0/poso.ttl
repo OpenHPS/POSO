@@ -22,7 +22,7 @@
                          <http://purl.org/dc/terms/modified> "2022-04-20T00:00:00"@en ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
-                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/" .
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI .
 
 #################################################################
 #    Annotation properties
@@ -87,7 +87,10 @@
 ###  http://purl.org/poso/hasAcceleration
 :hasAcceleration rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+                 owl:inverseOf :isAccelerationOf ;
                  rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                 rdfs:range :Acceleration ;
+                 rdfs:comment "Property that links a feature of interest to a unique acceleration property related to this feature."@en ;
                  rdfs:label "has acceleration" .
 
 
@@ -109,15 +112,19 @@
 ###  http://purl.org/poso/hasOrientation
 :hasOrientation rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+                owl:inverseOf :isOrientationOf ;
                 rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                 rdfs:range :Orientation ;
-                rdfs:comment "Property that"@en ;
-                rdfs:label "has orientation" .
+                rdfs:comment "Duid de orientatie aan van een object aan."@nl ,
+                             "Indicates the orientation of a feature of interest."@en ;
+                rdfs:label "has orientation"@en ,
+                           "heeft orientatie"@nl .
 
 
 ###  http://purl.org/poso/hasPosition
 :hasPosition rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+             owl:inverseOf :isPositionOf ;
              rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
              rdfs:range :Position ;
              rdfs:comment "Duid de absolute of relatieve positie van een object aan."@nl ,
@@ -126,20 +133,50 @@
                         "heeft positie"@nl .
 
 
+###  http://purl.org/poso/hasRelativePosition
+:hasRelativePosition rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasPosition ;
+                     owl:inverseOf :isRelativeTo ;
+                     rdfs:range :RelativePosition ;
+                     rdfs:label "has relative position"@en .
+
+
 ###  http://purl.org/poso/hasSRS
 :hasSRS rdf:type owl:ObjectProperty ;
-        rdfs:domain :PositioningSystem ,
-                    <http://www.w3.org/ns/sosa/Result> ;
+        rdfs:domain owl:Thing ;
         <http://qudt.org/schema/qudt/example> <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ;
+        rdfs:comment "Identifies an entity that has a spatial reference system in order to interpret the result."@en ;
         rdfs:label "has spatial reference system"@en .
 
 
 ###  http://purl.org/poso/hasVelocity
 :hasVelocity rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
+             owl:inverseOf :isVelocityOf ;
              rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
              rdfs:range :Velocity ;
-             rdfs:label "has velocity"@en .
+             rdfs:comment "Duid de snelheid van een object aan."@nl ,
+                          "Indicates the velocity of a feature of interest."@en ;
+             rdfs:label "has velocity"@en ,
+                        "heeft snelheid"@nl .
+
+
+###  http://purl.org/poso/isAccelerationOf
+:isAccelerationOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
+                  rdfs:label "is acceleration of"@en .
+
+
+###  http://purl.org/poso/isOrientationOf
+:isOrientationOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
+                 rdfs:label "is orientation of"@en .
+
+
+###  http://purl.org/poso/isPositionOf
+:isPositionOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
+              rdfs:label "is position of"@en .
 
 
 ###  http://purl.org/poso/isRelativeTo
@@ -150,6 +187,12 @@
               rdfs:label "is relative to"@en .
 
 
+###  http://purl.org/poso/isVelocityOf
+:isVelocityOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
+              rdfs:label "is velocity of"@en .
+
+
 ###  http://purl.org/poso/madeBySystem
 :madeBySystem rdf:type owl:ObjectProperty ;
               rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
@@ -158,20 +201,33 @@
               rdfs:label "made by system"@en .
 
 
+###  http://purl.org/poso/observesType
+:observesType rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://www.w3.org/ns/ssn/forProperty> ;
+              rdfs:domain <http://www.w3.org/ns/ssn/System> ;
+              rdfs:range rdfs:Class ;
+              rdfs:comment "The relation between a system and an observable property class to identify that a system observes a specific type of property."@en ;
+              rdfs:label "observes type"@en .
+
+
 ###  http://purl.org/poso/pitch
 :pitch rdf:type owl:ObjectProperty ;
        rdfs:domain :EulerOrientation ;
+       rdfs:range rdfs:Class ;
        rdfs:label "pitch"@en .
 
 
 ###  http://purl.org/poso/roll
 :roll rdf:type owl:ObjectProperty ;
       rdfs:domain :EulerOrientation ;
+      rdfs:range rdfs:Class ;
       rdfs:label "roll"@en .
 
 
 ###  http://purl.org/poso/scalar
 :scalar rdf:type owl:ObjectProperty ;
+        rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
+        rdfs:range rdfs:Class ;
         rdfs:label "scalar"@en ;
         <http://www.w3.org/2004/02/skos/core#altLabel> "w" .
 
@@ -180,6 +236,8 @@
 :xAxisValue rdf:type owl:ObjectProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
+            rdfs:range rdfs:Class ;
+            rdfs:comment "Quantitative result value along the X-axis of a spatial sensor."@en ;
             rdfs:label "x-axis value"@en .
 
 
@@ -187,12 +245,15 @@
 :yAxisValue rdf:type owl:ObjectProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
+            rdfs:range rdfs:Class ;
+            rdfs:comment "Quantitative result value along the Y-axis of a spatial sensor."@en ;
             rdfs:label "y-axis value"@en .
 
 
 ###  http://purl.org/poso/yaw
 :yaw rdf:type owl:ObjectProperty ;
      rdfs:domain :EulerOrientation ;
+     rdfs:range rdfs:Class ;
      rdfs:label "yaw"@en .
 
 
@@ -200,6 +261,8 @@
 :zAxisValue rdf:type owl:ObjectProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
+            rdfs:range rdfs:Class ;
+            rdfs:comment "Quantitative result value along the Z-axis of a spatial sensor."@en ;
             rdfs:label "z-axis value"@en .
 
 
@@ -223,28 +286,33 @@
                               <http://www.w3.org/ns/sosa/Result> ;
               <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/Acceleration> ;
               rdfs:comment "Acceleration cceleration is the (instantaneous) rate of change of velocity."@en ;
-              rdfs:label "Acceleration"@en .
+              rdfs:label "Acceleration"@en ,
+                         "Versnelling"@nl .
 
 
 ###  http://purl.org/poso/AngularAcceleration
 :AngularAcceleration rdf:type owl:Class ;
                      rdfs:subClassOf :Acceleration ;
                      <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/AngularAcceleration> ;
-                     rdfs:label "Angular acceleration"@en .
+                     rdfs:label "Angular acceleration"@en ,
+                                "Draaiversnelling"@nl .
 
 
 ###  http://purl.org/poso/AngularMovement
 :AngularMovement rdf:type owl:Class ;
                  rdfs:subClassOf :Movement ;
                  rdfs:comment "Angular movement around a certain origin point."@en ;
-                 rdfs:label "Angular movement"@en .
+                 rdfs:label "Angular movement"@en ,
+                            "Draaibeweging"@nl .
 
 
 ###  http://purl.org/poso/AngularVelocity
 :AngularVelocity rdf:type owl:Class ;
                  rdfs:subClassOf :Velocity ;
                  <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/AngularVelocity> ;
-                 rdfs:label "Angular velocity"@en .
+                 rdfs:comment "Angu,ar velocity is the momentum around a point of origin."@en ;
+                 rdfs:label "Angular velocity"@en ,
+                            "Draaisnelheid"@nl .
 
 
 ###  http://purl.org/poso/Angulation
@@ -263,7 +331,19 @@
 
 ###  http://purl.org/poso/AxisAngleOrientation
 :AxisAngleOrientation rdf:type owl:Class ;
-                      rdfs:subClassOf :Orientation ;
+                      rdfs:subClassOf :Orientation ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :xAxisValue ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :yAxisValue ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :zAxisValue ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                      ] ;
                       rdfs:label "Axis angle orientation"@en .
 
 
@@ -287,14 +367,25 @@
 
 ###  http://purl.org/poso/EulerOrientation
 :EulerOrientation rdf:type owl:Class ;
-                  rdfs:subClassOf :Orientation ;
+                  rdfs:subClassOf :Orientation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :pitch ;
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :roll ;
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :yaw ;
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ;
                   rdfs:label "Euler orientation"@en .
 
 
 ###  http://purl.org/poso/Fingerprint
 :Fingerprint rdf:type owl:Class ;
              rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
-                             <http://www.w3.org/ns/sosa/ObservableProperty> ,
                              <http://www.w3.org/ns/sosa/Result> ;
              rdfs:comment "A fingerprint is a scene analysis"@en ;
              rdfs:label "Fingerprint"@en .
@@ -309,7 +400,12 @@
 
 ###  http://purl.org/poso/HybridPositioningSystem
 :HybridPositioningSystem rdf:type owl:Class ;
-                         rdfs:subClassOf :PositioningSystem ;
+                         rdfs:subClassOf :PositioningSystem ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://www.w3.org/ns/ssn/implements> ;
+                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass <http://www.w3.org/ns/sosa/Procedure>
+                                         ] ;
                          rdfs:comment "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en ;
                          rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/250/> ;
                          rdfs:label "Integrated positioning system"@en ;
@@ -342,7 +438,6 @@
 :Landmark rdf:type owl:Class ;
           rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
                           <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
-                          <http://www.w3.org/ns/sosa/ObservableProperty> ,
                           <http://www.w3.org/ns/sosa/Result> ;
           rdfs:comment "A landmark is a feature with a known position, that can be used to identify the position of an object that has a relative position with this feature."@en ;
           rdfs:label "Landmark"@en .
@@ -373,6 +468,7 @@
 :LinearVelocity rdf:type owl:Class ;
                 rdfs:subClassOf :Velocity ;
                 <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/LinearVelocity> ;
+                rdfs:comment "Linear velocity is the momentum along one ore more axis."@en ;
                 rdfs:label "Linear velocity"@en .
 
 
@@ -469,7 +565,12 @@
 
 ###  http://purl.org/poso/PositioningSystem
 :PositioningSystem rdf:type owl:Class ;
-                   rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
+                   rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty <http://www.w3.org/ns/ssn/hasDeployment> ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass <http://www.w3.org/ns/ssn/Deployment>
+                                   ] ;
                    rdfs:comment "A positioning system is a system of instrumental and computational components for determining position."@en ;
                    rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/349/"@en ;
                    rdfs:label "Positioning system"@en .
@@ -484,7 +585,23 @@
 
 ###  http://purl.org/poso/QuaternionOrientation
 :QuaternionOrientation rdf:type owl:Class ;
-                       rdfs:subClassOf :Orientation ;
+                       rdfs:subClassOf :Orientation ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :scalar ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :xAxisValue ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :yAxisValue ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :zAxisValue ;
+                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                       ] ;
                        rdfs:label "Quaternion orientation"@en .
 
 
@@ -522,7 +639,12 @@
 
 ###  http://purl.org/poso/RelativePosition
 :RelativePosition rdf:type owl:Class ;
-                  rdfs:subClassOf :Position ;
+                  rdfs:subClassOf :Position ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :isRelativeTo ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass <http://www.w3.org/ns/sosa/FeatureOfInterest>
+                                  ] ;
                   rdfs:comment "A relative position is a position of a feature of interest with respect to the positions of other objects that this position is relative to."@en ,
                                "Een relatieve positie is een positie van een punt, met respect tot de posities van andere objecten die relatief zijn."@nl ;
                   rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/377/"@en ;
@@ -572,7 +694,13 @@
 ###  http://purl.org/poso/TrackedFeature
 :TrackedFeature rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
-                                <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
+                                <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasPosition ;
+                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass :Position
+                                ] ;
+                rdfs:comment "A feature of interest that is being tracked by a positioning system. This is the feature for which a position is observed."@en ;
                 rdfs:label "Tracked feature"@en .
 
 

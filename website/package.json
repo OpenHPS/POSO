@@ -1,0 +1,38 @@
+{
+  "name": "poso-website",
+  "version": "0.1.0",
+  "description": "POSO: A Generic Positioning System Ontology Website",
+  "main": "index.js",
+  "repository": "https://github.com/OpenHPS/POSO.git",
+  "author": {
+    "name": "Maxim Van de Wynckel",
+    "email": "maxim.van.de.wynckel@vub.be"
+  },
+  "contributors": [
+    "Beat Signer"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@types/node": "^17.0.23",
+    "axios": "^0.26.1",
+    "chalk": "^4.*",
+    "dotenv": "^16.0.0",
+    "fs-extra": "^10.0.1",
+    "luxon": "^2.3.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "serve": "^13.0.2",
+    "shx": "^0.3.4",
+    "unzip-stream": "^0.3.1"
+  },
+  "scripts": {
+    "clean": "rimraf ./_site",
+    "start": "eleventy --serve",
+    "build": "npm run clean && eleventy",
+    "deploy": "netlify deploy --prod --dir=_site"
+  },
+  "devDependencies": {
+    "netlify-cli": "^9.16.6"
+  }
+}

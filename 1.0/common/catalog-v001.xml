@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.org/poso/1.0/" uri="file:/Users/maximvandewynckel/workspace/POSO/1.0/poso.ttl"/>
     <uri id="User Entered Import Resolution" name="https://w3id.org/rdfp/rdfp-1.0" uri="file:/D:/maxim/workspace/POSO/1.0/poso.ttl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/poso/1.0/" uri="file:/D:/maxim/workspace/POSO/1.0/poso.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>

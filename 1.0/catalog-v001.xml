@@ -3,7 +3,5 @@
     <uri id="Imports Wizard Entry" name="http://qudt.org/2.1/schema/qudt" uri="http://qudt.org/schema/qudt/"/>
     <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/geosparql" uri="https://opengeospatial.github.io/ogc-geosparql/geosparql11/geo.ttl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/rdfp/rdfp-1.0" uri="https://w3id.org/rdfp/"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1648158167878" name="http://purl.org/poso" uri="docs/ontology.rdf"/>
-    </group>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
 </catalog>
