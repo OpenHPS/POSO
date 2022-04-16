@@ -14,22 +14,22 @@ const fse = require('fs-extra');
 async function buildOntology(version = '1.0') {
     // Download widoco
     const widocoJar = await downloadWidoco();
-    // await rmdir(path.join(__dirname, `../_site/${version}/`));
+    await rmdir(path.join(__dirname, `../_site/${version}/`));
 
-    // await executeWidoco(
-    //     widocoJar, 
-    //     path.join(__dirname, `../../${version}/poso.ttl`), 
-    //     path.join(__dirname, `../_site/${version}`)
-    // );
-    // fse.copySync(path.join(__dirname, `../_site/${version}/doc`), path.join(__dirname, `../_site/${version}`));
-    // await executeWidoco(
-    //     widocoJar, 
-    //     path.join(__dirname, `../../${version}/common/poso-common.ttl`), 
-    //     path.join(__dirname, `../_site/${version}/common`)
-    // );
-    // fse.copySync(path.join(__dirname, `../_site/${version}/common/doc`), path.join(__dirname, `../_site/${version}/common`));
-    // await rmdir(path.join(__dirname, `../_site/${version}/common/doc`));
-    // await rmdir(path.join(__dirname, `../_site/${version}/doc`));
+    await executeWidoco(
+        widocoJar, 
+        path.join(__dirname, `../../${version}/poso.ttl`), 
+        path.join(__dirname, `../_site/${version}`)
+    );
+    fse.copySync(path.join(__dirname, `../_site/${version}/doc`), path.join(__dirname, `../_site/${version}`));
+    await executeWidoco(
+        widocoJar, 
+        path.join(__dirname, `../../${version}/common/poso-common.ttl`), 
+        path.join(__dirname, `../_site/${version}/common`)
+    );
+    fse.copySync(path.join(__dirname, `../_site/${version}/common/doc`), path.join(__dirname, `../_site/${version}/common`));
+    await rmdir(path.join(__dirname, `../_site/${version}/common/doc`));
+    await rmdir(path.join(__dirname, `../_site/${version}/doc`));
     console.log(chalk.yellow(`Creating Netlify rewrites ...'`));
     await createRedirects(`${version}`, "http://purl.org/poso/");
     await createRedirects(`${version}/common`, "http://purl.org/poso/common/");
