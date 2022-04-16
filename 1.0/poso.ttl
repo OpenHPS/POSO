@@ -19,7 +19,7 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2022-04-20T00:00:00"@en ;
+                         <http://purl.org/dc/terms/modified> "2022-04-16T00:00:00"@en ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI .
@@ -285,7 +285,7 @@
               rdfs:subClassOf <http://www.w3.org/ns/sosa/ObservableProperty> ,
                               <http://www.w3.org/ns/sosa/Result> ;
               <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/Acceleration> ;
-              rdfs:comment "Acceleration cceleration is the (instantaneous) rate of change of velocity."@en ;
+              rdfs:comment "Acceleration is the (instantaneous) rate of change of velocity."@en ;
               rdfs:label "Acceleration"@en ,
                          "Versnelling"@nl .
 
@@ -310,7 +310,7 @@
 :AngularVelocity rdf:type owl:Class ;
                  rdfs:subClassOf :Velocity ;
                  <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/AngularVelocity> ;
-                 rdfs:comment "Angu,ar velocity is the momentum around a point of origin."@en ;
+                 rdfs:comment "Angular velocity is the momentum around a point of origin."@en ;
                  rdfs:label "Angular velocity"@en ,
                             "Draaisnelheid"@nl .
 

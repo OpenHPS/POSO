@@ -30,9 +30,6 @@ async function buildOntology(version = '1.0') {
     fse.copySync(path.join(__dirname, `../_site/${version}/common/doc`), path.join(__dirname, `../_site/${version}/common`));
     await rmdir(path.join(__dirname, `../_site/${version}/common/doc`));
     await rmdir(path.join(__dirname, `../_site/${version}/doc`));
-    console.log(chalk.yellow(`Creating Netlify rewrites ...'`));
-    await createRedirects(`${version}`, "http://purl.org/poso/");
-    await createRedirects(`${version}/common`, "http://purl.org/poso/common/");
 }
 
 async function downloadWidoco(version = "1.4.16") {
@@ -61,6 +58,7 @@ async function executeWidoco(file, ontologyFile, outputFolder) {
             -rewriteAll \
             -oops \
             -webVowl \
+            -lang en-nl \
             -licensius`;
         exec(cmd, (err, stdout, stderr) => {
             if (err) {
@@ -68,25 +66,6 @@ async function executeWidoco(file, ontologyFile, outputFolder) {
             }
             resolve(stderr || stdout);
         });
-    });
-}
-
-async function createRedirects(directory, uri) {
-    return new Promise((resolve) => {
-        const jsonld = path.join(__dirname, `../_site/`, directory, `/ontology.jsonld`);
-        const ontology = JSON.parse(fs.readFileSync(jsonld));
-        let rewrites = "\n\n";
-        ontology.forEach(quad => {
-            let originalUri = quad['@id'];
-            if (originalUri.startsWith(uri) && originalUri !== uri) {
-                originalUri = originalUri.replace(uri, "");
-                const newUri = `/${directory}#${originalUri}`;
-                rewrites = rewrites + `/${directory}/${originalUri}\t${newUri}\n`;
-            }
-        });
-        rewrites += "\n\n";
-        fs.appendFileSync(path.join(__dirname, "../_site/_redirects"), rewrites, { flag: "a" });
-        resolve();
     });
 }
 
