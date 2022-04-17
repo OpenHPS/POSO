@@ -84,6 +84,27 @@ async function rmdir(dir) {
 }
 
 async function rewriteLanguagePaths(directory, defaultLanguage = 'en') {
+    // Replacement patterns
+    const relativePathPattern = /(href|src?)=\"((?!http|#).*?)\"/g;
+    const relativePathSourcePattern = /.load\(\"((?!http).*?)\"/g;
+    const languagePathPattern = /href="index-([a-z]{2}?).html"/g;
+
+    // Get section files in the sections directory
+    const sectionFiles = fs.readdirSync(path.join(directory, "sections"));
+    // Create a mapping for section files with relative URIs
+    const sectionMapping = sectionFiles.map(file => {
+        const filePath = path.join(directory, "sections", file);
+        let contents = fs.readFileSync(filePath, { encoding: 'utf-8' });
+        if (relativePathPattern.exec(contents)) {
+            contents = contents.replace(relativePathPattern, '$1="../$2"');
+            const newFile = file.replace(".html", "_.html");
+            fs.writeFileSync(path.join(directory, "sections", newFile), contents);
+            return { [file]: newFile }
+        } else {
+            return { [file]: file };
+        }
+    }).reduce((a, b) => ({...a, ...b}), {});
+
     // Get index files in the directory
     const indexFiles = fs.readdirSync(directory)
         .filter(file => file.startsWith("index"));
@@ -98,8 +119,13 @@ async function rewriteLanguagePaths(directory, defaultLanguage = 'en') {
         fs.copyFileSync(oldFilePath, newFilePath);
         // URL rewriting in the new directory
         let contents = fs.readFileSync(newFilePath, { encoding: 'utf-8' });
-        contents = contents.replace(/href="index-([a-z]{2}?).html"/g, 'href="$1/"');
-        contents = contents.replace(/(href|src?)=\"((?!http).*?)\"/g, '$1="../$2"');
+        contents = contents.replace(languagePathPattern, 'href="$1/"');
+        contents = contents.replace(relativePathPattern, '$1="../$2"');
+        contents = contents.replace(relativePathSourcePattern, '.load\("../$1"');
+        // Replace sections with relative href or src
+        Object.keys(sectionMapping).forEach(sectionKey => {
+            contents = contents.replace(sectionKey, sectionMapping[sectionKey]);
+        });
         fs.writeFileSync(newFilePath, contents);
 
         if (defaultLanguage !== language) {
@@ -110,7 +136,7 @@ async function rewriteLanguagePaths(directory, defaultLanguage = 'en') {
             const defaultIndex = path.join(directory, "index.html");
             fs.renameSync(oldFilePath, defaultIndex); 
             let contents = fs.readFileSync(defaultIndex, { encoding: 'utf-8' });
-            contents = contents.replace(/href="index-([a-z]{2}?).html"/g, 'href="$1/"');
+            contents = contents.replace(languagePathPattern, 'href="$1/"');
             fs.writeFileSync(defaultIndex, contents);
         }
     });
