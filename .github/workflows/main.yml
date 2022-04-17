@@ -30,8 +30,8 @@ jobs:
         run: |
           npm run deploy
       - name: Deploy site to GitHub
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v3
         working-directory: ./website
-        run: |
-          npm run deploy:github
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
