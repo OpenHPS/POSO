@@ -22,12 +22,14 @@ async function buildOntology(version = '1.0') {
         path.join(__dirname, `../_site/${version}`)
     );
     fse.copySync(path.join(__dirname, `../_site/${version}/doc`), path.join(__dirname, `../_site/${version}`));
+    await rewriteLanguagePaths(path.join(__dirname, `../_site/${version}`));
     await executeWidoco(
         widocoJar, 
         path.join(__dirname, `../../${version}/common/poso-common.ttl`), 
         path.join(__dirname, `../_site/${version}/common`)
     );
     fse.copySync(path.join(__dirname, `../_site/${version}/common/doc`), path.join(__dirname, `../_site/${version}/common`));
+    await rewriteLanguagePaths(path.join(__dirname, `../_site/${version}/common`));
     await rmdir(path.join(__dirname, `../_site/${version}/common/doc`));
     await rmdir(path.join(__dirname, `../_site/${version}/doc`));
 }
@@ -80,5 +82,38 @@ async function rmdir(dir) {
         });
     });
 }
+
+async function rewriteLanguagePaths(directory, defaultLanguage = 'en') {
+    // Get index files in the directory
+    const indexFiles = fs.readdirSync(directory)
+        .filter(file => file.startsWith("index"));
+    indexFiles.forEach(index => {
+        // Language of the index file
+        const language = /index-(.*?).html/g.exec(index)[1];
+        const oldFilePath = path.join(directory, index);
+        const newFilePath = path.join(directory, language, "index.html");
+        // Create language directory
+        fs.mkdirSync(path.join(directory, language));
+        // Copy the file to /${language}/index.html
+        fs.copyFileSync(oldFilePath, newFilePath);
+        // URL rewriting in the new directory
+        let contents = fs.readFileSync(newFilePath, { encoding: 'utf-8' });
+        contents = contents.replace(/href="index-([a-z]{2}?).html"/g, 'href="$1/"');
+        contents = contents.replace(/(href|src?)=\"((?!http).*?)\"/g, '$1="../$2"');
+        fs.writeFileSync(newFilePath, contents);
+
+        if (defaultLanguage !== language) {
+            // Remove index file if not the default language
+            fs.rmSync(oldFilePath);
+        } else {
+            // Rename the index-*.html file to index.html
+            const defaultIndex = path.join(directory, "index.html");
+            fs.renameSync(oldFilePath, defaultIndex); 
+            let contents = fs.readFileSync(defaultIndex, { encoding: 'utf-8' });
+            contents = contents.replace(/href="index-([a-z]{2}?).html"/g, 'href="$1/"');
+            fs.writeFileSync(defaultIndex, contents);
+        }
+    });
+}  
 
 module.exports = buildOntology;
