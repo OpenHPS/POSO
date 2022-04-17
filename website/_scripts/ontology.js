@@ -58,12 +58,11 @@ async function executeWidoco(file, ontologyFile, outputFolder) {
             -ontFile ${ontologyFile} \
             -outFolder ${outputFolder} \
             -rewriteAll \
-            -oops \
             -webVowl \
-            -excludeIntroduction \
             -uniteSections \
             -lang en-nl \
             -getOntologyMetadata \
+            -noPlaceHolderText \
             -licensius`;
         exec(cmd, (err, stdout, stderr) => {
             if (err) {
