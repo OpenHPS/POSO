@@ -42,17 +42,12 @@ function loadTOC(){
 	  t+='</ul>';
 	  $("#toc").html(t); 
 }
- $.fn.ignore = function(sel){
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
- };    $(function(){
-      $("#abstract").load("../sections/abstract-nl.html"); 
-      $("#introduction").load("../sections/introduction-nl.html"); 
-      $("#overview").load("../sections/overview-nl_.html"); 
-      $("#description").load("../sections/description-nl.html"); 
-      $("#references").load("../sections/references-nl.html"); 
-      $("#crossref").load("../sections/crossref-nl.html", null, loadHash); 
-    });
-    </script> 
+ }; 
+   </script> 
   </head> 
 
 <body>
@@ -73,7 +68,7 @@ function loadTOC(){
 <dd>Beat Signer</dd>
 
 <dt>GeÃ¯mporteerde ontologieÃ«n:</dt>
-<dd><a href="http://purl.org/poso/">&lt;http://purl.org/poso/&gt;</a></dd><dd><a href="http://www.opengis.net/ont/geosparql">geosparql</a></dd><dd><a href="http://www.opengis.net/ont/gml">gml</a></dd><dd><a href="http://www.opengis.net/ont/sf">sf</a></dd><dd><a href="http://www.w3.org/2004/02/skos/core">core</a></dd><dd><a href="http://www.w3.org/ns/sosa/">&lt;http://www.w3.org/ns/sosa/&gt;</a></dd><dd><a href="http://www.w3.org/ns/ssn/">&lt;http://www.w3.org/ns/ssn/&gt;</a></dd><dd><a href="http://www.w3.org/ns/ssn/systems/">&lt;http://www.w3.org/ns/ssn/systems/&gt;</a></dd>
+<dd><a href="http://purl.org/poso/">&lt;http://purl.org/poso/&gt;</a></dd><dd><a href="http://www.opengis.net/ont/geosparql">geosparql</a></dd><dd><a href="http://www.opengis.net/ont/gml">gml</a></dd><dd><a href="http://www.opengis.net/ont/sf">sf</a></dd><dd><a href="http://www.w3.org/2004/02/skos/core">core</a></dd><dd><a href="http://www.w3.org/ns/sosa/">&lt;http://www.w3.org/ns/sosa/&gt;</a></dd><dd><a href="http://www.w3.org/ns/ssn/">&lt;http://www.w3.org/ns/ssn/&gt;</a></dd><dd><a href="http://www.w3.org/ns/ssn/systems/">&lt;http://www.w3.org/ns/ssn/systems/&gt;</a></dd><dd><a href="https://w3id.org/rdfp/rdfp-1.0">rdfp-1.0</a></dd>
 
 <dt>Download serialisatie:</dt><dd><span><a href="../ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="../ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="../ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="../ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Licentie: </dt><dd><a href="http://purl.org/NET/rdflicense/MIT1.0" target="_blank"><img src="https://img.shields.io/badge/License-http://purl.org/NET/rdflicense/MIT1.0-blue.svg" alt="http://purl.org/NET/rdflicense/MIT1.0" /></a>
 </dd><dt>Visualisatie:</dt><dd><a href="../webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
@@ -87,12 +82,848 @@ function loadTOC(){
 <div>
 <span>Ontology Specification Draft</span>
 </div>
-</div>     <div id="abstract"></div>
-<div id="toc"></div>     <div id="introduction"></div>
-     <div id="overview"></div>
-     <div id="description"></div>
-     <div id="crossref"></div>
-     <div id="references"></div>
+</div>     <div id="abstract"><h2>Samenvatting</h2><span class="markdown">
+The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning about how a system is deployed.</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Positioning System Ontology Common Technologies, Algorithms and Systems: Overzicht <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
+<span class="markdown">
+Deze ontologie heeft de volgende klassen en eigenschappen.</span>
+<h4>Concrete exemplaren</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#AbsolutePositionOutput"
+         title="http://purl.org/poso/common/AbsolutePositionOutput">Absolute position output</a>
+   </li>
+   <li>
+      <a href="#Anyplace" title="http://purl.org/poso/common/Anyplace">Anyplace</a>
+   </li>
+   <li>
+      <a href="#BDS" title="http://purl.org/poso/common/BDS">BeiDou Navigation Satellite System</a>
+   </li>
+   <li>
+      <a href="#EarthDeployment" title="http://purl.org/poso/common/EarthDeployment">Earth deployment</a>
+   </li>
+   <li>
+      <a href="#Galileo" title="http://purl.org/poso/common/Galileo">Galileo</a>
+   </li>
+   <li>
+      <a href="#GeolocationAPI" title="http://purl.org/poso/common/GeolocationAPI">Geolocation API</a>
+   </li>
+   <li>
+      <a href="#GLONASS" title="http://purl.org/poso/common/GLONASS">Global Navigation Satellite System</a>
+   </li>
+   <li>
+      <a href="#GPS" title="http://purl.org/poso/common/GPS">Global Positioning System</a>
+   </li>
+   <li>
+      <a href="#HectorSLAM" title="http://purl.org/poso/common/HectorSLAM">Hector SLAM</a>
+   </li>
+   <li>
+      <a href="#IRNSS" title="http://purl.org/poso/common/IRNSS">Indian Regional Navigation Satellite System</a>
+   </li>
+   <li>
+      <a href="#IndoorAtlas" title="http://purl.org/poso/common/IndoorAtlas">IndoorAtlas</a>
+   </li>
+   <li>
+      <a href="#KNNFingerprinting" title="http://purl.org/poso/common/KNNFingerprinting">k-NN fingerprinting</a>
+   </li>
+   <li>
+      <a href="#LDPL" title="http://purl.org/poso/common/LDPL">Log-distance path loss model</a>
+   </li>
+   <li>
+      <a href="#MidpointLateration" title="http://purl.org/poso/common/MidpointLateration">Midpoint lateration</a>
+   </li>
+   <li>
+      <a href="#NavIC" title="http://purl.org/poso/common/NavIC">Navigation Indian Constellation</a>
+   </li>
+   <li>
+      <a href="#NLSMultilateration" title="http://purl.org/poso/common/NLSMultilateration">Non-linear least squares multilateration</a>
+   </li>
+   <li>
+      <a href="#OpenHPS" title="http://purl.org/poso/common/OpenHPS">OpenHPS</a>
+   </li>
+   <li>
+      <a href="#OpenVSLAM" title="http://purl.org/poso/common/OpenVSLAM">OpenVSLAM</a>
+   </li>
+   <li>
+      <a href="#ORBSLAM2" title="http://purl.org/poso/common/ORBSLAM2">ORB-SLAM2</a>
+   </li>
+   <li>
+      <a href="#ORBSLAM3" title="http://purl.org/poso/common/ORBSLAM3">ORB-SLAM3</a>
+   </li>
+   <li>
+      <a href="#PedestrianDeadReckoning"
+         title="http://purl.org/poso/common/PedestrianDeadReckoning">Pedestrian dead reckoning</a>
+   </li>
+   <li>
+      <a href="#ProbabilisticFingerprinting"
+         title="http://purl.org/poso/common/ProbabilisticFingerprinting">Probabilistic fingerprinting</a>
+   </li>
+   <li>
+      <a href="#QZSS" title="http://purl.org/poso/common/QZSS">Quasi-Zenith Satellite System</a>
+   </li>
+   <li>
+      <a href="#RFCellIdentification" title="http://purl.org/poso/common/RFCellIdentification">RF cell identification</a>
+   </li>
+   <li>
+      <a href="#ROS" title="http://purl.org/poso/common/ROS">Robotics Operating System</a>
+   </li>
+   <li>
+      <a href="#SMPFingerprinting" title="http://purl.org/poso/common/SMPFingerprinting">SMP fingerprinting</a>
+   </li>
+   <li>
+      <a href="#SonyNimway" title="http://purl.org/poso/common/SonyNimway">Sony Nimway</a>
+   </li>
+   <li>
+      <a href="#SVMFingerprinting" title="http://purl.org/poso/common/SVMFingerprinting">SVM fingerprinting</a>
+   </li>
+   <li>
+      <a href="#WeightedAccuracyFusion"
+         title="http://purl.org/poso/common/WeightedAccuracyFusion">Weighted accuracy fusion</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="../webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Positioning System Ontology Common Technologies, Algorithms and Systems: Beschrijving <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
+<span class="markdown">
+Dit is een tijdelijke tekst voor de beschrijving van de ontologie. De beschrijving moet een uitleg en een diagram bevatten waarin wordt uitgelegd hoe de klassen met elkaar in verband staan, gebruiksvoorbeelden, enz.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Kruisverwijzing voor Positioning System Ontology Common Technologies, Algorithms and Systems klassen, objecteigenschappen en data-eigenschapen <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
+Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Positioning System Ontology Common Technologies, Algorithms and Systems.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h2>Concrete Exemplaren</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#AbsolutePositionOutput"
+            title="http://purl.org/poso/common/AbsolutePositionOutput">Absolute position output</a>
+      </li>
+      <li>
+         <a href="#Anyplace" title="http://purl.org/poso/common/Anyplace">Anyplace</a>
+      </li>
+      <li>
+         <a href="#BDS" title="http://purl.org/poso/common/BDS">BeiDou Navigation Satellite System</a>
+      </li>
+      <li>
+         <a href="#EarthDeployment" title="http://purl.org/poso/common/EarthDeployment">Earth deployment</a>
+      </li>
+      <li>
+         <a href="#Galileo" title="http://purl.org/poso/common/Galileo">Galileo</a>
+      </li>
+      <li>
+         <a href="#GeolocationAPI" title="http://purl.org/poso/common/GeolocationAPI">Geolocation API</a>
+      </li>
+      <li>
+         <a href="#GLONASS" title="http://purl.org/poso/common/GLONASS">Global Navigation Satellite System</a>
+      </li>
+      <li>
+         <a href="#GPS" title="http://purl.org/poso/common/GPS">Global Positioning System</a>
+      </li>
+      <li>
+         <a href="#HectorSLAM" title="http://purl.org/poso/common/HectorSLAM">Hector SLAM</a>
+      </li>
+      <li>
+         <a href="#IRNSS" title="http://purl.org/poso/common/IRNSS">Indian Regional Navigation Satellite System</a>
+      </li>
+      <li>
+         <a href="#IndoorAtlas" title="http://purl.org/poso/common/IndoorAtlas">IndoorAtlas</a>
+      </li>
+      <li>
+         <a href="#KNNFingerprinting" title="http://purl.org/poso/common/KNNFingerprinting">k-NN fingerprinting</a>
+      </li>
+      <li>
+         <a href="#LDPL" title="http://purl.org/poso/common/LDPL">Log-distance path loss model</a>
+      </li>
+      <li>
+         <a href="#MidpointLateration" title="http://purl.org/poso/common/MidpointLateration">Midpoint lateration</a>
+      </li>
+      <li>
+         <a href="#NavIC" title="http://purl.org/poso/common/NavIC">Navigation Indian Constellation</a>
+      </li>
+      <li>
+         <a href="#NLSMultilateration" title="http://purl.org/poso/common/NLSMultilateration">Non-linear least squares multilateration</a>
+      </li>
+      <li>
+         <a href="#OpenHPS" title="http://purl.org/poso/common/OpenHPS">OpenHPS</a>
+      </li>
+      <li>
+         <a href="#OpenVSLAM" title="http://purl.org/poso/common/OpenVSLAM">OpenVSLAM</a>
+      </li>
+      <li>
+         <a href="#ORBSLAM2" title="http://purl.org/poso/common/ORBSLAM2">ORB-SLAM2</a>
+      </li>
+      <li>
+         <a href="#ORBSLAM3" title="http://purl.org/poso/common/ORBSLAM3">ORB-SLAM3</a>
+      </li>
+      <li>
+         <a href="#PedestrianDeadReckoning"
+            title="http://purl.org/poso/common/PedestrianDeadReckoning">Pedestrian dead reckoning</a>
+      </li>
+      <li>
+         <a href="#ProbabilisticFingerprinting"
+            title="http://purl.org/poso/common/ProbabilisticFingerprinting">Probabilistic fingerprinting</a>
+      </li>
+      <li>
+         <a href="#QZSS" title="http://purl.org/poso/common/QZSS">Quasi-Zenith Satellite System</a>
+      </li>
+      <li>
+         <a href="#RFCellIdentification" title="http://purl.org/poso/common/RFCellIdentification">RF cell identification</a>
+      </li>
+      <li>
+         <a href="#ROS" title="http://purl.org/poso/common/ROS">Robotics Operating System</a>
+      </li>
+      <li>
+         <a href="#SMPFingerprinting" title="http://purl.org/poso/common/SMPFingerprinting">SMP fingerprinting</a>
+      </li>
+      <li>
+         <a href="#SonyNimway" title="http://purl.org/poso/common/SonyNimway">Sony Nimway</a>
+      </li>
+      <li>
+         <a href="#SVMFingerprinting" title="http://purl.org/poso/common/SVMFingerprinting">SVM fingerprinting</a>
+      </li>
+      <li>
+         <a href="#WeightedAccuracyFusion"
+            title="http://purl.org/poso/common/WeightedAccuracyFusion">Weighted accuracy fusion</a>
+      </li>
+   </ul>
+   <div class="entity" id="AbsolutePositionOutput">
+      <h3>Absolute position output<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/AbsolutePositionOutput</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositionOutput"
+               target="_blank"
+               title="http://purl.org/poso/PositionOutput">position output</a>
+         </dd>
+         <dd>
+            <a href="https://w3id.org/rdfp/GraphDescription"
+               target="_blank"
+               title="https://w3id.org/rdfp/GraphDescription">graph description</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Anyplace">
+      <h3>Anyplace<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/Anyplace</p>
+      <div class="comment">
+         <span class="markdown">Anyplace is a first-of-a-kind indoor information service offering GPS-less localization, navigation and search inside buildings using ordinary smartphones.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>
+            <a href="https://anyplace.cs.ucy.ac.cy/">https://anyplace.cs.ucy.ac.cy/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositioningPlatform"
+               target="_blank"
+               title="http://purl.org/poso/PositioningPlatform">positioning platform</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BDS">
+      <h3>BeiDou Navigation Satellite System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/BDS</p>
+      <div class="comment">
+         <span class="markdown">BeiDou, or BDS, is a global GNSS owned and operated by the People's Republic of China. BDS was formally commissioned in 2020. The operational system consists of 35 satellites. BDS was previously called Compass.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EarthDeployment">
+      <h3>Earth deployment<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EarthDeployment</p>
+      <div class="comment">
+         <span class="markdown">A generic deployment for any positioning system deployment on Earth.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/OutdoorDeployment"
+               target="_blank"
+               title="http://purl.org/poso/OutdoorDeployment">outdoor deployment</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Galileo">
+      <h3>Galileo<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/Galileo</p>
+      <div class="comment">
+         <span class="markdown">Galileo is a global GNSS owned and operated by the European Union. The EU declared the start of Galileo Initial Services in 2016 and plans to complete the system of 24+ satellites in 2021.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeolocationAPI">
+      <h3>Geolocation API<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/GeolocationAPI</p>
+      <div class="comment">
+         <span class="markdown">The Geolocation API is a W3C specification that provides geographical location data based on the capabilities of the hosting device.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/LocationBasedService"
+               target="_blank"
+               title="http://purl.org/poso/LocationBasedService">location based service</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GLONASS">
+      <h3>Global Navigation Satellite System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/GLONASS</p>
+      <div class="comment">
+         <span class="markdown">GLONASS (Globalnaya Navigazionnaya Sputnikovaya Sistema, or Global Navigation Satellite System) is a global GNSS owned and operated by the Russian Federation. The fully operational system consists of 24+ satellites.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GPS">
+      <h3>Global Positioning System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/GPS</p>
+      <div class="comment">
+         <span class="markdown">The Global Positioning System (GPS) is a U.S.-owned utility that provides users with positioning, navigation, and timing (PNT) services. This system consists of three segments: the space segment, the control segment, and the user segment. The U.S. Space Force develops, maintains, and operates the space and control segments.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HectorSLAM">
+      <h3>Hector SLAM<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/HectorSLAM</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/VSLAM"
+               target="_blank"
+               title="http://purl.org/poso/VSLAM">v s l a m</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IRNSS">
+      <h3>Indian Regional Navigation Satellite System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/IRNSS</p>
+      <div class="comment">
+         <span class="markdown">IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning "sailor" or "navigator").</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is gelijk aan</dt>
+         <dd>
+            <a href="#NavIC" title="http://purl.org/poso/common/NavIC">Navigation Indian Constellation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IndoorAtlas">
+      <h3>IndoorAtlas<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/IndoorAtlas</p>
+      <div class="comment">
+         <span class="markdown">Cross-platform indoor positioning SDK powered by patented 6-layer sensor fusion core. Fast development cycles. Easy to set up. Proven by 10,000+ developers.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositioningPlatform"
+               target="_blank"
+               title="http://purl.org/poso/PositioningPlatform">positioning platform</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="KNNFingerprinting">
+      <h3>k-NN fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/KNNFingerprinting</p>
+      <div class="comment">
+         <span class="markdown">k-Neirest Neighbour fingerprinting is a fingerprinting technique where a number (k) of matches are selected, as opposed to one single fingerprint match. The final output position is the (weighted) average of the k-number of selected fingerprints.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Fingerprinting"
+               target="_blank"
+               title="http://purl.org/poso/Fingerprinting">fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LDPL">
+      <h3>Log-distance path loss model<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/LDPL</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/RadioPropagation"
+               target="_blank"
+               title="http://purl.org/poso/RadioPropagation">radio propagation</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MidpointLateration">
+      <h3>Midpoint lateration<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/MidpointLateration</p>
+      <div class="comment">
+         <span class="markdown">Midpoint lateration uses the midpoint of two points.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Lateration"
+               target="_blank"
+               title="http://purl.org/poso/Lateration">lateration</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NavIC">
+      <h3>Navigation Indian Constellation<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/NavIC</p>
+      <div class="comment">
+         <span class="markdown">IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning "sailor" or "navigator").</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is gelijk aan</dt>
+         <dd>
+            <a href="#IRNSS" title="http://purl.org/poso/common/IRNSS">Indian Regional Navigation Satellite System</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NLSMultilateration">
+      <h3>Non-linear least squares multilateration<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/NLSMultilateration</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Multilateration"
+               target="_blank"
+               title="http://purl.org/poso/Multilateration">multilateration</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OpenHPS">
+      <h3>OpenHPS<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/OpenHPS</p>
+      <div class="comment">
+         <span class="markdown">OpenHPS is an open source hybrid positioning system to help developers fuse various positioning technologies and algorithms. The system offers a modular data processing framework with each modules ranging from computer vision to common algorithms such as fingerprinting or data persistence of sampled data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositioningPlatform"
+               target="_blank"
+               title="http://purl.org/poso/PositioningPlatform">positioning platform</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OpenVSLAM">
+      <h3>OpenVSLAM<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/OpenVSLAM</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/VSLAM"
+               target="_blank"
+               title="http://purl.org/poso/VSLAM">v s l a m</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ORBSLAM2">
+      <h3>ORB-SLAM2<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/ORBSLAM2</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/VSLAM"
+               target="_blank"
+               title="http://purl.org/poso/VSLAM">v s l a m</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ORBSLAM3">
+      <h3>ORB-SLAM3<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/ORBSLAM3</p>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/VSLAM"
+               target="_blank"
+               title="http://purl.org/poso/VSLAM">v s l a m</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PedestrianDeadReckoning">
+      <h3>Pedestrian dead reckoning<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/PedestrianDeadReckoning</p>
+      <div class="comment">
+         <span class="markdown">Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/DeadReckoning"
+               target="_blank"
+               title="http://purl.org/poso/DeadReckoning">dead reckoning</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ProbabilisticFingerprinting">
+      <h3>Probabilistic fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/ProbabilisticFingerprinting</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Fingerprinting"
+               target="_blank"
+               title="http://purl.org/poso/Fingerprinting">fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="QZSS">
+      <h3>Quasi-Zenith Satellite System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/QZSS</p>
+      <div class="comment">
+         <span class="markdown">QZSS is a regional GNSS owned by the Government of Japan and operated by QZS System Service Inc. (QSS). QZSS complements GPS to improve coverage in East Asia and Oceania. Japan declared the official start of QZSS services in 2018 with 4 operational satellites, and plans to expand the constellation to 7 satellites by 2023 for autonomous capability.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RFCellIdentification">
+      <h3>RF cell identification<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/RFCellIdentification</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/CellIdentification"
+               target="_blank"
+               title="http://purl.org/poso/CellIdentification">cell identification</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ROS">
+      <h3>Robotics Operating System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/ROS</p>
+      <div class="comment">
+         <span class="markdown">ROS (Robot Operating System) provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositioningPlatform"
+               target="_blank"
+               title="http://purl.org/poso/PositioningPlatform">positioning platform</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SMPFingerprinting">
+      <h3>SMP fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/SMPFingerprinting</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Fingerprinting"
+               target="_blank"
+               title="http://purl.org/poso/Fingerprinting">fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SonyNimway">
+      <h3>Sony Nimway<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/SonyNimway</p>
+      <div class="comment">
+         <span class="markdown">Nimway from Sony is a complete smart office solution for the people-centred workplace. Acting as your personal assistant throughout the workday, it facilitates many otherwise time-consuming tasks, like finding your way to a meeting room, locating a colleague or booking a desk.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositioningPlatform"
+               target="_blank"
+               title="http://purl.org/poso/PositioningPlatform">positioning platform</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SVMFingerprinting">
+      <h3>SVM fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/SVMFingerprinting</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Fingerprinting"
+               target="_blank"
+               title="http://purl.org/poso/Fingerprinting">fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WeightedAccuracyFusion">
+      <h3>Weighted accuracy fusion<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/WeightedAccuracyFusion</p>
+      <div class="comment">
+         <span class="markdown">High level fusion based on weighted average of the accuract^-1.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/HighLevelFusion"
+               target="_blank"
+               title="http://purl.org/poso/HighLevelFusion">high level fusion</a>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legenda <span class="backlink"> terug naar <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-ni" title="Concrete exemplaren">ni</sup>: Concrete exemplaren
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">Referenties <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
+<span class="markdown">
+Voeg hier uw referenties toe. Het wordt aanbevolen om ze in lijstvorm op te voeren.</span>
+
+</div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Dankbetuiging <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
 <p>

@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://purl.org/poso/common/"
      xml:base="http://purl.org/poso/common/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:ssn="http://www.w3.org/ns/ssn/"
@@ -129,20 +130,6 @@
     
 
 
-    <!-- https://w3id.org/rdfp/presentedBy -->
-
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/rdfp/presentedBy"/>
-    
-
-
-    <!-- https://w3id.org/rdfp/validationRule -->
-
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/rdfp/validationRule"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -176,13 +163,6 @@
     
 
 
-    <!-- http://purl.org/poso/HighLevelFusion -->
-
-
-    <owl:Class rdf:about="http://purl.org/poso/HighLevelFusion"/>
-    
-
-
     <!-- http://purl.org/poso/Lateration -->
 
 
@@ -201,13 +181,6 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Multilateration"/>
-    
-
-
-    <!-- http://purl.org/poso/PositionOutput -->
-
-
-    <owl:Class rdf:about="http://purl.org/poso/PositionOutput"/>
     
 
 
@@ -246,13 +219,6 @@
     
 
 
-    <!-- https://w3id.org/rdfp/GraphDescription -->
-
-
-    <owl:Class rdf:about="https://w3id.org/rdfp/GraphDescription"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -271,8 +237,8 @@
     <owl:NamedIndividual rdf:about="http://purl.org/poso/common/AbsolutePositionOutput">
         <rdf:type rdf:resource="http://purl.org/poso/PositionOutput"/>
         <rdf:type rdf:resource="https://w3id.org/rdfp/GraphDescription"/>
-        <rdfs:label xml:lang="en">Absolute position output</rdfs:label>
         <rdfp:presentedBy rdf:nodeID="genid1"/>
+        <rdfs:label xml:lang="en">Absolute position output</rdfs:label>
     </owl:NamedIndividual>
     <rdf:Description rdf:nodeID="genid1">
         <rdf:type rdf:resource="https://w3id.org/rdfp/GraphDescription"/>
