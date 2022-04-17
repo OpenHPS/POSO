@@ -31,7 +31,6 @@ jobs:
           npm run deploy
       - name: Deploy site to GitHub
         uses: peaceiris/actions-gh-pages@v3
-        working-directory: ./website
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          publish_dir: ./website/_site
