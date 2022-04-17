@@ -8,11 +8,9 @@
 
 <http://purl.org/poso/> rdf:type owl:Ontology ;
                          owl:versionIRI <http://purl.org/poso/1.0/> ;
-                         owl:imports <http://qudt.org/2.1/schema/qudt> ,
-                                     <http://www.opengis.net/ont/geosparql> ,
+                         owl:imports <http://www.opengis.net/ont/geosparql> ,
                                      <http://www.w3.org/ns/ssn/> ,
-                                     <http://www.w3.org/ns/ssn/systems/> ,
-                                     <https://w3id.org/rdfp/rdfp-1.0> ;
+                                     <http://www.w3.org/ns/ssn/systems/> ;
                          <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated."@en ;
                          <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology"^^xsd:string ;
                          <http://purl.org/dc/terms/contributor> "Beat Signer"@en ;
@@ -91,7 +89,8 @@
                  rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                  rdfs:range :Acceleration ;
                  rdfs:comment "Property that links a feature of interest to a unique acceleration property related to this feature."@en ;
-                 rdfs:label "has acceleration" .
+                 rdfs:label "has acceleration"@en ;
+                 rdfs:label "heeft versnelling"@nl .
 
 
 ###  http://purl.org/poso/hasAccuracy
@@ -100,7 +99,8 @@
              rdfs:subPropertyOf <http://www.w3.org/ns/ssn/systems/qualityOfObservation> ;
              rdf:type owl:FunctionalProperty ;
              rdfs:comment "The accuracy of an observation or observation result."@en ;
-             rdfs:label "has accuracy"@en .
+             rdfs:label "has accuracy"@en ;
+             rdfs:label "heeft accuraatheid"@nl .
 
 
 ###  http://purl.org/poso/hasCRS
@@ -138,7 +138,8 @@
                      rdfs:subPropertyOf :hasPosition ;
                      owl:inverseOf :isRelativeTo ;
                      rdfs:range :RelativePosition ;
-                     rdfs:label "has relative position"@en .
+                     rdfs:label "has relative position"@en ;
+                     rdfs:label "heeft relatieve positie"@nl .
 
 
 ###  http://purl.org/poso/hasSRS
@@ -164,19 +165,22 @@
 ###  http://purl.org/poso/isAccelerationOf
 :isAccelerationOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
-                  rdfs:label "is acceleration of"@en .
+                  rdfs:label "is acceleration of"@en ; 
+                  rdfs:label "is versnelling van"@nl .
 
 
 ###  http://purl.org/poso/isOrientationOf
 :isOrientationOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
-                 rdfs:label "is orientation of"@en .
+                 rdfs:label "is orientation of"@en ;
+                 rdfs:label "is orientatie van"@nl .
 
 
 ###  http://purl.org/poso/isPositionOf
 :isPositionOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
-              rdfs:label "is position of"@en .
+              rdfs:label "is position of"@en ;
+              rdfs:label "is positie van"@nl .
 
 
 ###  http://purl.org/poso/isRelativeTo
@@ -184,13 +188,15 @@
               rdfs:domain :RelativePosition ;
               rdfs:range <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
               rdfs:comment "Indicates a relative position to be relative to another feature."@en ;
-              rdfs:label "is relative to"@en .
+              rdfs:label "is relative to"@en ; 
+              rdfs:label "is relatief met"@nl .
 
 
 ###  http://purl.org/poso/isVelocityOf
 :isVelocityOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
-              rdfs:label "is velocity of"@en .
+              rdfs:label "is velocity of"@en ;
+              rdfs:label "is de snelheid van"@nl .
 
 
 ###  http://purl.org/poso/madeBySystem
@@ -211,21 +217,24 @@
 
 
 ###  http://purl.org/poso/pitch
-:pitch rdf:type owl:ObjectProperty ;
+:pitch rdf:type owl:ObjectProperty ,
+                owl:FunctionalProperty ;
        rdfs:domain :EulerOrientation ;
        rdfs:range rdfs:Class ;
        rdfs:label "pitch"@en .
 
 
 ###  http://purl.org/poso/roll
-:roll rdf:type owl:ObjectProperty ;
+:roll rdf:type owl:ObjectProperty ,
+               owl:FunctionalProperty ;
       rdfs:domain :EulerOrientation ;
       rdfs:range rdfs:Class ;
       rdfs:label "roll"@en .
 
 
 ###  http://purl.org/poso/scalar
-:scalar rdf:type owl:ObjectProperty ;
+:scalar rdf:type owl:ObjectProperty ,
+                 owl:FunctionalProperty ;
         rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
         rdfs:range rdfs:Class ;
         rdfs:label "scalar"@en ;
@@ -251,7 +260,8 @@
 
 
 ###  http://purl.org/poso/yaw
-:yaw rdf:type owl:ObjectProperty ;
+:yaw rdf:type owl:ObjectProperty ,
+              owl:FunctionalProperty ;
      rdfs:domain :EulerOrientation ;
      rdfs:range rdfs:Class ;
      rdfs:label "yaw"@en .
