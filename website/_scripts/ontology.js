@@ -5,7 +5,6 @@ const { exec } = require('child_process');
 const fs = require('fs');
 const rimraf = require('rimraf');
 const fse = require('fs-extra');
-const N3 = require('n3');
 
 /**
  * Build the ontology
