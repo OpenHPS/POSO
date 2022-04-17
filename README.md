@@ -1,7 +1,7 @@
 # POSO: A Generic Positioning System Ontology
 *POSO is a generic ontology positioning system ontology. Other than many geospatial ontologies, POSO focuses on the semantics needed to express a positioning system, their techiques and the location data along with other information it can output.
 
-> :warning **Attention**: This repository is currently anonymised using [https://anonymous.4open.science/](https://anonymous.4open.science/) for the ISWC2022 blind review process. This anonymisation includes the ontologies, source code, license, documentation, website and permanent URL (purl.org) of the poso ontology. Please do not fork or use this repository.
+> :warning: **Attention**: This repository is currently anonymised using [https://anonymous.4open.science/](https://anonymous.4open.science/) for the ISWC2022 blind review process. This anonymisation includes the ontologies, source code, license, documentation, website and permanent URL (purl.org) of the poso ontology. Please do not fork or use this repository.
 
 ## Repository Contents
 - `/1.0/`: POSO 1.0 ontology and related modules
@@ -16,9 +16,11 @@
 ## Documentation
 Documentation is provided using WIDOCO [1] and generated in the `./website` directory upon building the website.
 
-**POSO Ontology (en)**: [https://anonymous.4open.science/w/POSO-5477/1.0/](https://anonymous.4open.science/w/POSO-5477/1.0/)
-
+**POSO Ontology (en)**: [https://anonymous.4open.science/w/POSO-5477/1.0/](https://anonymous.4open.science/w/POSO-5477/1.0/)\
 **POSO-common module (en)**: [https://anonymous.4open.science/w/POSO-5477/1.0/common/](https://anonymous.4open.science/w/POSO-5477/1.0/common/)
+
+
+> :warning: *If you get a 404 error when clicking on the above URLs, refresh the browser or copy the link to the address bar (issue in the anonymised repository UI)*
 
 ![](docs/images/systems_and_procedures.svg)
 
