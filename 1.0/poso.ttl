@@ -10,14 +10,15 @@
                          owl:versionIRI <http://purl.org/poso/1.0/> ;
                          owl:imports <http://www.opengis.net/ont/geosparql> ,
                                      <http://www.w3.org/ns/ssn/> ,
-                                     <http://www.w3.org/ns/ssn/systems/> ;
+                                     <http://www.w3.org/ns/ssn/systems/> ,
+                                     <https://w3id.org/rdfp/rdfp-1.0> ;
                          <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated."@en ;
                          <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology"^^xsd:string ;
                          <http://purl.org/dc/terms/contributor> "Beat Signer"@en ;
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2022-04-16T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2022-04-17T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI .
@@ -70,6 +71,10 @@
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
+###  http://qudt.org/schema/qudt/example
+<http://qudt.org/schema/qudt/example> rdf:type owl:AnnotationProperty .
+
+
 ###  http://qudt.org/schema/qudt/hasQuantityKind
 <http://qudt.org/schema/qudt/hasQuantityKind> rdf:type owl:AnnotationProperty .
 
@@ -89,18 +94,17 @@
                  rdfs:domain <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                  rdfs:range :Acceleration ;
                  rdfs:comment "Property that links a feature of interest to a unique acceleration property related to this feature."@en ;
-                 rdfs:label "has acceleration"@en ;
-                 rdfs:label "heeft versnelling"@nl .
+                 rdfs:label "has acceleration"@en ,
+                            "heeft versnelling"@nl .
 
 
 ###  http://purl.org/poso/hasAccuracy
 :hasAccuracy rdf:type owl:ObjectProperty ;
-             owl:equivalentProperty <http://www.opengis.net/ont/geosparql#hasSpatialAccuracy> ;
-             rdfs:subPropertyOf <http://www.w3.org/ns/ssn/systems/qualityOfObservation> ;
+             rdfs:subPropertyOf <http://www.w3.org/ns/ssn/hasProperty> ;
              rdf:type owl:FunctionalProperty ;
-             rdfs:comment "The accuracy of an observation or observation result."@en ;
-             rdfs:label "has accuracy"@en ;
-             rdfs:label "heeft accuraatheid"@nl .
+             rdfs:comment "The accuracy of an entity."@en ;
+             rdfs:label "has accuracy"@en ,
+                        "heeft accuraatheid"@nl .
 
 
 ###  http://purl.org/poso/hasCRS
@@ -138,8 +142,8 @@
                      rdfs:subPropertyOf :hasPosition ;
                      owl:inverseOf :isRelativeTo ;
                      rdfs:range :RelativePosition ;
-                     rdfs:label "has relative position"@en ;
-                     rdfs:label "heeft relatieve positie"@nl .
+                     rdfs:label "has relative position"@en ,
+                                "heeft relatieve positie"@nl .
 
 
 ###  http://purl.org/poso/hasSRS
@@ -165,22 +169,22 @@
 ###  http://purl.org/poso/isAccelerationOf
 :isAccelerationOf rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
-                  rdfs:label "is acceleration of"@en ; 
-                  rdfs:label "is versnelling van"@nl .
+                  rdfs:label "is acceleration of"@en ,
+                             "is versnelling van"@nl .
 
 
 ###  http://purl.org/poso/isOrientationOf
 :isOrientationOf rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
-                 rdfs:label "is orientation of"@en ;
-                 rdfs:label "is orientatie van"@nl .
+                 rdfs:label "is orientatie van"@nl ,
+                            "is orientation of"@en .
 
 
 ###  http://purl.org/poso/isPositionOf
 :isPositionOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
-              rdfs:label "is position of"@en ;
-              rdfs:label "is positie van"@nl .
+              rdfs:label "is positie van"@nl ,
+                         "is position of"@en .
 
 
 ###  http://purl.org/poso/isRelativeTo
@@ -188,15 +192,15 @@
               rdfs:domain :RelativePosition ;
               rdfs:range <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
               rdfs:comment "Indicates a relative position to be relative to another feature."@en ;
-              rdfs:label "is relative to"@en ; 
-              rdfs:label "is relatief met"@nl .
+              rdfs:label "is relatief met"@nl ,
+                         "is relative to"@en .
 
 
 ###  http://purl.org/poso/isVelocityOf
 :isVelocityOf rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://www.w3.org/ns/ssn/isPropertyOf> ;
-              rdfs:label "is velocity of"@en ;
-              rdfs:label "is de snelheid van"@nl .
+              rdfs:label "is de snelheid van"@nl ,
+                         "is velocity of"@en .
 
 
 ###  http://purl.org/poso/madeBySystem
@@ -275,8 +279,6 @@
             rdfs:comment "Quantitative result value along the Z-axis of a spatial sensor."@en ;
             rdfs:label "z-axis value"@en .
 
-
-###  http://www.opengis.net/ont/geosparql#hasSpatialAccuracy
 
 #################################################################
 #    Classes
@@ -408,6 +410,14 @@
                 rdfs:label "Fingerprinting"@en .
 
 
+###  http://purl.org/poso/HighLevelFusion
+:HighLevelFusion rdf:type owl:Class ;
+                 rdfs:subClassOf :SensorFusion ;
+                 rdfs:comment "High level sensor fusion is about fusing both objects and their trajectories. We're not only relying on detections, but also on predictions and tracking."@en ;
+                 rdfs:isDefinedBy "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^xsd:anyURI ;
+                 rdfs:label "High level sensor fusion"@en .
+
+
 ###  http://purl.org/poso/HybridPositioningSystem
 :HybridPositioningSystem rdf:type owl:Class ;
                          rdfs:subClassOf :PositioningSystem ,
@@ -490,11 +500,33 @@
                       rdfs:label "Location based service"@en .
 
 
+###  http://purl.org/poso/LowLevelFusion
+:LowLevelFusion rdf:type owl:Class ;
+                rdfs:subClassOf :SensorFusion ;
+                rdfs:comment "Low Level Sensor Fusion is about fusing the raw data coming from multiple sensors. For example, we fuse point clouds coming from LiDARs and pixels coming from cameras."@en ;
+                rdfs:isDefinedBy "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^xsd:anyURI ;
+                rdfs:label "Low level sensor fusion"@en .
+
+
 ###  http://purl.org/poso/MagneticOdometry
 :MagneticOdometry rdf:type owl:Class ;
                   rdfs:subClassOf :Odometry ;
                   rdfs:comment "Magnetic field odometry is the procedure of detecting movement by analyizing how the magnetic field is changing from one Observation to another."@en ;
                   rdfs:label "Magnetic odometry"@en .
+
+
+###  http://purl.org/poso/MapOutput
+:MapOutput rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/ssn/Output> ;
+           rdfs:label "Map output"@en .
+
+
+###  http://purl.org/poso/MidLevelFusion
+:MidLevelFusion rdf:type owl:Class ;
+                rdfs:subClassOf :SensorFusion ;
+                rdfs:comment "Mid-Level sensor fusion is about fusing the objects detected independently on sensor data."@en ;
+                rdfs:isDefinedBy "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^xsd:anyURI ;
+                rdfs:label "Mid level sensor fusion"@en .
 
 
 ###  http://purl.org/poso/Movement
@@ -564,6 +596,12 @@
           rdfs:comment "A position indicates where an entity is located."@en ;
           rdfs:label "Positie"@nl ,
                      "Position"@en .
+
+
+###  http://purl.org/poso/PositionOutput
+:PositionOutput rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.w3.org/ns/ssn/Output> ;
+                rdfs:label "Position output"@en .
 
 
 ###  http://purl.org/poso/PositioningPlatform
@@ -737,6 +775,12 @@
           rdfs:label "Velocity"@en .
 
 
+###  http://purl.org/poso/VisualInput
+:VisualInput rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/ssn/Input> ;
+             rdfs:label "Visual input"@en .
+
+
 ###  http://purl.org/poso/VisualLandmark
 :VisualLandmark rdf:type owl:Class ;
                 rdfs:subClassOf :Landmark ;
@@ -753,6 +797,10 @@
 
 ###  http://www.opengis.net/ont/geosparql#Geometry
 <http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+rdfs:Class rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/sosa/FeatureOfInterest
