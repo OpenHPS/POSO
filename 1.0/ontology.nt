@@ -3,13 +3,14 @@
 <http://purl.org/poso/> <http://www.w3.org/2002/07/owl#imports> <http://www.opengis.net/ont/geosparql> .
 <http://purl.org/poso/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
 <http://purl.org/poso/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/systems/> .
+<http://purl.org/poso/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/rdfp/rdfp-1.0> .
 <http://purl.org/poso/> <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated."@en .
 <http://purl.org/poso/> <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology" .
 <http://purl.org/poso/> <http://purl.org/dc/terms/contributor> "Beat Signer"@en .
 <http://purl.org/poso/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/poso/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
 <http://purl.org/poso/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2022-04-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2022-04-17T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/poso/> <http://purl.org/dc/terms/title> "Positioning System Ontology"@en .
 <http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" .
 <http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -85,9 +86,9 @@
 # 
 # http://purl.org/poso/hasAccuracy
 <http://purl.org/poso/hasAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/poso/hasAccuracy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/systems/qualityOfObservation> .
+<http://purl.org/poso/hasAccuracy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
 <http://purl.org/poso/hasAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://purl.org/poso/hasAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "The accuracy of an observation or observation result."@en .
+<http://purl.org/poso/hasAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "The accuracy of an entity."@en .
 <http://purl.org/poso/hasAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "has accuracy"@en .
 <http://purl.org/poso/hasAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "heeft accuraatheid"@nl .
 # 
@@ -188,7 +189,6 @@
 <http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/forProperty> .
 <http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/System> .
 <http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
-<http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a system and an observable property class to identify that a system observes a specific type of property."@en .
 <http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#label> "observes type"@en .
 # 
@@ -367,6 +367,13 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/poso/Fingerprinting> <http://www.w3.org/2000/01/rdf-schema#comment> "Fingerprinting is a positioning Procedure where sensor data is collected at a specific position and orientation. During the offline-stage of a positioning system, the significant data features are extracted and stored for that position. In the online-stage, the closest match(es) of the features are determined to predict the position."@en .
 <http://purl.org/poso/Fingerprinting> <http://www.w3.org/2000/01/rdf-schema#label> "Fingerprinting"@en .
 # 
+# http://purl.org/poso/HighLevelFusion
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/SensorFusion> .
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2000/01/rdf-schema#comment> "High level sensor fusion is about fusing both objects and their trajectories. We're not only relying on detections, but also on predictions and tracking."@en .
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2000/01/rdf-schema#label> "High level sensor fusion"@en .
+# 
 # http://purl.org/poso/HybridPositioningSystem
 <http://purl.org/poso/HybridPositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/HybridPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningSystem> .
@@ -439,11 +446,30 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/poso/LocationBasedService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://isotc211.geolexica.org/concepts/278/> .
 <http://purl.org/poso/LocationBasedService> <http://www.w3.org/2000/01/rdf-schema#label> "Location based service"@en .
 # 
+# http://purl.org/poso/LowLevelFusion
+<http://purl.org/poso/LowLevelFusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/LowLevelFusion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/SensorFusion> .
+<http://purl.org/poso/LowLevelFusion> <http://www.w3.org/2000/01/rdf-schema#comment> "Low Level Sensor Fusion is about fusing the raw data coming from multiple sensors. For example, we fuse point clouds coming from LiDARs and pixels coming from cameras."@en .
+<http://purl.org/poso/LowLevelFusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/LowLevelFusion> <http://www.w3.org/2000/01/rdf-schema#label> "Low level sensor fusion"@en .
+# 
 # http://purl.org/poso/MagneticOdometry
 <http://purl.org/poso/MagneticOdometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/MagneticOdometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Odometry> .
 <http://purl.org/poso/MagneticOdometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Magnetic field odometry is the procedure of detecting movement by analyizing how the magnetic field is changing from one Observation to another."@en .
 <http://purl.org/poso/MagneticOdometry> <http://www.w3.org/2000/01/rdf-schema#label> "Magnetic odometry"@en .
+# 
+# http://purl.org/poso/MapOutput
+<http://purl.org/poso/MapOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/MapOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Output> .
+<http://purl.org/poso/MapOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Map output"@en .
+# 
+# http://purl.org/poso/MidLevelFusion
+<http://purl.org/poso/MidLevelFusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/MidLevelFusion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/SensorFusion> .
+<http://purl.org/poso/MidLevelFusion> <http://www.w3.org/2000/01/rdf-schema#comment> "Mid-Level sensor fusion is about fusing the objects detected independently on sensor data."@en .
+<http://purl.org/poso/MidLevelFusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/MidLevelFusion> <http://www.w3.org/2000/01/rdf-schema#label> "Mid level sensor fusion"@en .
 # 
 # http://purl.org/poso/Movement
 <http://purl.org/poso/Movement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -504,6 +530,11 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/poso/Position> <http://www.w3.org/2000/01/rdf-schema#comment> "A position indicates where an entity is located."@en .
 <http://purl.org/poso/Position> <http://www.w3.org/2000/01/rdf-schema#label> "Positie"@nl .
 <http://purl.org/poso/Position> <http://www.w3.org/2000/01/rdf-schema#label> "Position"@en .
+# 
+# http://purl.org/poso/PositionOutput
+<http://purl.org/poso/PositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/PositionOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Output> .
+<http://purl.org/poso/PositionOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Position output"@en .
 # 
 # http://purl.org/poso/PositioningPlatform
 <http://purl.org/poso/PositioningPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -658,6 +689,11 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/poso/Velocity> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear or angular velocity of a feature."@en .
 <http://purl.org/poso/Velocity> <http://www.w3.org/2000/01/rdf-schema#label> "Velocity"@en .
 # 
+# http://purl.org/poso/VisualInput
+<http://purl.org/poso/VisualInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/VisualInput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Input> .
+<http://purl.org/poso/VisualInput> <http://www.w3.org/2000/01/rdf-schema#label> "Visual input"@en .
+# 
 # http://purl.org/poso/VisualLandmark
 <http://purl.org/poso/VisualLandmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/VisualLandmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Landmark> .
@@ -674,6 +710,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2000/01/rdf-schema#Class
+<http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/ns/sosa/FeatureOfInterest
 <http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

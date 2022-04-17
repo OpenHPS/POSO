@@ -7,7 +7,7 @@
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/poso/common/> <http://purl.org/dc/terms/modified> "2022-04-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/common/> <http://purl.org/dc/terms/modified> "2022-04-7T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en .
 <http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso-common" .
 <http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -53,6 +53,15 @@
 # http://www.w3.org/2004/02/skos/core#example
 <http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.w3.org/ns/shacl#targetClass
+<http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/rdfp/presentedBy
+<https://w3id.org/rdfp/presentedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/rdfp/validationRule
+<https://w3id.org/rdfp/validationRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # 
 # 
 # #################################################################
@@ -83,6 +92,9 @@
 # http://purl.org/poso/Multilateration
 <http://purl.org/poso/Multilateration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# http://purl.org/poso/PositionOutput
+<http://purl.org/poso/PositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://purl.org/poso/PositioningPlatform
 <http://purl.org/poso/PositioningPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
@@ -95,6 +107,12 @@
 # http://purl.org/poso/VSLAM
 <http://purl.org/poso/VSLAM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# http://www.w3.org/ns/shacl#NodeShape
+<http://www.w3.org/ns/shacl#NodeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/rdfp/GraphDescription
+<https://w3id.org/rdfp/GraphDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # 
 # 
 # #################################################################
@@ -103,6 +121,17 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/poso/common/AbsolutePositionOutput
+<http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/PositionOutput> .
+<http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdfp/GraphDescription> .
+<http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Absolute position output"@en .
+<http://purl.org/poso/common/AbsolutePositionOutput> <https://w3id.org/rdfp/presentedBy> _:genid1 .
+_:genid1 <https://w3id.org/rdfp/validationRule> _:genid2 .
+_:genid2 <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/poso/AbsolutePosition> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdfp/GraphDescription> .
 # 
 # http://purl.org/poso/common/Anyplace
 <http://purl.org/poso/common/Anyplace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

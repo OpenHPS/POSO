@@ -9,9 +9,11 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:qudt="http://qudt.org/schema/qudt/"
+     xmlns:rdfp="https://w3id.org/rdfp/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:shacl="http://www.w3.org/ns/shacl#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="http://purl.org/poso/common/">
@@ -23,7 +25,7 @@
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-16T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-7T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology Common Technologies, Algorithms and Systems</terms:title>
         <vann:preferredNamespacePrefix>poso-common</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/common/</vann:preferredNamespaceUri>
@@ -120,6 +122,27 @@
     
 
 
+    <!-- http://www.w3.org/ns/shacl#targetClass -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#targetClass"/>
+    
+
+
+    <!-- https://w3id.org/rdfp/presentedBy -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rdfp/presentedBy"/>
+    
+
+
+    <!-- https://w3id.org/rdfp/validationRule -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rdfp/validationRule"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -181,6 +204,13 @@
     
 
 
+    <!-- http://purl.org/poso/PositionOutput -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/PositionOutput"/>
+    
+
+
     <!-- http://purl.org/poso/PositioningPlatform -->
 
 
@@ -209,6 +239,20 @@
     
 
 
+    <!-- http://www.w3.org/ns/shacl#NodeShape -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/shacl#NodeShape"/>
+    
+
+
+    <!-- https://w3id.org/rdfp/GraphDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/rdfp/GraphDescription"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -218,6 +262,26 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/poso/common/AbsolutePositionOutput -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/AbsolutePositionOutput">
+        <rdf:type rdf:resource="http://purl.org/poso/PositionOutput"/>
+        <rdf:type rdf:resource="https://w3id.org/rdfp/GraphDescription"/>
+        <rdfs:label xml:lang="en">Absolute position output</rdfs:label>
+        <rdfp:presentedBy rdf:nodeID="genid1"/>
+    </owl:NamedIndividual>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="https://w3id.org/rdfp/GraphDescription"/>
+        <rdfp:validationRule rdf:nodeID="genid2"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:targetClass rdf:resource="http://purl.org/poso/AbsolutePosition"/>
+    </rdf:Description>
     
 
 

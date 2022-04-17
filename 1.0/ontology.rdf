@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://purl.org/poso/"
      xml:base="http://purl.org/poso/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -18,13 +19,14 @@
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/systems/"/>
+        <owl:imports rdf:resource="https://w3id.org/rdfp/rdfp-1.0"/>
         <terms:abstract xml:lang="en">The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.</terms:abstract>
         <terms:bibliographicCitation>Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology</terms:bibliographicCitation>
         <terms:contributor xml:lang="en">Beat Signer</terms:contributor>
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-16T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-17T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology</terms:title>
         <vann:preferredNamespacePrefix>poso</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/</vann:preferredNamespaceUri>
@@ -173,9 +175,9 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/poso/hasAccuracy">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/systems/qualityOfObservation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:comment xml:lang="en">The accuracy of an observation or observation result.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The accuracy of an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">has accuracy</rdfs:label>
         <rdfs:label xml:lang="nl">heeft accuraatheid</rdfs:label>
     </owl:ObjectProperty>
@@ -637,6 +639,18 @@
     
 
 
+    <!-- http://purl.org/poso/HighLevelFusion -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/HighLevelFusion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/SensorFusion"/>
+        <rdfs:comment xml:lang="en">High level sensor fusion is about fusing both objects and their trajectories. We&apos;re not only relying on detections, but also on predictions and tracking.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">High level sensor fusion</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/HybridPositioningSystem -->
 
 
@@ -761,6 +775,18 @@
     
 
 
+    <!-- http://purl.org/poso/LowLevelFusion -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/LowLevelFusion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/SensorFusion"/>
+        <rdfs:comment xml:lang="en">Low Level Sensor Fusion is about fusing the raw data coming from multiple sensors. For example, we fuse point clouds coming from LiDARs and pixels coming from cameras.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Low level sensor fusion</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/MagneticOdometry -->
 
 
@@ -768,6 +794,28 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/Odometry"/>
         <rdfs:comment xml:lang="en">Magnetic field odometry is the procedure of detecting movement by analyizing how the magnetic field is changing from one Observation to another.</rdfs:comment>
         <rdfs:label xml:lang="en">Magnetic odometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/MapOutput -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/MapOutput">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <rdfs:label xml:lang="en">Map output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/MidLevelFusion -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/MidLevelFusion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/SensorFusion"/>
+        <rdfs:comment xml:lang="en">Mid-Level sensor fusion is about fusing the objects detected independently on sensor data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Mid level sensor fusion</rdfs:label>
     </owl:Class>
     
 
@@ -873,6 +921,16 @@
         <rdfs:comment xml:lang="en">A position indicates where an entity is located.</rdfs:comment>
         <rdfs:label xml:lang="nl">Positie</rdfs:label>
         <rdfs:label xml:lang="en">Position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/PositionOutput -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/PositionOutput">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <rdfs:label xml:lang="en">Position output</rdfs:label>
     </owl:Class>
     
 
@@ -1130,6 +1188,16 @@
         <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/Velocity"/>
         <rdfs:comment xml:lang="en">Linear or angular velocity of a feature.</rdfs:comment>
         <rdfs:label xml:lang="en">Velocity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/VisualInput -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/VisualInput">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Input"/>
+        <rdfs:label xml:lang="en">Visual input</rdfs:label>
     </owl:Class>
     
 

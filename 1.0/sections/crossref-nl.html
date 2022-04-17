@@ -40,6 +40,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#Fingerprinting" title="http://purl.org/poso/Fingerprinting">Fingerprinting</a>
       </li>
       <li>
+         <a href="#HighLevelFusion" title="http://purl.org/poso/HighLevelFusion">High level sensor fusion</a>
+      </li>
+      <li>
          <a href="#IndoorDeployment" title="http://purl.org/poso/IndoorDeployment">Indoor deployment</a>
       </li>
       <li>
@@ -70,7 +73,16 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#LocationBasedService" title="http://purl.org/poso/LocationBasedService">Location based service</a>
       </li>
       <li>
+         <a href="#LowLevelFusion" title="http://purl.org/poso/LowLevelFusion">Low level sensor fusion</a>
+      </li>
+      <li>
          <a href="#MagneticOdometry" title="http://purl.org/poso/MagneticOdometry">Magnetic odometry</a>
+      </li>
+      <li>
+         <a href="#MapOutput" title="http://purl.org/poso/MapOutput">Map output</a>
+      </li>
+      <li>
+         <a href="#MidLevelFusion" title="http://purl.org/poso/MidLevelFusion">Mid level sensor fusion</a>
       </li>
       <li>
          <a href="#Movement" title="http://purl.org/poso/Movement">Movement</a>
@@ -98,6 +110,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </li>
       <li>
          <a href="#Position" title="http://purl.org/poso/Position">Positie</a>
+      </li>
+      <li>
+         <a href="#PositionOutput" title="http://purl.org/poso/PositionOutput">Position output</a>
       </li>
       <li>
          <a href="#PositioningPlatform" title="http://purl.org/poso/PositioningPlatform">Positioning platform</a>
@@ -152,6 +167,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </li>
       <li>
          <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Versnelling</a>
+      </li>
+      <li>
+         <a href="#VisualInput" title="http://purl.org/poso/VisualInput">Visual input</a>
       </li>
       <li>
          <a href="#VisualLandmark" title="http://purl.org/poso/VisualLandmark">Visual landmark</a>
@@ -402,6 +420,28 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
+   <div class="entity" id="HighLevelFusion">
+      <h3>High level sensor fusion<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/HighLevelFusion</p>
+      <div class="comment">
+         <span class="markdown">High level sensor fusion is about fusing both objects and their trajectories. We're not only relying on detections, but also on predictions and tracking.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#SensorFusion" title="http://purl.org/poso/SensorFusion">Sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="IndoorDeployment">
       <h3>Indoor deployment<sup class="type-c" title="klasse">c</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
@@ -619,6 +659,28 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
+   <div class="entity" id="LowLevelFusion">
+      <h3>Low level sensor fusion<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/LowLevelFusion</p>
+      <div class="comment">
+         <span class="markdown">Low Level Sensor Fusion is about fusing the raw data coming from multiple sensors. For example, we fuse point clouds coming from LiDARs and pixels coming from cameras.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#SensorFusion" title="http://purl.org/poso/SensorFusion">Sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="MagneticOdometry">
       <h3>Magnetic odometry<sup class="type-c" title="klasse">c</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
@@ -633,6 +695,44 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dt>heeft superklassen</dt>
          <dd>
             <a href="#Odometry" title="http://purl.org/poso/Odometry">Odometry</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MapOutput">
+      <h3>Map output<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/MapOutput</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Output"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Output">output</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MidLevelFusion">
+      <h3>Mid level sensor fusion<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/MidLevelFusion</p>
+      <div class="comment">
+         <span class="markdown">Mid-Level sensor fusion is about fusing the objects detected independently on sensor data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#SensorFusion" title="http://purl.org/poso/SensorFusion">Sensor fusion</a>
             <sup class="type-c" title="klasse">c</sup>
          </dd>
       </dl>
@@ -840,6 +940,22 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dd>
             <a href="#hasPosition" title="http://purl.org/poso/hasPosition">heeft positie</a>
             <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PositionOutput">
+      <h3>Position output<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/PositionOutput</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Output"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Output">output</a>
          </dd>
       </dl>
    </div>
@@ -1124,6 +1240,13 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
                target="_blank"
                title="http://www.w3.org/ns/sosa/Procedure">procedure</a>
          </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#HighLevelFusion" title="http://purl.org/poso/HighLevelFusion">High level sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#LowLevelFusion" title="http://purl.org/poso/LowLevelFusion">Low level sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#MidLevelFusion" title="http://purl.org/poso/MidLevelFusion">Mid level sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="SLAM">
@@ -1279,6 +1402,22 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dd>
             <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">heeft versnelling</a>
             <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VisualInput">
+      <h3>Visual input<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/VisualInput</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Input"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Input">input</a>
          </dd>
       </dl>
    </div>
@@ -1458,7 +1597,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       <p>
          <strong>IRI:</strong> http://purl.org/poso/hasAccuracy</p>
       <div class="comment">
-         <span class="markdown">The accuracy of an observation or observation result.</span>
+         <span class="markdown">The accuracy of an entity.</span>
       </div>
       <div class="description">
          <p>
@@ -1467,9 +1606,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dl>
             <dt>heeft supereigenschappen</dt>
             <dd>
-               <a href="http://www.w3.org/ns/ssn/systems/qualityOfObservation"
+               <a href="http://www.w3.org/ns/ssn/hasProperty"
                   target="_blank"
-                  title="http://www.w3.org/ns/ssn/systems/qualityOfObservation">quality of observation</a>
+                  title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
             </dd>
          </dl>
       </div>

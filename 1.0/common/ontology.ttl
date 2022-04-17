@@ -15,7 +15,7 @@
                                 <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                                 <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                                <http://purl.org/dc/terms/modified> "2022-04-16T00:00:00"^^xsd:dateTime ;
+                                <http://purl.org/dc/terms/modified> "2022-04-7T00:00:00"^^xsd:dateTime ;
                                 <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en ;
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso-common" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^xsd:anyURI .
@@ -68,6 +68,18 @@
 <http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/ns/shacl#targetClass
+<http://www.w3.org/ns/shacl#targetClass> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rdfp/presentedBy
+<https://w3id.org/rdfp/presentedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rdfp/validationRule
+<https://w3id.org/rdfp/validationRule> rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -100,6 +112,10 @@
 <http://purl.org/poso/Multilateration> rdf:type owl:Class .
 
 
+###  http://purl.org/poso/PositionOutput
+<http://purl.org/poso/PositionOutput> rdf:type owl:Class .
+
+
 ###  http://purl.org/poso/PositioningPlatform
 <http://purl.org/poso/PositioningPlatform> rdf:type owl:Class .
 
@@ -116,9 +132,31 @@
 <http://purl.org/poso/VSLAM> rdf:type owl:Class .
 
 
+###  http://www.w3.org/ns/shacl#NodeShape
+<http://www.w3.org/ns/shacl#NodeShape> rdf:type owl:Class .
+
+
+###  https://w3id.org/rdfp/GraphDescription
+<https://w3id.org/rdfp/GraphDescription> rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://purl.org/poso/common/AbsolutePositionOutput
+:AbsolutePositionOutput rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/poso/PositionOutput> ,
+                                 <https://w3id.org/rdfp/GraphDescription> ;
+                        rdfs:label "Absolute position output"@en ;
+                        <https://w3id.org/rdfp/presentedBy> _:genid1 .
+
+_:genid1 rdf:type <https://w3id.org/rdfp/GraphDescription> ;
+          <https://w3id.org/rdfp/validationRule> _:genid2 .
+
+_:genid2 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+          <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/poso/AbsolutePosition> .
+
 
 ###  http://purl.org/poso/common/Anyplace
 :Anyplace rdf:type owl:NamedIndividual ,

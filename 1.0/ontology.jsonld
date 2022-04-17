@@ -203,7 +203,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2022-04-16T00:00:00"
+    "@value" : "2022-04-17T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -222,6 +222,8 @@
     "@id" : "http://www.w3.org/ns/ssn/"
   }, {
     "@id" : "http://www.w3.org/ns/ssn/systems/"
+  }, {
+    "@id" : "https://w3id.org/rdfp/rdfp-1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "http://purl.org/poso/1.0/"
@@ -452,6 +454,24 @@
     "@id" : "http://purl.org/poso/PositioningTechnique"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/HighLevelFusion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "High level sensor fusion is about fusing both objects and their trajectories. We're not only relying on detections, but also on predictions and tracking."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High level sensor fusion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/SensorFusion"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/HybridPositioningSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -613,6 +633,24 @@
     "@id" : "http://www.w3.org/ns/ssn/System"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/LowLevelFusion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Low Level Sensor Fusion is about fusing the raw data coming from multiple sensors. For example, we fuse point clouds coming from LiDARs and pixels coming from cameras."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Low level sensor fusion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/SensorFusion"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/MagneticOdometry",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -625,6 +663,34 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/Odometry"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/MapOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Map output"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Output"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/MidLevelFusion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Mid-Level sensor fusion is about fusing the objects detected independently on sensor data."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mid level sensor fusion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/SensorFusion"
   } ]
 }, {
   "@id" : "http://purl.org/poso/Movement",
@@ -766,6 +832,16 @@
     "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
   }, {
     "@id" : "http://www.w3.org/ns/sosa/Result"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/PositionOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Position output"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Output"
   } ]
 }, {
   "@id" : "http://purl.org/poso/PositioningPlatform",
@@ -1079,6 +1155,16 @@
     "@id" : "http://www.w3.org/ns/sosa/Result"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/VisualInput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Visual input"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Input"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/VisualLandmark",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1137,7 +1223,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The accuracy of an observation or observation result."
+    "@value" : "The accuracy of an entity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1147,7 +1233,7 @@
     "@value" : "heeft accuraatheid"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/systems/qualityOfObservation"
+    "@id" : "http://www.w3.org/ns/ssn/hasProperty"
   } ]
 }, {
   "@id" : "http://purl.org/poso/hasCRS",
