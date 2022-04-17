@@ -32,5 +32,6 @@ jobs:
       - name: Deploy site to GitHub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: ./website
         run: |
           npm run deploy:github
