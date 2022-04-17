@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    name: 'Deploy to Netlify'
+    name: 'Deploy Ontology Documentation'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,10 +22,16 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Deploy site
+      - name: Deploy site to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         working-directory: ./website
         run: |
           npm run deploy
+      - name: Deploy site to GitHub
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
