@@ -1,0 +1,13 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<http://purl.org/poso/1.0/> a prov:Entity;
+	 dc:title "Positioning System Ontology";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2022-04-16T00:00:00";
+.
+:agent0 a prov:Agent; foaf:name "Maxim Van de Wynckel".
+:agent1 a prov:Agent; foaf:name "Beat Signer".
