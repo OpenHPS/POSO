@@ -1,5 +1,5 @@
 # POSO: A Generic Positioning System Ontology
-*POSO is a generic ontology positioning system ontology. Other than many geospatial ontologies, POSO focuses on the semantics needed to express a positioning system, their techiques and the location data along with other information it can output.
+*POSO is a generic ontology positioning system ontology. Other than many geospatial ontologies, POSO focuses on the semantics needed to express a positioning system, their techiques and the location data along with other information it can output.*
 
 > :warning: **Attention**: This repository is currently anonymised using [https://anonymous.4open.science/](https://anonymous.4open.science/) for the ISWC2022 blind review process. This anonymisation includes the ontologies, source code, license, documentation, website and permanent URL (purl.org) of the poso ontology. Please do not fork or use this repository.
 
