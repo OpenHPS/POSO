@@ -45,12 +45,12 @@ function loadTOC(){
  $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
-      $("#abstract").load("sections/abstract-nl.html"); 
-      $("#introduction").load("sections/introduction-nl.html"); 
-      $("#overview").load("sections/overview-nl.html"); 
-      $("#description").load("sections/description-nl.html"); 
-      $("#references").load("sections/references-nl.html"); 
-      $("#crossref").load("sections/crossref-nl.html", null, loadHash); 
+      $("#abstract").load("../sections/abstract-nl.html"); 
+      $("#introduction").load("../sections/introduction-nl.html"); 
+      $("#overview").load("../sections/overview-nl_.html"); 
+      $("#description").load("../sections/description-nl.html"); 
+      $("#references").load("../sections/references-nl.html"); 
+      $("#crossref").load("../sections/crossref-nl.html", null, loadHash); 
     });
     </script> 
   </head> 
@@ -94,7 +94,7 @@ function loadTOC(){
      <div id="crossref"></div>
      <div id="references"></div>
 <div id="acknowledgments">
-<h2 id="ack" class="list">Dankbetuiging <span class="backlink"> terug naar <a href="../#toc">Index</a></span></h2>
+<h2 id="ack" class="list">Dankbetuiging <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
 <p>
 De auteurs willen graag <a href="http://www.essepuntato.it/">Silvio Peroni</a> bedanken voor het ontwikkelen van <a href="http://www.essepuntato.it/lode">LODE</a>, een Live OWL Documentation Environment, welke in dit document wordt gebruikt voor het weergeven van de sectie met kruisverwijzingen, en <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> voor het ontwikkelen van <a href="https://github.com/dgarijo/Widoco">Widoco</a>, het programma waarmee het sjabloon is gecreÃ«erd welke is toegepast op dit document.</p>
 </div>

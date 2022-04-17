@@ -45,12 +45,12 @@ function loadTOC(){
  $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
  };    $(function(){
-      $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
-      $("#overview").load("sections/overview-en.html"); 
-      $("#description").load("sections/description-en.html"); 
-      $("#references").load("sections/references-en.html"); 
-      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
+      $("#abstract").load("../sections/abstract-en.html"); 
+      $("#introduction").load("../sections/introduction-en.html"); 
+      $("#overview").load("../sections/overview-en_.html"); 
+      $("#description").load("../sections/description-en.html"); 
+      $("#references").load("../sections/references-en.html"); 
+      $("#crossref").load("../sections/crossref-en.html", null, loadHash); 
     });
     </script> 
   </head> 
@@ -94,7 +94,7 @@ function loadTOC(){
      <div id="crossref"></div>
      <div id="references"></div>
 <div id="acknowledgments">
-<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="../#toc">ToC</a></span></h2>
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
 </div>
