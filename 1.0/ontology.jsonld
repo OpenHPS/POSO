@@ -1338,6 +1338,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has spatial reference system"
+  }, {
+    "@language" : "nl",
+    "@value" : "heeft een ruimtelijk referentiepunt"
   } ]
 }, {
   "@id" : "http://purl.org/poso/hasVelocity",
@@ -1367,6 +1370,23 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://purl.org/poso/isVelocityOf"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/inDeployment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@language" : "en",
+    "@value" : "Identifies an absolute position within a deployment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/poso/AbsolutePosition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "in deployment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Deployment"
   } ]
 }, {
   "@id" : "http://purl.org/poso/isAccelerationOf",

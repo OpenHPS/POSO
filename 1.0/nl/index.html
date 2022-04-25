@@ -275,10 +275,10 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#hasCRS" title="http://purl.org/poso/hasCRS">has coordinate reference system</a>
    </li>
    <li>
-      <a href="#hasSRS" title="http://purl.org/poso/hasSRS">has spatial reference system</a>
+      <a href="#hasAccuracy" title="http://purl.org/poso/hasAccuracy">heeft accuraatheid</a>
    </li>
    <li>
-      <a href="#hasAccuracy" title="http://purl.org/poso/hasAccuracy">heeft accuraatheid</a>
+      <a href="#hasSRS" title="http://purl.org/poso/hasSRS">heeft een ruimtelijk referentiepunt</a>
    </li>
    <li>
       <a href="#hasOrientation" title="http://purl.org/poso/hasOrientation">heeft orientatie</a>
@@ -294,6 +294,9 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
    </li>
    <li>
       <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">heeft versnelling</a>
+   </li>
+   <li>
+      <a href="#inDeployment" title="http://purl.org/poso/inDeployment">in deployment</a>
    </li>
    <li>
       <a href="#isVelocityOf" title="http://purl.org/poso/isVelocityOf">is de snelheid van</a>
@@ -547,6 +550,11 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dd>
             <a href="#Position" title="http://purl.org/poso/Position">Positie</a>
             <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in domein van</dt>
+         <dd>
+            <a href="#inDeployment" title="http://purl.org/poso/inDeployment">in deployment</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
          </dd>
       </dl>
    </div>
@@ -1826,10 +1834,10 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#hasCRS" title="http://purl.org/poso/hasCRS">has coordinate reference system</a>
       </li>
       <li>
-         <a href="#hasSRS" title="http://purl.org/poso/hasSRS">has spatial reference system</a>
+         <a href="#hasAccuracy" title="http://purl.org/poso/hasAccuracy">heeft accuraatheid</a>
       </li>
       <li>
-         <a href="#hasAccuracy" title="http://purl.org/poso/hasAccuracy">heeft accuraatheid</a>
+         <a href="#hasSRS" title="http://purl.org/poso/hasSRS">heeft een ruimtelijk referentiepunt</a>
       </li>
       <li>
          <a href="#hasOrientation" title="http://purl.org/poso/hasOrientation">heeft orientatie</a>
@@ -1845,6 +1853,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </li>
       <li>
          <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">heeft versnelling</a>
+      </li>
+      <li>
+         <a href="#inDeployment" title="http://purl.org/poso/inDeployment">in deployment</a>
       </li>
       <li>
          <a href="#isVelocityOf" title="http://purl.org/poso/isVelocityOf">is de snelheid van</a>
@@ -1900,35 +1911,8 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dl>
             <dt>heeft supereigenschappen</dt>
             <dd>
-               <a href="#hasSRS" title="http://purl.org/poso/hasSRS">has spatial reference system</a>
+               <a href="#hasSRS" title="http://purl.org/poso/hasSRS">heeft een ruimtelijk referentiepunt</a>
                <sup class="type-op" title="objecteigenschap">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasSRS">
-      <h3>has spatial reference system<sup class="type-op" title="objecteigenschap">op</sup>
-         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/poso/hasSRS</p>
-      <div class="comment">
-         <span class="markdown">Identifies an entity that has a spatial reference system in order to interpret the result.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>heeft subeigenschappen</dt>
-            <dd>
-               <a href="#hasCRS" title="http://purl.org/poso/hasCRS">has coordinate reference system</a>
-               <sup class="type-op" title="objecteigenschap">op</sup>
-            </dd>
-            <dt>heeft domein</dt>
-            <dd>
-               <a href="http://www.w3.org/2002/07/owl#Thing"
-                  target="_blank"
-                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
-               <sup class="type-c" title="klasse">c</sup>
             </dd>
          </dl>
       </div>
@@ -1953,6 +1937,33 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
                <a href="http://www.w3.org/ns/ssn/hasProperty"
                   target="_blank"
                   title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSRS">
+      <h3>heeft een ruimtelijk referentiepunt<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasSRS</p>
+      <div class="comment">
+         <span class="markdown">Identifies an entity that has a spatial reference system in order to interpret the result.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>heeft subeigenschappen</dt>
+            <dd>
+               <a href="#hasCRS" title="http://purl.org/poso/hasCRS">has coordinate reference system</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="klasse">c</sup>
             </dd>
          </dl>
       </div>
@@ -2137,6 +2148,29 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
             <dd>
                <a href="#isAccelerationOf" title="http://purl.org/poso/isAccelerationOf">is versnelling van</a>
                <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inDeployment">
+      <h3>in deployment<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/inDeployment</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#AbsolutePosition" title="http://purl.org/poso/AbsolutePosition">Absolute position</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/Deployment"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/Deployment">deployment</a>
             </dd>
          </dl>
       </div>

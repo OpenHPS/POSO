@@ -133,6 +133,7 @@
 <http://purl.org/poso/hasSRS> <http://qudt.org/schema/qudt/example> <http://www.opengis.net/def/crs/OGC/1.3/CRS84> .
 <http://purl.org/poso/hasSRS> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies an entity that has a spatial reference system in order to interpret the result."@en .
 <http://purl.org/poso/hasSRS> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial reference system"@en .
+<http://purl.org/poso/hasSRS> <http://www.w3.org/2000/01/rdf-schema#label> "heeft een ruimtelijk referentiepunt"@nl .
 # 
 # http://purl.org/poso/hasVelocity
 <http://purl.org/poso/hasVelocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -144,6 +145,13 @@
 <http://purl.org/poso/hasVelocity> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the velocity of a feature of interest."@en .
 <http://purl.org/poso/hasVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "has velocity"@en .
 <http://purl.org/poso/hasVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "heeft snelheid"@nl .
+# 
+# http://purl.org/poso/inDeployment
+<http://purl.org/poso/inDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/inDeployment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/AbsolutePosition> .
+<http://purl.org/poso/inDeployment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Deployment> .
+<http://purl.org/poso/inDeployment> <http://purl.org/vocab/vann/preferredNamespaceUri> "Identifies an absolute position within a deployment"@en .
+<http://purl.org/poso/inDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "in deployment"@en .
 # 
 # http://purl.org/poso/isAccelerationOf
 <http://purl.org/poso/isAccelerationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

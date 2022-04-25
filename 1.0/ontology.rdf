@@ -247,6 +247,7 @@
         <qudt:example rdf:resource="http://www.opengis.net/def/crs/OGC/1.3/CRS84"/>
         <rdfs:comment xml:lang="en">Identifies an entity that has a spatial reference system in order to interpret the result.</rdfs:comment>
         <rdfs:label xml:lang="en">has spatial reference system</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft een ruimtelijk referentiepunt</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -263,6 +264,18 @@
         <rdfs:comment xml:lang="en">Indicates the velocity of a feature of interest.</rdfs:comment>
         <rdfs:label xml:lang="en">has velocity</rdfs:label>
         <rdfs:label xml:lang="nl">heeft snelheid</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/poso/inDeployment -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/poso/inDeployment">
+        <rdfs:domain rdf:resource="http://purl.org/poso/AbsolutePosition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <vann:preferredNamespaceUri xml:lang="en">Identifies an absolute position within a deployment</vann:preferredNamespaceUri>
+        <rdfs:label xml:lang="en">in deployment</rdfs:label>
     </owl:ObjectProperty>
     
 
