@@ -122,7 +122,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Procedure"
+    "@id" : "http://purl.org/poso/SensorFusion"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/ssn/implements"
@@ -472,29 +472,6 @@
     "@id" : "http://purl.org/poso/SensorFusion"
   } ]
 }, {
-  "@id" : "http://purl.org/poso/HybridPositioningSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://isotc211.geolexica.org/concepts/250/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Integrated positioning system"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/PositioningSystem"
-  }, {
-    "@id" : "_:genid7"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "Hybrid positioning system"
-  } ]
-}, {
   "@id" : "http://purl.org/poso/IndoorDeployment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -538,6 +515,29 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/PositioningSystem"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/IntegratedPositioningSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://isotc211.geolexica.org/concepts/250/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Integrated positioning system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/PositioningSystem"
+  }, {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Hybrid positioning system"
   } ]
 }, {
   "@id" : "http://purl.org/poso/Landmark",
@@ -1500,6 +1500,10 @@
 }, {
   "@id" : "http://purl.org/poso/pitch",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Pitch is the rotation around the x-axis with respect to the object the yaw applies to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/poso/EulerOrientation"
   } ],
@@ -1513,6 +1517,10 @@
 }, {
   "@id" : "http://purl.org/poso/roll",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Roll is the rotation around the y-axis with respect to the object the roll applies to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/poso/EulerOrientation"
   } ],
@@ -1576,6 +1584,10 @@
 }, {
   "@id" : "http://purl.org/poso/yaw",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Yaw is the rotation around the z-axis with respect to the object the yaw applies to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/poso/EulerOrientation"
   } ],

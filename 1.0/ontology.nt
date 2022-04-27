@@ -205,6 +205,7 @@
 <http://purl.org/poso/pitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
 <http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#comment> "Pitch is the rotation around the x-axis with respect to the object the yaw applies to."@en .
 <http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#label> "pitch"@en .
 # 
 # http://purl.org/poso/roll
@@ -212,6 +213,7 @@
 <http://purl.org/poso/roll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
 <http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#comment> "Roll is the rotation around the y-axis with respect to the object the roll applies to."@en .
 <http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#label> "roll"@en .
 # 
 # http://purl.org/poso/scalar
@@ -243,6 +245,7 @@
 <http://purl.org/poso/yaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
 <http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#comment> "Yaw is the rotation around the z-axis with respect to the object the yaw applies to."@en .
 <http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#label> "yaw"@en .
 # 
 # http://purl.org/poso/zAxisValue
@@ -382,19 +385,6 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2000/01/rdf-schema#label> "High level sensor fusion"@en .
 # 
-# http://purl.org/poso/HybridPositioningSystem
-<http://purl.org/poso/HybridPositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/poso/HybridPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningSystem> .
-<http://purl.org/poso/HybridPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/sosa/Procedure> .
-_:genid7 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/implements> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/poso/HybridPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en .
-<http://purl.org/poso/HybridPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://isotc211.geolexica.org/concepts/250/> .
-<http://purl.org/poso/HybridPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Integrated positioning system"@en .
-<http://purl.org/poso/HybridPositioningSystem> <http://www.w3.org/2004/02/skos/core#altLabel> "Hybrid positioning system"@en .
-# 
 # http://purl.org/poso/IndoorDeployment
 <http://purl.org/poso/IndoorDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/IndoorDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Deployment> .
@@ -413,6 +403,19 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/poso/InertialPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An inertial positioning system is a positioning system employing accelerometers, gyroscopes, and computer as integral components to determine coordinates of points or objects relative to an initial known reference point"@en .
 <http://purl.org/poso/InertialPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://isotc211.geolexica.org/concepts/240/> .
 <http://purl.org/poso/InertialPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Inertial positioning system"@en .
+# 
+# http://purl.org/poso/IntegratedPositioningSystem
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningSystem> .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/SensorFusion> .
+_:genid7 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/implements> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://isotc211.geolexica.org/concepts/250/> .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Integrated positioning system"@en .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2004/02/skos/core#altLabel> "Hybrid positioning system"@en .
 # 
 # http://purl.org/poso/Landmark
 <http://purl.org/poso/Landmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

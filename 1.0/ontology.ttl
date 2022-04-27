@@ -234,6 +234,7 @@
                 owl:FunctionalProperty ;
        rdfs:domain :EulerOrientation ;
        rdfs:range rdfs:Class ;
+       rdfs:comment "Pitch is the rotation around the x-axis with respect to the object the yaw applies to."@en ;
        rdfs:label "pitch"@en .
 
 
@@ -242,6 +243,7 @@
                owl:FunctionalProperty ;
       rdfs:domain :EulerOrientation ;
       rdfs:range rdfs:Class ;
+      rdfs:comment "Roll is the rotation around the y-axis with respect to the object the roll applies to."@en ;
       rdfs:label "roll"@en .
 
 
@@ -277,6 +279,7 @@
               owl:FunctionalProperty ;
      rdfs:domain :EulerOrientation ;
      rdfs:range rdfs:Class ;
+     rdfs:comment "Yaw is the rotation around the z-axis with respect to the object the yaw applies to."@en ;
      rdfs:label "yaw"@en .
 
 
@@ -427,20 +430,6 @@
                  rdfs:label "High level sensor fusion"@en .
 
 
-###  http://purl.org/poso/HybridPositioningSystem
-:HybridPositioningSystem rdf:type owl:Class ;
-                         rdfs:subClassOf :PositioningSystem ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty <http://www.w3.org/ns/ssn/implements> ;
-                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                           owl:onClass <http://www.w3.org/ns/sosa/Procedure>
-                                         ] ;
-                         rdfs:comment "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en ;
-                         rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/250/> ;
-                         rdfs:label "Integrated positioning system"@en ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Hybrid positioning system"@en .
-
-
 ###  http://purl.org/poso/IndoorDeployment
 :IndoorDeployment rdf:type owl:Class ;
                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
@@ -461,6 +450,20 @@
                            rdfs:comment "An inertial positioning system is a positioning system employing accelerometers, gyroscopes, and computer as integral components to determine coordinates of points or objects relative to an initial known reference point"@en ;
                            rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/240/> ;
                            rdfs:label "Inertial positioning system"@en .
+
+
+###  http://purl.org/poso/IntegratedPositioningSystem
+:IntegratedPositioningSystem rdf:type owl:Class ;
+                             rdfs:subClassOf :PositioningSystem ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://www.w3.org/ns/ssn/implements> ;
+                                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                               owl:onClass :SensorFusion
+                                             ] ;
+                             rdfs:comment "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en ;
+                             rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/250/> ;
+                             rdfs:label "Integrated positioning system"@en ;
+                             <http://www.w3.org/2004/02/skos/core#altLabel> "Hybrid positioning system"@en .
 
 
 ###  http://purl.org/poso/Landmark
