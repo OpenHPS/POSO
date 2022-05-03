@@ -18,7 +18,7 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2022-04-17T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2022-05-03T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI .
@@ -151,8 +151,8 @@
         rdfs:domain owl:Thing ;
         <http://qudt.org/schema/qudt/example> <http://www.opengis.net/def/crs/OGC/1.3/CRS84> ;
         rdfs:comment "Identifies an entity that has a spatial reference system in order to interpret the result."@en ;
-        rdfs:label "has spatial reference system"@en,
-                  "heeft een ruimtelijk referentiepunt"@nl .
+        rdfs:label "has spatial reference system"@en ,
+                   "heeft een ruimtelijk referentiepunt"@nl .
 
 
 ###  http://purl.org/poso/hasVelocity
@@ -409,9 +409,14 @@
 
 ###  http://purl.org/poso/Fingerprint
 :Fingerprint rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasPosition ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :AbsolutePosition
+                                 ] ;
              rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
                              <http://www.w3.org/ns/sosa/Result> ;
-             rdfs:comment "A fingerprint is a scene analysis"@en ;
+             rdfs:comment "A fingerprint is a scene analysis at a particular absolute position."@en ;
              rdfs:label "Fingerprint"@en .
 
 
@@ -427,21 +432,8 @@
                  rdfs:subClassOf :SensorFusion ;
                  rdfs:comment "High level sensor fusion is about fusing both objects and their trajectories. We're not only relying on detections, but also on predictions and tracking."@en ;
                  rdfs:isDefinedBy "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^xsd:anyURI ;
-                 rdfs:label "High level sensor fusion"@en .
-
-
-###  http://purl.org/poso/IntegratedPositioningSystem
-:IntegratedPositioningSystem rdf:type owl:Class ;
-                         rdfs:subClassOf :PositioningSystem ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty <http://www.w3.org/ns/ssn/implements> ;
-                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                           owl:onClass :SensorFusion
-                                         ] ;
-                         rdfs:comment "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en ;
-                         rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/250/> ;
-                         rdfs:label "Integrated positioning system"@en ;
-                         <http://www.w3.org/2004/02/skos/core#altLabel> "Hybrid positioning system"@en .
+                 rdfs:label "High level sensor fusion"@en ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Decision level sensor fusion"@en .
 
 
 ###  http://purl.org/poso/IndoorDeployment
@@ -464,6 +456,20 @@
                            rdfs:comment "An inertial positioning system is a positioning system employing accelerometers, gyroscopes, and computer as integral components to determine coordinates of points or objects relative to an initial known reference point"@en ;
                            rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/240/> ;
                            rdfs:label "Inertial positioning system"@en .
+
+
+###  http://purl.org/poso/IntegratedPositioningSystem
+:IntegratedPositioningSystem rdf:type owl:Class ;
+                             rdfs:subClassOf :PositioningSystem ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://www.w3.org/ns/ssn/implements> ;
+                                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                               owl:onClass :SensorFusion
+                                             ] ;
+                             rdfs:comment "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en ;
+                             rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/250/> ;
+                             rdfs:label "Integrated positioning system"@en ;
+                             <http://www.w3.org/2004/02/skos/core#altLabel> "Hybrid positioning system"@en .
 
 
 ###  http://purl.org/poso/Landmark
@@ -592,6 +598,7 @@
 ###  http://purl.org/poso/PDR
 :PDR rdf:type owl:Class ;
      rdfs:subClassOf :DeadReckoning ;
+     rdfs:comment "Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement."@en ;
      rdfs:label "Pedestrian dead reckoning"@en .
 
 
