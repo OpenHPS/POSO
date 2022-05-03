@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/common/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/common/","name":"Positioning System Ontology Common Technologies, Algorithms and Systems", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning about how a system is deployed.", "datePublished":"2022-04-7T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/common/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/common/","name":"Positioning System Ontology Common Technologies, Algorithms and Systems", "headline":"The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.", "datePublished":"2022-05-03T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology Common Technologies, Algorithms and Systems</h1>
-<h2>Release  2022-04-7T00:00:00</h2>
+<h2>Release  2022-05-03T00:00:00</h2>
 
 
 <dl>
@@ -83,7 +83,7 @@ $(function(){
 <span>Ontology Specification Draft</span>
 </div>
 </div>     <div id="abstract"><h2>Samenvatting</h2><span class="markdown">
-The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning about how a system is deployed.</span>
+The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.</span>
 </div>
 <div id="toc"></div>  
 
@@ -103,7 +103,13 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#BDS" title="http://purl.org/poso/common/BDS">BeiDou Navigation Satellite System</a>
    </li>
    <li>
+      <a href="#CSIFingerprinting" title="http://purl.org/poso/common/CSIFingerprinting">Channel State Information fingerprinting</a>
+   </li>
+   <li>
       <a href="#EarthDeployment" title="http://purl.org/poso/common/EarthDeployment">Earth deployment</a>
+   </li>
+   <li>
+      <a href="#FootMountedPDR" title="http://purl.org/poso/common/FootMountedPDR">Foot-mounted pedestrian dead reckoning</a>
    </li>
    <li>
       <a href="#Galileo" title="http://purl.org/poso/common/Galileo">Galileo</a>
@@ -154,10 +160,6 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#ORBSLAM3" title="http://purl.org/poso/common/ORBSLAM3">ORB-SLAM3</a>
    </li>
    <li>
-      <a href="#PedestrianDeadReckoning"
-         title="http://purl.org/poso/common/PedestrianDeadReckoning">Pedestrian dead reckoning</a>
-   </li>
-   <li>
       <a href="#ProbabilisticFingerprinting"
          title="http://purl.org/poso/common/ProbabilisticFingerprinting">Probabilistic fingerprinting</a>
    </li>
@@ -171,13 +173,10 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#ROS" title="http://purl.org/poso/common/ROS">Robotics Operating System</a>
    </li>
    <li>
-      <a href="#SMPFingerprinting" title="http://purl.org/poso/common/SMPFingerprinting">SMP fingerprinting</a>
-   </li>
-   <li>
       <a href="#SonyNimway" title="http://purl.org/poso/common/SonyNimway">Sony Nimway</a>
    </li>
    <li>
-      <a href="#SVMFingerprinting" title="http://purl.org/poso/common/SVMFingerprinting">SVM fingerprinting</a>
+      <a href="#SVMFingerprinting" title="http://purl.org/poso/common/SVMFingerprinting">Support Vector Machine fingerprinting</a>
    </li>
    <li>
       <a href="#WeightedAccuracyFusion"
@@ -204,7 +203,13 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#BDS" title="http://purl.org/poso/common/BDS">BeiDou Navigation Satellite System</a>
       </li>
       <li>
+         <a href="#CSIFingerprinting" title="http://purl.org/poso/common/CSIFingerprinting">Channel State Information fingerprinting</a>
+      </li>
+      <li>
          <a href="#EarthDeployment" title="http://purl.org/poso/common/EarthDeployment">Earth deployment</a>
+      </li>
+      <li>
+         <a href="#FootMountedPDR" title="http://purl.org/poso/common/FootMountedPDR">Foot-mounted pedestrian dead reckoning</a>
       </li>
       <li>
          <a href="#Galileo" title="http://purl.org/poso/common/Galileo">Galileo</a>
@@ -255,10 +260,6 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#ORBSLAM3" title="http://purl.org/poso/common/ORBSLAM3">ORB-SLAM3</a>
       </li>
       <li>
-         <a href="#PedestrianDeadReckoning"
-            title="http://purl.org/poso/common/PedestrianDeadReckoning">Pedestrian dead reckoning</a>
-      </li>
-      <li>
          <a href="#ProbabilisticFingerprinting"
             title="http://purl.org/poso/common/ProbabilisticFingerprinting">Probabilistic fingerprinting</a>
       </li>
@@ -272,13 +273,10 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#ROS" title="http://purl.org/poso/common/ROS">Robotics Operating System</a>
       </li>
       <li>
-         <a href="#SMPFingerprinting" title="http://purl.org/poso/common/SMPFingerprinting">SMP fingerprinting</a>
-      </li>
-      <li>
          <a href="#SonyNimway" title="http://purl.org/poso/common/SonyNimway">Sony Nimway</a>
       </li>
       <li>
-         <a href="#SVMFingerprinting" title="http://purl.org/poso/common/SVMFingerprinting">SVM fingerprinting</a>
+         <a href="#SVMFingerprinting" title="http://purl.org/poso/common/SVMFingerprinting">Support Vector Machine fingerprinting</a>
       </li>
       <li>
          <a href="#WeightedAccuracyFusion"
@@ -356,6 +354,23 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
+   <div class="entity" id="CSIFingerprinting">
+      <h3>Channel State Information fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/CSIFingerprinting</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Fingerprinting"
+               target="_blank"
+               title="http://purl.org/poso/Fingerprinting">fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="EarthDeployment">
       <h3>Earth deployment<sup class="type-ni" title="concreet exemplaar">ni</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
@@ -366,12 +381,37 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       <div class="comment">
          <span class="markdown">A generic deployment for any positioning system deployment on Earth.</span>
       </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>
+            <a href="https://dbpedia.org/resouce/Earth">https://dbpedia.org/resouce/Earth</a>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>behoort tot</dt>
          <dd>
             <a href="http://purl.org/poso/OutdoorDeployment"
                target="_blank"
                title="http://purl.org/poso/OutdoorDeployment">outdoor deployment</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FootMountedPDR">
+      <h3>Foot-mounted pedestrian dead reckoning<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/FootMountedPDR</p>
+      <div class="comment">
+         <span class="markdown">Foot-mounted pedestrian dead reckoning uses a sensor on the foot of a pedestrian to detect steps.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PDR"
+               target="_blank"
+               title="http://purl.org/poso/PDR">p d r</a>
          </dd>
       </dl>
    </div>
@@ -567,6 +607,15 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/poso/common/LDPL</p>
+      <div class="comment">
+         <span class="markdown">The log-distance path loss model is a radio propagation model that predicts the path loss a signal encounters inside a building or densely populated areas over distance.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>
+            <a href="http://dbpedia.org/resource/Log-distance_path_loss_model">http://dbpedia.org/resource/Log-distance_path_loss_model</a>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>behoort tot</dt>
          <dd>
@@ -721,26 +770,6 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
-   <div class="entity" id="PedestrianDeadReckoning">
-      <h3>Pedestrian dead reckoning<sup class="type-ni" title="concreet exemplaar">ni</sup>
-         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/poso/common/PedestrianDeadReckoning</p>
-      <div class="comment">
-         <span class="markdown">Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement.</span>
-      </div>
-      <dl class="description">
-         <dt>behoort tot</dt>
-         <dd>
-            <a href="http://purl.org/poso/DeadReckoning"
-               target="_blank"
-               title="http://purl.org/poso/DeadReckoning">dead reckoning</a>
-            <sup class="type-c" title="klasse">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="ProbabilisticFingerprinting">
       <h3>Probabilistic fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
@@ -789,6 +818,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/poso/common/RFCellIdentification</p>
+      <div class="comment">
+         <span class="markdown">RF cell identification is a technique that determines the position based on the closest RF landmark in range.</span>
+      </div>
       <dl class="description">
          <dt>behoort tot</dt>
          <dd>
@@ -823,23 +855,6 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
-   <div class="entity" id="SMPFingerprinting">
-      <h3>SMP fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
-         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/poso/common/SMPFingerprinting</p>
-      <dl class="description">
-         <dt>behoort tot</dt>
-         <dd>
-            <a href="http://purl.org/poso/Fingerprinting"
-               target="_blank"
-               title="http://purl.org/poso/Fingerprinting">fingerprinting</a>
-            <sup class="type-c" title="klasse">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="SonyNimway">
       <h3>Sony Nimway<sup class="type-ni" title="concreet exemplaar">ni</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
@@ -865,7 +880,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </dl>
    </div>
    <div class="entity" id="SVMFingerprinting">
-      <h3>SVM fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
+      <h3>Support Vector Machine fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
          </span>
       </h3>
@@ -889,7 +904,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       <p>
          <strong>IRI:</strong> http://purl.org/poso/common/WeightedAccuracyFusion</p>
       <div class="comment">
-         <span class="markdown">High level fusion based on weighted average of the accuract^-1.</span>
+         <span class="markdown">Decision level fusion based on weighted average of the accuracy^-1.</span>
       </div>
       <dl class="description">
          <dt>behoort tot</dt>

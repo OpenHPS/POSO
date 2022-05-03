@@ -1,13 +1,13 @@
 <http://purl.org/poso/common/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://purl.org/poso/common/> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/poso/1.0/common/> .
 <http://purl.org/poso/common/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/poso/1.0/> .
-<http://purl.org/poso/common/> <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning about how a system is deployed."@en .
+<http://purl.org/poso/common/> <http://purl.org/dc/terms/abstract> "The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms."@en .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology" .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/contributor> "Beat Signer"@en .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/poso/common/> <http://purl.org/dc/terms/modified> "2022-04-7T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/common/> <http://purl.org/dc/terms/modified> "2022-05-03T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en .
 <http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso-common" .
 <http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -55,6 +55,15 @@
 # 
 # http://www.w3.org/ns/shacl#targetClass
 <http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/ssn/hasDeployment
+<http://www.w3.org/ns/ssn/hasDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/rdfp/presentedBy
+<https://w3id.org/rdfp/presentedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/rdfp/validationRule
+<https://w3id.org/rdfp/validationRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -133,11 +142,23 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 <http://purl.org/poso/common/BDS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.gps.gov/systems/gnss/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/common/BDS> <http://www.w3.org/2000/01/rdf-schema#label> "BeiDou Navigation Satellite System"@en .
 # 
+# http://purl.org/poso/common/CSIFingerprinting
+<http://purl.org/poso/common/CSIFingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/common/CSIFingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/Fingerprinting> .
+<http://purl.org/poso/common/CSIFingerprinting> <http://www.w3.org/2000/01/rdf-schema#label> "Channel State Information fingerprinting"@en .
+# 
 # http://purl.org/poso/common/EarthDeployment
 <http://purl.org/poso/common/EarthDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/EarthDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/OutdoorDeployment> .
 <http://purl.org/poso/common/EarthDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic deployment for any positioning system deployment on Earth."@en .
+<http://purl.org/poso/common/EarthDeployment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://dbpedia.org/resouce/Earth> .
 <http://purl.org/poso/common/EarthDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Earth deployment"@en .
+# 
+# http://purl.org/poso/common/FootMountedPDR
+<http://purl.org/poso/common/FootMountedPDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/common/FootMountedPDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/PDR> .
+<http://purl.org/poso/common/FootMountedPDR> <http://www.w3.org/2000/01/rdf-schema#comment> "Foot-mounted pedestrian dead reckoning uses a sensor on the foot of a pedestrian to detect steps."@en .
+<http://purl.org/poso/common/FootMountedPDR> <http://www.w3.org/2000/01/rdf-schema#label> "Foot-mounted pedestrian dead reckoning"@en .
 # 
 # http://purl.org/poso/common/GLONASS
 <http://purl.org/poso/common/GLONASS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -204,6 +225,8 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 # http://purl.org/poso/common/LDPL
 <http://purl.org/poso/common/LDPL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/LDPL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/RadioPropagation> .
+<http://purl.org/poso/common/LDPL> <http://www.w3.org/2000/01/rdf-schema#comment> "The log-distance path loss model is a radio propagation model that predicts the path loss a signal encounters inside a building or densely populated areas over distance."@en .
+<http://purl.org/poso/common/LDPL> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://dbpedia.org/resource/Log-distance_path_loss_model> .
 <http://purl.org/poso/common/LDPL> <http://www.w3.org/2000/01/rdf-schema#label> "Log-distance path loss model"@en .
 # 
 # http://purl.org/poso/common/MidpointLateration
@@ -248,13 +271,8 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 <http://purl.org/poso/common/OpenVSLAM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/OpenVSLAM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/VSLAM> .
 <http://purl.org/poso/common/OpenVSLAM> <http://www.w3.org/2000/01/rdf-schema#label> "OpenVSLAM"@en .
-<http://purl.org/poso/common/OpenVSLAM> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://openvslam-community.readthedocs.io/en/latest/index.html"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-# 
-# http://purl.org/poso/common/PedestrianDeadReckoning
-<http://purl.org/poso/common/PedestrianDeadReckoning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/poso/common/PedestrianDeadReckoning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/DeadReckoning> .
-<http://purl.org/poso/common/PedestrianDeadReckoning> <http://www.w3.org/2000/01/rdf-schema#comment> "Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement."@en .
-<http://purl.org/poso/common/PedestrianDeadReckoning> <http://www.w3.org/2000/01/rdf-schema#label> "Pedestrian dead reckoning"@en .
+<http://purl.org/poso/common/OpenVSLAM> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://stella-cv.readthedocs.io/en/latest/index.html"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/common/OpenVSLAM> <http://www.w3.org/2004/02/skos/core#altLabel> "stella-vslam"@en .
 # 
 # http://purl.org/poso/common/ProbabilisticFingerprinting
 <http://purl.org/poso/common/ProbabilisticFingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -272,6 +290,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 # http://purl.org/poso/common/RFCellIdentification
 <http://purl.org/poso/common/RFCellIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/RFCellIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/CellIdentification> .
+<http://purl.org/poso/common/RFCellIdentification> <http://www.w3.org/2000/01/rdf-schema#comment> "RF cell identification is a technique that determines the position based on the closest RF landmark in range."@en .
 <http://purl.org/poso/common/RFCellIdentification> <http://www.w3.org/2000/01/rdf-schema#label> "RF cell identification"@en .
 # 
 # http://purl.org/poso/common/ROS
@@ -281,15 +300,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 <http://purl.org/poso/common/ROS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.ros.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/common/ROS> <http://www.w3.org/2000/01/rdf-schema#label> "Robotics Operating System"@en .
 # 
-# http://purl.org/poso/common/SMPFingerprinting
-<http://purl.org/poso/common/SMPFingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/poso/common/SMPFingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/Fingerprinting> .
-<http://purl.org/poso/common/SMPFingerprinting> <http://www.w3.org/2000/01/rdf-schema#label> "SMP fingerprinting"@en .
-# 
 # http://purl.org/poso/common/SVMFingerprinting
 <http://purl.org/poso/common/SVMFingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/SVMFingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/Fingerprinting> .
-<http://purl.org/poso/common/SVMFingerprinting> <http://www.w3.org/2000/01/rdf-schema#label> "SVM fingerprinting"@en .
+<http://purl.org/poso/common/SVMFingerprinting> <http://www.w3.org/2000/01/rdf-schema#label> "Support Vector Machine fingerprinting"@en .
 # 
 # http://purl.org/poso/common/SonyNimway
 <http://purl.org/poso/common/SonyNimway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -301,7 +315,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 # http://purl.org/poso/common/WeightedAccuracyFusion
 <http://purl.org/poso/common/WeightedAccuracyFusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/WeightedAccuracyFusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/HighLevelFusion> .
-<http://purl.org/poso/common/WeightedAccuracyFusion> <http://www.w3.org/2000/01/rdf-schema#comment> "High level fusion based on weighted average of the accuract^-1."@en .
+<http://purl.org/poso/common/WeightedAccuracyFusion> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision level fusion based on weighted average of the accuracy^-1."@en .
 <http://purl.org/poso/common/WeightedAccuracyFusion> <http://www.w3.org/2000/01/rdf-schema#label> "Weighted accuracy fusion"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

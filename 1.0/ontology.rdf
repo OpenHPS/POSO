@@ -26,7 +26,7 @@
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-04-17T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-03T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology</terms:title>
         <vann:preferredNamespacePrefix>poso</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/</vann:preferredNamespaceUri>
@@ -636,9 +636,16 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Fingerprint">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/hasPosition"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/poso/AbsolutePosition"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Result"/>
-        <rdfs:comment xml:lang="en">A fingerprint is a scene analysis</rdfs:comment>
+        <rdfs:comment xml:lang="en">A fingerprint is a scene analysis at a particular absolute position.</rdfs:comment>
         <rdfs:label xml:lang="en">Fingerprint</rdfs:label>
     </owl:Class>
     
@@ -663,6 +670,7 @@
         <rdfs:comment xml:lang="en">High level sensor fusion is about fusing both objects and their trajectories. We&apos;re not only relying on detections, but also on predictions and tracking.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">High level sensor fusion</rdfs:label>
+        <skos:altLabel xml:lang="en">Decision level sensor fusion</skos:altLabel>
     </owl:Class>
     
 
@@ -913,6 +921,7 @@
 
     <owl:Class rdf:about="http://purl.org/poso/PDR">
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/DeadReckoning"/>
+        <rdfs:comment xml:lang="en">Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement.</rdfs:comment>
         <rdfs:label xml:lang="en">Pedestrian dead reckoning</rdfs:label>
     </owl:Class>
     

@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2022-04-17T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2022-05-03T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release 2022-04-17T00:00:00</h2>
+<h2>Release 2022-05-03T00:00:00</h2>
 
 
 <dl>
@@ -772,9 +772,16 @@ This section provides details for each class and property defined by Positioning
       <p>
          <strong>IRI:</strong> http://purl.org/poso/Fingerprint</p>
       <div class="comment">
-         <span class="markdown">A fingerprint is a scene analysis</span>
+         <span class="markdown">A fingerprint is a scene analysis at a particular absolute position.</span>
       </div>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#hasPosition" title="http://purl.org/poso/hasPosition">has position</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#AbsolutePosition" title="http://purl.org/poso/AbsolutePosition">Absolute position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
@@ -1271,6 +1278,9 @@ This section provides details for each class and property defined by Positioning
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/poso/PDR</p>
+      <div class="comment">
+         <span class="markdown">Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>

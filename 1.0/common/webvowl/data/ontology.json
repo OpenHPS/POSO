@@ -39,25 +39,25 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2022-04-7T00:00:00",
+        "value" : "2022-05-03T00:00:00",
         "type" : "label"
       } ],
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "en",
-        "value" : "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning about how a system is deployed.",
-        "type" : "label"
-      } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "undefined",
-        "value" : "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology",
+        "value" : "The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "http://purl.org/poso/common/",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology",
         "type" : "label"
       } ],
       "title" : [ {
@@ -259,10 +259,10 @@
     "id" : "248",
     "type" : "owl:Class"
   }, {
-    "id" : "387",
+    "id" : "386",
     "type" : "owl:Class"
   }, {
-    "id" : "391",
+    "id" : "390",
     "type" : "owl:Class"
   }, {
     "id" : "37",
@@ -277,31 +277,31 @@
     "id" : "270",
     "type" : "owl:Class"
   }, {
-    "id" : "403",
+    "id" : "402",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "404",
+    "id" : "403",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "234",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "408",
+    "id" : "407",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "409",
+    "id" : "408",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "199",
     "type" : "owl:Class"
   }, {
-    "id" : "411",
+    "id" : "410",
     "type" : "owl:Class"
   }, {
-    "id" : "413",
+    "id" : "412",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "414",
+    "id" : "413",
     "type" : "owl:unionOf"
   }, {
     "id" : "272",
@@ -370,7 +370,7 @@
     "id" : "458",
     "type" : "owl:Class"
   }, {
-    "id" : "407",
+    "id" : "406",
     "type" : "owl:Class"
   }, {
     "id" : "7",
@@ -436,10 +436,10 @@
     "id" : "186",
     "type" : "owl:Class"
   }, {
-    "id" : "469",
+    "id" : "468",
     "type" : "owl:Class"
   }, {
-    "id" : "468",
+    "id" : "469",
     "type" : "owl:Class"
   }, {
     "id" : "471",
@@ -547,13 +547,13 @@
     "id" : "147",
     "type" : "owl:Class"
   }, {
-    "id" : "406",
-    "type" : "owl:Class"
-  }, {
-    "id" : "163",
+    "id" : "405",
     "type" : "owl:Class"
   }, {
     "id" : "254",
+    "type" : "owl:Class"
+  }, {
+    "id" : "163",
     "type" : "owl:Class"
   }, {
     "id" : "277",
@@ -664,7 +664,7 @@
     "id" : "223",
     "type" : "owl:Class"
   }, {
-    "id" : "375",
+    "id" : "420",
     "type" : "owl:Class"
   }, {
     "id" : "121",
@@ -1233,24 +1233,6 @@
         "en" : "IndoorAtlas"
       }
     }, {
-      "iri" : "http://purl.org/poso/common/SonyNimway",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.sonynetworkcom.com/nimway",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Nimway from Sony is a complete smart office solution for the people-centred workplace. Acting as your personal assistant throughout the workday, it facilitates many otherwise time-consuming tasks, like finding your way to a meeting room, locating a colleague or booking a desk."
-      },
-      "labels" : {
-        "IRI-based" : "SonyNimway",
-        "en" : "Sony Nimway"
-      }
-    }, {
       "iri" : "http://purl.org/poso/common/ROS",
       "baseIri" : "http://purl.org/poso/common",
       "annotations" : {
@@ -1267,6 +1249,24 @@
       "labels" : {
         "IRI-based" : "ROS",
         "en" : "Robotics Operating System"
+      }
+    }, {
+      "iri" : "http://purl.org/poso/common/SonyNimway",
+      "baseIri" : "http://purl.org/poso/common",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://www.sonynetworkcom.com/nimway",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Nimway from Sony is a complete smart office solution for the people-centred workplace. Acting as your personal assistant throughout the workday, it facilitates many otherwise time-consuming tasks, like finding your way to a meeting room, locating a colleague or booking a desk."
+      },
+      "labels" : {
+        "IRI-based" : "SonyNimway",
+        "en" : "Sony Nimway"
       }
     } ],
     "comment" : {
@@ -1353,11 +1353,11 @@
         "en" : "Probabilistic fingerprinting"
       }
     }, {
-      "iri" : "http://purl.org/poso/common/SMPFingerprinting",
+      "iri" : "http://purl.org/poso/common/CSIFingerprinting",
       "baseIri" : "http://purl.org/poso/common",
       "labels" : {
-        "IRI-based" : "SMPFingerprinting",
-        "en" : "SMP fingerprinting"
+        "IRI-based" : "CSIFingerprinting",
+        "en" : "Channel State Information fingerprinting"
       }
     }, {
       "iri" : "http://purl.org/poso/common/KNNFingerprinting",
@@ -1374,7 +1374,7 @@
       "baseIri" : "http://purl.org/poso/common",
       "labels" : {
         "IRI-based" : "SVMFingerprinting",
-        "en" : "SVM fingerprinting"
+        "en" : "Support Vector Machine fingerprinting"
       }
     } ],
     "comment" : {
@@ -1843,17 +1843,6 @@
       "IRI-based" : "DeadReckoning",
       "en" : "Dead reckoning"
     },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/PedestrianDeadReckoning",
-      "baseIri" : "http://purl.org/poso/common",
-      "comment" : {
-        "en" : "Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement."
-      },
-      "labels" : {
-        "IRI-based" : "PedestrianDeadReckoning",
-        "en" : "Pedestrian dead reckoning"
-      }
-    } ],
     "subClasses" : [ "324" ],
     "comment" : {
       "en" : "Dead reckoning is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."
@@ -1886,7 +1875,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Registering an image of the landscape.",
+        "value" : "Selecting a subset of a population.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Digging a pit through a soil sequence.",
         "type" : "label"
       }, {
         "identifier" : "example",
@@ -1896,12 +1890,7 @@
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Taking a diamond-drill core from a rock outcrop.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Splitting a piece of drill-core to create two new samples.",
+        "value" : "Registering an image of the landscape.",
         "type" : "label"
       }, {
         "identifier" : "example",
@@ -1916,7 +1905,12 @@
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Digging a pit through a soil sequence.",
+        "value" : "Taking a diamond-drill core from a rock outcrop.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Crushing a rock sample in a ball mill.",
         "type" : "label"
       }, {
         "identifier" : "example",
@@ -1926,17 +1920,12 @@
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Selecting a subset of a population.",
+        "value" : "Splitting a piece of drill-core to create two new samples.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "en",
         "value" : "Drawing blood from a patient.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Crushing a rock sample in a ball mill.",
         "type" : "label"
       } ]
     },
@@ -2266,7 +2255,7 @@
       "en" : "As a Sensor Property: Selectivity is a Property of a Sensor whereby it provides observed values for one or more ObservableProperties such that the Results for each ObservableProperty are independent of other Properties in the FeatureOfInterest being investigated,  under the defined Conditions.\n\n      As an Actuator Property: Selectivity is a Property of an Actuator whereby it acts on one or more ActuatableProperties such as the Results for each ActuatableProperty are independent of other Properties in the FeatureOfInterest being acted on, under the defined Conditions."
     },
     "attributes" : [ "external" ],
-    "id" : "387",
+    "id" : "386",
     "superClasses" : [ "27" ]
   }, {
     "iri" : "https://w3id.org/rdfp/LiftingRule",
@@ -2294,7 +2283,7 @@
       "en" : "The class of rules that enable RDF lifting.\r\nSuch rules may have various representations, such as a [RML mapping](http://rml.io), a [SPARQL-Generate](https://w3id.org/sparql-generate) or a [XSPARQL query](http://xsparql.deri.org/)."
     },
     "attributes" : [ "external" ],
-    "id" : "391"
+    "id" : "390"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/SystemLifetime",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -2409,14 +2398,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "403",
+    "id" : "402",
     "label" : {
       "IRI-based" : "integer"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "404",
+    "id" : "403",
     "label" : {
       "IRI-based" : "integer"
     }
@@ -2430,7 +2419,7 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "408",
+    "id" : "407",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -2438,7 +2427,7 @@
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#wktLiteral",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
-    "id" : "409",
+    "id" : "408",
     "label" : {
       "IRI-based" : "wktLiteral",
       "en" : "Well-known Text Literal"
@@ -2488,12 +2477,12 @@
       "en" : "Used to specify ranges for qualities that act as conditions on a system/sensor's operation.  For example, wind speed of 10-60m/s may be used as the condition on a SystemProperty, for example, to state that a sensor has a particular accuracy in that condition."
     },
     "attributes" : [ "external" ],
-    "id" : "411",
+    "id" : "410",
     "superClasses" : [ "87" ]
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#gmlLiteral",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
-    "id" : "413",
+    "id" : "412",
     "label" : {
       "IRI-based" : "gmlLiteral",
       "en" : "GML Literal"
@@ -2501,8 +2490,8 @@
   }, {
     "instances" : 0,
     "union" : [ "58", "16" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "414"
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "413"
   }, {
     "iri" : "http://purl.org/poso/Multilateration",
     "baseIri" : "http://purl.org/poso",
@@ -2721,10 +2710,16 @@
       "iri" : "http://purl.org/poso/common/OpenVSLAM",
       "baseIri" : "http://purl.org/poso/common",
       "annotations" : {
+        "altLabel" : [ {
+          "identifier" : "altLabel",
+          "language" : "en",
+          "value" : "stella-vslam",
+          "type" : "label"
+        } ],
         "seeAlso" : [ {
           "identifier" : "seeAlso",
           "language" : "undefined",
-          "value" : "https://openvslam-community.readthedocs.io/en/latest/index.html",
+          "value" : "https://stella-cv.readthedocs.io/en/latest/index.html",
           "type" : "label"
         } ]
       },
@@ -3007,7 +3002,7 @@
       "en" : "Instances of rdfp:GraphPresentation describe RDF Graph presentations in terms of lifting, lowering, and validation rules.\r\n\r\n   - lifting rules can be used to generate a RDF graph from a document, using for instance a RML mapping, a XSPARQL rule, or SPARQL-Generate rule;\r\n   - lowering rules can be used to generate a document from a RDF graph, using for instance a STTL rule (aka. SPARQL-Template).\r\n   - validation rules can be used to validate a document, using for instance a regular expression, a XSD Schema, or a JSON Schema\r\n\r\n   For example,\r\n\r\n    https://w3id.org/rdfp/example/graph/xml> a rdfp:GraphPresentation ; \r\n        rdfp:mediaType \"application/xml\" ; \r\n        rdfp:liftingRule <https://w3id.org/rdfp/example/graph/xml/lifingRule> ;\r\n        rdfp:loweringRule <https://w3id.org/rdfp/example/graph/xml/loweringRule> ."
     },
     "attributes" : [ "external" ],
-    "id" : "407"
+    "id" : "406"
   }, {
     "iri" : "http://www.opengis.net/ont/gml#GeometricComplex",
     "baseIri" : "http://www.opengis.net/ont/gml",
@@ -3102,6 +3097,14 @@
     "individuals" : [ {
       "iri" : "http://purl.org/poso/common/EarthDeployment",
       "baseIri" : "http://purl.org/poso/common",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://dbpedia.org/resouce/Earth",
+          "type" : "iri"
+        } ]
+      },
       "comment" : {
         "en" : "A generic deployment for any positioning system deployment on Earth."
       },
@@ -3174,6 +3177,9 @@
     "individuals" : [ {
       "iri" : "http://purl.org/poso/common/RFCellIdentification",
       "baseIri" : "http://purl.org/poso/common",
+      "comment" : {
+        "en" : "RF cell identification is a technique that determines the position based on the closest RF landmark in range."
+      },
       "labels" : {
         "IRI-based" : "RFCellIdentification",
         "en" : "RF cell identification"
@@ -3287,7 +3293,7 @@
       "IRI-based" : "SystemProperty",
       "en" : "System Property"
     },
-    "subClasses" : [ "464", "465", "235", "466", "387", "26", "184", "239", "348", "467", "300", "468", "469" ],
+    "subClasses" : [ "464", "465", "235", "466", "386", "26", "184", "239", "348", "467", "300", "468", "469" ],
     "comment" : {
       "en" : "An identifiable and observable characteristic that represents the System's ability to operate its primary purpose: a Sensor to make Observations, an Actuator to make Actuations, or a Sampler to make Samplings."
     },
@@ -3438,34 +3444,6 @@
     "id" : "186",
     "superClasses" : [ "443", "114" ]
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/ResponseTime",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "As a Sensor Property: the time between a (step) change in the value of an observed ObservableProperty and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.\n\n      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on ActuatableProperty, under the defined Conditions.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ResponseTime",
-      "en" : "Response Time"
-    },
-    "comment" : {
-      "en" : "As a Sensor Property: the time between a (step) change in the value of an observed ObservableProperty and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.\n\n      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on ActuatableProperty, under the defined Conditions."
-    },
-    "attributes" : [ "external" ],
-    "id" : "469",
-    "superClasses" : [ "27" ]
-  }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/MeasurementRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
     "instances" : 0,
@@ -3492,6 +3470,34 @@
     },
     "attributes" : [ "external" ],
     "id" : "468",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/ResponseTime",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "As a Sensor Property: the time between a (step) change in the value of an observed ObservableProperty and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.\n\n      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on ActuatableProperty, under the defined Conditions.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ResponseTime",
+      "en" : "Response Time"
+    },
+    "comment" : {
+      "en" : "As a Sensor Property: the time between a (step) change in the value of an observed ObservableProperty and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.\n\n      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on ActuatableProperty, under the defined Conditions."
+    },
+    "attributes" : [ "external" ],
+    "id" : "469",
     "superClasses" : [ "27" ]
   }, {
     "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
@@ -3561,13 +3567,12 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/gml",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://www.opengis.net/spec/geosparql/1.0",
@@ -3577,11 +3582,12 @@
         "language" : "undefined",
         "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/gml",
-        "type" : "iri"
+        "value" : "Matthew Perry",
+        "type" : "label"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -3653,6 +3659,17 @@
     "individuals" : [ {
       "iri" : "http://purl.org/poso/common/LDPL",
       "baseIri" : "http://purl.org/poso/common",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "http://dbpedia.org/resource/Log-distance_path_loss_model",
+          "type" : "iri"
+        } ]
+      },
+      "comment" : {
+        "en" : "The log-distance path loss model is a radio propagation model that predicts the path loss a signal encounters inside a building or densely populated areas over distance."
+      },
       "labels" : {
         "IRI-based" : "LDPL",
         "en" : "Log-distance path loss model"
@@ -3701,7 +3718,7 @@
       "IRI-based" : "Property",
       "en" : "Property"
     },
-    "subClasses" : [ "86", "223", "171", "38", "427", "27", "375", "155", "411" ],
+    "subClasses" : [ "86", "223", "171", "38", "427", "27", "420", "155", "410" ],
     "comment" : {
       "en" : "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."
     },
@@ -4063,16 +4080,16 @@
         "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
         "type" : "label"
       } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
-        "type" : "label"
-      } ],
       "scopeNote" : [ {
         "identifier" : "scopeNote",
         "language" : "en",
         "value" : "A concept scheme may be defined to include concepts from different sources.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
         "type" : "label"
       } ]
     },
@@ -4327,7 +4344,29 @@
       "en" : "Instances of rdfp:GraphDescription describe RDF Graphs in terms of validation and presentation.\r\n\r\n  A rdfp:GraphDescription may be linked to one or more validation rules.\r\n  A rdfp:GraphDescription may be linked to one or more instances or rdfp:Presentation.\r\n\r\n   For example,\r\n \r\n```\r\n   <https://w3id.org/rdfp/example/graph> a rdfp:GraphDescription ;\r\n     rdfp:validationRule <some_sparql_ask_rule> ;\r\n     rdfp:presentedBy <some_presentation_description> .\r\n```\r\n\r\nWe propose an alignment of this resource with sd:Graph, but this is part of [another document](https://w3id.org/rdfp/align/sd).\r\n"
     },
     "attributes" : [ "external" ],
-    "id" : "406"
+    "id" : "405"
+  }, {
+    "iri" : "http://purl.org/poso/MidLevelFusion",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MidLevelFusion",
+      "en" : "Mid level sensor fusion"
+    },
+    "comment" : {
+      "en" : "Mid-Level sensor fusion is about fusing the objects detected independently on sensor data."
+    },
+    "attributes" : [ "external" ],
+    "id" : "254",
+    "superClasses" : [ "101" ]
   }, {
     "iri" : "http://purl.org/poso/SatellitePositioningSystem",
     "baseIri" : "http://purl.org/poso",
@@ -4479,28 +4518,6 @@
     "id" : "163",
     "superClasses" : [ "110" ]
   }, {
-    "iri" : "http://purl.org/poso/MidLevelFusion",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "MidLevelFusion",
-      "en" : "Mid level sensor fusion"
-    },
-    "comment" : {
-      "en" : "Mid-Level sensor fusion is about fusing the objects detected independently on sensor data."
-    },
-    "attributes" : [ "external" ],
-    "id" : "254",
-    "superClasses" : [ "101" ]
-  }, {
     "iri" : "http://purl.org/poso/VisualInput",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
@@ -4531,7 +4548,7 @@
       "iri" : "http://purl.org/poso/common/WeightedAccuracyFusion",
       "baseIri" : "http://purl.org/poso/common",
       "comment" : {
-        "en" : "High level fusion based on weighted average of the accuract^-1."
+        "en" : "Decision level fusion based on weighted average of the accuracy^-1."
       },
       "labels" : {
         "IRI-based" : "WeightedAccuracyFusion",
@@ -4606,12 +4623,12 @@
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/gml",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/gml",
         "type" : "iri"
       } ],
       "prefLabel" : [ {
@@ -5114,7 +5131,7 @@
       "en" : "Sample"
     },
     "comment" : {
-      "en" : "A Sample is the result from an act of Sampling."
+      "en" : "Samples are artifacts of an observational strategy, and have no significant function outside of their role in the observation process. The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign.\n\nA Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features."
     },
     "attributes" : [ "external" ],
     "id" : "260",
@@ -5288,6 +5305,17 @@
       "IRI-based" : "PDR",
       "en" : "Pedestrian dead reckoning"
     },
+    "individuals" : [ {
+      "iri" : "http://purl.org/poso/common/FootMountedPDR",
+      "baseIri" : "http://purl.org/poso/common",
+      "comment" : {
+        "en" : "Foot-mounted pedestrian dead reckoning uses a sensor on the foot of a pedestrian to detect steps."
+      },
+      "labels" : {
+        "IRI-based" : "FootMountedPDR",
+        "en" : "Foot-mounted pedestrian dead reckoning"
+      }
+    } ],
     "attributes" : [ "external" ],
     "id" : "324",
     "superClasses" : [ "61" ]
@@ -5334,12 +5362,12 @@
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/ont/gml",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/gml",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -5461,7 +5489,7 @@
       "en" : "Describes survival capabilities of a System under some specified Conditions. For example, to the lifetime of a System under a specified temperature range.\n\n    In the absence of SurvivalProperties, simply describes the Conditions a System can be exposed to without damage. For example, the temperature range a System can withstand before being considered damaged.\n\n    The System continues to operate as defined using SystemCapability. If, however, the OperatingProperty is violated, the System is operating 'out of operating range' and SystemCapability specifications may no longer hold."
     },
     "attributes" : [ "external" ],
-    "id" : "375",
+    "id" : "420",
     "superClasses" : [ "87" ]
   }, {
     "iri" : "http://www.opengis.net/ont/gml#Polygon",
@@ -6172,13 +6200,13 @@
     "id" : "337",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "339",
+    "id" : "338",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "340",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "343",
+    "id" : "342",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "344",
@@ -6208,22 +6236,22 @@
     "id" : "355",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "357",
+    "id" : "356",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "359",
+    "id" : "365",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "360",
+    "id" : "366",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "361",
+    "id" : "368",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "362",
+    "id" : "370",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "371",
+    "id" : "372",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "373",
@@ -6232,14 +6260,17 @@
     "id" : "374",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "376",
+    "id" : "375",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "191",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "377",
+    "id" : "376",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "377",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "378",
     "type" : "owl:allValuesFrom"
@@ -6253,7 +6284,7 @@
     "id" : "381",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "382",
+    "id" : "383",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "384",
@@ -6262,13 +6293,13 @@
     "id" : "385",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "386",
+    "id" : "387",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "388",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "389",
+    "id" : "391",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "392",
@@ -6280,7 +6311,7 @@
     "id" : "394",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "395",
+    "id" : "396",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "397",
@@ -6295,26 +6326,26 @@
     "id" : "401",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "402",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "405",
+    "id" : "404",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "410",
+    "id" : "409",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "412",
+    "id" : "411",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "18",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "415",
+    "id" : "414",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "416",
+    "id" : "415",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "416",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "417",
     "type" : "owl:allValuesFrom"
@@ -6323,9 +6354,6 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "419",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "420",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "421",
@@ -6430,7 +6458,7 @@
     "id" : "463",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "383",
+    "id" : "382",
     "type" : "owl:objectProperty"
   }, {
     "id" : "227",
@@ -6628,13 +6656,13 @@
     "id" : "535",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "369",
+    "id" : "363",
     "type" : "owl:objectProperty"
   }, {
     "id" : "536",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "364",
+    "id" : "358",
     "type" : "owl:objectProperty"
   }, {
     "id" : "537",
@@ -6688,9 +6716,6 @@
     "id" : "552",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "553",
-    "type" : "owl:allValuesFrom"
-  }, {
     "id" : "554",
     "type" : "owl:allValuesFrom"
   }, {
@@ -6698,6 +6723,9 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "556",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "557",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "558",
@@ -6861,6 +6889,12 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -6871,12 +6905,6 @@
         "language" : "undefined",
         "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
-      } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -6921,22 +6949,22 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Matthew Perry",
         "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
-        "type" : "iri"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -6959,7 +6987,7 @@
     "comment" : {
       "en" : "\n      The number of measurements or axes needed to describe the spatial position of \n      this geometry in a coordinate system.\n    "
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "72"
   }, {
     "range" : "77",
@@ -7103,12 +7131,6 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -7119,6 +7141,12 @@
         "language" : "undefined",
         "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -7304,12 +7332,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -7662,12 +7690,6 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -7678,6 +7700,12 @@
         "language" : "undefined",
         "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -7700,7 +7728,7 @@
     "comment" : {
       "en" : "\n      (true) if this geometric object is the empty Geometry. If \n      true, then this geometric object represents the empty point \n      set for the coordinate space.\n    "
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "233"
   }, {
     "range" : "216",
@@ -7774,7 +7802,7 @@
       "en" : "notation"
     },
     "domain" : "49",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "243"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#defaultGeometry",
@@ -7796,22 +7824,22 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Matthew Perry",
         "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
-        "type" : "iri"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -7927,12 +7955,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -8230,12 +8258,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -8292,12 +8320,12 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
@@ -8308,12 +8336,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ]
     },
@@ -8373,9 +8401,9 @@
     "attributes" : [ "functional", "object", "allValues", "external" ],
     "id" : "331"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasInput",
+    "iri" : "http://www.w3.org/ns/ssn/hasOutput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "278",
+    "range" : "69",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -8386,17 +8414,17 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation between a Procedure and an Input to it.",
+        "value" : "Relation between a Procedure and an Output of it.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasInput",
-      "en" : "has input"
+      "IRI-based" : "hasOutput",
+      "en" : "has output"
     },
     "domain" : "60",
     "comment" : {
-      "en" : "Relation between a Procedure and an Input to it."
+      "en" : "Relation between a Procedure and an Output of it."
     },
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "334"
@@ -8426,22 +8454,22 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sensor",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Platform",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
@@ -8462,8 +8490,36 @@
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "335"
   }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasInput",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "278",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Procedure and an Input to it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasInput",
+      "en" : "has input"
+    },
+    "domain" : "60",
+    "comment" : {
+      "en" : "Relation between a Procedure and an Input to it."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "337"
+  }, {
     "iri" : "http://www.w3.org/ns/ssn/implementedBy",
-    "inverse" : "338",
+    "inverse" : "339",
     "baseIri" : "http://www.w3.org/ns/ssn",
     "range" : "135",
     "annotations" : {
@@ -8495,11 +8551,11 @@
       "en" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "337"
+    "id" : "338"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasOutput",
+    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "69",
+    "range" : "97",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -8510,86 +8566,25 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation between a Procedure and an Output of it.",
+        "value" : "Relation between an Observation and the Stimulus that originated it.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasOutput",
-      "en" : "has output"
-    },
-    "domain" : "60",
-    "comment" : {
-      "en" : "Relation between a Procedure and an Output of it."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "339"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "342",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "219",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasResult",
-      "en" : "has result"
+      "IRI-based" : "wasOriginatedBy",
+      "en" : "was originated by"
     },
     "domain" : "341",
     "comment" : {
-      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+      "en" : "Relation between an Observation and the Stimulus that originated it."
     },
-    "attributes" : [ "object", "allValues", "external" ],
+    "attributes" : [ "functional", "object", "allValues", "external" ],
     "id" : "340"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "227",
+    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
+    "inverse" : "343",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "158",
+    "range" : "168",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -8605,53 +8600,32 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+        "value" : "Relation between an Observation and the Sensor which made the Observation.",
         "type" : "label"
       } ],
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
-        "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasFeatureOfInterest",
-      "en" : "has feature of interest"
+      "IRI-based" : "madeBySensor",
+      "en" : "made by sensor"
     },
     "domain" : "341",
     "comment" : {
-      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
+      "en" : "Relation between an Observation and the Sensor which made the Observation."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "343"
+    "id" : "342"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#sfContains",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
@@ -8675,12 +8649,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -8747,9 +8721,10 @@
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "345"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "227",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "223",
+    "range" : "158",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -8765,29 +8740,50 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
         "type" : "label"
       } ],
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "observedProperty",
-      "en" : "observed property"
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
     },
     "domain" : "341",
     "comment" : {
-      "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
     },
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "346"
@@ -8814,12 +8810,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -8868,10 +8864,10 @@
     "attributes" : [ "functional", "object", "external" ],
     "id" : "350"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
     "inverse" : "352",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "168",
+    "range" : "219",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -8887,13 +8883,73 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation between an Observation and the Sensor which made the Observation.",
+        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
         "type" : "label"
       } ],
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasResult",
+      "en" : "has result"
+    },
+    "domain" : "341",
+    "comment" : {
+      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "351"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "223",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
@@ -8904,42 +8960,14 @@
       } ]
     },
     "label" : {
-      "IRI-based" : "madeBySensor",
-      "en" : "made by sensor"
+      "IRI-based" : "observedProperty",
+      "en" : "observed property"
     },
     "domain" : "341",
     "comment" : {
-      "en" : "Relation between an Observation and the Sensor which made the Observation."
+      "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "351"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "97",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an Observation and the Stimulus that originated it.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "wasOriginatedBy",
-      "en" : "was originated by"
-    },
-    "domain" : "341",
-    "comment" : {
-      "en" : "Relation between an Observation and the Stimulus that originated it."
-    },
-    "attributes" : [ "functional", "object", "allValues", "external" ],
     "id" : "353"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
@@ -8972,17 +9000,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       } ]
     },
@@ -8996,132 +9024,6 @@
     },
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "354"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
-    "inverse" : "356",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "168",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an ObservableProperty and the Sensor able to observe it.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sensor",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isObservedBy",
-      "en" : "is observed by"
-    },
-    "domain" : "223",
-    "comment" : {
-      "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "355"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasSample",
-    "inverse" : "358",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "260",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a FeatureOfInterest and the Sample used to represent it.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSample",
-      "en" : "has sample"
-    },
-    "domain" : "158",
-    "comment" : {
-      "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
-    },
-    "attributes" : [ "object", "allValues", "inverse functional", "external" ],
-    "id" : "357"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "97",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isProxyFor",
-      "en" : "is proxy for"
-    },
-    "domain" : "223",
-    "comment" : {
-      "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "359"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observedProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -9166,42 +9068,7 @@
       "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "360"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/forProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "155",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation between some aspect of an entity and a Property.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "forProperty",
-      "en" : "for property"
-    },
-    "domain" : "134",
-    "subproperty" : [ "356", "240" ],
-    "comment" : {
-      "en" : "A relation between some aspect of an entity and a Property."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "361"
+    "id" : "355"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasProperty",
     "inverse" : "50",
@@ -9226,15 +9093,95 @@
       "en" : "has property"
     },
     "domain" : "158",
-    "subproperty" : [ "363", "202", "364", "350", "365", "366", "367", "368", "369", "157", "370" ],
+    "subproperty" : [ "357", "202", "358", "350", "359", "360", "361", "362", "363", "157", "364" ],
     "comment" : {
       "en" : "Relation between an entity and a Property of that entity."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "362"
+    "id" : "356"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "97",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isProxyFor",
+      "en" : "is proxy for"
+    },
+    "domain" : "223",
+    "comment" : {
+      "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "365"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
+    "inverse" : "367",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "168",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an ObservableProperty and the Sensor able to observe it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isObservedBy",
+      "en" : "is observed by"
+    },
+    "domain" : "223",
+    "comment" : {
+      "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "366"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeActuation",
-    "inverse" : "372",
+    "inverse" : "369",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "242",
     "annotations" : {
@@ -9277,7 +9224,145 @@
       "en" : "Relation between an Actuator and the Actuation it has made."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "371"
+    "id" : "368"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasSample",
+    "inverse" : "371",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "260",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a FeatureOfInterest and the Sample used to represent it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSample",
+      "en" : "has sample"
+    },
+    "domain" : "158",
+    "comment" : {
+      "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
+    },
+    "attributes" : [ "inverse functional", "object", "allValues", "external" ],
+    "id" : "370"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/forProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "155",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between some aspect of an entity and a Property.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "forProperty",
+      "en" : "for property"
+    },
+    "domain" : "134",
+    "subproperty" : [ "367", "240" ],
+    "comment" : {
+      "en" : "A relation between some aspect of an entity and a Property."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "372"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "135",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a System and its component parts.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSubSystem",
+      "en" : "has subsystem"
+    },
+    "domain" : "135",
+    "comment" : {
+      "en" : "Relation between a System and its component parts."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "373"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "86",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSystemCapability",
+      "en" : "has system capability"
+    },
+    "superproperty" : [ "161" ],
+    "domain" : "135",
+    "comment" : {
+      "en" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "374"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasDeployment",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -9305,70 +9390,7 @@
       "en" : "Relation between a System and a Deployment, recording that the System is deployed in that Deployment."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "373"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "375",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation from a System to a SurvivalRange.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSurvivalRange",
-      "en" : "has survival range"
-    },
-    "superproperty" : [ "161" ],
-    "domain" : "135",
-    "comment" : {
-      "en" : "Relation from a System to a SurvivalRange."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "374"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/implements",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "60",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "implements",
-      "en" : "implements"
-    },
-    "domain" : "135",
-    "comment" : {
-      "en" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "376"
+    "id" : "375"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#closeMatch",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -9423,7 +9445,7 @@
       "en" : "Links a representation to one of its aliases. \r\n\r\nAccording to the Web architecture design principles, there should never be two following rdfp:alias links."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "377"
+    "id" : "376"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -9451,11 +9473,11 @@
       "en" : "Relation between a System and its component parts."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "378"
+    "id" : "377"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/detects",
+    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "168",
+    "range" : "223",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -9466,17 +9488,57 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
+        "value" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "detects",
-      "en" : "detects"
+      "IRI-based" : "isProxyFor",
+      "en" : "is proxy for"
     },
     "domain" : "97",
     "comment" : {
-      "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
+      "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "378"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/implements",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "60",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "implements",
+      "en" : "implements"
+    },
+    "domain" : "135",
+    "comment" : {
+      "en" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."
     },
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "379"
@@ -9511,11 +9573,6 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuator",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampler",
         "type" : "iri"
       }, {
@@ -9527,6 +9584,11 @@
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Platform",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
         "type" : "iri"
       } ]
     },
@@ -9540,34 +9602,6 @@
     },
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "380"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "135",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a System and its component parts.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSubSystem",
-      "en" : "has subsystem"
-    },
-    "domain" : "135",
-    "comment" : {
-      "en" : "Relation between a System and its component parts."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "381"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/isPropertyOf",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -9591,12 +9625,12 @@
       "en" : "is property of"
     },
     "domain" : "87",
-    "subproperty" : [ "383", "203", "160", "48" ],
+    "subproperty" : [ "382", "203", "160", "48" ],
     "comment" : {
       "en" : "Relation between a Property and the entity it belongs to."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "382"
+    "id" : "381"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasOutput",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -9622,6 +9656,34 @@
     "domain" : "69",
     "comment" : {
       "en" : "Relation between a Procedure and an Output of it."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "383"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/detects",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "168",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "detects",
+      "en" : "detects"
+    },
+    "domain" : "97",
+    "comment" : {
+      "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
     },
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "384"
@@ -9654,40 +9716,6 @@
     "attributes" : [ "functional", "object", "allValues", "external" ],
     "id" : "385"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "223",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isProxyFor",
-      "en" : "is proxy for"
-    },
-    "domain" : "97",
-    "comment" : {
-      "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "386"
-  }, {
     "iri" : "http://www.w3.org/ns/ssn/hasInput",
     "baseIri" : "http://www.w3.org/ns/ssn",
     "range" : "60",
@@ -9714,10 +9742,10 @@
       "en" : "Relation between a Procedure and an Input to it."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "388"
+    "id" : "387"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
-    "inverse" : "390",
+    "inverse" : "389",
     "baseIri" : "http://www.w3.org/ns/ssn",
     "range" : "197",
     "annotations" : {
@@ -9743,7 +9771,7 @@
       "en" : "Relation between a Deployment and the Platform on which the Systems are deployed."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "389"
+    "id" : "388"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/forProperty",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -9773,9 +9801,37 @@
       "en" : "for property"
     },
     "domain" : "292",
-    "subproperty" : [ "356", "240" ],
+    "subproperty" : [ "367", "240" ],
     "comment" : {
       "en" : "A relation between some aspect of an entity and a Property."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "391"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/detects",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "97",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "detects",
+      "en" : "detects"
+    },
+    "domain" : "168",
+    "comment" : {
+      "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
     },
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "392"
@@ -9825,6 +9881,35 @@
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "393"
   }, {
+    "iri" : "http://www.w3.org/ns/ssn/deployedSystem",
+    "inverse" : "395",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "135",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Deployment and a deployed System.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "deployedSystem",
+      "en" : "deployed system"
+    },
+    "domain" : "292",
+    "comment" : {
+      "en" : "Relation between a Deployment and a deployed System."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "394"
+  }, {
     "iri" : "http://www.w3.org/ns/sosa/observes",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "223",
@@ -9869,226 +9954,7 @@
       "en" : "Relation between a Sensor and an ObservableProperty that it is capable of sensing."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "394"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/deployedSystem",
-    "inverse" : "396",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "135",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Deployment and a deployed System.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "deployedSystem",
-      "en" : "deployed system"
-    },
-    "domain" : "292",
-    "comment" : {
-      "en" : "Relation between a Deployment and a deployed System."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "395"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/detects",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "97",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "detects",
-      "en" : "detects"
-    },
-    "domain" : "168",
-    "comment" : {
-      "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "397"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "60",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Procedure",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "usedProcedure",
-      "en" : "used procedure"
-    },
-    "domain" : "327",
-    "comment" : {
-      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "398"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
-    "inverse" : "400",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "138",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampler",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "madeBySampler",
-      "en" : "made by sampler"
-    },
-    "domain" : "327",
-    "comment" : {
-      "en" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "399"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "342",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "260",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasResult",
-      "en" : "has result"
-    },
-    "domain" : "327",
-    "comment" : {
-      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "401"
+    "id" : "396"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
     "inverse" : "227",
@@ -10155,11 +10021,173 @@
       "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "402"
+    "id" : "397"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "60",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Procedure",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usedProcedure",
+      "en" : "used procedure"
+    },
+    "domain" : "327",
+    "comment" : {
+      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "398"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
+    "inverse" : "400",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "138",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeBySampler",
+      "en" : "made by sampler"
+    },
+    "domain" : "327",
+    "comment" : {
+      "en" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "399"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "352",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "260",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasResult",
+      "en" : "has result"
+    },
+    "domain" : "327",
+    "comment" : {
+      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "401"
   }, {
     "iri" : "https://w3id.org/rdfp/presentedBy",
     "baseIri" : "https://w3id.org/rdfp",
-    "range" : "407",
+    "range" : "406",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -10178,12 +10206,12 @@
       "IRI-based" : "presentedBy",
       "en" : "presented by"
     },
-    "domain" : "406",
+    "domain" : "405",
     "comment" : {
       "en" : "Links a RDF graph description to one of its presentation means."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "405"
+    "id" : "404"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#ehEquals",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
@@ -10204,12 +10232,6 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -10220,6 +10242,12 @@
         "language" : "undefined",
         "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -10243,11 +10271,11 @@
       "en" : "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "
     },
     "attributes" : [ "object", "external" ],
-    "id" : "410"
+    "id" : "409"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#dimension",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
-    "range" : "403",
+    "range" : "402",
     "description" : {
       "en" : "\n      The topological dimension of this geometric object, which \n      must be less than or equal to the coordinate dimension. \n      In non-homogeneous collections, this will return the largest \n      topological dimension of the contained objects.\n    "
     },
@@ -10264,22 +10292,22 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Matthew Perry",
         "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
-        "type" : "iri"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -10302,8 +10330,8 @@
     "comment" : {
       "en" : "\n      The topological dimension of this geometric object, which \n      must be less than or equal to the coordinate dimension. \n      In non-homogeneous collections, this will return the largest \n      topological dimension of the contained objects.\n    "
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "412"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "411"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#broaderTransitive",
     "inverse" : "17",
@@ -10339,98 +10367,9 @@
     "attributes" : [ "transitive", "object", "external" ],
     "id" : "18"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "135",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSystemCapability",
-      "en" : "has system capability"
-    },
-    "superproperty" : [ "161" ],
-    "domain" : "86",
-    "comment" : {
-      "en" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "415"
-  }, {
-    "iri" : "http://www.opengis.net/ont/geosparql#hasSerialization",
-    "baseIri" : "http://www.opengis.net/ont/geosparql",
-    "range" : "408",
-    "description" : {
-      "en" : "\n      Connects a geometry object with its text-based serialization.\n    "
-    },
-    "annotations" : {
-      "date" : [ {
-        "identifier" : "date",
-        "language" : "undefined",
-        "value" : "2011-06-16",
-        "type" : "label"
-      } ],
-      "creator" : [ {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
-        "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
-        "type" : "iri"
-      } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "has serialization",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "\n      Connects a geometry object with its text-based serialization.\n    ",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSerialization",
-      "en" : "has serialization"
-    },
-    "domain" : "73",
-    "comment" : {
-      "en" : "\n      Connects a geometry object with its text-based serialization.\n    "
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "416"
-  }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "411",
+    "range" : "410",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -10460,36 +10399,67 @@
       "en" : "Describes the prevailing environmental conditions for SystemCapabilites, OperatingRanges and SurvivalRanges."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "417"
+    "id" : "414"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "86",
+    "iri" : "http://www.opengis.net/ont/geosparql#hasSerialization",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "range" : "407",
+    "description" : {
+      "en" : "\n      Connects a geometry object with its text-based serialization.\n    "
+    },
     "annotations" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2011-06-16",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "has serialization",
+        "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System.",
+        "value" : "\n      Connects a geometry object with its text-based serialization.\n    ",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasSystemProperty",
-      "en" : "has system property"
+      "IRI-based" : "hasSerialization",
+      "en" : "has serialization"
     },
-    "superproperty" : [ "161" ],
-    "domain" : "27",
+    "domain" : "73",
     "comment" : {
-      "en" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System."
+      "en" : "\n      Connects a geometry object with its text-based serialization.\n    "
     },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "418"
+    "attributes" : [ "datatype", "external" ],
+    "id" : "415"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -10518,11 +10488,11 @@
       "en" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "419"
+    "id" : "416"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "38",
+    "range" : "86",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -10533,50 +10503,21 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation from a SurvivalRange of a System to a SurvivalProperty describing the survival range of the System.",
+        "value" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasSurvivalProperty",
-      "en" : "has survival property"
+      "IRI-based" : "hasSystemProperty",
+      "en" : "has system property"
     },
     "superproperty" : [ "161" ],
-    "domain" : "375",
+    "domain" : "27",
     "comment" : {
-      "en" : "Relation from a SurvivalRange of a System to a SurvivalProperty describing the survival range of the System."
+      "en" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "420"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "135",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation from a System to a SurvivalRange.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSurvivalRange",
-      "en" : "has survival range"
-    },
-    "superproperty" : [ "161" ],
-    "domain" : "375",
-    "comment" : {
-      "en" : "Relation from a System to a SurvivalRange."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "421"
+    "id" : "417"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/forProperty",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -10606,16 +10547,103 @@
       "en" : "for property"
     },
     "domain" : "86",
-    "subproperty" : [ "356", "240" ],
+    "subproperty" : [ "367", "240" ],
     "comment" : {
       "en" : "A relation between some aspect of an entity and a Property."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "418"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "38",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a SurvivalRange of a System to a SurvivalProperty describing the survival range of the System.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSurvivalProperty",
+      "en" : "has survival property"
+    },
+    "superproperty" : [ "161" ],
+    "domain" : "420",
+    "comment" : {
+      "en" : "Relation from a SurvivalRange of a System to a SurvivalProperty describing the survival range of the System."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "419"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "135",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a System to a SurvivalRange.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSurvivalRange",
+      "en" : "has survival range"
+    },
+    "superproperty" : [ "161" ],
+    "domain" : "420",
+    "comment" : {
+      "en" : "Relation from a System to a SurvivalRange."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "421"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "135",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSystemCapability",
+      "en" : "has system capability"
+    },
+    "superproperty" : [ "161" ],
+    "domain" : "86",
+    "comment" : {
+      "en" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions."
     },
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "422"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "411",
+    "range" : "410",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -10640,7 +10668,7 @@
       "IRI-based" : "inCondition",
       "en" : "in condition"
     },
-    "domain" : "375",
+    "domain" : "420",
     "comment" : {
       "en" : "Describes the prevailing environmental conditions for SystemCapabilites, OperatingRanges and SurvivalRanges."
     },
@@ -10698,9 +10726,38 @@
     "attributes" : [ "object", "external" ],
     "id" : "424"
   }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "135",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a System to an OperatingRange describing the normal operating environment of the System.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOperatingRange",
+      "en" : "has operating range"
+    },
+    "superproperty" : [ "161" ],
+    "domain" : "427",
+    "comment" : {
+      "en" : "Relation from a System to an OperatingRange describing the normal operating environment of the System."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "426"
+  }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "411",
+    "range" : "410",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -10730,40 +10787,11 @@
       "en" : "Describes the prevailing environmental conditions for SystemCapabilites, OperatingRanges and SurvivalRanges."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "426"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "135",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation from a System to an OperatingRange describing the normal operating environment of the System.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasOperatingRange",
-      "en" : "has operating range"
-    },
-    "superproperty" : [ "161" ],
-    "domain" : "427",
-    "comment" : {
-      "en" : "Relation from a System to an OperatingRange describing the normal operating environment of the System."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
     "id" : "428"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "375",
+    "range" : "420",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -10790,35 +10818,6 @@
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "429"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "86",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSystemCapability",
-      "en" : "has system capability"
-    },
-    "superproperty" : [ "161" ],
-    "domain" : "135",
-    "comment" : {
-      "en" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "430"
-  }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
     "range" : "427",
@@ -10844,6 +10843,35 @@
     "domain" : "135",
     "comment" : {
       "en" : "Relation from a System to an OperatingRange describing the normal operating environment of the System."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "430"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "420",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a System to a SurvivalRange.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSurvivalRange",
+      "en" : "has survival range"
+    },
+    "superproperty" : [ "161" ],
+    "domain" : "135",
+    "comment" : {
+      "en" : "Relation from a System to a SurvivalRange."
     },
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "431"
@@ -11000,7 +11028,7 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -11010,7 +11038,7 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       } ]
     },
@@ -11023,7 +11051,7 @@
     "comment" : {
       "en" : "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "445"
   }, {
     "range" : "53",
@@ -11038,7 +11066,7 @@
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#asWKT",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
-    "range" : "409",
+    "range" : "408",
     "description" : {
       "en" : "\n      The WKT serialization of a geometry\n    "
     },
@@ -11058,12 +11086,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -11093,7 +11121,7 @@
     "comment" : {
       "en" : "\n      The WKT serialization of a geometry\n    "
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "449"
   }, {
     "range" : "59",
@@ -11128,12 +11156,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -11195,12 +11223,6 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -11211,6 +11233,12 @@
         "language" : "undefined",
         "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -11238,7 +11266,7 @@
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#asGML",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
-    "range" : "413",
+    "range" : "412",
     "description" : {
       "en" : "\n      The GML serialization of a geometry\n    "
     },
@@ -11264,12 +11292,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       } ],
       "prefLabel" : [ {
@@ -11293,7 +11321,7 @@
     "comment" : {
       "en" : "\n      The GML serialization of a geometry\n    "
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "459"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#sfOverlaps",
@@ -11315,22 +11343,22 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Matthew Perry",
         "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
-        "type" : "iri"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -11404,7 +11432,7 @@
     "superproperty" : [ "50" ],
     "domain" : "49",
     "attributes" : [ "object", "external" ],
-    "id" : "383"
+    "id" : "382"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -11430,17 +11458,17 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
@@ -11530,22 +11558,22 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
-        "type" : "iri"
-      } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Matthew Perry",
         "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -11653,12 +11681,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       } ],
       "prefLabel" : [ {
@@ -11704,6 +11732,12 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
+      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -11714,12 +11748,6 @@
         "language" : "undefined",
         "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
-      } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -11792,22 +11820,22 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Matthew Perry",
         "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
-        "type" : "iri"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -11835,7 +11863,7 @@
   }, {
     "iri" : "https://w3id.org/rdfp/liftingRule",
     "baseIri" : "https://w3id.org/rdfp",
-    "range" : "391",
+    "range" : "390",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -12024,7 +12052,7 @@
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#member",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "414",
+    "range" : "413",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -12068,7 +12096,7 @@
     "id" : "493"
   }, {
     "range" : "87",
-    "domain" : "375",
+    "domain" : "420",
     "attributes" : [ "anonymous", "object" ],
     "id" : "494"
   }, {
@@ -12078,7 +12106,7 @@
     "id" : "495"
   }, {
     "range" : "87",
-    "domain" : "411",
+    "domain" : "410",
     "attributes" : [ "anonymous", "object" ],
     "id" : "496"
   }, {
@@ -12140,12 +12168,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       } ],
       "prefLabel" : [ {
@@ -12199,12 +12227,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -12234,7 +12262,7 @@
     "comment" : {
       "en" : "\n      (true) if this geometric object has no anomalous geometric \n      points, such as self intersection or self tangency.\n    "
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "505"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#rcc8ntppi",
@@ -12298,9 +12326,9 @@
     "id" : "506"
   }, {
     "iri" : "https://w3id.org/rdfp/presentationFor",
-    "inverse" : "405",
+    "inverse" : "404",
     "baseIri" : "https://w3id.org/rdfp",
-    "range" : "406",
+    "range" : "405",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -12319,7 +12347,7 @@
       "IRI-based" : "presentationFor",
       "en" : "presentation for"
     },
-    "domain" : "407",
+    "domain" : "406",
     "comment" : {
       "en" : "Links a RDF graph presentation to the description of RDF graphs it may present."
     },
@@ -12438,7 +12466,7 @@
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#coordinateDimension",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
-    "range" : "404",
+    "range" : "403",
     "description" : {
       "en" : "\n      The number of measurements or axes needed to describe the position of this\n      geometry in a coordinate system.\n    "
     },
@@ -12455,12 +12483,6 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -12471,6 +12493,12 @@
         "language" : "undefined",
         "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -12493,7 +12521,7 @@
     "comment" : {
       "en" : "\n      The number of measurements or axes needed to describe the position of this\n      geometry in a coordinate system.\n    "
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "519"
   }, {
     "range" : "443",
@@ -12517,7 +12545,7 @@
   }, {
     "iri" : "https://w3id.org/rdfp/describedBy",
     "baseIri" : "https://w3id.org/rdfp",
-    "range" : "406",
+    "range" : "405",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -12562,22 +12590,22 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
-        "type" : "iri"
-      } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Matthew Perry",
         "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -12677,12 +12705,6 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -12693,6 +12715,12 @@
         "language" : "undefined",
         "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -12733,7 +12761,7 @@
       "en" : "Property that links a feature of interest to a unique acceleration property related to this feature."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "369"
+    "id" : "363"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#sfCrosses",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
@@ -12763,12 +12791,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       } ],
       "prefLabel" : [ {
@@ -12796,7 +12824,7 @@
     "id" : "536"
   }, {
     "iri" : "http://purl.org/poso/hasVelocity",
-    "inverse" : "383",
+    "inverse" : "382",
     "baseIri" : "http://purl.org/poso",
     "range" : "80",
     "label" : {
@@ -12811,7 +12839,7 @@
       "nl" : "Duid de snelheid van een object aan."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "364"
+    "id" : "358"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#ehMeet",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
@@ -12832,12 +12860,6 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Matthew Perry",
-        "type" : "label"
-      } ],
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
@@ -12848,6 +12870,12 @@
         "language" : "undefined",
         "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Matthew Perry",
+        "type" : "label"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -12904,7 +12932,7 @@
     "id" : "543"
   }, {
     "range" : "27",
-    "domain" : "387",
+    "domain" : "386",
     "attributes" : [ "anonymous", "object" ],
     "id" : "544"
   }, {
@@ -13021,7 +13049,7 @@
     "comment" : {
       "en" : "Links a representation to its media type."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "547"
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -13046,12 +13074,12 @@
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "value" : "http://www.opengis.net/ont/geosparql",
         "type" : "iri"
       }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
         "type" : "iri"
       } ],
       "contributor" : [ {
@@ -13104,22 +13132,22 @@
         "value" : "OGC GeoSPARQL 1.0 Standard Working Group",
         "type" : "label"
       } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql/1.0",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql",
+        "type" : "iri"
+      } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Matthew Perry",
         "type" : "label"
-      } ],
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/ont/geosparql",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.opengis.net/spec/geosparql/1.0",
-        "type" : "iri"
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -13182,17 +13210,17 @@
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
-        "type" : "iri"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
         "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
         "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -13205,6 +13233,164 @@
     },
     "attributes" : [ "object", "allValues", "external" ],
     "id" : "551"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
+    "inverse" : "553",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "155",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "actsOnProperty",
+      "en" : "acts on property"
+    },
+    "domain" : "242",
+    "comment" : {
+      "en" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "552"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "134",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Actuation to the Actuator that made that Actuation.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeByActuator",
+      "en" : "made by actuator"
+    },
+    "domain" : "242",
+    "comment" : {
+      "en" : "Relation linking an Actuation to the Actuator that made that Actuation."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "554"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "352",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "219",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasResult",
+      "en" : "has result"
+    },
+    "domain" : "242",
+    "comment" : {
+      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "555"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
     "inverse" : "227",
@@ -13271,7 +13457,7 @@
       "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "552"
+    "id" : "556"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -13303,17 +13489,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       } ]
     },
@@ -13326,165 +13512,7 @@
       "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
     },
     "attributes" : [ "object", "allValues", "external" ],
-    "id" : "553"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "134",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an Actuation to the Actuator that made that Actuation.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuator",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "madeByActuator",
-      "en" : "made by actuator"
-    },
-    "domain" : "242",
-    "comment" : {
-      "en" : "Relation linking an Actuation to the Actuator that made that Actuation."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "554"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "342",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "219",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasResult",
-      "en" : "has result"
-    },
-    "domain" : "242",
-    "comment" : {
-      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "555"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
-    "inverse" : "557",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "155",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
-        "type" : "label"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "actsOnProperty",
-      "en" : "acts on property"
-    },
-    "domain" : "242",
-    "comment" : {
-      "en" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."
-    },
-    "attributes" : [ "object", "allValues", "external" ],
-    "id" : "556"
+    "id" : "557"
   }, {
     "range" : "73",
     "domain" : "154",
@@ -13604,12 +13632,13 @@
         "value" : "The simple value of an Observation or Actuation or act of Sampling.",
         "type" : "label"
       } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For instance, the values 23 or true.",
+        "type" : "label"
+      } ],
       "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
@@ -13619,12 +13648,11 @@
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For instance, the values 23 or true.",
-        "type" : "label"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -13635,7 +13663,7 @@
     "comment" : {
       "en" : "The simple value of an Observation or Actuation or act of Sampling."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "562"
   } ]
 }

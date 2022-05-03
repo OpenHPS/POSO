@@ -71,7 +71,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
-    "@value" : "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning about how a system is deployed."
+    "@value" : "The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms."
   } ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
     "@value" : "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology"
@@ -92,7 +92,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2022-04-7T00:00:00"
+    "@value" : "2022-05-03T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -160,15 +160,39 @@
     "@id" : "http://purl.org/poso/common/EarthDeployment"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/common/CSIFingerprinting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/poso/Fingerprinting"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Channel State Information fingerprinting"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/common/EarthDeployment",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/poso/OutdoorDeployment" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A generic deployment for any positioning system deployment on Earth."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://dbpedia.org/resouce/Earth"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Earth deployment"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/common/FootMountedPDR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/poso/PDR" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Foot-mounted pedestrian dead reckoning uses a sensor on the foot of a pedestrian to detect steps."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Foot-mounted pedestrian dead reckoning"
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/GLONASS",
@@ -329,6 +353,13 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/poso/RadioPropagation"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The log-distance path loss model is a radio propagation model that predicts the path loss a signal encounters inside a building or densely populated areas over distance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://dbpedia.org/resource/Log-distance_path_loss_model"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Log-distance path loss model"
@@ -436,21 +467,11 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://openvslam-community.readthedocs.io/en/latest/index.html"
-  } ]
-}, {
-  "@id" : "http://purl.org/poso/common/PedestrianDeadReckoning",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/poso/DeadReckoning"
+    "@value" : "https://stella-cv.readthedocs.io/en/latest/index.html"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
-    "@value" : "Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Pedestrian dead reckoning"
+    "@value" : "stella-vslam"
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/ProbabilisticFingerprinting",
@@ -489,6 +510,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/poso/CellIdentification"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "RF cell identification is a technique that determines the position based on the closest RF landmark in range."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "RF cell identification"
@@ -512,16 +537,6 @@
     "@value" : "Robotics Operating System"
   } ]
 }, {
-  "@id" : "http://purl.org/poso/common/SMPFingerprinting",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/poso/Fingerprinting"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "SMP fingerprinting"
-  } ]
-}, {
   "@id" : "http://purl.org/poso/common/SVMFingerprinting",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -529,7 +544,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "SVM fingerprinting"
+    "@value" : "Support Vector Machine fingerprinting"
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/SonyNimway",
@@ -554,7 +569,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/poso/HighLevelFusion" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "High level fusion based on weighted average of the accuract^-1."
+    "@value" : "Decision level fusion based on weighted average of the accuracy^-1."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -574,5 +589,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.w3.org/ns/shacl#targetClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/ssn/hasDeployment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/rdfp/presentedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/rdfp/validationRule",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]

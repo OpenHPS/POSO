@@ -16,7 +16,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/xAxisValue"
+    "@id" : "http://purl.org/poso/scalar"
   } ]
 }, {
   "@id" : "_:genid11",
@@ -26,7 +26,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/yAxisValue"
+    "@id" : "http://purl.org/poso/xAxisValue"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -36,10 +36,20 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/zAxisValue"
+    "@id" : "http://purl.org/poso/yAxisValue"
   } ]
 }, {
   "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/poso/zAxisValue"
+  } ]
+}, {
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -52,7 +62,7 @@
     "@id" : "http://purl.org/poso/isRelativeTo"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -117,6 +127,19 @@
 }, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://purl.org/poso/AbsolutePosition"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/poso/hasPosition"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -128,7 +151,7 @@
     "@id" : "http://www.w3.org/ns/ssn/implements"
   } ]
 }, {
-  "@id" : "_:genid8",
+  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -139,16 +162,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/ssn/hasDeployment"
-  } ]
-}, {
-  "@id" : "_:genid9",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/scalar"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/abstract",
@@ -203,7 +216,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2022-04-17T00:00:00"
+    "@value" : "2022-05-03T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -428,7 +441,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A fingerprint is a scene analysis"
+    "@value" : "A fingerprint is a scene analysis at a particular absolute position."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -438,6 +451,9 @@
     "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
   }, {
     "@id" : "http://www.w3.org/ns/sosa/Result"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "http://purl.org/poso/Fingerprinting",
@@ -470,6 +486,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/SensorFusion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Decision level sensor fusion"
   } ]
 }, {
   "@id" : "http://purl.org/poso/IndoorDeployment",
@@ -533,7 +553,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/PositioningSystem"
   }, {
-    "@id" : "_:genid7"
+    "@id" : "_:genid8"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -797,6 +817,10 @@
 }, {
   "@id" : "http://purl.org/poso/PDR",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Pedestrian dead reckoning"
@@ -875,7 +899,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/ssn/System"
   }, {
-    "@id" : "_:genid8"
+    "@id" : "_:genid9"
   } ]
 }, {
   "@id" : "http://purl.org/poso/PositioningTechnique",
@@ -901,13 +925,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/Orientation"
   }, {
-    "@id" : "_:genid9"
-  }, {
     "@id" : "_:genid10"
   }, {
     "@id" : "_:genid11"
   }, {
     "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "http://purl.org/poso/RFLandmark",
@@ -1003,7 +1027,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/Position"
   }, {
-    "@id" : "_:genid13"
+    "@id" : "_:genid14"
   } ]
 }, {
   "@id" : "http://purl.org/poso/RelativeVelocity",
@@ -1105,7 +1129,7 @@
   }, {
     "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
   }, {
-    "@id" : "_:genid14"
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "http://purl.org/poso/Triangulation",

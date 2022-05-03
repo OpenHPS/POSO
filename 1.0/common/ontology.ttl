@@ -9,13 +9,13 @@
 <http://purl.org/poso/common/> rdf:type owl:Ontology ;
                                 owl:versionIRI <http://purl.org/poso/1.0/common/> ;
                                 owl:imports <http://purl.org/poso/1.0/> ;
-                                <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning about how a system is deployed."@en ;
+                                <http://purl.org/dc/terms/abstract> "The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms."@en ;
                                 <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology" ;
                                 <http://purl.org/dc/terms/contributor> "Beat Signer"@en ;
                                 <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                                 <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                                <http://purl.org/dc/terms/modified> "2022-04-7T00:00:00"^^xsd:dateTime ;
+                                <http://purl.org/dc/terms/modified> "2022-05-03T00:00:00"^^xsd:dateTime ;
                                 <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en ;
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso-common" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^xsd:anyURI .
@@ -70,6 +70,18 @@
 
 ###  http://www.w3.org/ns/shacl#targetClass
 <http://www.w3.org/ns/shacl#targetClass> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/ssn/hasDeployment
+<http://www.w3.org/ns/ssn/hasDeployment> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rdfp/presentedBy
+<https://w3id.org/rdfp/presentedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/rdfp/validationRule
+<https://w3id.org/rdfp/validationRule> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -155,11 +167,25 @@ _:genid2 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
      rdfs:label "BeiDou Navigation Satellite System"@en .
 
 
+###  http://purl.org/poso/common/CSIFingerprinting
+:CSIFingerprinting rdf:type owl:NamedIndividual ,
+                            <http://purl.org/poso/Fingerprinting> ;
+                   rdfs:label "Channel State Information fingerprinting"@en .
+
+
 ###  http://purl.org/poso/common/EarthDeployment
 :EarthDeployment rdf:type owl:NamedIndividual ,
                           <http://purl.org/poso/OutdoorDeployment> ;
                  rdfs:comment "A generic deployment for any positioning system deployment on Earth."@en ;
+                 rdfs:isDefinedBy <https://dbpedia.org/resouce/Earth> ;
                  rdfs:label "Earth deployment"@en .
+
+
+###  http://purl.org/poso/common/FootMountedPDR
+:FootMountedPDR rdf:type owl:NamedIndividual ,
+                         <http://purl.org/poso/PDR> ;
+                rdfs:comment "Foot-mounted pedestrian dead reckoning uses a sensor on the foot of a pedestrian to detect steps."@en ;
+                rdfs:label "Foot-mounted pedestrian dead reckoning"@en .
 
 
 ###  http://purl.org/poso/common/GLONASS
@@ -235,6 +261,8 @@ _:genid2 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
 ###  http://purl.org/poso/common/LDPL
 :LDPL rdf:type owl:NamedIndividual ,
                <http://purl.org/poso/RadioPropagation> ;
+      rdfs:comment "The log-distance path loss model is a radio propagation model that predicts the path loss a signal encounters inside a building or densely populated areas over distance."@en ;
+      rdfs:isDefinedBy <http://dbpedia.org/resource/Log-distance_path_loss_model> ;
       rdfs:label "Log-distance path loss model"@en .
 
 
@@ -286,14 +314,8 @@ _:genid2 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
 :OpenVSLAM rdf:type owl:NamedIndividual ,
                     <http://purl.org/poso/VSLAM> ;
            rdfs:label "OpenVSLAM"@en ;
-           rdfs:seeAlso "https://openvslam-community.readthedocs.io/en/latest/index.html"^^xsd:anyURI .
-
-
-###  http://purl.org/poso/common/PedestrianDeadReckoning
-:PedestrianDeadReckoning rdf:type owl:NamedIndividual ,
-                                  <http://purl.org/poso/DeadReckoning> ;
-                         rdfs:comment "Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement."@en ;
-                         rdfs:label "Pedestrian dead reckoning"@en .
+           rdfs:seeAlso "https://stella-cv.readthedocs.io/en/latest/index.html"^^xsd:anyURI ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "stella-vslam"@en .
 
 
 ###  http://purl.org/poso/common/ProbabilisticFingerprinting
@@ -314,6 +336,7 @@ _:genid2 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
 ###  http://purl.org/poso/common/RFCellIdentification
 :RFCellIdentification rdf:type owl:NamedIndividual ,
                                <http://purl.org/poso/CellIdentification> ;
+                      rdfs:comment "RF cell identification is a technique that determines the position based on the closest RF landmark in range."@en ;
                       rdfs:label "RF cell identification"@en .
 
 
@@ -325,16 +348,10 @@ _:genid2 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
      rdfs:label "Robotics Operating System"@en .
 
 
-###  http://purl.org/poso/common/SMPFingerprinting
-:SMPFingerprinting rdf:type owl:NamedIndividual ,
-                            <http://purl.org/poso/Fingerprinting> ;
-                   rdfs:label "SMP fingerprinting"@en .
-
-
 ###  http://purl.org/poso/common/SVMFingerprinting
 :SVMFingerprinting rdf:type owl:NamedIndividual ,
                             <http://purl.org/poso/Fingerprinting> ;
-                   rdfs:label "SVM fingerprinting"@en .
+                   rdfs:label "Support Vector Machine fingerprinting"@en .
 
 
 ###  http://purl.org/poso/common/SonyNimway
@@ -348,7 +365,7 @@ _:genid2 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
 ###  http://purl.org/poso/common/WeightedAccuracyFusion
 :WeightedAccuracyFusion rdf:type owl:NamedIndividual ,
                                  <http://purl.org/poso/HighLevelFusion> ;
-                        rdfs:comment "High level fusion based on weighted average of the accuract^-1."@en ;
+                        rdfs:comment "Decision level fusion based on weighted average of the accuracy^-1."@en ;
                         rdfs:label "Weighted accuracy fusion"@en .
 
 
