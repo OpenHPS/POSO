@@ -7,8 +7,8 @@
 - `/1.0/`: POSO 1.0 ontology and related modules
     - `/1.0/poso.ttl`: POSO core ontolog
     - `/1.0/common/poso-common.ttl`: POSO-common ontology with individuals for algorithms, techniques and existing systems
-    - `/1.0/m3lite/poso-m3lite.ttl`: POSO-m3lite allignment (wip)
-    - `/1.0/hdgi/poso-hdgi.ttl`: POSO-hdgi allignment (wip)
+    - `/1.0/m3lite/poso-m3lite.ttl`: POSO-m3lite alignment (Work In Progress)
+    - `/1.0/hdgi/poso-hdgi.ttl`: POSO-hdgi alignment (Work In Progress)
 - `/docs/`: Documentation related files for the wiki
     - `/docs/images/`: POSO ontology documentation images
 - `/website/`: Website and build scripts for deployment
