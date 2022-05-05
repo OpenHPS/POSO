@@ -107,6 +107,9 @@
 # http://www.w3.org/ns/shacl#NodeShape
 <http://www.w3.org/ns/shacl#NodeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# https://w3id.org/rdfp/GraphDescription
+<https://w3id.org/rdfp/GraphDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # 
 # 
 # #################################################################
@@ -120,12 +123,12 @@
 <http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/PositionOutput> .
 <http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdfp/GraphDescription> .
+<http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Absolute position output"@en .
 <http://purl.org/poso/common/AbsolutePositionOutput> <https://w3id.org/rdfp/presentedBy> _:genid1 .
 _:genid1 <https://w3id.org/rdfp/validationRule> _:genid2 .
 _:genid2 <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/poso/AbsolutePosition> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdfp/GraphDescription> .
-<http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Absolute position output"@en .
 # 
 # http://purl.org/poso/common/Anyplace
 <http://purl.org/poso/common/Anyplace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

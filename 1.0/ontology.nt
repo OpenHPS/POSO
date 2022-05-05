@@ -1,9 +1,7 @@
 <http://purl.org/poso/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://purl.org/poso/> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/poso/1.0/> .
-<http://purl.org/poso/> <http://www.w3.org/2002/07/owl#imports> <http://www.opengis.net/ont/geosparql> .
 <http://purl.org/poso/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
 <http://purl.org/poso/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/systems/> .
-<http://purl.org/poso/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/rdfp/rdfp-1.0> .
 <http://purl.org/poso/> <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated."@en .
 <http://purl.org/poso/> <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology" .
 <http://purl.org/poso/> <http://purl.org/dc/terms/contributor> "Beat Signer"@en .
@@ -426,6 +424,7 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://purl.org/poso/Landmark
 <http://purl.org/poso/Landmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/Landmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/Landmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 <http://purl.org/poso/Landmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
 <http://purl.org/poso/Landmark> <http://www.w3.org/2000/01/rdf-schema#comment> "A landmark is a feature with a known position, that can be used to identify the position of an object that has a relative position with this feature."@en .
@@ -726,6 +725,8 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://www.opengis.net/ont/geosparql#Geometry
 <http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/geosparql#SpatialObject
 # 
 # http://www.w3.org/2000/01/rdf-schema#Class
 <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

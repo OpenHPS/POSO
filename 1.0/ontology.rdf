@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.org/poso/"
      xml:base="http://purl.org/poso/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -16,10 +14,8 @@
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="http://purl.org/poso/">
         <owl:versionIRI rdf:resource="http://purl.org/poso/1.0/"/>
-        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/systems/"/>
-        <owl:imports rdf:resource="https://w3id.org/rdfp/rdfp-1.0"/>
         <terms:abstract xml:lang="en">The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.</terms:abstract>
         <terms:bibliographicCitation>Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology</terms:bibliographicCitation>
         <terms:contributor xml:lang="en">Beat Signer</terms:contributor>
@@ -1253,6 +1249,13 @@
 
 
     <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#SpatialObject -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject"/>
     
 
 

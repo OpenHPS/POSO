@@ -132,6 +132,10 @@
 <http://www.w3.org/ns/shacl#NodeShape> rdf:type owl:Class .
 
 
+###  https://w3id.org/rdfp/GraphDescription
+<https://w3id.org/rdfp/GraphDescription> rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -140,8 +144,8 @@
 :AbsolutePositionOutput rdf:type owl:NamedIndividual ,
                                  <http://purl.org/poso/PositionOutput> ,
                                  <https://w3id.org/rdfp/GraphDescription> ;
-                        <https://w3id.org/rdfp/presentedBy> _:genid1 ;
-                        rdfs:label "Absolute position output"@en .
+                        rdfs:label "Absolute position output"@en ;
+                        <https://w3id.org/rdfp/presentedBy> _:genid1 .
 
 _:genid1 rdf:type <https://w3id.org/rdfp/GraphDescription> ;
           <https://w3id.org/rdfp/validationRule> _:genid2 .

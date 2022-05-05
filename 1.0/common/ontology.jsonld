@@ -1,6 +1,8 @@
 [ {
   "@id" : "_:genid1",
-  "@type" : [ "https://w3id.org/rdfp/GraphDescription" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/rdfp/GraphDescription"
+  } ],
   "https://w3id.org/rdfp/validationRule" : [ {
     "@id" : "_:genid2"
   } ]
@@ -113,7 +115,10 @@
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/AbsolutePositionOutput",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/poso/PositionOutput", "https://w3id.org/rdfp/GraphDescription" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/poso/PositionOutput" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/rdfp/GraphDescription"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Absolute position output"
@@ -593,6 +598,9 @@
 }, {
   "@id" : "http://www.w3.org/ns/ssn/hasDeployment",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/rdfp/GraphDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/rdfp/presentedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
