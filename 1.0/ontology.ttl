@@ -16,7 +16,7 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2022-05-03T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2022-07-07T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI .
@@ -198,9 +198,10 @@
 :isRelativeTo rdf:type owl:ObjectProperty ;
               rdfs:domain :RelativePosition ;
               rdfs:range <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
-              rdfs:comment "Indicates a relative position to be relative to another feature."@en ;
+              rdfs:comment "Indicates a relative position to be relative to another feature of interest."@en ;
               rdfs:label "is relatief met"@nl ,
-                         "is relative to"@en .
+                         "is relative to"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "A person can have a relative distance to another feature of interest. When a feature is moving (i.e. when the geometry changes based on time) the distance remains relative to the feature and not the geometry at a specific point in time."@en .
 
 
 ###  http://purl.org/poso/isVelocityOf
@@ -437,7 +438,7 @@
 ###  http://purl.org/poso/IndoorDeployment
 :IndoorDeployment rdf:type owl:Class ;
                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
-                  rdfs:comment "Describes the deployment of a System in an indoor environment."@en ;
+                  rdfs:comment "Describes the spatial deployment of a System in an indoor environment."@en ;
                   rdfs:label "Indoor deployment"@en .
 
 

@@ -8,7 +8,7 @@
 <http://purl.org/poso/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/poso/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
 <http://purl.org/poso/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2022-05-03T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2022-07-07T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/poso/> <http://purl.org/dc/terms/title> "Positioning System Ontology"@en .
 <http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" .
 <http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -173,9 +173,10 @@
 <http://purl.org/poso/isRelativeTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/RelativePosition> .
 <http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
-<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a relative position to be relative to another feature."@en .
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a relative position to be relative to another feature of interest."@en .
 <http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#label> "is relatief met"@nl .
 <http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#label> "is relative to"@en .
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2004/02/skos/core#example> "A person can have a relative distance to another feature of interest. When a feature is moving (i.e. when the geometry changes based on time) the distance remains relative to the feature and not the geometry at a specific point in time."@en .
 # 
 # http://purl.org/poso/isVelocityOf
 <http://purl.org/poso/isVelocityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -392,7 +393,7 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://purl.org/poso/IndoorDeployment
 <http://purl.org/poso/IndoorDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/IndoorDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Deployment> .
-<http://purl.org/poso/IndoorDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the deployment of a System in an indoor environment."@en .
+<http://purl.org/poso/IndoorDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the spatial deployment of a System in an indoor environment."@en .
 <http://purl.org/poso/IndoorDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Indoor deployment"@en .
 # 
 # http://purl.org/poso/IndoorPositioningSystem
