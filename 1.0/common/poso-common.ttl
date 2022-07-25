@@ -18,7 +18,7 @@
                                 <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                                 <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                                <http://purl.org/dc/terms/modified> "2022-05-03T00:00:00"^^xsd:dateTime ;
+                                <http://purl.org/dc/terms/modified> "2022-07-25T00:00:00"^^xsd:dateTime ;
                                 <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en ;
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso-common" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^xsd:anyURI .

@@ -9,7 +9,7 @@ module.exports = function (el) {
 
   el.setDataDeepMerge(true);
 
-  el.on('afterBuild', async () => {
+  el.on('beforeBuild', async () => {
     await buildOntology();
   });
 

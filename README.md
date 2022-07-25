@@ -11,12 +11,17 @@
 - `/website/`: Website and build scripts for deployment
 
 ## Documentation
-Documentation is provided using WIDOCO [1] and generated in the `./website` directory upon building the website.
+Ontology documentation is provided using WIDOCO [1] and generated in the `./website` directory upon building the website.
 
 **POSO Ontology (en)**: [https://openhps.github.io/POSO/1.0/en/](https://openhps.github.io/POSO/1.0/en/)\
 **POSO-common module (en)**: [https://openhps.github.io/POSO/1.0/common/en/](https://openhps.github.io/POSO/1.0/common/en/)
 
 ![](docs/images/systems_and_procedures.svg)
+
+## Methodology
+The POSO ontology has been designed with the common data requirements of various positioning system technologies, datasets and frame-
+works in mind to cover all types of systems without overcomplicating the modelling of the data. 
+An initial validation has further been conducted based on the OpenHPS framework using the [@openhps/rdf](https://github.com/OpenHPS/openhps-rdf) module.
 
 ## License
 POSO is licensed under the [MIT license](LICENSE) and maintained by the Web & Information Systems Engineering Lab at the Vrije Universiteit Brussel.
