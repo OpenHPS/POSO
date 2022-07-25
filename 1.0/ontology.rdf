@@ -5,6 +5,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -22,10 +23,12 @@
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-07T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-25T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology</terms:title>
+        <bibo:status>Ontology Specification Draft</bibo:status>
         <vann:preferredNamespacePrefix>poso</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/</vann:preferredNamespaceUri>
+        <schema:image>https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg</schema:image>
     </owl:Ontology>
     
 
@@ -105,6 +108,13 @@
     
 
 
+    <!-- http://purl.org/ontology/bibo/status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
 
@@ -133,6 +143,13 @@
     
 
 
+    <!-- http://schema.org/image -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/image"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
 
@@ -149,6 +166,20 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/poso/angle -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/poso/angle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Result"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:comment xml:lang="en">Quantitative anglue result value for axis-angle representation.</rdfs:comment>
+        <rdfs:label xml:lang="en">angle</rdfs:label>
+        <rdfs:label xml:lang="nl">hoek</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -186,6 +217,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/poso/hasCRS">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/poso/hasSRS"/>
         <rdfs:label xml:lang="en">has coordinate reference system</rdfs:label>
+        <rdfs:label xml:lang="nl">heeft een coördinaten referentiesysteem</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -341,6 +373,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/ssn/System"/>
         <rdfs:comment xml:lang="en">A relation to a re-usable system that computed the observation.</rdfs:comment>
+        <rdfs:label xml:lang="nl">gemaakt door systeem</rdfs:label>
         <rdfs:label xml:lang="en">made by system</rdfs:label>
     </owl:ObjectProperty>
     
@@ -354,6 +387,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/ns/ssn/System"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
         <rdfs:comment xml:lang="en">The relation between a system and an observable property class to identify that a system observes a specific type of property.</rdfs:comment>
+        <rdfs:label xml:lang="nl">observeert type</rdfs:label>
         <rdfs:label xml:lang="en">observes type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -405,7 +439,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Result"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <rdfs:comment xml:lang="en">Quantitative result value along the X-axis of a spatial sensor.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Quantitative result value along the X-axis of a spatial sensor or result.</rdfs:comment>
         <rdfs:label xml:lang="en">x-axis value</rdfs:label>
     </owl:ObjectProperty>
     
@@ -418,7 +452,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Result"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <rdfs:comment xml:lang="en">Quantitative result value along the Y-axis of a spatial sensor.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Quantitative result value along the Y-axis of a spatial sensor or result.</rdfs:comment>
         <rdfs:label xml:lang="en">y-axis value</rdfs:label>
     </owl:ObjectProperty>
     
@@ -554,6 +588,18 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/Orientation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/angle"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/angle"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/poso/xAxisValue"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
@@ -570,7 +616,8 @@
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Axis angle orientation</rdfs:label>
+        <rdfs:comment xml:lang="en">The axis-angle orientation is an orientation representation where the x, y and z values are rotated with a certain angle.</rdfs:comment>
+        <rdfs:label xml:lang="en">Axis-angle orientation</rdfs:label>
     </owl:Class>
     
 
@@ -700,7 +747,7 @@
     <owl:Class rdf:about="http://purl.org/poso/InertialPositioningSystem">
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningSystem"/>
         <rdfs:comment xml:lang="en">An inertial positioning system is a positioning system employing accelerometers, gyroscopes, and computer as integral components to determine coordinates of points or objects relative to an initial known reference point</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://isotc211.geolexica.org/concepts/240/"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://isotc211.geolexica.org/concepts/240/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Inertial positioning system</rdfs:label>
     </owl:Class>
     
@@ -719,7 +766,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An integrated positioning system is a positioning system that incorporates multiple positioning technologies.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://isotc211.geolexica.org/concepts/250/"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://isotc211.geolexica.org/concepts/250/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Integrated positioning system</rdfs:label>
         <skos:altLabel xml:lang="en">Hybrid positioning system</skos:altLabel>
     </owl:Class>
@@ -767,6 +814,7 @@
     <owl:Class rdf:about="http://purl.org/poso/LinearMovement">
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/Movement"/>
         <rdfs:comment xml:lang="en">Linear movement along a certain axis.</rdfs:comment>
+        <rdfs:label xml:lang="nl">Lineaire beweging</rdfs:label>
         <rdfs:label xml:lang="en">Linear movement</rdfs:label>
     </owl:Class>
     
@@ -779,6 +827,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/Velocity"/>
         <qudt:hasQuantityKind rdf:resource="http://qudt.org/vocab/quantitykind/LinearVelocity"/>
         <rdfs:comment xml:lang="en">Linear velocity is the momentum along one ore more axis.</rdfs:comment>
+        <rdfs:label xml:lang="nl">Lineaire snelheid</rdfs:label>
         <rdfs:label xml:lang="en">Linear velocity</rdfs:label>
     </owl:Class>
     
@@ -790,7 +839,7 @@
     <owl:Class rdf:about="http://purl.org/poso/LocationBasedService">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
         <rdfs:comment xml:lang="en">A location based service (LBS) is a service that provides the location of a person or object. It provides this information without the required knowledge of the underlying technologies and algorithms.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://isotc211.geolexica.org/concepts/278/"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://isotc211.geolexica.org/concepts/278/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Location based service</rdfs:label>
     </owl:Class>
     
@@ -847,6 +896,7 @@
     <owl:Class rdf:about="http://purl.org/poso/Movement">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Stimulus"/>
         <rdfs:comment xml:lang="en">Movement stimulus triggering an update of a position.</rdfs:comment>
+        <rdfs:label xml:lang="nl">Beweging</rdfs:label>
         <rdfs:label xml:lang="en">Movement</rdfs:label>
     </owl:Class>
     
@@ -882,7 +932,7 @@
     <owl:Class rdf:about="http://purl.org/poso/OpticalPositioningSystem">
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningSystem"/>
         <rdfs:comment xml:lang="en">An optical positioning system is a positioning system that determines the position of an object by means of the properties of light.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://isotc211.geolexica.org/concepts/320/"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://isotc211.geolexica.org/concepts/320/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Optical positioning system</rdfs:label>
     </owl:Class>
     
@@ -981,7 +1031,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A positioning system is a system of instrumental and computational components for determining position.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://isotc211.geolexica.org/concepts/349/</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://isotc211.geolexica.org/concepts/349/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Positioning system</rdfs:label>
     </owl:Class>
     
@@ -1039,6 +1089,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/Landmark"/>
         <rdfs:comment xml:lang="en">A radio frequency landmark is a transmitting landmark that can be observed by its transmitting signals.</rdfs:comment>
         <rdfs:label xml:lang="en">RF landmark</rdfs:label>
+        <skos:example xml:lang="en">An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position.</skos:example>
     </owl:Class>
     
 
@@ -1094,7 +1145,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A relative position is a position of a feature of interest with respect to the positions of other objects that this position is relative to.</rdfs:comment>
         <rdfs:comment xml:lang="nl">Een relatieve positie is een positie van een punt, met respect tot de posities van andere objecten die relatief zijn.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://isotc211.geolexica.org/concepts/377/</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://isotc211.geolexica.org/concepts/377/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="nl">Relatieve positie</rdfs:label>
         <rdfs:label xml:lang="en">Relative position</rdfs:label>
     </owl:Class>
@@ -1119,7 +1170,7 @@
     <owl:Class rdf:about="http://purl.org/poso/SLAM">
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
         <rdfs:comment xml:lang="en">Simultaneous localization and mapping (SLAM) is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent&apos;s location within it.</rdfs:comment>
-        <rdfs:isDefinedBy xml:lang="en">https://dbpedia.org/page/Simultaneous_localization_and_mapping</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://dbpedia.org/page/Simultaneous_localization_and_mapping</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Simultaneous localisation and mapping</rdfs:label>
     </owl:Class>
     
@@ -1142,7 +1193,7 @@
     <owl:Class rdf:about="http://purl.org/poso/SatellitePositioningSystem">
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningSystem"/>
         <rdfs:comment xml:lang="en">In this context, satellite positioning implies the use of radio signals transmitted from &quot;active&quot; artificial objects orbiting the Earth and received by &quot;passive&quot; instruments on or near the Earth&apos;s surface to determine position, velocity, and/or attitude of an object.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://isotc211.geolexica.org/concepts/392/"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://isotc211.geolexica.org/concepts/392/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Satellite positioning system</rdfs:label>
     </owl:Class>
     
@@ -1175,6 +1226,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A feature of interest that is being tracked by a positioning system. This is the feature for which a position is observed.</rdfs:comment>
         <rdfs:label xml:lang="en">Tracked feature</rdfs:label>
+        <skos:example xml:lang="en">The phone of a person that is being tracked in an indoor positioning system is the tracked feature.</skos:example>
     </owl:Class>
     
 

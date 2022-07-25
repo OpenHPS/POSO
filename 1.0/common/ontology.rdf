@@ -24,7 +24,7 @@
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-03T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-25T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology Common Technologies, Algorithms and Systems</terms:title>
         <vann:preferredNamespacePrefix>poso-common</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/common/</vann:preferredNamespaceUri>

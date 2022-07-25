@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2022-07-07T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2022-07-25T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release  2022-07-07T00:00:00</h2>
+<h2>Release  2022-07-25T00:00:00</h2>
 
 
 <dl>
@@ -103,7 +103,10 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#AuditoryLandmark" title="http://purl.org/poso/AuditoryLandmark">Auditory landmark</a>
    </li>
    <li>
-      <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis angle orientation</a>
+      <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
+   </li>
+   <li>
+      <a href="#Movement" title="http://purl.org/poso/Movement">Beweging</a>
    </li>
    <li>
       <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
@@ -151,13 +154,13 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#Lateration" title="http://purl.org/poso/Lateration">Lateration</a>
    </li>
    <li>
+      <a href="#LinearMovement" title="http://purl.org/poso/LinearMovement">Lineaire beweging</a>
+   </li>
+   <li>
+      <a href="#LinearVelocity" title="http://purl.org/poso/LinearVelocity">Lineaire snelheid</a>
+   </li>
+   <li>
       <a href="#LinearAcceleration" title="http://purl.org/poso/LinearAcceleration">Linear acceleration</a>
-   </li>
-   <li>
-      <a href="#LinearMovement" title="http://purl.org/poso/LinearMovement">Linear movement</a>
-   </li>
-   <li>
-      <a href="#LinearVelocity" title="http://purl.org/poso/LinearVelocity">Linear velocity</a>
    </li>
    <li>
       <a href="#LocationBasedService" title="http://purl.org/poso/LocationBasedService">Location based service</a>
@@ -173,9 +176,6 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
    </li>
    <li>
       <a href="#MidLevelFusion" title="http://purl.org/poso/MidLevelFusion">Mid level sensor fusion</a>
-   </li>
-   <li>
-      <a href="#Movement" title="http://purl.org/poso/Movement">Movement</a>
    </li>
    <li>
       <a href="#Multilateration" title="http://purl.org/poso/Multilateration">Multilateration</a>
@@ -272,10 +272,13 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
    </li>
 </ul><h4>Objecteigenschappen</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#hasCRS" title="http://purl.org/poso/hasCRS">has coordinate reference system</a>
+      <a href="#madeBySystem" title="http://purl.org/poso/madeBySystem">gemaakt door systeem</a>
    </li>
    <li>
       <a href="#hasAccuracy" title="http://purl.org/poso/hasAccuracy">heeft accuraatheid</a>
+   </li>
+   <li>
+      <a href="#hasCRS" title="http://purl.org/poso/hasCRS">heeft een coördinaten referentiesysteem</a>
    </li>
    <li>
       <a href="#hasSRS" title="http://purl.org/poso/hasSRS">heeft een ruimtelijk referentiepunt</a>
@@ -296,6 +299,9 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">heeft versnelling</a>
    </li>
    <li>
+      <a href="#angle" title="http://purl.org/poso/angle">hoek</a>
+   </li>
+   <li>
       <a href="#inDeployment" title="http://purl.org/poso/inDeployment">in deployment</a>
    </li>
    <li>
@@ -314,10 +320,7 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#isAccelerationOf" title="http://purl.org/poso/isAccelerationOf">is versnelling van</a>
    </li>
    <li>
-      <a href="#madeBySystem" title="http://purl.org/poso/madeBySystem">made by system</a>
-   </li>
-   <li>
-      <a href="#observesType" title="http://purl.org/poso/observesType">observes type</a>
+      <a href="#observesType" title="http://purl.org/poso/observesType">observeert type</a>
    </li>
    <li>
       <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
@@ -360,7 +363,10 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#AuditoryLandmark" title="http://purl.org/poso/AuditoryLandmark">Auditory landmark</a>
       </li>
       <li>
-         <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis angle orientation</a>
+         <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
+      </li>
+      <li>
+         <a href="#Movement" title="http://purl.org/poso/Movement">Beweging</a>
       </li>
       <li>
          <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
@@ -408,13 +414,13 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#Lateration" title="http://purl.org/poso/Lateration">Lateration</a>
       </li>
       <li>
+         <a href="#LinearMovement" title="http://purl.org/poso/LinearMovement">Lineaire beweging</a>
+      </li>
+      <li>
+         <a href="#LinearVelocity" title="http://purl.org/poso/LinearVelocity">Lineaire snelheid</a>
+      </li>
+      <li>
          <a href="#LinearAcceleration" title="http://purl.org/poso/LinearAcceleration">Linear acceleration</a>
-      </li>
-      <li>
-         <a href="#LinearMovement" title="http://purl.org/poso/LinearMovement">Linear movement</a>
-      </li>
-      <li>
-         <a href="#LinearVelocity" title="http://purl.org/poso/LinearVelocity">Linear velocity</a>
       </li>
       <li>
          <a href="#LocationBasedService" title="http://purl.org/poso/LocationBasedService">Location based service</a>
@@ -430,9 +436,6 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </li>
       <li>
          <a href="#MidLevelFusion" title="http://purl.org/poso/MidLevelFusion">Mid level sensor fusion</a>
-      </li>
-      <li>
-         <a href="#Movement" title="http://purl.org/poso/Movement">Movement</a>
       </li>
       <li>
          <a href="#Multilateration" title="http://purl.org/poso/Multilateration">Multilateration</a>
@@ -595,16 +598,44 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </dl>
    </div>
    <div class="entity" id="AxisAngleOrientation">
-      <h3>Axis angle orientation<sup class="type-c" title="klasse">c</sup>
+      <h3>Axis-angle orientation<sup class="type-c" title="klasse">c</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/poso/AxisAngleOrientation</p>
+      <div class="comment">
+         <span class="markdown">The axis-angle orientation is an orientation representation where the x, y and z values are rotated with a certain angle.</span>
+      </div>
       <dl class="description">
          <dt>heeft superklassen</dt>
          <dd>
             <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientatie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Movement">
+      <h3>Beweging<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Movement</p>
+      <div class="comment">
+         <span class="markdown">Movement stimulus triggering an update of a position.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Stimulus"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Stimulus">stimulus</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#AngularMovement" title="http://purl.org/poso/AngularMovement">Draaibeweging</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#LinearMovement" title="http://purl.org/poso/LinearMovement">Lineaire beweging</a>
             <sup class="type-c" title="klasse">c</sup>
          </dd>
       </dl>
@@ -672,7 +703,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       <dl class="description">
          <dt>heeft superklassen</dt>
          <dd>
-            <a href="#Movement" title="http://purl.org/poso/Movement">Movement</a>
+            <a href="#Movement" title="http://purl.org/poso/Movement">Beweging</a>
             <sup class="type-c" title="klasse">c</sup>
          </dd>
       </dl>
@@ -850,9 +881,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </div>
       <dl class="definedBy">
          <dt>Is gedefinieerd door</dt>
-         <dd>
-            <a href="https://isotc211.geolexica.org/concepts/240/">https://isotc211.geolexica.org/concepts/240/</a>
-         </dd>
+         <dd>http://purl.org/poso/</dd>
       </dl>
       <dl class="description">
          <dt>heeft superklassen</dt>
@@ -874,9 +903,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </div>
       <dl class="definedBy">
          <dt>Is gedefinieerd door</dt>
-         <dd>
-            <a href="https://isotc211.geolexica.org/concepts/250/">https://isotc211.geolexica.org/concepts/250/</a>
-         </dd>
+         <dd>http://purl.org/poso/</dd>
       </dl>
       <dl class="description">
          <dt>heeft superklassen</dt>
@@ -942,23 +969,8 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
-   <div class="entity" id="LinearAcceleration">
-      <h3>Linear acceleration<sup class="type-c" title="klasse">c</sup>
-         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/poso/LinearAcceleration</p>
-      <dl class="description">
-         <dt>heeft superklassen</dt>
-         <dd>
-            <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Versnelling</a>
-            <sup class="type-c" title="klasse">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="LinearMovement">
-      <h3>Linear movement<sup class="type-c" title="klasse">c</sup>
+      <h3>Lineaire beweging<sup class="type-c" title="klasse">c</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
          </span>
       </h3>
@@ -970,13 +982,13 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       <dl class="description">
          <dt>heeft superklassen</dt>
          <dd>
-            <a href="#Movement" title="http://purl.org/poso/Movement">Movement</a>
+            <a href="#Movement" title="http://purl.org/poso/Movement">Beweging</a>
             <sup class="type-c" title="klasse">c</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="LinearVelocity">
-      <h3>Linear velocity<sup class="type-c" title="klasse">c</sup>
+      <h3>Lineaire snelheid<sup class="type-c" title="klasse">c</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
          </span>
       </h3>
@@ -993,6 +1005,21 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
+   <div class="entity" id="LinearAcceleration">
+      <h3>Linear acceleration<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/LinearAcceleration</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Versnelling</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="LocationBasedService">
       <h3>Location based service<sup class="type-c" title="klasse">c</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
@@ -1005,9 +1032,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </div>
       <dl class="definedBy">
          <dt>Is gedefinieerd door</dt>
-         <dd>
-            <a href="https://isotc211.geolexica.org/concepts/278/">https://isotc211.geolexica.org/concepts/278/</a>
-         </dd>
+         <dd>http://purl.org/poso/</dd>
       </dl>
       <dl class="description">
          <dt>heeft superklassen</dt>
@@ -1097,31 +1122,6 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Movement">
-      <h3>Movement<sup class="type-c" title="klasse">c</sup>
-         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/poso/Movement</p>
-      <div class="comment">
-         <span class="markdown">Movement stimulus triggering an update of a position.</span>
-      </div>
-      <dl class="description">
-         <dt>heeft superklassen</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/ssn/Stimulus"
-               target="_blank"
-               title="http://www.w3.org/ns/ssn/Stimulus">stimulus</a>
-         </dd>
-         <dt>heeft subklassen</dt>
-         <dd>
-            <a href="#AngularMovement" title="http://purl.org/poso/AngularMovement">Draaibeweging</a>
-            <sup class="type-c" title="klasse">c</sup>, <a href="#LinearMovement" title="http://purl.org/poso/LinearMovement">Linear movement</a>
-            <sup class="type-c" title="klasse">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Multilateration">
       <h3>Multilateration<sup class="type-c" title="klasse">c</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
@@ -1176,9 +1176,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </div>
       <dl class="definedBy">
          <dt>Is gedefinieerd door</dt>
-         <dd>
-            <a href="https://isotc211.geolexica.org/concepts/320/">https://isotc211.geolexica.org/concepts/320/</a>
-         </dd>
+         <dd>http://purl.org/poso/</dd>
       </dl>
       <dl class="description">
          <dt>heeft superklassen</dt>
@@ -1209,7 +1207,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
          <dt>heeft subklassen</dt>
          <dd>
-            <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis angle orientation</a>
+            <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
             <sup class="type-c" title="klasse">c</sup>, <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
             <sup class="type-c" title="klasse">c</sup>, <a href="#QuaternionOrientation" title="http://purl.org/poso/QuaternionOrientation">Quaternion orientation</a>
             <sup class="type-c" title="klasse">c</sup>
@@ -1550,6 +1548,12 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       <div class="comment">
          <span class="markdown">A radio frequency landmark is a transmitting landmark that can be observed by its transmitting signals.</span>
       </div>
+      <dl>
+         <dt>Voorbeeld</dt>
+         <dd>
+            <pre>An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position.</pre>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>heeft superklassen</dt>
          <dd>
@@ -1570,9 +1574,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </div>
       <dl class="definedBy">
          <dt>Is gedefinieerd door</dt>
-         <dd>
-            <a href="https://isotc211.geolexica.org/concepts/392/">https://isotc211.geolexica.org/concepts/392/</a>
-         </dd>
+         <dd>http://purl.org/poso/</dd>
       </dl>
       <dl class="description">
          <dt>heeft superklassen</dt>
@@ -1668,6 +1670,12 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       <div class="comment">
          <span class="markdown">A feature of interest that is being tracked by a positioning system. This is the feature for which a position is observed.</span>
       </div>
+      <dl>
+         <dt>Voorbeeld</dt>
+         <dd>
+            <pre>The phone of a person that is being tracked in an indoor positioning system is the tracked feature.</pre>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>heeft superklassen</dt>
          <dd>
@@ -1727,7 +1735,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dt>heeft subklassen</dt>
          <dd>
             <a href="#AngularVelocity" title="http://purl.org/poso/AngularVelocity">Draaisnelheid</a>
-            <sup class="type-c" title="klasse">c</sup>, <a href="#LinearVelocity" title="http://purl.org/poso/LinearVelocity">Linear velocity</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#LinearVelocity" title="http://purl.org/poso/LinearVelocity">Lineaire snelheid</a>
             <sup class="type-c" title="klasse">c</sup>
          </dd>
          <dt>is in bereik van</dt>
@@ -1843,10 +1851,13 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
    <h3 id="properties" class="list">Objecteigenschappen</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasCRS" title="http://purl.org/poso/hasCRS">has coordinate reference system</a>
+         <a href="#madeBySystem" title="http://purl.org/poso/madeBySystem">gemaakt door systeem</a>
       </li>
       <li>
          <a href="#hasAccuracy" title="http://purl.org/poso/hasAccuracy">heeft accuraatheid</a>
+      </li>
+      <li>
+         <a href="#hasCRS" title="http://purl.org/poso/hasCRS">heeft een coördinaten referentiesysteem</a>
       </li>
       <li>
          <a href="#hasSRS" title="http://purl.org/poso/hasSRS">heeft een ruimtelijk referentiepunt</a>
@@ -1867,6 +1878,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">heeft versnelling</a>
       </li>
       <li>
+         <a href="#angle" title="http://purl.org/poso/angle">hoek</a>
+      </li>
+      <li>
          <a href="#inDeployment" title="http://purl.org/poso/inDeployment">in deployment</a>
       </li>
       <li>
@@ -1885,10 +1899,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#isAccelerationOf" title="http://purl.org/poso/isAccelerationOf">is versnelling van</a>
       </li>
       <li>
-         <a href="#madeBySystem" title="http://purl.org/poso/madeBySystem">made by system</a>
-      </li>
-      <li>
-         <a href="#observesType" title="http://purl.org/poso/observesType">observes type</a>
+         <a href="#observesType" title="http://purl.org/poso/observesType">observeert type</a>
       </li>
       <li>
          <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
@@ -1912,19 +1923,30 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#zAxisValue" title="http://purl.org/poso/zAxisValue">z-axis value</a>
       </li>
    </ul>
-   <div class="entity" id="hasCRS">
-      <h3>has coordinate reference system<sup class="type-op" title="objecteigenschap">op</sup>
+   <div class="entity" id="madeBySystem">
+      <h3>gemaakt door systeem<sup class="type-op" title="objecteigenschap">op</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/poso/hasCRS</p>
+         <strong>IRI:</strong> http://purl.org/poso/madeBySystem</p>
+      <div class="comment">
+         <span class="markdown">A relation to a re-usable system that computed the observation.</span>
+      </div>
       <div class="description">
          <dl>
-            <dt>heeft supereigenschappen</dt>
+            <dt>heeft domein</dt>
             <dd>
-               <a href="#hasSRS" title="http://purl.org/poso/hasSRS">heeft een ruimtelijk referentiepunt</a>
-               <sup class="type-op" title="objecteigenschap">op</sup>
+               <a href="http://www.w3.org/ns/sosa/Observation"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/System"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/System">system</a>
+               <sup class="type-c" title="klasse">c</sup>
             </dd>
          </dl>
       </div>
@@ -1953,6 +1975,23 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasCRS">
+      <h3>heeft een coördinaten referentiesysteem<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasCRS</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="#hasSRS" title="http://purl.org/poso/hasSRS">heeft een ruimtelijk referentiepunt</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasSRS">
       <h3>heeft een ruimtelijk referentiepunt<sup class="type-op" title="objecteigenschap">op</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
@@ -1967,7 +2006,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dl>
             <dt>heeft subeigenschappen</dt>
             <dd>
-               <a href="#hasCRS" title="http://purl.org/poso/hasCRS">has coordinate reference system</a>
+               <a href="#hasCRS" title="http://purl.org/poso/hasCRS">heeft een coördinaten referentiesysteem</a>
                <sup class="type-op" title="objecteigenschap">op</sup>
             </dd>
             <dt>heeft domein</dt>
@@ -2164,6 +2203,37 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dl>
       </div>
    </div>
+   <div class="entity" id="angle">
+      <h3>hoek<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/angle</p>
+      <div class="comment">
+         <span class="markdown">Quantitative anglue result value for axis-angle representation.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>heeft kenmerken:
+                </strong> functioneel</p>
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Result"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Result">result</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="inDeployment">
       <h3>in deployment<sup class="type-op" title="objecteigenschap">op</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
@@ -2317,36 +2387,8 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dl>
       </div>
    </div>
-   <div class="entity" id="madeBySystem">
-      <h3>made by system<sup class="type-op" title="objecteigenschap">op</sup>
-         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/poso/madeBySystem</p>
-      <div class="comment">
-         <span class="markdown">A relation to a re-usable system that computed the observation.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>heeft domein</dt>
-            <dd>
-               <a href="http://www.w3.org/ns/sosa/Observation"
-                  target="_blank"
-                  title="http://www.w3.org/ns/sosa/Observation">observation</a>
-            </dd>
-            <dt>heeft bereik</dt>
-            <dd>
-               <a href="http://www.w3.org/ns/ssn/System"
-                  target="_blank"
-                  title="http://www.w3.org/ns/ssn/System">system</a>
-               <sup class="type-c" title="klasse">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="observesType">
-      <h3>observes type<sup class="type-op" title="objecteigenschap">op</sup>
+      <h3>observeert type<sup class="type-op" title="objecteigenschap">op</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
          </span>
       </h3>
@@ -2476,7 +2518,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       <p>
          <strong>IRI:</strong> http://purl.org/poso/xAxisValue</p>
       <div class="comment">
-         <span class="markdown">Quantitative result value along the X-axis of a spatial sensor.</span>
+         <span class="markdown">Quantitative result value along the X-axis of a spatial sensor or result.</span>
       </div>
       <div class="description">
          <p>
@@ -2507,7 +2549,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       <p>
          <strong>IRI:</strong> http://purl.org/poso/yAxisValue</p>
       <div class="comment">
-         <span class="markdown">Quantitative result value along the Y-axis of a spatial sensor.</span>
+         <span class="markdown">Quantitative result value along the Y-axis of a spatial sensor or result.</span>
       </div>
       <div class="description">
          <p>

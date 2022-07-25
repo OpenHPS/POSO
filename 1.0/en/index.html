@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2022-07-07T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2022-07-25T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release 2022-07-07T00:00:00</h2>
+<h2>Release 2022-07-25T00:00:00</h2>
 
 
 <dl>
@@ -115,7 +115,7 @@ This ontology has the following classes and properties.</span>
       <a href="#AuditoryLandmark" title="http://purl.org/poso/AuditoryLandmark">Auditory landmark</a>
    </li>
    <li>
-      <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis angle orientation</a>
+      <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
    </li>
    <li>
       <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
@@ -272,6 +272,9 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
+      <a href="#angle" title="http://purl.org/poso/angle">angle</a>
+   </li>
+   <li>
       <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">has acceleration</a>
    </li>
    <li>
@@ -372,7 +375,7 @@ This section provides details for each class and property defined by Positioning
          <a href="#AuditoryLandmark" title="http://purl.org/poso/AuditoryLandmark">Auditory landmark</a>
       </li>
       <li>
-         <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis angle orientation</a>
+         <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
       </li>
       <li>
          <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
@@ -678,12 +681,15 @@ This section provides details for each class and property defined by Positioning
       </dl>
    </div>
    <div class="entity" id="AxisAngleOrientation">
-      <h3>Axis angle orientation<sup class="type-c" title="class">c</sup>
+      <h3>Axis-angle orientation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/poso/AxisAngleOrientation</p>
+      <div class="comment">
+         <span class="markdown">The axis-angle orientation is an orientation representation where the x, y and z values are rotated with a certain angle.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -882,9 +888,7 @@ This section provides details for each class and property defined by Positioning
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
-         <dd>
-            <a href="https://isotc211.geolexica.org/concepts/240/">https://isotc211.geolexica.org/concepts/240/</a>
-         </dd>
+         <dd>http://purl.org/poso/</dd>
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -906,9 +910,7 @@ This section provides details for each class and property defined by Positioning
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
-         <dd>
-            <a href="https://isotc211.geolexica.org/concepts/250/">https://isotc211.geolexica.org/concepts/250/</a>
-         </dd>
+         <dd>http://purl.org/poso/</dd>
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1037,9 +1039,7 @@ This section provides details for each class and property defined by Positioning
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
-         <dd>
-            <a href="https://isotc211.geolexica.org/concepts/278/">https://isotc211.geolexica.org/concepts/278/</a>
-         </dd>
+         <dd>http://purl.org/poso/</dd>
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1208,9 +1208,7 @@ This section provides details for each class and property defined by Positioning
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
-         <dd>
-            <a href="https://isotc211.geolexica.org/concepts/320/">https://isotc211.geolexica.org/concepts/320/</a>
-         </dd>
+         <dd>http://purl.org/poso/</dd>
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1241,7 +1239,7 @@ This section provides details for each class and property defined by Positioning
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis angle orientation</a>
+            <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#QuaternionOrientation" title="http://purl.org/poso/QuaternionOrientation">Quaternion orientation</a>
             <sup class="type-c" title="class">c</sup>
@@ -1582,6 +1580,12 @@ This section provides details for each class and property defined by Positioning
       <div class="comment">
          <span class="markdown">A radio frequency landmark is a transmitting landmark that can be observed by its transmitting signals.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position.</pre>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1602,9 +1606,7 @@ This section provides details for each class and property defined by Positioning
       </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
-         <dd>
-            <a href="https://isotc211.geolexica.org/concepts/392/">https://isotc211.geolexica.org/concepts/392/</a>
-         </dd>
+         <dd>http://purl.org/poso/</dd>
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1700,6 +1702,12 @@ This section provides details for each class and property defined by Positioning
       <div class="comment">
          <span class="markdown">A feature of interest that is being tracked by a positioning system. This is the feature for which a position is observed.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>The phone of a person that is being tracked in an indoor positioning system is the tracked feature.</pre>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1843,6 +1851,9 @@ This section provides details for each class and property defined by Positioning
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#angle" title="http://purl.org/poso/angle">angle</a>
+      </li>
+      <li>
          <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">has acceleration</a>
       </li>
       <li>
@@ -1912,6 +1923,37 @@ This section provides details for each class and property defined by Positioning
          <a href="#zAxisValue" title="http://purl.org/poso/zAxisValue">z-axis value</a>
       </li>
    </ul>
+   <div class="entity" id="angle">
+      <h3>angle<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/angle</p>
+      <div class="comment">
+         <span class="markdown">Quantitative anglue result value for axis-angle representation.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Result"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Result">result</a>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasAcceleration">
       <h3>has acceleration<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2476,7 +2518,7 @@ This section provides details for each class and property defined by Positioning
       <p>
          <strong>IRI:</strong> http://purl.org/poso/xAxisValue</p>
       <div class="comment">
-         <span class="markdown">Quantitative result value along the X-axis of a spatial sensor.</span>
+         <span class="markdown">Quantitative result value along the X-axis of a spatial sensor or result.</span>
       </div>
       <div class="description">
          <p>
@@ -2507,7 +2549,7 @@ This section provides details for each class and property defined by Positioning
       <p>
          <strong>IRI:</strong> http://purl.org/poso/yAxisValue</p>
       <div class="comment">
-         <span class="markdown">Quantitative result value along the Y-axis of a spatial sensor.</span>
+         <span class="markdown">Quantitative result value along the Y-axis of a spatial sensor or result.</span>
       </div>
       <div class="description">
          <p>

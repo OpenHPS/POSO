@@ -1,32 +1,38 @@
 [ {
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/xAxisValue"
+    "@id" : "http://purl.org/poso/angle"
   } ]
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://purl.org/poso/SensorFusion"
+  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/scalar"
+    "@id" : "http://www.w3.org/ns/ssn/implements"
   } ]
 }, {
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Deployment"
+  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/xAxisValue"
+    "@id" : "http://www.w3.org/ns/ssn/hasDeployment"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -36,7 +42,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/yAxisValue"
+    "@id" : "http://purl.org/poso/scalar"
   } ]
 }, {
   "@id" : "_:genid13",
@@ -46,10 +52,30 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/zAxisValue"
+    "@id" : "http://purl.org/poso/xAxisValue"
   } ]
 }, {
   "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/poso/yAxisValue"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/poso/zAxisValue"
+  } ]
+}, {
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -62,7 +88,7 @@
     "@id" : "http://purl.org/poso/isRelativeTo"
   } ]
 }, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -82,7 +108,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/yAxisValue"
+    "@id" : "http://purl.org/poso/angle"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -92,7 +118,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/zAxisValue"
+    "@id" : "http://purl.org/poso/xAxisValue"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -102,7 +128,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/pitch"
+    "@id" : "http://purl.org/poso/yAxisValue"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -112,7 +138,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/roll"
+    "@id" : "http://purl.org/poso/zAxisValue"
   } ]
 }, {
   "@id" : "_:genid6",
@@ -122,10 +148,30 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/poso/yaw"
+    "@id" : "http://purl.org/poso/pitch"
   } ]
 }, {
   "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/poso/roll"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/poso/yaw"
+  } ]
+}, {
+  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "http://purl.org/poso/AbsolutePosition"
@@ -136,32 +182,6 @@
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://purl.org/poso/SensorFusion"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/implements"
-  } ]
-}, {
-  "@id" : "_:genid9",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/Deployment"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/hasDeployment"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/abstract",
@@ -191,6 +211,9 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/ontology/bibo/status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/poso/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
@@ -216,11 +239,14 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2022-07-07T00:00:00"
+    "@value" : "2022-07-25T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
     "@value" : "Positioning System Ontology"
+  } ],
+  "http://purl.org/ontology/bibo/status" : [ {
+    "@value" : "Ontology Specification Draft"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "poso"
@@ -228,6 +254,9 @@
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "@value" : "http://purl.org/poso/"
+  } ],
+  "http://schema.org/image" : [ {
+    "@value" : "https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "http://www.w3.org/ns/ssn/"
@@ -360,9 +389,13 @@
 }, {
   "@id" : "http://purl.org/poso/AxisAngleOrientation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The axis-angle orientation is an orientation representation where the x, y and z values are rotated with a certain angle."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Axis angle orientation"
+    "@value" : "Axis-angle orientation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/Orientation"
@@ -372,6 +405,10 @@
     "@id" : "_:genid2"
   }, {
     "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
   } ]
 }, {
   "@id" : "http://purl.org/poso/CellIdentification",
@@ -426,11 +463,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/Orientation"
   }, {
-    "@id" : "_:genid4"
-  }, {
-    "@id" : "_:genid5"
-  }, {
     "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
   } ]
 }, {
   "@id" : "http://purl.org/poso/Fingerprint",
@@ -449,7 +486,7 @@
     "@id" : "http://www.w3.org/ns/sosa/Result"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid7"
+    "@id" : "_:genid9"
   } ]
 }, {
   "@id" : "http://purl.org/poso/Fingerprinting",
@@ -523,7 +560,8 @@
     "@value" : "An inertial positioning system is a positioning system employing accelerometers, gyroscopes, and computer as integral components to determine coordinates of points or objects relative to an initial known reference point"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://isotc211.geolexica.org/concepts/240/"
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://isotc211.geolexica.org/concepts/240/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -540,7 +578,8 @@
     "@value" : "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://isotc211.geolexica.org/concepts/250/"
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://isotc211.geolexica.org/concepts/250/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -549,7 +588,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/PositioningSystem"
   }, {
-    "@id" : "_:genid8"
+    "@id" : "_:genid10"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -608,6 +647,9 @@
     "@value" : "Linear movement along a certain axis."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "nl",
+    "@value" : "Lineaire beweging"
+  }, {
     "@language" : "en",
     "@value" : "Linear movement"
   } ],
@@ -625,6 +667,9 @@
     "@value" : "Linear velocity is the momentum along one ore more axis."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "nl",
+    "@value" : "Lineaire snelheid"
+  }, {
     "@language" : "en",
     "@value" : "Linear velocity"
   } ],
@@ -639,7 +684,8 @@
     "@value" : "A location based service (LBS) is a service that provides the location of a person or object. It provides this information without the required knowledge of the underlying technologies and algorithms."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://isotc211.geolexica.org/concepts/278/"
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://isotc211.geolexica.org/concepts/278/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -716,6 +762,9 @@
     "@value" : "Movement stimulus triggering an update of a position."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "nl",
+    "@value" : "Beweging"
+  }, {
     "@language" : "en",
     "@value" : "Movement"
   } ],
@@ -765,7 +814,8 @@
     "@value" : "An optical positioning system is a positioning system that determines the position of an object by means of the properties of light."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://isotc211.geolexica.org/concepts/320/"
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://isotc211.geolexica.org/concepts/320/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -885,7 +935,7 @@
     "@value" : "A positioning system is a system of instrumental and computational components for determining position."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@language" : "en",
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "@value" : "https://isotc211.geolexica.org/concepts/349/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -895,7 +945,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/ssn/System"
   }, {
-    "@id" : "_:genid9"
+    "@id" : "_:genid11"
   } ]
 }, {
   "@id" : "http://purl.org/poso/PositioningTechnique",
@@ -921,13 +971,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/Orientation"
   }, {
-    "@id" : "_:genid10"
-  }, {
-    "@id" : "_:genid11"
-  }, {
     "@id" : "_:genid12"
   }, {
     "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "http://purl.org/poso/RFLandmark",
@@ -942,6 +992,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/Landmark"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position."
   } ]
 }, {
   "@id" : "http://purl.org/poso/RadioPropagation",
@@ -1010,7 +1064,7 @@
     "@value" : "Een relatieve positie is een positie van een punt, met respect tot de posities van andere objecten die relatief zijn."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@language" : "en",
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "@value" : "https://isotc211.geolexica.org/concepts/377/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1023,7 +1077,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/Position"
   }, {
-    "@id" : "_:genid14"
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "http://purl.org/poso/RelativeVelocity",
@@ -1050,7 +1104,7 @@
     "@value" : "Simultaneous localization and mapping (SLAM) is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@language" : "en",
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "@value" : "https://dbpedia.org/page/Simultaneous_localization_and_mapping"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1082,7 +1136,8 @@
     "@value" : "In this context, satellite positioning implies the use of radio signals transmitted from \"active\" artificial objects orbiting the Earth and received by \"passive\" instruments on or near the Earth's surface to determine position, velocity, and/or attitude of an object."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://isotc211.geolexica.org/concepts/392/"
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://isotc211.geolexica.org/concepts/392/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1125,7 +1180,11 @@
   }, {
     "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
   }, {
-    "@id" : "_:genid15"
+    "@id" : "_:genid17"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The phone of a person that is being tracked in an indoor positioning system is the tracked feature."
   } ]
 }, {
   "@id" : "http://purl.org/poso/Triangulation",
@@ -1213,6 +1272,26 @@
     "@id" : "http://purl.org/poso/Odometry"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/angle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Quantitative anglue result value for axis-angle representation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Result"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "angle"
+  }, {
+    "@language" : "nl",
+    "@value" : "hoek"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/hasAcceleration",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1261,6 +1340,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has coordinate reference system"
+  }, {
+    "@language" : "nl",
+    "@value" : "heeft een coördinaten referentiesysteem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://purl.org/poso/hasSRS"
@@ -1495,6 +1577,9 @@
     "@id" : "http://www.w3.org/ns/sosa/Observation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "nl",
+    "@value" : "gemaakt door systeem"
+  }, {
     "@language" : "en",
     "@value" : "made by system"
   } ],
@@ -1512,6 +1597,9 @@
     "@id" : "http://www.w3.org/ns/ssn/System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "nl",
+    "@value" : "observeert type"
+  }, {
     "@language" : "en",
     "@value" : "observes type"
   } ],
@@ -1576,7 +1664,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Quantitative result value along the X-axis of a spatial sensor."
+    "@value" : "Quantitative result value along the X-axis of a spatial sensor or result."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/sosa/Result"
@@ -1593,7 +1681,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Quantitative result value along the Y-axis of a spatial sensor."
+    "@value" : "Quantitative result value along the Y-axis of a spatial sensor or result."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/ns/sosa/Result"
@@ -1650,6 +1738,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://qudt.org/schema/qudt/hasQuantityKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/image",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.opengis.net/ont/geosparql#Geometry",
