@@ -11,18 +11,17 @@
                          owl:versionIRI <http://purl.org/poso/1.0/> ;
                          owl:imports <http://www.w3.org/ns/ssn/> ,
                                      <http://www.w3.org/ns/ssn/systems/> ;
-                         <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" ;
                          <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated."@en ;
                          <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology"^^xsd:string ;
                          <http://purl.org/dc/terms/contributor> "Beat Signer"@en ;
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2022-07-25T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2022-09-20T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
-                         <http://schema.org/image> "https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg" ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
-                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI .
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
+                         <http://schema.org/image> "https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg" .
 
 #################################################################
 #    Annotation properties
@@ -80,6 +79,10 @@
 <http://qudt.org/schema/qudt/hasQuantityKind> rdf:type owl:AnnotationProperty .
 
 
+###  http://schema.org/image
+<http://schema.org/image> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 skos:altLabel rdf:type owl:AnnotationProperty .
 
@@ -94,8 +97,8 @@ skos:altLabel rdf:type owl:AnnotationProperty .
        rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
        rdfs:range rdfs:Class ;
        rdfs:comment "Quantitative anglue result value for axis-angle representation."@en ;
-       rdfs:label "angle"@en ;
-       rdfs:label "hoek"@nl .
+       rdfs:label "angle"@en ,
+                  "hoek"@nl .
 
 
 ###  http://purl.org/poso/hasAcceleration
@@ -395,6 +398,13 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                       rdfs:label "Axis-angle orientation"@en .
 
 
+###  http://purl.org/poso/BluetoothBeacon
+:BluetoothBeacon rdf:type owl:Class ;
+                 rdfs:subClassOf :RFLandmark ;
+                 rdfs:comment "A Bluetooth beacon is an RF landmark that advertises its transmission power and other optional information. Based on the signal strength receivers of this advertisement can determine the approximate distance."@en ;
+                 rdfs:label "Bluetooth beacon"@en .
+
+
 ###  http://purl.org/poso/CellIdentification
 :CellIdentification rdf:type owl:Class ;
                     rdfs:subClassOf :PositioningTechnique ;
@@ -523,8 +533,8 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 :LinearMovement rdf:type owl:Class ;
                 rdfs:subClassOf :Movement ;
                 rdfs:comment "Linear movement along a certain axis."@en ;
-                rdfs:label "Linear movement"@en ;
-                rdfs:label "Lineaire beweging"@nl .
+                rdfs:label "Lineaire beweging"@nl ,
+                           "Linear movement"@en .
 
 
 ###  http://purl.org/poso/LinearVelocity
@@ -532,8 +542,8 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                 rdfs:subClassOf :Velocity ;
                 <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/LinearVelocity> ;
                 rdfs:comment "Linear velocity is the momentum along one ore more axis."@en ;
-                rdfs:label "Linear velocity"@en ;
-                rdfs:label "Lineaire snelheid"@nl .
+                rdfs:label "Lineaire snelheid"@nl ,
+                           "Linear velocity"@en .
 
 
 ###  http://purl.org/poso/LocationBasedService
@@ -577,8 +587,8 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 :Movement rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/ssn/Stimulus> ;
           rdfs:comment "Movement stimulus triggering an update of a position."@en ;
-          rdfs:label "Movement"@en ;
-          rdfs:label "Beweging"@nl .
+          rdfs:label "Beweging"@nl ,
+                     "Movement"@en .
 
 
 ###  http://purl.org/poso/Multilateration
@@ -703,8 +713,8 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 :RFLandmark rdf:type owl:Class ;
             rdfs:subClassOf :Landmark ;
             rdfs:comment "A radio frequency landmark is a transmitting landmark that can be observed by its transmitting signals."@en ;
-            skos:example "An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position."@en ;
-            rdfs:label "RF landmark"@en .
+            rdfs:label "RF landmark"@en ;
+            skos:example "An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position."@en .
 
 
 ###  http://purl.org/poso/RadioPropagation
@@ -796,8 +806,8 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                                   owl:onClass :Position
                                 ] ;
                 rdfs:comment "A feature of interest that is being tracked by a positioning system. This is the feature for which a position is observed."@en ;
-                skos:example "The phone of a person that is being tracked in an indoor positioning system is the tracked feature."@en ;
-                rdfs:label "Tracked feature"@en .
+                rdfs:label "Tracked feature"@en ;
+                skos:example "The phone of a person that is being tracked in an indoor positioning system is the tracked feature."@en .
 
 
 ###  http://purl.org/poso/Triangulation
