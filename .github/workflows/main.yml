@@ -22,13 +22,6 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Deploy site to Netlify
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        working-directory: ./website
-        run: |
-          npm run deploy
       - name: Deploy site to GitHub
         uses: peaceiris/actions-gh-pages@v3
         with:
