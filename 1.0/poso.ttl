@@ -17,7 +17,7 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2022-09-20T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2022-10-08T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
@@ -851,7 +851,6 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                 rdfs:subClassOf :Odometry ;
                 rdfs:comment "Visual odometry is the procedure of detecting movement by analyzing how visual features are moving from one Observation image frame to another."@en ;
                 rdfs:label "Visual odometry"@en .
-
 
 ###  http://www.opengis.net/ont/geosparql#Geometry
 <http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class .
