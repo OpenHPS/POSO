@@ -16,9 +16,8 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2022-07-25T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2022-10-08T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
-                         <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
                          <http://schema.org/image> "https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg" .
@@ -61,10 +60,6 @@
 
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/ontology/bibo/status
-<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -400,6 +395,13 @@
                                       ] ;
                       rdfs:comment "The axis-angle orientation is an orientation representation where the x, y and z values are rotated with a certain angle."@en ;
                       rdfs:label "Axis-angle orientation"@en .
+
+
+###  http://purl.org/poso/BluetoothBeacon
+:BluetoothBeacon rdf:type owl:Class ;
+                 rdfs:subClassOf :RFLandmark ;
+                 rdfs:comment "A Bluetooth beacon is an RF landmark that advertises its transmission power and other optional information. Based on the signal strength receivers of this advertisement can determine the approximate distance."@en ;
+                 rdfs:label "Bluetooth beacon"@en .
 
 
 ###  http://purl.org/poso/CellIdentification

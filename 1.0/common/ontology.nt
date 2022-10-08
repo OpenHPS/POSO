@@ -7,7 +7,7 @@
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/poso/common/> <http://purl.org/dc/terms/modified> "2022-07-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/common/> <http://purl.org/dc/terms/modified> "2022-10-08T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en .
 <http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso-common" .
 <http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -74,6 +74,9 @@
 # #################################################################
 # 
 # 
+# http://purl.org/poso/BluetoothBeacon
+<http://purl.org/poso/BluetoothBeacon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://purl.org/poso/CellIdentification
 <http://purl.org/poso/CellIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
@@ -103,6 +106,27 @@
 # 
 # http://purl.org/poso/VSLAM
 <http://purl.org/poso/VSLAM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/poso/common/AltBeacon
+<http://purl.org/poso/common/AltBeacon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/common/AltBeacon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/BluetoothBeacon> .
+<http://purl.org/poso/common/AltBeacon> <http://www.w3.org/2000/01/rdf-schema#comment> "AltBeacon is an open and interoperable proximity beacon specification."@en .
+<http://purl.org/poso/common/AltBeacon> <http://www.w3.org/2000/01/rdf-schema#label> "AltBeacon"@en .
+<http://purl.org/poso/common/AltBeacon> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://altbeacon.org/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://purl.org/poso/common/EddystoneBeacon
+<http://purl.org/poso/common/EddystoneBeacon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/common/EddystoneBeacon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/BluetoothBeacon> .
+<http://purl.org/poso/common/EddystoneBeacon> <http://www.w3.org/2000/01/rdf-schema#comment> "Eddystone was a Bluetooth Low Energy beacon profile released by Google in July 2015."@en .
+<http://purl.org/poso/common/EddystoneBeacon> <http://www.w3.org/2000/01/rdf-schema#label> "Eddystone"@en .
+<http://purl.org/poso/common/EddystoneBeacon> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Eddystone_(Google)> .
+# 
+# http://purl.org/poso/common/iBeacon
+<http://purl.org/poso/common/iBeacon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/common/iBeacon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/BluetoothBeacon> .
+<http://purl.org/poso/common/iBeacon> <http://www.w3.org/2000/01/rdf-schema#comment> "An iBeacon is a beacon that advertises the proximity beacon packet specification."@en .
+<http://purl.org/poso/common/iBeacon> <http://www.w3.org/2000/01/rdf-schema#label> "iBeacon"@en .
+<http://purl.org/poso/common/iBeacon> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://developer.apple.com/ibeacon/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 # 
 # http://www.w3.org/ns/shacl#NodeShape
 <http://www.w3.org/ns/shacl#NodeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

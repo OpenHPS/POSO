@@ -15,7 +15,7 @@
                                 <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                                 <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                                <http://purl.org/dc/terms/modified> "2022-07-25T00:00:00"^^xsd:dateTime ;
+                                <http://purl.org/dc/terms/modified> "2022-10-08T00:00:00"^^xsd:dateTime ;
                                 <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en ;
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso-common" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^xsd:anyURI .
@@ -88,6 +88,10 @@
 #    Classes
 #################################################################
 
+###  http://purl.org/poso/BluetoothBeacon
+<http://purl.org/poso/BluetoothBeacon> rdf:type owl:Class .
+
+
 ###  http://purl.org/poso/CellIdentification
 <http://purl.org/poso/CellIdentification> rdf:type owl:Class .
 
@@ -126,6 +130,30 @@
 
 ###  http://purl.org/poso/VSLAM
 <http://purl.org/poso/VSLAM> rdf:type owl:Class .
+
+
+###  http://purl.org/poso/common/AltBeacon
+:AltBeacon rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.org/poso/BluetoothBeacon> ;
+           rdfs:comment "AltBeacon is an open and interoperable proximity beacon specification."@en ;
+           rdfs:label "AltBeacon"@en ;
+           rdfs:seeAlso "https://altbeacon.org/"^^xsd:anyURI .
+
+
+###  http://purl.org/poso/common/EddystoneBeacon
+:EddystoneBeacon rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.org/poso/BluetoothBeacon> ;
+                 rdfs:comment "Eddystone was a Bluetooth Low Energy beacon profile released by Google in July 2015."@en ;
+                 rdfs:label "Eddystone"@en ;
+                 rdfs:seeAlso <http://dbpedia.org/resource/Eddystone_(Google)> .
+
+
+###  http://purl.org/poso/common/iBeacon
+:iBeacon rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.org/poso/BluetoothBeacon> ;
+         rdfs:comment "An iBeacon is a beacon that advertises the proximity beacon packet specification."@en ;
+         rdfs:label "iBeacon"@en ;
+         rdfs:seeAlso "https://developer.apple.com/ibeacon/"^^xsd:anyURI .
 
 
 ###  http://www.w3.org/ns/shacl#NodeShape

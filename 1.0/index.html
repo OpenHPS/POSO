@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2022-07-25T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2022-10-08T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="en/"><b>en</b></a> <a href="nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release 2022-07-25T00:00:00</h2>
+<h2>Release 2022-10-08T00:00:00</h2>
 
 
 <dl>
@@ -116,6 +116,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
+   </li>
+   <li>
+      <a href="#BluetoothBeacon" title="http://purl.org/poso/BluetoothBeacon">Bluetooth beacon</a>
    </li>
    <li>
       <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
@@ -376,6 +379,9 @@ This section provides details for each class and property defined by Positioning
       </li>
       <li>
          <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
+      </li>
+      <li>
+         <a href="#BluetoothBeacon" title="http://purl.org/poso/BluetoothBeacon">Bluetooth beacon</a>
       </li>
       <li>
          <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
@@ -694,6 +700,24 @@ This section provides details for each class and property defined by Positioning
          <dt>has super-classes</dt>
          <dd>
             <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BluetoothBeacon">
+      <h3>Bluetooth beacon<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/BluetoothBeacon</p>
+      <div class="comment">
+         <span class="markdown">A Bluetooth beacon is an RF landmark that advertises its transmission power and other optional information. Based on the signal strength receivers of this advertisement can determine the approximate distance.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#RFLandmark" title="http://purl.org/poso/RFLandmark">RF landmark</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1590,6 +1614,11 @@ This section provides details for each class and property defined by Positioning
          <dt>has super-classes</dt>
          <dd>
             <a href="#Landmark" title="http://purl.org/poso/Landmark">Landmark</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#BluetoothBeacon" title="http://purl.org/poso/BluetoothBeacon">Bluetooth beacon</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

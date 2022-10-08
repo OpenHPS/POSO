@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/common/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/common/","name":"Positioning System Ontology Common Technologies, Algorithms and Systems", "headline":"The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.", "datePublished":"2022-07-25T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/common/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/common/","name":"Positioning System Ontology Common Technologies, Algorithms and Systems", "headline":"The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.", "datePublished":"2022-10-08T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology Common Technologies, Algorithms and Systems</h1>
-<h2>Release 2022-07-25T00:00:00</h2>
+<h2>Release 2022-10-08T00:00:00</h2>
 
 
 <dl>
@@ -91,7 +91,18 @@ The common allignment module is a module that extends POSO with implementations 
     <div id="overview"><h2 id="overv" class="list">Positioning System Ontology Common Technologies, Algorithms and Systems: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
-<h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#AltBeacon" title="http://purl.org/poso/common/AltBeacon">AltBeacon</a>
+   </li>
+   <li>
+      <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+   </li>
+   <li>
+      <a href="#iBeacon" title="http://purl.org/poso/common/iBeacon">iBeacon</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#AbsolutePositionOutput"
          title="http://purl.org/poso/common/AbsolutePositionOutput">Absolute position output</a>
@@ -189,7 +200,80 @@ This ontology has the following classes and properties.</span>
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Positioning System Ontology Common Technologies, Algorithms and Systems classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Positioning System Ontology Common Technologies, Algorithms and Systems.
-<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AltBeacon" title="http://purl.org/poso/common/AltBeacon">AltBeacon</a>
+      </li>
+      <li>
+         <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+      </li>
+      <li>
+         <a href="#iBeacon" title="http://purl.org/poso/common/iBeacon">iBeacon</a>
+      </li>
+   </ul>
+   <div class="entity" id="AltBeacon">
+      <h3>AltBeacon<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/AltBeacon</p>
+      <div class="comment">
+         <span class="markdown">AltBeacon is an open and interoperable proximity beacon specification.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://purl.org/poso/BluetoothBeacon"
+               target="_blank"
+               title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EddystoneBeacon">
+      <h3>Eddystone<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EddystoneBeacon</p>
+      <div class="comment">
+         <span class="markdown">Eddystone was a Bluetooth Low Energy beacon profile released by Google in July 2015.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://purl.org/poso/BluetoothBeacon"
+               target="_blank"
+               title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="iBeacon">
+      <h3>iBeacon<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/iBeacon</p>
+      <div class="comment">
+         <span class="markdown">An iBeacon is a beacon that advertises the proximity beacon packet specification.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://purl.org/poso/BluetoothBeacon"
+               target="_blank"
+               title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
@@ -919,6 +1003,7 @@ This section provides details for each class and property defined by Positioning
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
