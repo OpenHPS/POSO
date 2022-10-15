@@ -16,7 +16,8 @@ const _ = require("lodash");
 module.exports = function (el) {
   /* Passthrough Copy */
   el.setDataDeepMerge(true);
-
+  el.addPassthroughCopy("CNAME");
+  
   /* SEO */
   // el.addPlugin(pluginHTMLValidate);
 
