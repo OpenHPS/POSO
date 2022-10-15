@@ -88,10 +88,6 @@
 #    Classes
 #################################################################
 
-###  http://purl.org/poso/BluetoothBeacon
-<http://purl.org/poso/BluetoothBeacon> rdf:type owl:Class .
-
-
 ###  http://purl.org/poso/CellIdentification
 <http://purl.org/poso/CellIdentification> rdf:type owl:Class .
 

@@ -39,9 +39,6 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/poso/BluetoothBeacon",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://purl.org/poso/CellIdentification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {

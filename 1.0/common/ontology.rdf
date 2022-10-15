@@ -6,7 +6,6 @@
      xmlns:ssn="http://www.w3.org/ns/ssn/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfp="https://w3id.org/rdfp/"
@@ -159,13 +158,6 @@
      -->
 
 
-    
-
-
-    <!-- http://purl.org/poso/BluetoothBeacon -->
-
-
-    <owl:Class rdf:about="http://purl.org/poso/BluetoothBeacon"/>
     
 
 
