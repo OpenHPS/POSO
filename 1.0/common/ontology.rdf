@@ -6,27 +6,23 @@
      xmlns:ssn="http://www.w3.org/ns/ssn/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfp="https://w3id.org/rdfp/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:shacl="http://www.w3.org/ns/shacl#"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://purl.org/poso/common/">
         <owl:versionIRI rdf:resource="http://purl.org/poso/1.0/common/"/>
-        <owl:imports rdf:resource="http://purl.org/poso/1.0/"/>
         <terms:abstract xml:lang="en">The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.</terms:abstract>
         <terms:bibliographicCitation>Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology</terms:bibliographicCitation>
         <terms:contributor xml:lang="en">Beat Signer</terms:contributor>
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-10-08T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-21T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology Common Technologies, Algorithms and Systems</terms:title>
-        <vann:preferredNamespacePrefix>poso-common</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>posoc</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/common/</vann:preferredNamespaceUri>
     </owl:Ontology>
     
@@ -114,6 +110,13 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#example -->
 
 
@@ -152,12 +155,41 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/poso/common/hasReferenceRSSI -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/poso/common/hasReferenceRSSI">
+        <rdfs:comment xml:lang="en">has a reference Received Signal Strength Indicator at a specified distance.</rdfs:comment>
+        <rdfs:label xml:lang="en">has reference RSSI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
 
+    
+
+
+    <!-- http://purl.org/poso/BluetoothBeacon -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/BluetoothBeacon"/>
     
 
 
@@ -182,6 +214,13 @@
     
 
 
+    <!-- http://purl.org/poso/HighLevelFusion -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/HighLevelFusion"/>
+    
+
+
     <!-- http://purl.org/poso/Lateration -->
 
 
@@ -200,6 +239,27 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Multilateration"/>
+    
+
+
+    <!-- http://purl.org/poso/OutdoorDeployment -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/OutdoorDeployment"/>
+    
+
+
+    <!-- http://purl.org/poso/PDR -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/PDR"/>
+    
+
+
+    <!-- http://purl.org/poso/PositionOutput -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/PositionOutput"/>
     
 
 
@@ -330,10 +390,10 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/poso/common/BDS">
         <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
-        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
         <rdfs:comment xml:lang="en">BeiDou, or BDS, is a global GNSS owned and operated by the People&apos;s Republic of China. BDS was formally commissioned in 2020. The operational system consists of 35 satellites. BDS was previously called Compass.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">BeiDou Navigation Satellite System</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
     </owl:NamedIndividual>
     
 
@@ -376,11 +436,11 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/poso/common/GLONASS">
         <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
-        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
         <rdfs:comment xml:lang="en">GLONASS (Globalnaya Navigazionnaya Sputnikovaya Sistema, or Global Navigation Satellite System) is a global GNSS owned and operated by the Russian Federation. The fully operational system consists of 24+ satellites.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Global Navigation Satellite System</rdfs:label>
         <rdfs:label xml:lang="ru">Globalnaya Navigazionnaya Sputnikovaya Sistema</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
     </owl:NamedIndividual>
     
 
@@ -390,10 +450,10 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/poso/common/GPS">
         <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
-        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
         <rdfs:comment xml:lang="en">The Global Positioning System (GPS) is a U.S.-owned utility that provides users with positioning, navigation, and timing (PNT) services. This system consists of three segments: the space segment, the control segment, and the user segment. The U.S. Space Force develops, maintains, and operates the space and control segments.</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="en">https://www.gps.gov/systems/gps/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Global Positioning System</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
     </owl:NamedIndividual>
     
 
@@ -403,10 +463,10 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/poso/common/Galileo">
         <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
-        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
         <rdfs:comment xml:lang="en">Galileo is a global GNSS owned and operated by the European Union. The EU declared the start of Galileo Initial Services in 2016 and plans to complete the system of 24+ satellites in 2021.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Galileo</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
     </owl:NamedIndividual>
     
 
@@ -440,10 +500,10 @@
     <owl:NamedIndividual rdf:about="http://purl.org/poso/common/IRNSS">
         <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
         <owl:sameAs rdf:resource="http://purl.org/poso/common/NavIC"/>
-        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
         <rdfs:comment xml:lang="en">IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning &quot;sailor&quot; or &quot;navigator&quot;).</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Indian Regional Navigation Satellite System</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
     </owl:NamedIndividual>
     
 
@@ -516,10 +576,10 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/poso/common/NavIC">
         <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
-        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
         <rdfs:comment xml:lang="en">IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning &quot;sailor&quot; or &quot;navigator&quot;).</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Navigation Indian Constellation</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
     </owl:NamedIndividual>
     
 
@@ -585,10 +645,10 @@
 
     <owl:NamedIndividual rdf:about="http://purl.org/poso/common/QZSS">
         <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
-        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
         <rdfs:comment xml:lang="en">QZSS is a regional GNSS owned by the Government of Japan and operated by QZS System Service Inc. (QSS). QZSS complements GPS to improve coverage in East Asia and Oceania. Japan declared the official start of QZSS services in 2018 with 4 operational satellites, and plans to expand the constellation to 7 satellites by 2023 for autonomous capability.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Quasi-Zenith Satellite System</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
     </owl:NamedIndividual>
     
 

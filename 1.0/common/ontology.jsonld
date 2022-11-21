@@ -39,6 +39,9 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/poso/BluetoothBeacon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://purl.org/poso/CellIdentification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -48,6 +51,9 @@
   "@id" : "http://purl.org/poso/Fingerprinting",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://purl.org/poso/HighLevelFusion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://purl.org/poso/Lateration",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -55,6 +61,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://purl.org/poso/Multilateration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/poso/OutdoorDeployment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/poso/PDR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/poso/PositionOutput",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://purl.org/poso/PositioningPlatform",
@@ -94,29 +109,28 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2022-10-08T00:00:00"
+    "@value" : "2022-11-21T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
     "@value" : "Positioning System Ontology Common Technologies, Algorithms and Systems"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "poso-common"
+    "@value" : "posoc"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "@value" : "http://purl.org/poso/common/"
-  } ],
-  "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "http://purl.org/poso/1.0/"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "http://purl.org/poso/1.0/common/"
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/AbsolutePositionOutput",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/poso/PositionOutput" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/poso/PositionOutput"
+  }, {
     "@id" : "https://w3id.org/rdfp/GraphDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -194,7 +208,10 @@
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/EarthDeployment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/poso/OutdoorDeployment" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/poso/OutdoorDeployment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A generic deployment for any positioning system deployment on Earth."
@@ -225,7 +242,10 @@
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/FootMountedPDR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/poso/PDR" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/poso/PDR"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Foot-mounted pedestrian dead reckoning uses a sensor on the foot of a pedestrian to detect steps."
@@ -606,7 +626,10 @@
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/WeightedAccuracyFusion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/poso/HighLevelFusion" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/poso/HighLevelFusion"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Decision level fusion based on weighted average of the accuracy^-1."
@@ -614,6 +637,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Weighted accuracy fusion"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/common/hasReferenceRSSI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "has a reference Received Signal Strength Indicator at a specified distance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has reference RSSI"
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/iBeacon",
@@ -638,6 +672,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#example",

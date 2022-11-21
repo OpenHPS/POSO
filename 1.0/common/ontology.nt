@@ -1,15 +1,14 @@
 <http://purl.org/poso/common/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://purl.org/poso/common/> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/poso/1.0/common/> .
-<http://purl.org/poso/common/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/poso/1.0/> .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/abstract> "The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms."@en .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology" .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/contributor> "Beat Signer"@en .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/poso/common/> <http://purl.org/dc/terms/modified> "2022-10-08T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/common/> <http://purl.org/dc/terms/modified> "2022-11-21T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en .
-<http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso-common" .
+<http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "posoc" .
 <http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 # 
 # 
@@ -50,6 +49,9 @@
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.w3.org/2004/02/skos/core#example
 <http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -69,10 +71,27 @@
 # 
 # #################################################################
 # #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/poso/common/hasReferenceRSSI
+<http://purl.org/poso/common/hasReferenceRSSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/common/hasReferenceRSSI> <http://www.w3.org/2000/01/rdf-schema#comment> "has a reference Received Signal Strength Indicator at a specified distance."@en .
+<http://purl.org/poso/common/hasReferenceRSSI> <http://www.w3.org/2000/01/rdf-schema#label> "has reference RSSI"@en .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Classes
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/poso/BluetoothBeacon
+<http://purl.org/poso/BluetoothBeacon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://purl.org/poso/CellIdentification
 <http://purl.org/poso/CellIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -83,6 +102,9 @@
 # http://purl.org/poso/Fingerprinting
 <http://purl.org/poso/Fingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# http://purl.org/poso/HighLevelFusion
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # http://purl.org/poso/Lateration
 <http://purl.org/poso/Lateration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
@@ -91,6 +113,15 @@
 # 
 # http://purl.org/poso/Multilateration
 <http://purl.org/poso/Multilateration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/poso/OutdoorDeployment
+<http://purl.org/poso/OutdoorDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/poso/PDR
+<http://purl.org/poso/PDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/poso/PositionOutput
+<http://purl.org/poso/PositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://purl.org/poso/PositioningPlatform
 <http://purl.org/poso/PositioningPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -161,10 +192,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 # http://purl.org/poso/common/BDS
 <http://purl.org/poso/common/BDS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/BDS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/SatellitePositioningSystem> .
-<http://purl.org/poso/common/BDS> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 <http://purl.org/poso/common/BDS> <http://www.w3.org/2000/01/rdf-schema#comment> "BeiDou, or BDS, is a global GNSS owned and operated by the People's Republic of China. BDS was formally commissioned in 2020. The operational system consists of 35 satellites. BDS was previously called Compass."@en .
 <http://purl.org/poso/common/BDS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.gps.gov/systems/gnss/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/common/BDS> <http://www.w3.org/2000/01/rdf-schema#label> "BeiDou Navigation Satellite System"@en .
+<http://purl.org/poso/common/BDS> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 # 
 # http://purl.org/poso/common/CSIFingerprinting
 <http://purl.org/poso/common/CSIFingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -187,27 +218,27 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 # http://purl.org/poso/common/GLONASS
 <http://purl.org/poso/common/GLONASS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/GLONASS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/SatellitePositioningSystem> .
-<http://purl.org/poso/common/GLONASS> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 <http://purl.org/poso/common/GLONASS> <http://www.w3.org/2000/01/rdf-schema#comment> "GLONASS (Globalnaya Navigazionnaya Sputnikovaya Sistema, or Global Navigation Satellite System) is a global GNSS owned and operated by the Russian Federation. The fully operational system consists of 24+ satellites."@en .
 <http://purl.org/poso/common/GLONASS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.gps.gov/systems/gnss/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/common/GLONASS> <http://www.w3.org/2000/01/rdf-schema#label> "Global Navigation Satellite System"@en .
 <http://purl.org/poso/common/GLONASS> <http://www.w3.org/2000/01/rdf-schema#label> "Globalnaya Navigazionnaya Sputnikovaya Sistema"@ru .
+<http://purl.org/poso/common/GLONASS> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 # 
 # http://purl.org/poso/common/GPS
 <http://purl.org/poso/common/GPS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/GPS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/SatellitePositioningSystem> .
-<http://purl.org/poso/common/GPS> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 <http://purl.org/poso/common/GPS> <http://www.w3.org/2000/01/rdf-schema#comment> "The Global Positioning System (GPS) is a U.S.-owned utility that provides users with positioning, navigation, and timing (PNT) services. This system consists of three segments: the space segment, the control segment, and the user segment. The U.S. Space Force develops, maintains, and operates the space and control segments."@en .
 <http://purl.org/poso/common/GPS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.gps.gov/systems/gps/"@en .
 <http://purl.org/poso/common/GPS> <http://www.w3.org/2000/01/rdf-schema#label> "Global Positioning System"@en .
+<http://purl.org/poso/common/GPS> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 # 
 # http://purl.org/poso/common/Galileo
 <http://purl.org/poso/common/Galileo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/Galileo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/SatellitePositioningSystem> .
-<http://purl.org/poso/common/Galileo> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 <http://purl.org/poso/common/Galileo> <http://www.w3.org/2000/01/rdf-schema#comment> "Galileo is a global GNSS owned and operated by the European Union. The EU declared the start of Galileo Initial Services in 2016 and plans to complete the system of 24+ satellites in 2021."@en .
 <http://purl.org/poso/common/Galileo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.gps.gov/systems/gnss/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/common/Galileo> <http://www.w3.org/2000/01/rdf-schema#label> "Galileo"@en .
+<http://purl.org/poso/common/Galileo> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 # 
 # http://purl.org/poso/common/GeolocationAPI
 <http://purl.org/poso/common/GeolocationAPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -226,10 +257,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 <http://purl.org/poso/common/IRNSS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/IRNSS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/SatellitePositioningSystem> .
 <http://purl.org/poso/common/IRNSS> <http://www.w3.org/2002/07/owl#sameAs> <http://purl.org/poso/common/NavIC> .
-<http://purl.org/poso/common/IRNSS> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 <http://purl.org/poso/common/IRNSS> <http://www.w3.org/2000/01/rdf-schema#comment> "IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning \"sailor\" or \"navigator\")."@en .
 <http://purl.org/poso/common/IRNSS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.gps.gov/systems/gnss/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/common/IRNSS> <http://www.w3.org/2000/01/rdf-schema#label> "Indian Regional Navigation Satellite System"@en .
+<http://purl.org/poso/common/IRNSS> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 # 
 # http://purl.org/poso/common/NavIC
 # 
@@ -267,10 +298,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 # http://purl.org/poso/common/NavIC
 <http://purl.org/poso/common/NavIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/NavIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/SatellitePositioningSystem> .
-<http://purl.org/poso/common/NavIC> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 <http://purl.org/poso/common/NavIC> <http://www.w3.org/2000/01/rdf-schema#comment> "IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning \"sailor\" or \"navigator\")."@en .
 <http://purl.org/poso/common/NavIC> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.gps.gov/systems/gnss/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/common/NavIC> <http://www.w3.org/2000/01/rdf-schema#label> "Navigation Indian Constellation"@en .
+<http://purl.org/poso/common/NavIC> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 # 
 # http://purl.org/poso/common/ORBSLAM2
 <http://purl.org/poso/common/ORBSLAM2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -306,10 +337,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdf
 # http://purl.org/poso/common/QZSS
 <http://purl.org/poso/common/QZSS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/common/QZSS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/SatellitePositioningSystem> .
-<http://purl.org/poso/common/QZSS> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 <http://purl.org/poso/common/QZSS> <http://www.w3.org/2000/01/rdf-schema#comment> "QZSS is a regional GNSS owned by the Government of Japan and operated by QZS System Service Inc. (QSS). QZSS complements GPS to improve coverage in East Asia and Oceania. Japan declared the official start of QZSS services in 2018 with 4 operational satellites, and plans to expand the constellation to 7 satellites by 2023 for autonomous capability."@en .
 <http://purl.org/poso/common/QZSS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.gps.gov/systems/gnss/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/common/QZSS> <http://www.w3.org/2000/01/rdf-schema#label> "Quasi-Zenith Satellite System"@en .
+<http://purl.org/poso/common/QZSS> <http://www.w3.org/ns/ssn/hasDeployment> <http://purl.org/poso/common/EarthDeployment> .
 # 
 # http://purl.org/poso/common/RFCellIdentification
 <http://purl.org/poso/common/RFCellIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
