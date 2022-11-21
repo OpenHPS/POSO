@@ -11,16 +11,15 @@
 
 <http://purl.org/poso/common/> rdf:type owl:Ontology ;
                                 owl:versionIRI <http://purl.org/poso/1.0/common/> ;
-                                owl:imports <http://purl.org/poso/1.0/> ;
                                 <http://purl.org/dc/terms/abstract> "The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms."@en ;
                                 <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology"^^xsd:string ;
                                 <http://purl.org/dc/terms/contributor> "Beat Signer"@en ;
                                 <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                                 <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                                <http://purl.org/dc/terms/modified> "2022-10-08T00:00:00"^^xsd:dateTime ;
+                                <http://purl.org/dc/terms/modified> "2022-11-21T00:00:00"^^xsd:dateTime ;
                                 <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en ;
-                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso-common" ;
+                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "posoc" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^xsd:anyURI .
 
 #################################################################
@@ -67,6 +66,10 @@
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#example
 <http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
 
@@ -88,8 +91,22 @@ rdfp:validationRule rdf:type owl:AnnotationProperty .
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/poso/common/hasReferenceRSSI
+:hasReferenceRSSI rdf:type owl:ObjectProperty ;
+                  rdfs:comment "has a reference Received Signal Strength Indicator at a specified distance."@en ;
+                  rdfs:label "has reference RSSI"@en .
+
+
+#################################################################
 #    Classes
 #################################################################
+
+###  http://purl.org/poso/BluetoothBeacon
+poso:BluetoothBeacon rdf:type owl:Class .
+
 
 ###  http://purl.org/poso/CellIdentification
 poso:CellIdentification rdf:type owl:Class .
@@ -103,6 +120,10 @@ poso:DeadReckoning rdf:type owl:Class .
 poso:Fingerprinting rdf:type owl:Class .
 
 
+###  http://purl.org/poso/HighLevelFusion
+poso:HighLevelFusion rdf:type owl:Class .
+
+
 ###  http://purl.org/poso/Lateration
 poso:Lateration rdf:type owl:Class .
 
@@ -113,6 +134,18 @@ poso:LocationBasedService rdf:type owl:Class .
 
 ###  http://purl.org/poso/Multilateration
 poso:Multilateration rdf:type owl:Class .
+
+
+###  http://purl.org/poso/OutdoorDeployment
+poso:OutdoorDeployment rdf:type owl:Class .
+
+
+###  http://purl.org/poso/PDR
+poso:PDR rdf:type owl:Class .
+
+
+###  http://purl.org/poso/PositionOutput
+poso:PositionOutput rdf:type owl:Class .
 
 
 ###  http://purl.org/poso/PositioningPlatform
