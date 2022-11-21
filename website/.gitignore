@@ -4,3 +4,4 @@ _site
 .env
 tmp*/
 _scripts/*.jar
+_scripts/myDocumentation

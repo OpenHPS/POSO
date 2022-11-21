@@ -4,6 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @base <http://purl.org/poso/> .
 
 <http://purl.org/poso/> rdf:type owl:Ontology ;
@@ -16,10 +17,11 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2022-05-03T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2022-10-08T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
-                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI .
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
+                         <http://schema.org/image> "https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg" .
 
 #################################################################
 #    Annotation properties
@@ -77,13 +79,27 @@
 <http://qudt.org/schema/qudt/hasQuantityKind> rdf:type owl:AnnotationProperty .
 
 
+###  http://schema.org/image
+<http://schema.org/image> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#altLabel
-<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://purl.org/poso/angle
+:angle rdf:type owl:ObjectProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
+       rdfs:range rdfs:Class ;
+       rdfs:comment "Quantitative anglue result value for axis-angle representation."@en ;
+       rdfs:label "angle"@en ,
+                  "hoek"@nl .
+
 
 ###  http://purl.org/poso/hasAcceleration
 :hasAcceleration rdf:type owl:ObjectProperty ;
@@ -108,7 +124,8 @@
 ###  http://purl.org/poso/hasCRS
 :hasCRS rdf:type owl:ObjectProperty ;
         rdfs:subPropertyOf :hasSRS ;
-        rdfs:label "has coordinate reference system"@en .
+        rdfs:label "has coordinate reference system"@en ,
+                   "heeft een coördinaten referentiesysteem"@nl .
 
 
 ###  http://purl.org/poso/hasOrientation
@@ -198,9 +215,10 @@
 :isRelativeTo rdf:type owl:ObjectProperty ;
               rdfs:domain :RelativePosition ;
               rdfs:range <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
-              rdfs:comment "Indicates a relative position to be relative to another feature."@en ;
+              rdfs:comment "Indicates a relative position to be relative to another feature of interest."@en ;
               rdfs:label "is relatief met"@nl ,
-                         "is relative to"@en .
+                         "is relative to"@en ;
+              skos:example "A person can have a relative distance to another feature of interest. When a feature is moving (i.e. when the geometry changes based on time) the distance remains relative to the feature and not the geometry at a specific point in time."@en .
 
 
 ###  http://purl.org/poso/isVelocityOf
@@ -215,7 +233,8 @@
               rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
               rdfs:range <http://www.w3.org/ns/ssn/System> ;
               rdfs:comment "A relation to a re-usable system that computed the observation."@en ;
-              rdfs:label "made by system"@en .
+              rdfs:label "gemaakt door systeem"@nl ,
+                         "made by system"@en .
 
 
 ###  http://purl.org/poso/observesType
@@ -224,7 +243,8 @@
               rdfs:domain <http://www.w3.org/ns/ssn/System> ;
               rdfs:range rdfs:Class ;
               rdfs:comment "The relation between a system and an observable property class to identify that a system observes a specific type of property."@en ;
-              rdfs:label "observes type"@en .
+              rdfs:label "observeert type"@nl ,
+                         "observes type"@en .
 
 
 ###  http://purl.org/poso/pitch
@@ -251,7 +271,7 @@
         rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
         rdfs:range rdfs:Class ;
         rdfs:label "scalar"@en ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "w" .
+        skos:altLabel "w" .
 
 
 ###  http://purl.org/poso/xAxisValue
@@ -259,7 +279,7 @@
                      owl:FunctionalProperty ;
             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
             rdfs:range rdfs:Class ;
-            rdfs:comment "Quantitative result value along the X-axis of a spatial sensor."@en ;
+            rdfs:comment "Quantitative result value along the X-axis of a spatial sensor or result."@en ;
             rdfs:label "x-axis value"@en .
 
 
@@ -268,7 +288,7 @@
                      owl:FunctionalProperty ;
             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
             rdfs:range rdfs:Class ;
-            rdfs:comment "Quantitative result value along the Y-axis of a spatial sensor."@en ;
+            rdfs:comment "Quantitative result value along the Y-axis of a spatial sensor or result."@en ;
             rdfs:label "y-axis value"@en .
 
 
@@ -355,6 +375,14 @@
 :AxisAngleOrientation rdf:type owl:Class ;
                       rdfs:subClassOf :Orientation ,
                                       [ rdf:type owl:Restriction ;
+                                        owl:onProperty :angle ;
+                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :angle ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty :xAxisValue ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                       ] ,
@@ -366,7 +394,15 @@
                                         owl:onProperty :zAxisValue ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                       ] ;
-                      rdfs:label "Axis angle orientation"@en .
+                      rdfs:comment "The axis-angle orientation is an orientation representation where the x, y and z values are rotated with a certain angle."@en ;
+                      rdfs:label "Axis-angle orientation"@en .
+
+
+###  http://purl.org/poso/BluetoothBeacon
+:BluetoothBeacon rdf:type owl:Class ;
+                 rdfs:subClassOf :RFLandmark ;
+                 rdfs:comment "A Bluetooth beacon is an RF landmark that advertises its transmission power and other optional information. Based on the signal strength receivers of this advertisement can determine the approximate distance."@en ;
+                 rdfs:label "Bluetooth beacon"@en .
 
 
 ###  http://purl.org/poso/CellIdentification
@@ -374,9 +410,9 @@
                     rdfs:subClassOf :PositioningTechnique ;
                     rdfs:comment "Cell identification is a positioning procedure using the position of one landmark that is within the cell."@en ;
                     rdfs:label "Cell identification"@en ;
-                    <http://www.w3.org/2004/02/skos/core#altLabel> "Cell Of Origin (COO)"@en ;
-                    <http://www.w3.org/2004/02/skos/core#example> "An example of cell identification is using the position of a Bluetooth beacon whenever this beacon has a high signal strength."@en ,
-                                                                  "An example of cell identification is using the position of a QR-code when this code is scanned (and the user is presumably within a short distance)."@en .
+                    skos:altLabel "Cell Of Origin (COO)"@en ;
+                    skos:example "An example of cell identification is using the position of a Bluetooth beacon whenever this beacon has a high signal strength."@en ,
+                                 "An example of cell identification is using the position of a QR-code when this code is scanned (and the user is presumably within a short distance)."@en .
 
 
 ###  http://purl.org/poso/DeadReckoning
@@ -384,7 +420,7 @@
                rdfs:subClassOf :PositioningTechnique ;
                rdfs:comment "Dead reckoning is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."@en ;
                rdfs:label "Dead reckoning"@en ;
-               <http://www.w3.org/2004/02/skos/core#altLabel> "Deduced reckoning"@en .
+               skos:altLabel "Deduced reckoning"@en .
 
 
 ###  http://purl.org/poso/EulerOrientation
@@ -431,13 +467,13 @@
                  rdfs:comment "High level sensor fusion is about fusing both objects and their trajectories. We're not only relying on detections, but also on predictions and tracking."@en ;
                  rdfs:isDefinedBy "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^xsd:anyURI ;
                  rdfs:label "High level sensor fusion"@en ;
-                 <http://www.w3.org/2004/02/skos/core#altLabel> "Decision level sensor fusion"@en .
+                 skos:altLabel "Decision level sensor fusion"@en .
 
 
 ###  http://purl.org/poso/IndoorDeployment
 :IndoorDeployment rdf:type owl:Class ;
                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
-                  rdfs:comment "Describes the deployment of a System in an indoor environment."@en ;
+                  rdfs:comment "Describes the spatial deployment of a System in an indoor environment."@en ;
                   rdfs:label "Indoor deployment"@en .
 
 
@@ -452,7 +488,7 @@
 :InertialPositioningSystem rdf:type owl:Class ;
                            rdfs:subClassOf :PositioningSystem ;
                            rdfs:comment "An inertial positioning system is a positioning system employing accelerometers, gyroscopes, and computer as integral components to determine coordinates of points or objects relative to an initial known reference point"@en ;
-                           rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/240/> ;
+                           rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/240/"^^xsd:anyURI ;
                            rdfs:label "Inertial positioning system"@en .
 
 
@@ -465,9 +501,9 @@
                                                owl:onClass :SensorFusion
                                              ] ;
                              rdfs:comment "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en ;
-                             rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/250/> ;
+                             rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/250/"^^xsd:anyURI ;
                              rdfs:label "Integrated positioning system"@en ;
-                             <http://www.w3.org/2004/02/skos/core#altLabel> "Hybrid positioning system"@en .
+                             skos:altLabel "Hybrid positioning system"@en .
 
 
 ###  http://purl.org/poso/Landmark
@@ -497,7 +533,8 @@
 :LinearMovement rdf:type owl:Class ;
                 rdfs:subClassOf :Movement ;
                 rdfs:comment "Linear movement along a certain axis."@en ;
-                rdfs:label "Linear movement"@en .
+                rdfs:label "Lineaire beweging"@nl ,
+                           "Linear movement"@en .
 
 
 ###  http://purl.org/poso/LinearVelocity
@@ -505,14 +542,15 @@
                 rdfs:subClassOf :Velocity ;
                 <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/LinearVelocity> ;
                 rdfs:comment "Linear velocity is the momentum along one ore more axis."@en ;
-                rdfs:label "Linear velocity"@en .
+                rdfs:label "Lineaire snelheid"@nl ,
+                           "Linear velocity"@en .
 
 
 ###  http://purl.org/poso/LocationBasedService
 :LocationBasedService rdf:type owl:Class ;
                       rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
                       rdfs:comment "A location based service (LBS) is a service that provides the location of a person or object. It provides this information without the required knowledge of the underlying technologies and algorithms."@en ;
-                      rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/278/> ;
+                      rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/278/"^^xsd:anyURI ;
                       rdfs:label "Location based service"@en .
 
 
@@ -549,7 +587,8 @@
 :Movement rdf:type owl:Class ;
           rdfs:subClassOf <http://www.w3.org/ns/ssn/Stimulus> ;
           rdfs:comment "Movement stimulus triggering an update of a position."@en ;
-          rdfs:label "Movement"@en .
+          rdfs:label "Beweging"@nl ,
+                     "Movement"@en .
 
 
 ###  http://purl.org/poso/Multilateration
@@ -557,8 +596,8 @@
                  rdfs:subClassOf :Lateration ;
                  rdfs:comment "Multilateration is the procedure of determining a position using relative distances to other known positions."@en ;
                  rdfs:label "Multilateration"@en ;
-                 <http://www.w3.org/2004/02/skos/core#altLabel> "Hyperbolic positioning"@en ,
-                                                                "Trilateration"@en .
+                 skos:altLabel "Hyperbolic positioning"@en ,
+                               "Trilateration"@en .
 
 
 ###  http://purl.org/poso/Odometry
@@ -572,7 +611,7 @@
 :OpticalPositioningSystem rdf:type owl:Class ;
                           rdfs:subClassOf :PositioningSystem ;
                           rdfs:comment "An optical positioning system is a positioning system that determines the position of an object by means of the properties of light."@en ;
-                          rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/320/> ;
+                          rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/320/"^^xsd:anyURI ;
                           rdfs:label "Optical positioning system"@en .
 
 
@@ -637,7 +676,7 @@
                                      owl:onClass <http://www.w3.org/ns/ssn/Deployment>
                                    ] ;
                    rdfs:comment "A positioning system is a system of instrumental and computational components for determining position."@en ;
-                   rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/349/"@en ;
+                   rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/349/"^^xsd:anyURI ;
                    rdfs:label "Positioning system"@en .
 
 
@@ -674,7 +713,8 @@
 :RFLandmark rdf:type owl:Class ;
             rdfs:subClassOf :Landmark ;
             rdfs:comment "A radio frequency landmark is a transmitting landmark that can be observed by its transmitting signals."@en ;
-            rdfs:label "RF landmark"@en .
+            rdfs:label "RF landmark"@en ;
+            skos:example "An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position."@en .
 
 
 ###  http://purl.org/poso/RadioPropagation
@@ -691,7 +731,7 @@
                rdfs:comment "A relative angle is a quantitative angle relative to another feature of interest."@en ;
                rdfs:label "Relatieve hoek"@nl ,
                           "Relative angle"@en ;
-               <http://www.w3.org/2004/02/skos/core#example> "An example of relative angle is the Angle of Arrival."@en .
+               skos:example "An example of relative angle is the Angle of Arrival."@en .
 
 
 ###  http://purl.org/poso/RelativeDistance
@@ -712,7 +752,7 @@
                                   ] ;
                   rdfs:comment "A relative position is a position of a feature of interest with respect to the positions of other objects that this position is relative to."@en ,
                                "Een relatieve positie is een positie van een punt, met respect tot de posities van andere objecten die relatief zijn."@nl ;
-                  rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/377/"@en ;
+                  rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/377/"^^xsd:anyURI ;
                   rdfs:label "Relatieve positie"@nl ,
                              "Relative position"@en .
 
@@ -729,7 +769,7 @@
 :SLAM rdf:type owl:Class ;
       rdfs:subClassOf :PositioningTechnique ;
       rdfs:comment "Simultaneous localization and mapping (SLAM) is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it."@en ;
-      rdfs:isDefinedBy "https://dbpedia.org/page/Simultaneous_localization_and_mapping"@en ;
+      rdfs:isDefinedBy "https://dbpedia.org/page/Simultaneous_localization_and_mapping"^^xsd:anyURI ;
       rdfs:label "Simultaneous localisation and mapping"@en .
 
 
@@ -744,7 +784,7 @@
 :SatellitePositioningSystem rdf:type owl:Class ;
                             rdfs:subClassOf :PositioningSystem ;
                             rdfs:comment "In this context, satellite positioning implies the use of radio signals transmitted from \"active\" artificial objects orbiting the Earth and received by \"passive\" instruments on or near the Earth's surface to determine position, velocity, and/or attitude of an object."@en ;
-                            rdfs:isDefinedBy <https://isotc211.geolexica.org/concepts/392/> ;
+                            rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/392/"^^xsd:anyURI ;
                             rdfs:label "Satellite positioning system"@en .
 
 
@@ -766,7 +806,8 @@
                                   owl:onClass :Position
                                 ] ;
                 rdfs:comment "A feature of interest that is being tracked by a positioning system. This is the feature for which a position is observed."@en ;
-                rdfs:label "Tracked feature"@en .
+                rdfs:label "Tracked feature"@en ;
+                skos:example "The phone of a person that is being tracked in an indoor positioning system is the tracked feature."@en .
 
 
 ###  http://purl.org/poso/Triangulation
@@ -811,9 +852,12 @@
                 rdfs:comment "Visual odometry is the procedure of detecting movement by analyzing how visual features are moving from one Observation image frame to another."@en ;
                 rdfs:label "Visual odometry"@en .
 
-
 ###  http://www.opengis.net/ont/geosparql#Geometry
 <http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Class
