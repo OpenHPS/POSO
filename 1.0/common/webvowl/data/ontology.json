@@ -1,8 +1,7 @@
 {
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
-    "languages" : [ "ru", "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/poso/common", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/poso", "https://w3id.org/rdfp", "http://www.w3.org/ns/shacl", "http://www.w3.org/2001/XMLSchema" ],
+    "languages" : [ "en", "undefined" ],
     "title" : {
       "en" : "Positioning System Ontology Common Technologies, Algorithms and Systems"
     },
@@ -39,13 +38,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2022-11-21T00:00:00",
-        "type" : "label"
-      } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "http://purl.org/poso/common/",
+        "value" : "2023-01-16T00:00:00",
         "type" : "label"
       } ],
       "abstract" : [ {
@@ -58,6 +51,12 @@
         "identifier" : "bibliographicCitation",
         "language" : "undefined",
         "value" : "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://purl.org/poso/common/",
         "type" : "label"
       } ],
       "title" : [ {
@@ -82,13 +81,19 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
     "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "2",
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
     "type" : "owl:Class"
   }, {
     "id" : "10",
@@ -97,10 +102,19 @@
     "id" : "11",
     "type" : "owl:Class"
   }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
     "id" : "13",
-    "type" : "owl:Thing"
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
   }, {
     "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
     "type" : "owl:Class"
   }, {
     "id" : "16",
@@ -114,792 +128,110 @@
   }, {
     "id" : "19",
     "type" : "owl:Class"
-  }, {
-    "id" : "20",
-    "type" : "owl:Class"
-  }, {
-    "id" : "8",
-    "type" : "owl:Class"
-  }, {
-    "id" : "21",
-    "type" : "owl:Class"
-  }, {
-    "id" : "22",
-    "type" : "owl:Class"
-  }, {
-    "id" : "23",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
     "iri" : "http://purl.org/poso/HighLevelFusion",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "HighLevelFusion"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/WeightedAccuracyFusion",
-      "baseIri" : "http://purl.org/poso/common",
-      "comment" : {
-        "en" : "Decision level fusion based on weighted average of the accuracy^-1."
-      },
-      "labels" : {
-        "IRI-based" : "WeightedAccuracyFusion",
-        "en" : "Weighted accuracy fusion"
-      }
-    } ],
-    "attributes" : [ "external" ],
     "id" : "0"
   }, {
     "iri" : "http://purl.org/poso/common/EddystoneBeacon",
     "baseIri" : "http://purl.org/poso/common",
     "instances" : 0,
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "http://dbpedia.org/resource/Eddystone_(Google)",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "EddystoneBeacon",
-      "en" : "Eddystone"
-    },
-    "comment" : {
-      "en" : "Eddystone was a Bluetooth Low Energy beacon profile released by Google in July 2015."
-    },
     "id" : "1",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/ns/shacl#NodeShape",
     "baseIri" : "http://www.w3.org/ns/shacl",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "NodeShape"
-    },
-    "attributes" : [ "external" ],
     "id" : "3"
   }, {
     "iri" : "http://purl.org/poso/OutdoorDeployment",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "OutdoorDeployment"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/EarthDeployment",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://dbpedia.org/resouce/Earth",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "A generic deployment for any positioning system deployment on Earth."
-      },
-      "labels" : {
-        "IRI-based" : "EarthDeployment",
-        "en" : "Earth deployment"
-      }
-    } ],
-    "attributes" : [ "external" ],
     "id" : "4"
   }, {
     "iri" : "http://purl.org/poso/common/AltBeacon",
     "baseIri" : "http://purl.org/poso/common",
     "instances" : 0,
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://altbeacon.org/",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "AltBeacon",
-      "en" : "AltBeacon"
-    },
-    "comment" : {
-      "en" : "AltBeacon is an open and interoperable proximity beacon specification."
-    },
-    "id" : "6",
+    "id" : "5",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://purl.org/poso/CellIdentification",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "CellIdentification"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/RFCellIdentification",
-      "baseIri" : "http://purl.org/poso/common",
-      "comment" : {
-        "en" : "RF cell identification is a technique that determines the position based on the closest RF landmark in range."
-      },
-      "labels" : {
-        "IRI-based" : "RFCellIdentification",
-        "en" : "RF cell identification"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "9"
+    "id" : "6"
   }, {
     "iri" : "http://purl.org/poso/BluetoothBeacon",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "BluetoothBeacon"
-    },
-    "subClasses" : [ "1", "6", "8" ],
-    "attributes" : [ "external" ],
+    "subClasses" : [ "1", "5", "7" ],
     "id" : "2"
   }, {
     "iri" : "http://purl.org/poso/VSLAM",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "VSLAM"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/ORBSLAM2",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://github.com/raulmur/ORB_SLAM2",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ORBSLAM2",
-        "en" : "ORB-SLAM2"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/OpenVSLAM",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "altLabel" : [ {
-          "identifier" : "altLabel",
-          "language" : "en",
-          "value" : "stella-vslam",
-          "type" : "label"
-        } ],
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "https://stella-cv.readthedocs.io/en/latest/index.html",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "OpenVSLAM",
-        "en" : "OpenVSLAM"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/ORBSLAM3",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://github.com/UZ-SLAMLab/ORB_SLAM3",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ORBSLAM3",
-        "en" : "ORB-SLAM3"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/HectorSLAM",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "seeAlso" : [ {
-          "identifier" : "seeAlso",
-          "language" : "undefined",
-          "value" : "http://wiki.ros.org/hector_slam",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "HectorSLAM",
-        "en" : "Hector SLAM"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "10"
+    "id" : "8"
   }, {
     "iri" : "http://purl.org/poso/RadioPropagation",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "RadioPropagation"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/LDPL",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "http://dbpedia.org/resource/Log-distance_path_loss_model",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "The log-distance path loss model is a radio propagation model that predicts the path loss a signal encounters inside a building or densely populated areas over distance."
-      },
-      "labels" : {
-        "IRI-based" : "LDPL",
-        "en" : "Log-distance path loss model"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "11"
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "13",
-    "label" : {
-      "undefined" : "Thing"
-    }
+    "id" : "9"
   }, {
     "iri" : "http://purl.org/poso/Fingerprinting",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "Fingerprinting"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/ProbabilisticFingerprinting",
-      "baseIri" : "http://purl.org/poso/common",
-      "labels" : {
-        "IRI-based" : "ProbabilisticFingerprinting",
-        "en" : "Probabilistic fingerprinting"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/CSIFingerprinting",
-      "baseIri" : "http://purl.org/poso/common",
-      "labels" : {
-        "IRI-based" : "CSIFingerprinting",
-        "en" : "Channel State Information fingerprinting"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/KNNFingerprinting",
-      "baseIri" : "http://purl.org/poso/common",
-      "comment" : {
-        "en" : "k-Neirest Neighbour fingerprinting is a fingerprinting technique where a number (k) of matches are selected, as opposed to one single fingerprint match. The final output position is the (weighted) average of the k-number of selected fingerprints."
-      },
-      "labels" : {
-        "IRI-based" : "KNNFingerprinting",
-        "en" : "k-NN fingerprinting"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/SVMFingerprinting",
-      "baseIri" : "http://purl.org/poso/common",
-      "labels" : {
-        "IRI-based" : "SVMFingerprinting",
-        "en" : "Support Vector Machine fingerprinting"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "15"
+    "id" : "10"
   }, {
     "iri" : "http://purl.org/poso/Multilateration",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "Multilateration"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/NLSMultilateration",
-      "baseIri" : "http://purl.org/poso/common",
-      "labels" : {
-        "IRI-based" : "NLSMultilateration",
-        "en" : "Non-linear least squares multilateration"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "16"
+    "id" : "11"
   }, {
     "iri" : "http://purl.org/poso/Lateration",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "Lateration"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/MidpointLateration",
-      "baseIri" : "http://purl.org/poso/common",
-      "comment" : {
-        "en" : "Midpoint lateration uses the midpoint of two points."
-      },
-      "labels" : {
-        "IRI-based" : "MidpointLateration",
-        "en" : "Midpoint lateration"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "17"
+    "id" : "12"
   }, {
     "iri" : "http://purl.org/poso/DeadReckoning",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "DeadReckoning"
-    },
-    "attributes" : [ "external" ],
-    "id" : "18"
+    "id" : "13"
   }, {
     "iri" : "http://purl.org/poso/PositionOutput",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "PositionOutput"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/AbsolutePositionOutput",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "presentedBy" : [ {
-          "identifier" : "presentedBy",
-          "language" : "undefined",
-          "value" : "_:genid2147483648",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "AbsolutePositionOutput",
-        "en" : "Absolute position output"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "19"
+    "id" : "14"
   }, {
     "iri" : "http://purl.org/poso/PDR",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "PDR"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/FootMountedPDR",
-      "baseIri" : "http://purl.org/poso/common",
-      "comment" : {
-        "en" : "Foot-mounted pedestrian dead reckoning uses a sensor on the foot of a pedestrian to detect steps."
-      },
-      "labels" : {
-        "IRI-based" : "FootMountedPDR",
-        "en" : "Foot-mounted pedestrian dead reckoning"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "20"
+    "id" : "15"
   }, {
     "iri" : "http://purl.org/poso/common/iBeacon",
     "baseIri" : "http://purl.org/poso/common",
     "instances" : 0,
-    "annotations" : {
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "https://developer.apple.com/ibeacon/",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "iBeacon",
-      "en" : "iBeacon"
-    },
-    "comment" : {
-      "en" : "An iBeacon is a beacon that advertises the proximity beacon packet specification."
-    },
-    "id" : "8",
+    "id" : "7",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://purl.org/poso/LocationBasedService",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "LocationBasedService"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/GeolocationAPI",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.w3.org/TR/geolocation/",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "The Geolocation API is a W3C specification that provides geographical location data based on the capabilities of the hosting device."
-      },
-      "labels" : {
-        "IRI-based" : "GeolocationAPI",
-        "undefined" : "Geolocation API"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "21"
+    "id" : "16"
   }, {
     "iri" : "https://w3id.org/rdfp/GraphDescription",
     "baseIri" : "https://w3id.org/rdfp",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "GraphDescription"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/AbsolutePositionOutput",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "presentedBy" : [ {
-          "identifier" : "presentedBy",
-          "language" : "undefined",
-          "value" : "_:genid2147483648",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "AbsolutePositionOutput",
-        "en" : "Absolute position output"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "22"
-  }, {
-    "iri" : "http://purl.org/poso/PositioningPlatform",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PositioningPlatform"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/Anyplace",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://anyplace.cs.ucy.ac.cy/",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Anyplace is a first-of-a-kind indoor information service offering GPS-less localization, navigation and search inside buildings using ordinary smartphones."
-      },
-      "labels" : {
-        "IRI-based" : "Anyplace",
-        "en" : "Anyplace"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/OpenHPS",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://openhps.org",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "OpenHPS is an open source hybrid positioning system to help developers fuse various positioning technologies and algorithms. The system offers a modular data processing framework with each modules ranging from computer vision to common algorithms such as fingerprinting or data persistence of sampled data."
-      },
-      "labels" : {
-        "IRI-based" : "OpenHPS",
-        "en" : "OpenHPS"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/IndoorAtlas",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.indooratlas.com/",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Cross-platform indoor positioning SDK powered by patented 6-layer sensor fusion core. Fast development cycles. Easy to set up. Proven by 10,000+ developers."
-      },
-      "labels" : {
-        "IRI-based" : "IndoorAtlas",
-        "en" : "IndoorAtlas"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/ROS",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.ros.org/",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "ROS (Robot Operating System) provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more."
-      },
-      "labels" : {
-        "IRI-based" : "ROS",
-        "en" : "Robotics Operating System"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/SonyNimway",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.sonynetworkcom.com/nimway",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Nimway from Sony is a complete smart office solution for the people-centred workplace. Acting as your personal assistant throughout the workday, it facilitates many otherwise time-consuming tasks, like finding your way to a meeting room, locating a colleague or booking a desk."
-      },
-      "labels" : {
-        "IRI-based" : "SonyNimway",
-        "en" : "Sony Nimway"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "23"
+    "id" : "17"
   }, {
     "iri" : "http://purl.org/poso/SatellitePositioningSystem",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "SatellitePositioningSystem"
-    },
-    "individuals" : [ {
-      "iri" : "http://purl.org/poso/common/GPS",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "en",
-          "value" : "https://www.gps.gov/systems/gps/",
-          "type" : "label"
-        } ],
-        "hasDeployment" : [ {
-          "identifier" : "hasDeployment",
-          "language" : "undefined",
-          "value" : "http://purl.org/poso/common/EarthDeployment",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "The Global Positioning System (GPS) is a U.S.-owned utility that provides users with positioning, navigation, and timing (PNT) services. This system consists of three segments: the space segment, the control segment, and the user segment. The U.S. Space Force develops, maintains, and operates the space and control segments."
-      },
-      "labels" : {
-        "IRI-based" : "GPS",
-        "en" : "Global Positioning System"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/Galileo",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.gps.gov/systems/gnss/",
-          "type" : "label"
-        } ],
-        "hasDeployment" : [ {
-          "identifier" : "hasDeployment",
-          "language" : "undefined",
-          "value" : "http://purl.org/poso/common/EarthDeployment",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "Galileo is a global GNSS owned and operated by the European Union. The EU declared the start of Galileo Initial Services in 2016 and plans to complete the system of 24+ satellites in 2021."
-      },
-      "labels" : {
-        "IRI-based" : "Galileo",
-        "en" : "Galileo"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/IRNSS",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.gps.gov/systems/gnss/",
-          "type" : "label"
-        } ],
-        "hasDeployment" : [ {
-          "identifier" : "hasDeployment",
-          "language" : "undefined",
-          "value" : "http://purl.org/poso/common/EarthDeployment",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning \"sailor\" or \"navigator\")."
-      },
-      "labels" : {
-        "IRI-based" : "IRNSS",
-        "en" : "Indian Regional Navigation Satellite System"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/QZSS",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.gps.gov/systems/gnss/",
-          "type" : "label"
-        } ],
-        "hasDeployment" : [ {
-          "identifier" : "hasDeployment",
-          "language" : "undefined",
-          "value" : "http://purl.org/poso/common/EarthDeployment",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "QZSS is a regional GNSS owned by the Government of Japan and operated by QZS System Service Inc. (QSS). QZSS complements GPS to improve coverage in East Asia and Oceania. Japan declared the official start of QZSS services in 2018 with 4 operational satellites, and plans to expand the constellation to 7 satellites by 2023 for autonomous capability."
-      },
-      "labels" : {
-        "IRI-based" : "QZSS",
-        "en" : "Quasi-Zenith Satellite System"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/BDS",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.gps.gov/systems/gnss/",
-          "type" : "label"
-        } ],
-        "hasDeployment" : [ {
-          "identifier" : "hasDeployment",
-          "language" : "undefined",
-          "value" : "http://purl.org/poso/common/EarthDeployment",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "BeiDou, or BDS, is a global GNSS owned and operated by the People's Republic of China. BDS was formally commissioned in 2020. The operational system consists of 35 satellites. BDS was previously called Compass."
-      },
-      "labels" : {
-        "IRI-based" : "BDS",
-        "en" : "BeiDou Navigation Satellite System"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/GLONASS",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.gps.gov/systems/gnss/",
-          "type" : "label"
-        } ],
-        "hasDeployment" : [ {
-          "identifier" : "hasDeployment",
-          "language" : "undefined",
-          "value" : "http://purl.org/poso/common/EarthDeployment",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "GLONASS (Globalnaya Navigazionnaya Sputnikovaya Sistema, or Global Navigation Satellite System) is a global GNSS owned and operated by the Russian Federation. The fully operational system consists of 24+ satellites."
-      },
-      "labels" : {
-        "IRI-based" : "GLONASS",
-        "ru" : "Globalnaya Navigazionnaya Sputnikovaya Sistema",
-        "en" : "Global Navigation Satellite System"
-      }
-    }, {
-      "iri" : "http://purl.org/poso/common/NavIC",
-      "baseIri" : "http://purl.org/poso/common",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://www.gps.gov/systems/gnss/",
-          "type" : "label"
-        } ],
-        "hasDeployment" : [ {
-          "identifier" : "hasDeployment",
-          "language" : "undefined",
-          "value" : "http://purl.org/poso/common/EarthDeployment",
-          "type" : "iri"
-        } ]
-      },
-      "comment" : {
-        "en" : "IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning \"sailor\" or \"navigator\")."
-      },
-      "labels" : {
-        "IRI-based" : "NavIC",
-        "en" : "Navigation Indian Constellation"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "24"
-  } ],
-  "property" : [ {
-    "id" : "5",
-    "type" : "rdfs:SubClassOf"
+    "id" : "18"
   }, {
-    "id" : "7",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "12",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "14",
-    "type" : "rdfs:SubClassOf"
-  } ],
-  "propertyAttribute" : [ {
-    "range" : "2",
-    "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "5"
-  }, {
-    "range" : "2",
-    "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "7"
-  }, {
-    "iri" : "http://purl.org/poso/common/hasReferenceRSSI",
-    "baseIri" : "http://purl.org/poso/common",
-    "range" : "13",
-    "label" : {
-      "IRI-based" : "hasReferenceRSSI",
-      "en" : "has reference RSSI"
-    },
-    "domain" : "13",
-    "comment" : {
-      "en" : "has a reference Received Signal Strength Indicator at a specified distance."
-    },
-    "attributes" : [ "object" ],
-    "id" : "12"
-  }, {
-    "range" : "2",
-    "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "14"
+    "iri" : "http://purl.org/poso/PositioningPlatform",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "id" : "19"
   } ]
 }

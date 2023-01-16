@@ -20,7 +20,7 @@
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-21T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-16T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology Common Technologies, Algorithms and Systems</terms:title>
         <vann:preferredNamespacePrefix>posoc</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/common/</vann:preferredNamespaceUri>
@@ -171,6 +171,61 @@
         <rdfs:comment xml:lang="en">has a reference Received Signal Strength Indicator at a specified distance.</rdfs:comment>
         <rdfs:label xml:lang="en">has reference RSSI</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/poso/common/major -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/poso/common/major">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/common/major"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/poso/common/minor -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/poso/common/minor">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/common/major"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/poso/common/proximityUUID -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/poso/common/proximityUUID">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/common/major"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:label xml:lang="en">Proximity UUID</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -360,13 +415,13 @@
         <rdf:type rdf:resource="http://purl.org/poso/PositionOutput"/>
         <rdf:type rdf:resource="https://w3id.org/rdfp/GraphDescription"/>
         <rdfs:label xml:lang="en">Absolute position output</rdfs:label>
-        <rdfp:presentedBy rdf:nodeID="genid1"/>
+        <rdfp:presentedBy rdf:nodeID="genid4"/>
     </owl:NamedIndividual>
-    <rdf:Description rdf:nodeID="genid1">
+    <rdf:Description rdf:nodeID="genid4">
         <rdf:type rdf:resource="https://w3id.org/rdfp/GraphDescription"/>
-        <rdfp:validationRule rdf:nodeID="genid2"/>
+        <rdfp:validationRule rdf:nodeID="genid5"/>
     </rdf:Description>
-    <rdf:Description rdf:nodeID="genid2">
+    <rdf:Description rdf:nodeID="genid5">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:targetClass rdf:resource="http://purl.org/poso/AbsolutePosition"/>
     </rdf:Description>

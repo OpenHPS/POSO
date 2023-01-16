@@ -14,7 +14,7 @@
                                 <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                                 <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                                <http://purl.org/dc/terms/modified> "2022-11-21T00:00:00"^^xsd:dateTime ;
+                                <http://purl.org/dc/terms/modified> "2023-01-16T00:00:00"^^xsd:dateTime ;
                                 <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en ;
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "posoc" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^xsd:anyURI .
@@ -95,6 +95,35 @@
 :hasReferenceRSSI rdf:type owl:ObjectProperty ;
                   rdfs:comment "has a reference Received Signal Strength Indicator at a specified distance."@en ;
                   rdfs:label "has reference RSSI"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/poso/common/major
+:major rdf:type owl:DatatypeProperty ;
+       rdfs:domain [ rdf:type owl:Restriction ;
+                     owl:onProperty :major ;
+                     owl:someValuesFrom xsd:integer
+                   ] .
+
+
+###  http://purl.org/poso/common/minor
+:minor rdf:type owl:DatatypeProperty ;
+       rdfs:domain [ rdf:type owl:Restriction ;
+                     owl:onProperty :major ;
+                     owl:someValuesFrom xsd:integer
+                   ] .
+
+
+###  http://purl.org/poso/common/proximityUUID
+:proximityUUID rdf:type owl:DatatypeProperty ;
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty :major ;
+                             owl:someValuesFrom xsd:hexBinary
+                           ] ;
+               rdfs:label "Proximity UUID"@en .
 
 
 #################################################################
@@ -202,12 +231,12 @@
                                  <http://purl.org/poso/PositionOutput> ,
                                  <https://w3id.org/rdfp/GraphDescription> ;
                         rdfs:label "Absolute position output"@en ;
-                        <https://w3id.org/rdfp/presentedBy> _:genid1 .
+                        <https://w3id.org/rdfp/presentedBy> _:genid4 .
 
-_:genid1 rdf:type <https://w3id.org/rdfp/GraphDescription> ;
-          <https://w3id.org/rdfp/validationRule> _:genid2 .
+_:genid4 rdf:type <https://w3id.org/rdfp/GraphDescription> ;
+          <https://w3id.org/rdfp/validationRule> _:genid5 .
 
-_:genid2 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+_:genid5 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
           <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/poso/AbsolutePosition> .
 
 

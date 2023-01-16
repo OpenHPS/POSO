@@ -8,7 +8,7 @@
 <http://purl.org/poso/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/poso/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
 <http://purl.org/poso/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2022-11-21T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2023-01-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/poso/> <http://purl.org/dc/terms/title> "Positioning System Ontology"@en .
 <http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" .
 <http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -610,6 +610,13 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/poso/PositioningTechnique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Procedure> .
 <http://purl.org/poso/PositioningTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "A positioning technique is a procedure to sample sensor data to an output position."@en .
 <http://purl.org/poso/PositioningTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "Positioning technique"@en .
+# 
+# http://purl.org/poso/Proximity
+<http://purl.org/poso/Proximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Proximity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Stimulus> .
+<http://purl.org/poso/Proximity> <http://www.w3.org/2000/01/rdf-schema#comment> "Stimulus whenever two Feature of Interests are within close proximity."@en .
+<http://purl.org/poso/Proximity> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity" .
+<http://purl.org/poso/Proximity> <http://www.w3.org/2004/02/skos/core#example> "A Feature Of Interest can be within close proximity of another Feature Of Interest without movement whenever the other Feature moved wihin the proximity of the first Feature."@en .
 # 
 # http://purl.org/poso/QuaternionOrientation
 <http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

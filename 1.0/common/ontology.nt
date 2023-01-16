@@ -6,7 +6,7 @@
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/poso/common/> <http://purl.org/dc/terms/modified> "2022-11-21T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/common/> <http://purl.org/dc/terms/modified> "2023-01-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/poso/common/> <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en .
 <http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "posoc" .
 <http://purl.org/poso/common/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -80,6 +80,37 @@
 <http://purl.org/poso/common/hasReferenceRSSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/common/hasReferenceRSSI> <http://www.w3.org/2000/01/rdf-schema#comment> "has a reference Received Signal Strength Indicator at a specified distance."@en .
 <http://purl.org/poso/common/hasReferenceRSSI> <http://www.w3.org/2000/01/rdf-schema#label> "has reference RSSI"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/poso/common/major
+<http://purl.org/poso/common/major> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/poso/common/major> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/common/major> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://purl.org/poso/common/minor
+<http://purl.org/poso/common/minor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/poso/common/minor> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/common/major> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# http://purl.org/poso/common/proximityUUID
+<http://purl.org/poso/common/proximityUUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/poso/common/proximityUUID> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#hexBinary> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/common/major> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/common/proximityUUID> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity UUID"@en .
 # 
 # 
 # 
@@ -176,11 +207,11 @@
 <http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/PositionOutput> .
 <http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdfp/GraphDescription> .
 <http://purl.org/poso/common/AbsolutePositionOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Absolute position output"@en .
-<http://purl.org/poso/common/AbsolutePositionOutput> <https://w3id.org/rdfp/presentedBy> _:genid1 .
-_:genid1 <https://w3id.org/rdfp/validationRule> _:genid2 .
-_:genid2 <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/poso/AbsolutePosition> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdfp/GraphDescription> .
+<http://purl.org/poso/common/AbsolutePositionOutput> <https://w3id.org/rdfp/presentedBy> _:genid4 .
+_:genid4 <https://w3id.org/rdfp/validationRule> _:genid5 .
+_:genid5 <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/poso/AbsolutePosition> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/rdfp/GraphDescription> .
 # 
 # http://purl.org/poso/common/Anyplace
 <http://purl.org/poso/common/Anyplace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

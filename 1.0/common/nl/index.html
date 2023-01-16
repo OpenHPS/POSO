@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/common/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/common/","name":"Positioning System Ontology Common Technologies, Algorithms and Systems", "headline":"The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.", "datePublished":"2022-11-21T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/common/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/common/","name":"Positioning System Ontology Common Technologies, Algorithms and Systems", "headline":"The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.", "datePublished":"2023-01-16T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology Common Technologies, Algorithms and Systems</h1>
-<h2>Release  2022-11-21T00:00:00</h2>
+<h2>Release  2023-01-16T00:00:00</h2>
 
 
 <dl>
@@ -102,6 +102,20 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
 </ul><h4>Objecteigenschappen</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#hasReferenceRSSI" title="http://purl.org/poso/common/hasReferenceRSSI">has reference RSSI</a>
+   </li>
+</ul><h4>Data-eigenschappen</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#major" title="http://purl.org/poso/common/major">
+         <span>major</span>
+      </a>
+   </li>
+   <li>
+      <a href="#minor" title="http://purl.org/poso/common/minor">
+         <span>minor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#proximityUUID" title="http://purl.org/poso/common/proximityUUID">Proximity UUID</a>
    </li>
 </ul><h4>Concrete exemplaren</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
@@ -290,6 +304,86 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <strong>IRI:</strong> http://purl.org/poso/common/hasReferenceRSSI</p>
       <div class="comment">
          <span class="markdown">has a reference Received Signal Strength Indicator at a specified distance.</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data-eigenschappen</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#major" title="http://purl.org/poso/common/major">
+            <span>major</span>
+         </a>
+      </li>
+      <li>
+         <a href="#minor" title="http://purl.org/poso/common/minor">
+            <span>minor</span>
+         </a>
+      </li>
+      <li>
+         <a href="#proximityUUID" title="http://purl.org/poso/common/proximityUUID">Proximity UUID</a>
+      </li>
+   </ul>
+   <div class="entity" id="major">
+      <h3>major<sup class="type-dp" title="data-eigenschap">dp</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#dataproperties">Index data-eigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/major</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#major" title="http://purl.org/poso/common/major">major</a>
+               <sup class="type-dp" title="data-eigenschap">dp</sup> 
+               <span class="logic">some</span> 
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="minor">
+      <h3>minor<sup class="type-dp" title="data-eigenschap">dp</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#dataproperties">Index data-eigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/minor</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#major" title="http://purl.org/poso/common/major">major</a>
+               <sup class="type-dp" title="data-eigenschap">dp</sup> 
+               <span class="logic">some</span> 
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="proximityUUID">
+      <h3>Proximity UUID<sup class="type-dp" title="data-eigenschap">dp</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#dataproperties">Index data-eigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/proximityUUID</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#major" title="http://purl.org/poso/common/major">major</a>
+               <sup class="type-dp" title="data-eigenschap">dp</sup> 
+               <span class="logic">some</span> 
+               <a href="http://www.w3.org/2001/XMLSchema#hexBinary"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#hexBinary">hex binary</a>
+            </dd>
+         </dl>
       </div>
    </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
@@ -1028,6 +1122,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
 <div   class="entity">
 <sup class="type-c" title="Klassen">c</sup>: Klassen <br/>
 <sup class="type-op" title="Objecteigenschappen">op</sup>: Objecteigenschappen <br/>
+<sup class="type-dp" title="Data-eigenschappen">dp</sup>: Data-eigenschappen <br/>
 <sup class="type-ni" title="Concrete exemplaren">ni</sup>: Concrete exemplaren
 </div>
 </div>
