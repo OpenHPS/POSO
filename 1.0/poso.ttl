@@ -17,7 +17,7 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2022-11-21T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2023-01-16T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
@@ -685,6 +685,14 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                       rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
                       rdfs:comment "A positioning technique is a procedure to sample sensor data to an output position."@en ;
                       rdfs:label "Positioning technique"@en .
+
+
+###  http://purl.org/poso/Proximity
+:Proximity rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/ssn/Stimulus> ;
+           rdfs:comment "Stimulus whenever two Feature of Interests are within close proximity."@en ;
+           rdfs:label "Proximity" ;
+           skos:example "A Feature Of Interest can be within close proximity of another Feature Of Interest without movement whenever the other Feature moved wihin the proximity of the first Feature."@en .
 
 
 ###  http://purl.org/poso/QuaternionOrientation
