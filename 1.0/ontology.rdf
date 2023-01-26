@@ -22,7 +22,7 @@
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-16T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-26T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology</terms:title>
         <vann:preferredNamespacePrefix>poso</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/</vann:preferredNamespaceUri>
@@ -1162,6 +1162,18 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://isotc211.geolexica.org/concepts/377/</rdfs:isDefinedBy>
         <rdfs:label xml:lang="nl">Relatieve positie</rdfs:label>
         <rdfs:label xml:lang="en">Relative position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/RelativeSignalStrength -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/RelativeSignalStrength">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/RelativePosition"/>
+        <rdfs:comment xml:lang="en">A relative signal strength is a received signal strength transmitted by another (RF) feature of interest.</rdfs:comment>
+        <rdfs:label xml:lang="nl">Relatieve signaalsterkte</rdfs:label>
+        <rdfs:label xml:lang="en">Relative signal strength</rdfs:label>
     </owl:Class>
     
 

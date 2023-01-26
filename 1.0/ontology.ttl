@@ -16,7 +16,7 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2023-01-16T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2023-01-26T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
@@ -762,6 +762,14 @@
                   rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/377/"^^xsd:anyURI ;
                   rdfs:label "Relatieve positie"@nl ,
                              "Relative position"@en .
+
+
+###  http://purl.org/poso/RelativeSignalStrength
+:RelativeSignalStrength rdf:type owl:Class ;
+                        rdfs:subClassOf :RelativePosition ;
+                        rdfs:comment "A relative signal strength is a received signal strength transmitted by another (RF) feature of interest."@en ;
+                        rdfs:label "Relatieve signaalsterkte"@nl ,
+                                   "Relative signal strength"@en .
 
 
 ###  http://purl.org/poso/RelativeVelocity

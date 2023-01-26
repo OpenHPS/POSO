@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2023-01-16T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2023-01-26T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="en/"><b>en</b></a> <a href="nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release 2023-01-16T00:00:00</h2>
+<h2>Release 2023-01-26T00:00:00</h2>
 
 
 <dl>
@@ -236,6 +236,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relative position</a>
+   </li>
+   <li>
+      <a href="#RelativeSignalStrength" title="http://purl.org/poso/RelativeSignalStrength">Relative signal strength</a>
    </li>
    <li>
       <a href="#RelativeVelocity" title="http://purl.org/poso/RelativeVelocity">Relative velocity</a>
@@ -502,6 +505,9 @@ This section provides details for each class and property defined by Positioning
       </li>
       <li>
          <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relative position</a>
+      </li>
+      <li>
+         <a href="#RelativeSignalStrength" title="http://purl.org/poso/RelativeSignalStrength">Relative signal strength</a>
       </li>
       <li>
          <a href="#RelativeVelocity" title="http://purl.org/poso/RelativeVelocity">Relative velocity</a>
@@ -1592,6 +1598,7 @@ This section provides details for each class and property defined by Positioning
          <dd>
             <a href="#RelativeAngle" title="http://purl.org/poso/RelativeAngle">Relative angle</a>
             <sup class="type-c" title="class">c</sup>, <a href="#RelativeDistance" title="http://purl.org/poso/RelativeDistance">Relative distance</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RelativeSignalStrength" title="http://purl.org/poso/RelativeSignalStrength">Relative signal strength</a>
             <sup class="type-c" title="class">c</sup>, <a href="#RelativeVelocity" title="http://purl.org/poso/RelativeVelocity">Relative velocity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -1604,6 +1611,24 @@ This section provides details for each class and property defined by Positioning
          <dd>
             <a href="#hasRelativePosition" title="http://purl.org/poso/hasRelativePosition">has relative position</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RelativeSignalStrength">
+      <h3>Relative signal strength<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RelativeSignalStrength</p>
+      <div class="comment">
+         <span class="markdown">A relative signal strength is a received signal strength transmitted by another (RF) feature of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relative position</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>

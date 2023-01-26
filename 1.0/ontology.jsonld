@@ -236,7 +236,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-01-16T00:00:00"
+    "@value" : "2023-01-26T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -1103,6 +1103,23 @@
     "@id" : "http://purl.org/poso/Position"
   }, {
     "@id" : "_:genid16"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/RelativeSignalStrength",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relative signal strength is a received signal strength transmitted by another (RF) feature of interest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "nl",
+    "@value" : "Relatieve signaalsterkte"
+  }, {
+    "@language" : "en",
+    "@value" : "Relative signal strength"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/RelativePosition"
   } ]
 }, {
   "@id" : "http://purl.org/poso/RelativeVelocity",
