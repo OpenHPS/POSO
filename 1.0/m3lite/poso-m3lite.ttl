@@ -8,13 +8,16 @@
 
 <http://purl.org/poso/m3lite/> rdf:type owl:Ontology ;
                                 owl:versionIRI <http://purl.org/poso/1.0/m3lite#> ;
-                                owl:imports <http://purl.oclc.org/NET/ssnx/ssn> ,
-                                            <http://purl.org/iot/vocab/m3-lite#> ,
+                                owl:imports <http://purl.org/iot/vocab/m3-lite#> ,
                                             <http://purl.org/poso/1.0/> .
 
 #################################################################
 #    Classes
 #################################################################
+
+###  http://purl.oclc.org/NET/ssnx/ssn#Device
+<http://purl.oclc.org/NET/ssnx/ssn#Device> rdfs:subClassOf <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+
 
 ###  http://purl.org/iot/vocab/m3-lite#Direction
 <http://purl.org/iot/vocab/m3-lite#Direction> rdf:type owl:Class ;

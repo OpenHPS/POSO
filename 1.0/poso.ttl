@@ -405,6 +405,12 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                  rdfs:label "Bluetooth beacon"@en .
 
 
+###  http://purl.org/poso/BluetoothReceiver
+:BluetoothReceiver rdf:type owl:Class ;
+                   rdfs:subClassOf :RFLandmark ;
+                   rdfs:label "Bluetooth receiver"@en .
+
+
 ###  http://purl.org/poso/CellIdentification
 :CellIdentification rdf:type owl:Class ;
                     rdfs:subClassOf :PositioningTechnique ;
@@ -749,12 +755,6 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                   rdfs:label "Relatieve afstand"@nl ,
                              "Relative distance"@en .
 
-###  http://purl.org/poso/RelativeSignalStrength
-:RelativeSignalStrength rdf:type owl:Class ;
-                  rdfs:subClassOf :RelativePosition ;
-                  rdfs:comment "A relative signal strength is a received signal strength transmitted by another (RF) feature of interest."@en ;
-                  rdfs:label "Relatieve signaalsterkte"@nl ,
-                             "Relative signal strength"@en .
 
 ###  http://purl.org/poso/RelativePosition
 :RelativePosition rdf:type owl:Class ;
@@ -769,6 +769,14 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                   rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/377/"^^xsd:anyURI ;
                   rdfs:label "Relatieve positie"@nl ,
                              "Relative position"@en .
+
+
+###  http://purl.org/poso/RelativeSignalStrength
+:RelativeSignalStrength rdf:type owl:Class ;
+                        rdfs:subClassOf :RelativePosition ;
+                        rdfs:comment "A relative signal strength is a received signal strength transmitted by another (RF) feature of interest."@en ;
+                        rdfs:label "Relatieve signaalsterkte"@nl ,
+                                   "Relative signal strength"@en .
 
 
 ###  http://purl.org/poso/RelativeVelocity
