@@ -624,6 +624,16 @@
     
 
 
+    <!-- http://purl.org/poso/BluetoothReceiver -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/BluetoothReceiver">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/RFLandmark"/>
+        <rdfs:label xml:lang="en">Bluetooth receiver</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/CellIdentification -->
 
 

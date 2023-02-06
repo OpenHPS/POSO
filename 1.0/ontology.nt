@@ -362,6 +362,11 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/poso/BluetoothBeacon> <http://www.w3.org/2000/01/rdf-schema#comment> "A Bluetooth beacon is an RF landmark that advertises its transmission power and other optional information. Based on the signal strength receivers of this advertisement can determine the approximate distance."@en .
 <http://purl.org/poso/BluetoothBeacon> <http://www.w3.org/2000/01/rdf-schema#label> "Bluetooth beacon"@en .
 # 
+# http://purl.org/poso/BluetoothReceiver
+<http://purl.org/poso/BluetoothReceiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/BluetoothReceiver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/RFLandmark> .
+<http://purl.org/poso/BluetoothReceiver> <http://www.w3.org/2000/01/rdf-schema#label> "Bluetooth receiver"@en .
+# 
 # http://purl.org/poso/CellIdentification
 <http://purl.org/poso/CellIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/CellIdentification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .

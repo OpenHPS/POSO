@@ -404,6 +404,12 @@
                  rdfs:label "Bluetooth beacon"@en .
 
 
+###  http://purl.org/poso/BluetoothReceiver
+:BluetoothReceiver rdf:type owl:Class ;
+                   rdfs:subClassOf :RFLandmark ;
+                   rdfs:label "Bluetooth receiver"@en .
+
+
 ###  http://purl.org/poso/CellIdentification
 :CellIdentification rdf:type owl:Class ;
                     rdfs:subClassOf :PositioningTechnique ;

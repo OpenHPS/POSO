@@ -151,21 +151,21 @@
     "instances" : 0,
     "id" : "4"
   }, {
-    "iri" : "http://purl.org/poso/common/AltBeacon",
-    "baseIri" : "http://purl.org/poso/common",
-    "instances" : 0,
-    "id" : "5",
-    "superClasses" : [ "2" ]
-  }, {
     "iri" : "http://purl.org/poso/CellIdentification",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "id" : "6"
+    "id" : "5"
+  }, {
+    "iri" : "http://purl.org/poso/common/AltBeacon",
+    "baseIri" : "http://purl.org/poso/common",
+    "instances" : 0,
+    "id" : "6",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "http://purl.org/poso/BluetoothBeacon",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "subClasses" : [ "1", "5", "7" ],
+    "subClasses" : [ "1", "6", "7" ],
     "id" : "2"
   }, {
     "iri" : "http://purl.org/poso/VSLAM",

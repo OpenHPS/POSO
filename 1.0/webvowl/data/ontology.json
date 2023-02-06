@@ -12,17 +12,17 @@
       "undefined" : "This ontology provides the terminologies used for positioning systems."
     },
     "other" : {
-      "image" : [ {
-        "identifier" : "image",
-        "language" : "undefined",
-        "value" : "https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg",
-        "type" : "label"
-      } ],
       "license" : [ {
         "identifier" : "license",
         "language" : "undefined",
         "value" : "http://purl.org/NET/rdflicense/MIT1.0",
         "type" : "iri"
+      } ],
+      "image" : [ {
+        "identifier" : "image",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg",
+        "type" : "label"
       } ],
       "creator" : [ {
         "identifier" : "creator",
@@ -48,6 +48,12 @@
         "value" : "2023-01-26T00:00:00",
         "type" : "label"
       } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.",
+        "type" : "label"
+      } ],
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "undefined",
@@ -58,12 +64,6 @@
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "http://purl.org/poso/",
-        "type" : "label"
-      } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "en",
-        "value" : "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.",
         "type" : "label"
       } ],
       "title" : [ {
@@ -88,10 +88,10 @@
     "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "36",
+    "id" : "26",
     "type" : "owl:Class"
   }, {
     "id" : "37",
@@ -109,10 +109,10 @@
     "id" : "38",
     "type" : "owl:Class"
   }, {
-    "id" : "74",
+    "id" : "73",
     "type" : "owl:Class"
   }, {
-    "id" : "73",
+    "id" : "74",
     "type" : "owl:Class"
   }, {
     "id" : "85",
@@ -121,34 +121,37 @@
     "id" : "64",
     "type" : "owl:Class"
   }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
     "id" : "50",
     "type" : "owl:Class"
   }, {
-    "id" : "93",
+    "id" : "95",
     "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "35",
+    "id" : "36",
     "type" : "owl:Class"
   }, {
     "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "103",
+    "id" : "105",
     "type" : "owl:Class"
   }, {
     "id" : "68",
     "type" : "owl:Class"
   }, {
-    "id" : "105",
-    "type" : "owl:Class"
-  }, {
-    "id" : "106",
-    "type" : "owl:Class"
-  }, {
     "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
     "type" : "owl:Class"
   }, {
     "id" : "61",
@@ -157,10 +160,10 @@
     "id" : "55",
     "type" : "owl:Class"
   }, {
-    "id" : "117",
+    "id" : "118",
     "type" : "owl:Class"
   }, {
-    "id" : "33",
+    "id" : "34",
     "type" : "owl:Class"
   }, {
     "id" : "62",
@@ -169,28 +172,28 @@
     "id" : "42",
     "type" : "owl:Class"
   }, {
-    "id" : "65",
+    "id" : "66",
     "type" : "owl:Class"
   }, {
-    "id" : "66",
+    "id" : "65",
     "type" : "owl:Class"
   }, {
     "id" : "69",
     "type" : "owl:Class"
   }, {
-    "id" : "145",
-    "type" : "owl:Class"
-  }, {
     "id" : "146",
     "type" : "owl:Class"
   }, {
-    "id" : "127",
+    "id" : "147",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
     "type" : "owl:Class"
   }, {
     "id" : "14",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "148",
+    "id" : "150",
     "type" : "owl:Class"
   }, {
     "id" : "41",
@@ -199,7 +202,7 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "134",
+    "id" : "138",
     "type" : "owl:Class"
   }, {
     "id" : "44",
@@ -211,10 +214,10 @@
     "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "142",
+    "id" : "96",
     "type" : "owl:Class"
   }, {
-    "id" : "94",
+    "id" : "123",
     "type" : "owl:Class"
   }, {
     "id" : "183",
@@ -226,10 +229,10 @@
     "id" : "185",
     "type" : "owl:Class"
   }, {
-    "id" : "97",
+    "id" : "99",
     "type" : "owl:Class"
   }, {
-    "id" : "140",
+    "id" : "143",
     "type" : "owl:Class"
   }, {
     "id" : "63",
@@ -244,7 +247,7 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "194",
+    "id" : "195",
     "type" : "owl:Class"
   }, {
     "id" : "71",
@@ -253,16 +256,16 @@
     "id" : "188",
     "type" : "owl:Class"
   }, {
-    "id" : "101",
+    "id" : "103",
     "type" : "owl:Class"
   }, {
-    "id" : "31",
+    "id" : "32",
     "type" : "owl:Class"
   }, {
     "id" : "193",
     "type" : "owl:Class"
   }, {
-    "id" : "100",
+    "id" : "102",
     "type" : "owl:Class"
   }, {
     "id" : "70",
@@ -274,22 +277,22 @@
     "id" : "72",
     "type" : "owl:Class"
   }, {
-    "id" : "99",
+    "id" : "101",
     "type" : "owl:Class"
   }, {
-    "id" : "30",
+    "id" : "31",
     "type" : "owl:Class"
   }, {
     "id" : "80",
     "type" : "owl:Class"
   }, {
-    "id" : "96",
+    "id" : "98",
     "type" : "owl:Class"
   }, {
-    "id" : "161",
+    "id" : "162",
     "type" : "owl:Class"
   }, {
-    "id" : "136",
+    "id" : "90",
     "type" : "owl:Class"
   }, {
     "id" : "17",
@@ -304,10 +307,10 @@
     "id" : "67",
     "type" : "owl:Class"
   }, {
-    "id" : "32",
+    "id" : "33",
     "type" : "owl:Class"
   }, {
-    "id" : "150",
+    "id" : "152",
     "type" : "owl:Class"
   }, {
     "id" : "10",
@@ -322,40 +325,40 @@
     "id" : "173",
     "type" : "owl:Class"
   }, {
-    "id" : "138",
+    "id" : "141",
     "type" : "owl:Class"
   }, {
-    "id" : "116",
+    "id" : "247",
     "type" : "owl:Class"
   }, {
     "id" : "52",
     "type" : "owl:Class"
   }, {
-    "id" : "257",
+    "id" : "261",
     "type" : "owl:Class"
   }, {
     "id" : "28",
     "type" : "owl:Thing"
   }, {
-    "id" : "268",
+    "id" : "270",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "270",
+    "id" : "272",
     "type" : "rdfs:Literal"
   }, {
     "id" : "22",
     "type" : "owl:Class"
   }, {
-    "id" : "123",
+    "id" : "124",
     "type" : "owl:Class"
   }, {
-    "id" : "118",
+    "id" : "119",
     "type" : "owl:Class"
   }, {
     "id" : "191",
     "type" : "owl:Class"
   }, {
-    "id" : "155",
+    "id" : "136",
     "type" : "owl:Class"
   }, {
     "id" : "19",
@@ -364,10 +367,10 @@
     "id" : "165",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "34",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
-    "id" : "102",
+    "id" : "104",
     "type" : "owl:Class"
   }, {
     "id" : "76",
@@ -376,43 +379,43 @@
     "id" : "47",
     "type" : "owl:Class"
   }, {
-    "id" : "159",
+    "id" : "160",
     "type" : "owl:Class"
   }, {
-    "id" : "129",
+    "id" : "132",
     "type" : "owl:Class"
   }, {
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "104",
+    "id" : "106",
     "type" : "owl:Class"
   }, {
-    "id" : "108",
+    "id" : "110",
     "type" : "owl:Class"
   }, {
-    "id" : "90",
+    "id" : "92",
     "type" : "owl:Class"
   }, {
-    "id" : "122",
+    "id" : "126",
     "type" : "owl:Class"
   }, {
-    "id" : "153",
+    "id" : "155",
     "type" : "owl:Class"
   }, {
     "id" : "184",
     "type" : "owl:Class"
   }, {
-    "id" : "187",
-    "type" : "owl:Class"
-  }, {
     "id" : "39",
     "type" : "owl:Class"
   }, {
-    "id" : "95",
+    "id" : "187",
     "type" : "owl:Class"
   }, {
-    "id" : "163",
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "164",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -517,20 +520,6 @@
     "id" : "25",
     "superClasses" : [ "26" ]
   }, {
-    "iri" : "http://purl.org/poso/PositioningTechnique",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PositioningTechnique",
-      "en" : "Positioning technique"
-    },
-    "subClasses" : [ "31", "32", "33", "25", "34", "35" ],
-    "comment" : {
-      "en" : "A positioning technique is a procedure to sample sensor data to an output position."
-    },
-    "id" : "26",
-    "superClasses" : [ "30" ]
-  }, {
     "iri" : "http://www.w3.org/ns/sosa/Observation",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "instances" : 0,
@@ -567,7 +556,21 @@
       "en" : "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."
     },
     "attributes" : [ "external" ],
-    "id" : "36"
+    "id" : "30"
+  }, {
+    "iri" : "http://purl.org/poso/PositioningTechnique",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PositioningTechnique",
+      "en" : "Positioning technique"
+    },
+    "subClasses" : [ "32", "33", "34", "25", "35", "36" ],
+    "comment" : {
+      "en" : "A positioning technique is a procedure to sample sensor data to an output position."
+    },
+    "id" : "26",
+    "superClasses" : [ "31" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Output",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -685,34 +688,6 @@
     "id" : "38",
     "superClasses" : [ "37" ]
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/ResponseTime",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "As a Sensor Property: the time between a (step) change in the value of an observed ObservableProperty and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.\n\n      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on ActuatableProperty, under the defined Conditions.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ResponseTime",
-      "en" : "Response Time"
-    },
-    "comment" : {
-      "en" : "As a Sensor Property: the time between a (step) change in the value of an observed ObservableProperty and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.\n\n      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on ActuatableProperty, under the defined Conditions."
-    },
-    "attributes" : [ "external" ],
-    "id" : "74",
-    "superClasses" : [ "12" ]
-  }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/MeasurementRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
     "instances" : 0,
@@ -739,6 +714,34 @@
     },
     "attributes" : [ "external" ],
     "id" : "73",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/ResponseTime",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "As a Sensor Property: the time between a (step) change in the value of an observed ObservableProperty and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.\n\n      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on ActuatableProperty, under the defined Conditions.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ResponseTime",
+      "en" : "Response Time"
+    },
+    "comment" : {
+      "en" : "As a Sensor Property: the time between a (step) change in the value of an observed ObservableProperty and a Sensor (possibly with specified error) 'settling' on an observed value, under the defined Conditions.\n\n      As an Actuator property: the time between a (step) change in the command of an Actuator and the 'settling' of the value of the acted on ActuatableProperty, under the defined Conditions."
+    },
+    "attributes" : [ "external" ],
+    "id" : "74",
     "superClasses" : [ "12" ]
   }, {
     "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
@@ -790,6 +793,16 @@
     "attributes" : [ "external" ],
     "id" : "64",
     "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://purl.org/poso/BluetoothReceiver",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BluetoothReceiver",
+      "en" : "Bluetooth receiver"
+    },
+    "id" : "89",
+    "superClasses" : [ "90" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/ActuatableProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -848,8 +861,8 @@
     "comment" : {
       "en" : "The radio propagation formulas cover the computation of the radio waves through a medium (e.g. air)."
     },
-    "id" : "93",
-    "superClasses" : [ "30" ]
+    "id" : "95",
+    "superClasses" : [ "31" ]
   }, {
     "iri" : "http://purl.org/poso/PositioningSystem",
     "baseIri" : "http://purl.org/poso",
@@ -866,7 +879,7 @@
       "IRI-based" : "PositioningSystem",
       "en" : "Positioning system"
     },
-    "subClasses" : [ "59", "94", "95", "96", "97" ],
+    "subClasses" : [ "59", "96", "97", "98", "99" ],
     "comment" : {
       "en" : "A positioning system is a system of instrumental and computational components for determining position."
     },
@@ -880,11 +893,11 @@
       "IRI-based" : "Odometry",
       "en" : "Odometry"
     },
-    "subClasses" : [ "100", "101" ],
+    "subClasses" : [ "102", "103" ],
     "comment" : {
       "en" : "Odometry is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."
     },
-    "id" : "35",
+    "id" : "36",
     "superClasses" : [ "26" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Property",
@@ -908,7 +921,7 @@
       "IRI-based" : "Property",
       "en" : "Property"
     },
-    "subClasses" : [ "45", "102", "55", "84", "5", "12", "47", "50", "52" ],
+    "subClasses" : [ "45", "104", "55", "84", "5", "12", "47", "50", "52" ],
     "comment" : {
       "en" : "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."
     },
@@ -931,8 +944,8 @@
       "en" : "Angular acceleration",
       "nl" : "Draaiversnelling"
     },
-    "id" : "103",
-    "superClasses" : [ "104" ]
+    "id" : "105",
+    "superClasses" : [ "106" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/Sensitivity",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -987,7 +1000,7 @@
       "en" : "Total useful life of a System's battery in the specified Conditions."
     },
     "attributes" : [ "external" ],
-    "id" : "105",
+    "id" : "107",
     "superClasses" : [ "84" ]
   }, {
     "iri" : "http://purl.org/poso/PolygonalAccuracy",
@@ -997,7 +1010,7 @@
       "IRI-based" : "PolygonalAccuracy",
       "en" : "Polygonal accuracy"
     },
-    "id" : "106",
+    "id" : "108",
     "superClasses" : [ "72" ]
   }, {
     "iri" : "http://purl.org/poso/PositioningPlatform",
@@ -1010,8 +1023,8 @@
     "comment" : {
       "en" : "A positioning platform is a framework, architecture or platform used to develop and host a positioning system."
     },
-    "id" : "107",
-    "superClasses" : [ "108" ]
+    "id" : "109",
+    "superClasses" : [ "110" ]
   }, {
     "iri" : "http://purl.org/poso/AngularVelocity",
     "baseIri" : "http://purl.org/poso",
@@ -1075,8 +1088,8 @@
     "comment" : {
       "en" : "Linear movement along a certain axis."
     },
-    "id" : "117",
-    "superClasses" : [ "118" ]
+    "id" : "118",
+    "superClasses" : [ "119" ]
   }, {
     "iri" : "http://purl.org/poso/Fingerprinting",
     "baseIri" : "http://purl.org/poso",
@@ -1088,7 +1101,7 @@
     "comment" : {
       "en" : "Fingerprinting is a positioning Procedure where sensor data is collected at a specific position and orientation. During the offline-stage of a positioning system, the significant data features are extracted and stored for that position. In the online-stage, the closest match(es) of the features are determined to predict the position."
     },
-    "id" : "33",
+    "id" : "34",
     "superClasses" : [ "26" ]
   }, {
     "iri" : "http://purl.org/poso/Velocity",
@@ -1111,7 +1124,7 @@
       "en" : "Linear or angular velocity of a feature."
     },
     "id" : "62",
-    "superClasses" : [ "99", "102" ]
+    "superClasses" : [ "101", "104" ]
   }, {
     "iri" : "http://purl.org/poso/Orientation",
     "baseIri" : "http://purl.org/poso",
@@ -1127,35 +1140,7 @@
       "nl" : "De orientatie van een object in 2D of 3D."
     },
     "id" : "42",
-    "superClasses" : [ "99", "102" ]
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/Frequency",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "The smallest possible time between one Observation, Actuation, or Sampling and the next, under the defined Conditions.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Frequency",
-      "en" : "Frequency"
-    },
-    "comment" : {
-      "en" : "The smallest possible time between one Observation, Actuation, or Sampling and the next, under the defined Conditions."
-    },
-    "attributes" : [ "external" ],
-    "id" : "65",
-    "superClasses" : [ "12" ]
+    "superClasses" : [ "101", "104" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/Precision",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -1183,6 +1168,34 @@
     },
     "attributes" : [ "external" ],
     "id" : "66",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/Frequency",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The smallest possible time between one Observation, Actuation, or Sampling and the next, under the defined Conditions.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Frequency",
+      "en" : "Frequency"
+    },
+    "comment" : {
+      "en" : "The smallest possible time between one Observation, Actuation, or Sampling and the next, under the defined Conditions."
+    },
+    "attributes" : [ "external" ],
+    "id" : "65",
     "superClasses" : [ "12" ]
   }, {
     "iri" : "http://purl.org/poso/SRS",
@@ -1234,7 +1247,7 @@
       "en" : "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."
     },
     "attributes" : [ "external" ],
-    "id" : "145"
+    "id" : "146"
   }, {
     "iri" : "http://purl.org/poso/RelativeSignalStrength",
     "baseIri" : "http://purl.org/poso",
@@ -1247,7 +1260,7 @@
     "comment" : {
       "en" : "A relative signal strength is a received signal strength transmitted by another (RF) feature of interest."
     },
-    "id" : "146",
+    "id" : "147",
     "superClasses" : [ "17" ]
   }, {
     "iri" : "http://purl.org/poso/AngularMovement",
@@ -1261,8 +1274,8 @@
     "comment" : {
       "en" : "Angular movement around a certain origin point."
     },
-    "id" : "127",
-    "superClasses" : [ "118" ]
+    "id" : "130",
+    "superClasses" : [ "119" ]
   }, {
     "iri" : "http://purl.org/poso/AbsolutePosition",
     "equivalent" : [ "165" ],
@@ -1290,7 +1303,7 @@
     "comment" : {
       "en" : "A relative velocity is a quantitative velocity relative to another feature of interest."
     },
-    "id" : "148",
+    "id" : "150",
     "superClasses" : [ "17" ]
   }, {
     "iri" : "http://purl.org/poso/AxisAngleOrientation",
@@ -1349,7 +1362,7 @@
     "comment" : {
       "en" : "A spatial landmark that can be observed by sound."
     },
-    "id" : "134",
+    "id" : "138",
     "superClasses" : [ "22" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sensor",
@@ -1413,28 +1426,7 @@
       "en" : "A position indicates where an entity is located."
     },
     "id" : "15",
-    "superClasses" : [ "99", "102" ]
-  }, {
-    "iri" : "http://purl.org/poso/MidLevelFusion",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "MidLevelFusion",
-      "en" : "Mid level sensor fusion"
-    },
-    "comment" : {
-      "en" : "Mid-Level sensor fusion is about fusing the objects detected independently on sensor data."
-    },
-    "id" : "142",
-    "superClasses" : [ "123" ]
+    "superClasses" : [ "101", "104" ]
   }, {
     "iri" : "http://purl.org/poso/SatellitePositioningSystem",
     "baseIri" : "http://purl.org/poso",
@@ -1454,8 +1446,29 @@
     "comment" : {
       "en" : "In this context, satellite positioning implies the use of radio signals transmitted from \"active\" artificial objects orbiting the Earth and received by \"passive\" instruments on or near the Earth's surface to determine position, velocity, and/or attitude of an object."
     },
-    "id" : "94",
+    "id" : "96",
     "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://purl.org/poso/MidLevelFusion",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MidLevelFusion",
+      "en" : "Mid level sensor fusion"
+    },
+    "comment" : {
+      "en" : "Mid-Level sensor fusion is about fusing the objects detected independently on sensor data."
+    },
+    "id" : "123",
+    "superClasses" : [ "124" ]
   }, {
     "iri" : "http://purl.org/poso/VisualInput",
     "baseIri" : "http://purl.org/poso",
@@ -1504,7 +1517,7 @@
     "comment" : {
       "en" : "An optical positioning system is a positioning system that determines the position of an object by means of the properties of light."
     },
-    "id" : "97",
+    "id" : "99",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/poso/HighLevelFusion",
@@ -1531,8 +1544,8 @@
     "comment" : {
       "en" : "High level sensor fusion is about fusing both objects and their trajectories. We're not only relying on detections, but also on predictions and tracking."
     },
-    "id" : "140",
-    "superClasses" : [ "123" ]
+    "id" : "143",
+    "superClasses" : [ "124" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/DetectionLimit",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -1646,7 +1659,7 @@
       "IRI-based" : "Agent"
     },
     "attributes" : [ "external" ],
-    "id" : "194"
+    "id" : "195"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/ActuationRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -1697,7 +1710,7 @@
       "IRI-based" : "Stimulus",
       "en" : "Stimulus"
     },
-    "subClasses" : [ "187", "118" ],
+    "subClasses" : [ "187", "119" ],
     "comment" : {
       "en" : "An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor."
     },
@@ -1714,8 +1727,8 @@
     "comment" : {
       "en" : "Magnetic field odometry is the procedure of detecting movement by analyizing how the magnetic field is changing from one Observation to another."
     },
-    "id" : "101",
-    "superClasses" : [ "35" ]
+    "id" : "103",
+    "superClasses" : [ "36" ]
   }, {
     "iri" : "http://purl.org/poso/DeadReckoning",
     "baseIri" : "http://purl.org/poso",
@@ -1736,7 +1749,7 @@
     "comment" : {
       "en" : "Dead reckoning is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."
     },
-    "id" : "31",
+    "id" : "32",
     "superClasses" : [ "26" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sampling",
@@ -1763,47 +1776,7 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
-        "value" : "Digging a pit through a soil sequence.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Establishing a station for environmental monitoring.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Crushing a rock sample in a ball mill.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Taking a diamond-drill core from a rock outcrop.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Selecting a subset of a population.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Dividing a field site into quadrants.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
         "value" : "Sieving a powder to separate the subset finer than 100-mesh.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Splitting a piece of drill-core to create two new samples.",
-        "type" : "label"
-      }, {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Registering an image of the landscape.",
         "type" : "label"
       }, {
         "identifier" : "example",
@@ -1813,7 +1786,47 @@
       }, {
         "identifier" : "example",
         "language" : "en",
+        "value" : "Crushing a rock sample in a ball mill.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Establishing a station for environmental monitoring.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Digging a pit through a soil sequence.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Dividing a field site into quadrants.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Selecting a subset of a population.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
         "value" : "Drilling an observation well.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Registering an image of the landscape.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Splitting a piece of drill-core to create two new samples.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Taking a diamond-drill core from a rock outcrop.",
         "type" : "label"
       } ]
     },
@@ -1837,8 +1850,8 @@
     "comment" : {
       "en" : "Visual odometry is the procedure of detecting movement by analyzing how visual features are moving from one Observation image frame to another."
     },
-    "id" : "100",
-    "superClasses" : [ "35" ]
+    "id" : "102",
+    "superClasses" : [ "36" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/Latency",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -1923,7 +1936,7 @@
       "IRI-based" : "Accuracy",
       "en" : "Accuracy"
     },
-    "subClasses" : [ "106" ],
+    "subClasses" : [ "108" ],
     "comment" : {
       "en" : "The closeness of agreement between the Result of an Observation (resp. the command of an Actuation) and the true value of the observed ObservableProperty (resp. of the acted on ActuatableProperty) under the defined Conditions."
     },
@@ -1963,12 +1976,12 @@
       "IRI-based" : "Result",
       "en" : "Result"
     },
-    "subClasses" : [ "22", "15", "179", "62", "104", "42", "170" ],
+    "subClasses" : [ "22", "15", "179", "62", "106", "42", "170" ],
     "comment" : {
       "en" : "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."
     },
     "attributes" : [ "external" ],
-    "id" : "99"
+    "id" : "101"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Procedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -2008,12 +2021,12 @@
       "IRI-based" : "Procedure",
       "en" : "Procedure"
     },
-    "subClasses" : [ "123", "26", "93" ],
+    "subClasses" : [ "124", "26", "95" ],
     "comment" : {
       "en" : "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."
     },
     "attributes" : [ "external" ],
-    "id" : "30"
+    "id" : "31"
   }, {
     "iri" : "http://purl.org/poso/EulerOrientation",
     "baseIri" : "http://purl.org/poso",
@@ -2049,7 +2062,7 @@
     "comment" : {
       "en" : "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."
     },
-    "id" : "96",
+    "id" : "98",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/poso/RelativeAngle",
@@ -2071,7 +2084,7 @@
     "comment" : {
       "en" : "A relative angle is a quantitative angle relative to another feature of interest."
     },
-    "id" : "161",
+    "id" : "162",
     "superClasses" : [ "17" ]
   }, {
     "iri" : "http://purl.org/poso/RFLandmark",
@@ -2089,11 +2102,11 @@
       "IRI-based" : "RFLandmark",
       "en" : "RF landmark"
     },
-    "subClasses" : [ "159" ],
+    "subClasses" : [ "89", "160" ],
     "comment" : {
       "en" : "A radio frequency landmark is a transmitting landmark that can be observed by its transmitting signals."
     },
-    "id" : "136",
+    "id" : "90",
     "superClasses" : [ "22" ]
   }, {
     "iri" : "http://purl.org/poso/RelativePosition",
@@ -2112,7 +2125,7 @@
       "en" : "Relative position",
       "nl" : "Relatieve positie"
     },
-    "subClasses" : [ "161", "163", "146", "148" ],
+    "subClasses" : [ "162", "164", "147", "150" ],
     "comment" : {
       "en" : "A relative position is a position of a feature of interest with respect to the positions of other objects that this position is relative to.",
       "nl" : "Een relatieve positie is een positie van een punt, met respect tot de posities van andere objecten die relatief zijn."
@@ -2150,12 +2163,12 @@
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
-        "value" : "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.",
+        "value" : "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.",
         "type" : "label"
       }, {
         "identifier" : "example",
         "language" : "en",
-        "value" : "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.",
+        "value" : "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.",
         "type" : "label"
       } ]
     },
@@ -2168,7 +2181,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "170",
-    "superClasses" : [ "99", "90" ]
+    "superClasses" : [ "101", "92" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/SurvivalProperty",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -2191,7 +2204,7 @@
       "IRI-based" : "SurvivalProperty",
       "en" : "Survival Property"
     },
-    "subClasses" : [ "150", "105" ],
+    "subClasses" : [ "152", "107" ],
     "comment" : {
       "en" : "An identifiable characteristic that represents the extent of the System's useful life under the specified Conditions. May describe for example total battery life or number of recharges, or, for Sensors that are used only a fixed number of times, the number of observations that can be made before the sensing capability is depleted."
     },
@@ -2234,11 +2247,11 @@
       "IRI-based" : "Triangulation",
       "en" : "Triangulation"
     },
-    "subClasses" : [ "153", "155" ],
+    "subClasses" : [ "155", "136" ],
     "comment" : {
       "en" : "Triangulation is the procedure of determining a position using relative angles to a feature of interest with a known position."
     },
-    "id" : "32",
+    "id" : "33",
     "superClasses" : [ "26" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/SystemLifetime",
@@ -2266,7 +2279,7 @@
       "en" : "Total useful life of a System (expressed as total life since manufacture, time in use, number of operations, etc.) in the specified Conditions."
     },
     "attributes" : [ "external" ],
-    "id" : "150",
+    "id" : "152",
     "superClasses" : [ "84" ]
   }, {
     "iri" : "http://purl.org/poso/LocationBasedService",
@@ -2329,7 +2342,7 @@
       "en" : "A fingerprint is a scene analysis at a particular absolute position."
     },
     "id" : "179",
-    "superClasses" : [ "99", "90" ]
+    "superClasses" : [ "101", "92" ]
   }, {
     "iri" : "http://purl.org/poso/IndoorDeployment",
     "baseIri" : "http://purl.org/poso",
@@ -2354,7 +2367,7 @@
     "comment" : {
       "en" : "A visual landmark is a feature of interest that visually present in the space."
     },
-    "id" : "138",
+    "id" : "141",
     "superClasses" : [ "22" ]
   }, {
     "iri" : "http://purl.org/poso/LinearAcceleration",
@@ -2372,8 +2385,8 @@
       "IRI-based" : "LinearAcceleration",
       "en" : "Linear acceleration"
     },
-    "id" : "116",
-    "superClasses" : [ "104" ]
+    "id" : "247",
+    "superClasses" : [ "106" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/Condition",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -2426,8 +2439,8 @@
     "comment" : {
       "en" : "Multilateration is the procedure of determining a position using relative distances to other known positions."
     },
-    "id" : "257",
-    "superClasses" : [ "153" ]
+    "id" : "261",
+    "superClasses" : [ "155" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -2438,13 +2451,13 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "268",
+    "id" : "270",
     "label" : {
       "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "270",
+    "id" : "272",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -2457,12 +2470,12 @@
       "IRI-based" : "Landmark",
       "en" : "Landmark"
     },
-    "subClasses" : [ "134", "136", "138" ],
+    "subClasses" : [ "138", "90", "141" ],
     "comment" : {
       "en" : "A landmark is a feature with a known position, that can be used to identify the position of an object that has a relative position with this feature."
     },
     "id" : "22",
-    "superClasses" : [ "99", "20", "90" ]
+    "superClasses" : [ "101", "20", "92" ]
   }, {
     "iri" : "http://purl.org/poso/SensorFusion",
     "baseIri" : "http://purl.org/poso",
@@ -2479,12 +2492,12 @@
       "IRI-based" : "SensorFusion",
       "en" : "Sensor fusion"
     },
-    "subClasses" : [ "140", "142", "122" ],
+    "subClasses" : [ "143", "123", "126" ],
     "comment" : {
       "en" : "Sensor fusion is a procedure where multiple sensor data is combined to obtain a more reliable or accurate result."
     },
-    "id" : "123",
-    "superClasses" : [ "30" ]
+    "id" : "124",
+    "superClasses" : [ "31" ]
   }, {
     "iri" : "http://purl.org/poso/Movement",
     "baseIri" : "http://purl.org/poso",
@@ -2494,11 +2507,11 @@
       "en" : "Movement",
       "nl" : "Beweging"
     },
-    "subClasses" : [ "117", "127" ],
+    "subClasses" : [ "118", "130" ],
     "comment" : {
       "en" : "Movement stimulus triggering an update of a position."
     },
-    "id" : "118",
+    "id" : "119",
     "superClasses" : [ "188" ]
   }, {
     "iri" : "http://purl.org/poso/PDR",
@@ -2512,7 +2525,7 @@
       "en" : "Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement."
     },
     "id" : "191",
-    "superClasses" : [ "31" ]
+    "superClasses" : [ "32" ]
   }, {
     "iri" : "http://purl.org/poso/Angulation",
     "baseIri" : "http://purl.org/poso",
@@ -2524,8 +2537,8 @@
     "comment" : {
       "en" : "Angulation is a triangulation method to determine a position based on the relative angles to other objects."
     },
-    "id" : "155",
-    "superClasses" : [ "32" ]
+    "id" : "136",
+    "superClasses" : [ "33" ]
   }, {
     "iri" : "http://purl.org/poso/TrackedFeature",
     "baseIri" : "http://purl.org/poso",
@@ -2546,7 +2559,7 @@
       "en" : "A feature of interest that is being tracked by a positioning system. This is the feature for which a position is observed."
     },
     "id" : "19",
-    "superClasses" : [ "20", "90" ]
+    "superClasses" : [ "20", "92" ]
   }, {
     "iri" : "http://www.opengis.net/ont/geosparql#Geometry",
     "baseIri" : "http://www.opengis.net/ont/geosparql",
@@ -2572,11 +2585,11 @@
       "IRI-based" : "SLAM",
       "en" : "Simultaneous localisation and mapping"
     },
-    "subClasses" : [ "129" ],
+    "subClasses" : [ "132" ],
     "comment" : {
       "en" : "Simultaneous localization and mapping (SLAM) is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it."
     },
-    "id" : "34",
+    "id" : "35",
     "superClasses" : [ "26" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/ObservableProperty",
@@ -2611,12 +2624,12 @@
       "IRI-based" : "ObservableProperty",
       "en" : "Observable Property"
     },
-    "subClasses" : [ "15", "62", "104", "42" ],
+    "subClasses" : [ "15", "62", "106", "42" ],
     "comment" : {
       "en" : "An observable quality (property, characteristic) of a FeatureOfInterest."
     },
     "attributes" : [ "external" ],
-    "id" : "102",
+    "id" : "104",
     "superClasses" : [ "6" ]
   }, {
     "iri" : "http://purl.org/poso/LinearVelocity",
@@ -2679,8 +2692,8 @@
     "comment" : {
       "en" : "A Bluetooth beacon is an RF landmark that advertises its transmission power and other optional information. Based on the signal strength receivers of this advertisement can determine the approximate distance."
     },
-    "id" : "159",
-    "superClasses" : [ "136" ]
+    "id" : "160",
+    "superClasses" : [ "90" ]
   }, {
     "iri" : "http://purl.org/poso/VSLAM",
     "baseIri" : "http://purl.org/poso",
@@ -2692,8 +2705,8 @@
     "comment" : {
       "en" : "Visual simultaneous localisation and mapping (VSLAM) is a positioning techniques that uses visual imagery to map an environment. Positioning works by detecting features of interest in image frames and comparing how these features move from one frame to another."
     },
-    "id" : "129",
-    "superClasses" : [ "34" ]
+    "id" : "132",
+    "superClasses" : [ "35" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sampler",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -2750,12 +2763,12 @@
       "en" : "Acceleration",
       "nl" : "Versnelling"
     },
-    "subClasses" : [ "103", "116" ],
+    "subClasses" : [ "105", "247" ],
     "comment" : {
       "en" : "Acceleration is the (instantaneous) rate of change of velocity."
     },
-    "id" : "104",
-    "superClasses" : [ "99", "102" ]
+    "id" : "106",
+    "superClasses" : [ "101", "104" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Platform",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -2789,12 +2802,12 @@
       "IRI-based" : "Platform",
       "en" : "Platform"
     },
-    "subClasses" : [ "107" ],
+    "subClasses" : [ "109" ],
     "comment" : {
       "en" : "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."
     },
     "attributes" : [ "external" ],
-    "id" : "108"
+    "id" : "110"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -2833,7 +2846,7 @@
       "en" : "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."
     },
     "attributes" : [ "external" ],
-    "id" : "90"
+    "id" : "92"
   }, {
     "iri" : "http://purl.org/poso/LowLevelFusion",
     "baseIri" : "http://purl.org/poso",
@@ -2853,8 +2866,8 @@
     "comment" : {
       "en" : "Low Level Sensor Fusion is about fusing the raw data coming from multiple sensors. For example, we fuse point clouds coming from LiDARs and pixels coming from cameras."
     },
-    "id" : "122",
-    "superClasses" : [ "123" ]
+    "id" : "126",
+    "superClasses" : [ "124" ]
   }, {
     "iri" : "http://purl.org/poso/Lateration",
     "baseIri" : "http://purl.org/poso",
@@ -2871,9 +2884,9 @@
       "IRI-based" : "Lateration",
       "en" : "Lateration"
     },
-    "subClasses" : [ "257" ],
-    "id" : "153",
-    "superClasses" : [ "32" ]
+    "subClasses" : [ "261" ],
+    "id" : "155",
+    "superClasses" : [ "33" ]
   }, {
     "iri" : "http://www.w3.org/ns/ssn/Input",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -2903,6 +2916,16 @@
     "attributes" : [ "external" ],
     "id" : "184"
   }, {
+    "iri" : "http://purl.org/poso/PositionOutput",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PositionOutput",
+      "en" : "Position output"
+    },
+    "id" : "39",
+    "superClasses" : [ "37" ]
+  }, {
     "iri" : "http://purl.org/poso/Proximity",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
@@ -2924,16 +2947,6 @@
     "id" : "187",
     "superClasses" : [ "188" ]
   }, {
-    "iri" : "http://purl.org/poso/PositionOutput",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "PositionOutput",
-      "en" : "Position output"
-    },
-    "id" : "39",
-    "superClasses" : [ "37" ]
-  }, {
     "iri" : "http://purl.org/poso/IndoorPositioningSystem",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
@@ -2944,7 +2957,7 @@
     "comment" : {
       "en" : "A positioning system that is meant to perform indoor positioning of a feature of interest."
     },
-    "id" : "95",
+    "id" : "97",
     "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/poso/RelativeDistance",
@@ -2958,7 +2971,7 @@
     "comment" : {
       "en" : "A relative distance is a quantitative distance relative to another feature of interest."
     },
-    "id" : "163",
+    "id" : "164",
     "superClasses" : [ "17" ]
   } ],
   "property" : [ {
@@ -3043,58 +3056,55 @@
     "id" : "88",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "89",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "91",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "98",
+    "id" : "93",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "109",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "110",
-    "type" : "rdfs:SubClassOf"
+    "id" : "100",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "114",
+    "id" : "116",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "115",
+    "id" : "117",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "119",
+    "id" : "120",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "121",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "124",
+    "id" : "122",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "125",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "126",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "127",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "128",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "130",
+    "id" : "129",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "131",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "132",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "133",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "134",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "135",
@@ -3106,19 +3116,22 @@
     "id" : "139",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "141",
+    "id" : "140",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "143",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "112",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "147",
+    "id" : "142",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "120",
+    "id" : "144",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "121",
     "type" : "owl:objectProperty"
   }, {
     "id" : "149",
@@ -3127,7 +3140,7 @@
     "id" : "151",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "152",
+    "id" : "153",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "154",
@@ -3142,13 +3155,13 @@
     "id" : "158",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "160",
+    "id" : "159",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "162",
+    "id" : "161",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "164",
+    "id" : "163",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "166",
@@ -3205,13 +3218,13 @@
     "id" : "192",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "195",
+    "id" : "196",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "196",
+    "id" : "197",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "198",
+    "id" : "199",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "200",
@@ -3229,10 +3242,10 @@
     "id" : "204",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "205",
+    "id" : "206",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "206",
+    "id" : "207",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "208",
@@ -3244,7 +3257,7 @@
     "id" : "210",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "211",
+    "id" : "212",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "213",
@@ -3265,7 +3278,7 @@
     "id" : "219",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "220",
+    "id" : "221",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "222",
@@ -3314,33 +3327,30 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "237",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "238",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "239",
-    "type" : "owl:objectProperty"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "240",
     "type" : "owl:objectProperty"
   }, {
     "id" : "241",
-    "type" : "owl:allValuesFrom"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "242",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "243",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "244",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "245",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "246",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "247",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "248",
@@ -3364,19 +3374,19 @@
     "id" : "254",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "256",
+    "id" : "255",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "258",
+    "id" : "256",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "259",
+    "id" : "258",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "259",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "260",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "261",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "262",
@@ -3389,22 +3399,22 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "265",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "266",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "267",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "268",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "269",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "271",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "272",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "273",
     "type" : "owl:allValuesFrom"
@@ -3413,13 +3423,13 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "275",
-    "type" : "owl:objectProperty"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "276",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "277",
-    "type" : "owl:allValuesFrom"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "278",
     "type" : "owl:allValuesFrom"
@@ -3437,10 +3447,10 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "283",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "284",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "285",
     "type" : "rdfs:SubClassOf"
@@ -3458,10 +3468,10 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "290",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "291",
-    "type" : "owl:allValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "292",
     "type" : "owl:allValuesFrom"
@@ -3472,32 +3482,32 @@
     "id" : "294",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "295",
+    "id" : "296",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "297",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "304",
+    "id" : "298",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "306",
+    "id" : "300",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "307",
+    "id" : "302",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "309",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "310",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "311",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "312",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "313",
     "type" : "rdfs:SubClassOf"
@@ -3521,68 +3531,74 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "320",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "321",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "113",
+    "id" : "322",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "322",
+    "id" : "323",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "323",
-    "type" : "owl:datatypeProperty"
+    "id" : "115",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "324",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "325",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "326",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "327",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "328",
     "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "0"
   }, {
     "range" : "2",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "3"
   }, {
     "range" : "2",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "7"
   }, {
     "range" : "2",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "9"
   }, {
     "range" : "15",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "13"
   }, {
     "range" : "15",
     "domain" : "17",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "16"
   }, {
     "range" : "20",
     "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "18"
   }, {
     "range" : "20",
     "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "21"
   }, {
     "iri" : "http://purl.org/poso/isAccelerationOf",
@@ -3600,17 +3616,17 @@
   }, {
     "range" : "42",
     "domain" : "41",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "40"
   }, {
     "range" : "2",
     "domain" : "44",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
     "range" : "6",
     "domain" : "47",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
     "iri" : "http://purl.org/poso/isVelocityOf",
@@ -3628,17 +3644,17 @@
   }, {
     "range" : "6",
     "domain" : "50",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "49"
   }, {
     "range" : "6",
     "domain" : "52",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "51"
   }, {
     "range" : "55",
     "domain" : "54",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "53"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
@@ -3665,17 +3681,17 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
@@ -3703,27 +3719,27 @@
   }, {
     "range" : "55",
     "domain" : "58",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "57"
   }, {
     "range" : "62",
     "domain" : "61",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "60"
   }, {
     "range" : "62",
     "domain" : "76",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "75"
   }, {
     "range" : "42",
     "domain" : "78",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "77"
   }, {
     "range" : "42",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "79"
   }, {
     "iri" : "http://purl.org/poso/yaw",
@@ -3738,31 +3754,31 @@
     "comment" : {
       "en" : "Yaw is the rotation around the z-axis with respect to the object the yaw applies to."
     },
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "81"
   }, {
     "range" : "6",
     "domain" : "84",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "83"
   }, {
     "range" : "6",
     "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "86"
   }, {
     "range" : "6",
     "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "87"
   }, {
     "range" : "6",
     "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "88"
   }, {
     "iri" : "http://purl.org/poso/hasOrientation",
-    "inverse" : "91",
+    "inverse" : "93",
     "baseIri" : "http://purl.org/poso",
     "range" : "42",
     "label" : {
@@ -3770,14 +3786,14 @@
       "en" : "has orientation",
       "nl" : "heeft orientatie"
     },
-    "superproperty" : [ "92" ],
-    "domain" : "90",
+    "superproperty" : [ "94" ],
+    "domain" : "92",
     "comment" : {
       "en" : "Indicates the orientation of a feature of interest.",
       "nl" : "Duid de orientatie aan van een object aan."
     },
     "attributes" : [ "object" ],
-    "id" : "89"
+    "id" : "91"
   }, {
     "iri" : "http://purl.org/poso/isOrientationOf",
     "baseIri" : "http://purl.org/poso",
@@ -3790,7 +3806,7 @@
     "superproperty" : [ "29" ],
     "domain" : "28",
     "attributes" : [ "object" ],
-    "id" : "91"
+    "id" : "93"
   }, {
     "iri" : "http://purl.org/poso/yAxisValue",
     "baseIri" : "http://purl.org/poso",
@@ -3800,25 +3816,25 @@
       "en" : "y-axis value"
     },
     "maxCardinality" : "1",
-    "domain" : "99",
+    "domain" : "101",
     "comment" : {
       "en" : "Quantitative result value along the Y-axis of a spatial sensor or result."
     },
-    "attributes" : [ "functional", "object" ],
-    "id" : "98"
+    "attributes" : [ "object", "functional" ],
+    "id" : "100"
   }, {
-    "range" : "102",
-    "domain" : "104",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "109"
+    "range" : "104",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
   }, {
-    "range" : "102",
-    "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "110"
+    "range" : "104",
+    "domain" : "106",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
   }, {
     "iri" : "http://purl.org/poso/hasPosition",
-    "inverse" : "112",
+    "inverse" : "114",
     "baseIri" : "http://purl.org/poso",
     "range" : "15",
     "label" : {
@@ -3826,25 +3842,25 @@
       "en" : "has position",
       "nl" : "heeft positie"
     },
-    "superproperty" : [ "92" ],
-    "domain" : "90",
-    "subproperty" : [ "113" ],
+    "superproperty" : [ "94" ],
+    "domain" : "92",
+    "subproperty" : [ "115" ],
     "comment" : {
       "en" : "Indicates the absolute or relative position of a feature of interest.",
       "nl" : "Duid de absolute of relatieve positie van een object aan."
     },
     "attributes" : [ "object" ],
-    "id" : "111"
+    "id" : "113"
   }, {
     "range" : "104",
-    "domain" : "103",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "114"
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "116"
   }, {
-    "range" : "104",
-    "domain" : "116",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "115"
+    "range" : "106",
+    "domain" : "105",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "117"
   }, {
     "iri" : "http://purl.org/poso/hasSRS",
     "baseIri" : "http://purl.org/poso",
@@ -3863,22 +3879,22 @@
       "nl" : "heeft een ruimtelijk referentiepunt"
     },
     "domain" : "28",
-    "subproperty" : [ "120" ],
+    "subproperty" : [ "121" ],
     "comment" : {
       "en" : "Identifies an entity that has a spatial reference system in order to interpret the result."
     },
     "attributes" : [ "object" ],
-    "id" : "119"
+    "id" : "120"
   }, {
-    "range" : "123",
-    "domain" : "122",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "121"
+    "range" : "124",
+    "domain" : "123",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "122"
   }, {
-    "range" : "118",
-    "domain" : "117",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "124"
+    "range" : "124",
+    "domain" : "126",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "125"
   }, {
     "iri" : "http://purl.org/poso/scalar",
     "baseIri" : "http://purl.org/poso",
@@ -3896,24 +3912,24 @@
       "en" : "scalar"
     },
     "maxCardinality" : "1",
-    "domain" : "99",
-    "attributes" : [ "functional", "object" ],
-    "id" : "125"
+    "domain" : "101",
+    "attributes" : [ "object", "functional" ],
+    "id" : "127"
   }, {
-    "range" : "118",
-    "domain" : "127",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "126"
-  }, {
-    "range" : "34",
-    "domain" : "129",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "119",
+    "domain" : "118",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "128"
   }, {
-    "range" : "102",
-    "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "130"
+    "range" : "119",
+    "domain" : "130",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "129"
+  }, {
+    "range" : "35",
+    "domain" : "132",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "131"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
     "inverse" : "56",
@@ -3940,12 +3956,12 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "example" : [ {
@@ -3957,17 +3973,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       } ]
     },
@@ -3981,37 +3997,37 @@
       "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "131"
-  }, {
-    "range" : "102",
-    "domain" : "62",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "132"
-  }, {
-    "range" : "22",
-    "domain" : "134",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "133"
   }, {
-    "range" : "22",
+    "range" : "104",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "33",
     "domain" : "136",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "135"
   }, {
     "range" : "22",
     "domain" : "138",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "137"
   }, {
-    "range" : "123",
-    "domain" : "140",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "22",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "139"
   }, {
-    "range" : "123",
-    "domain" : "142",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "141"
+    "range" : "22",
+    "domain" : "141",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "140"
+  }, {
+    "range" : "124",
+    "domain" : "143",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "142"
   }, {
     "iri" : "http://purl.org/poso/observesType",
     "baseIri" : "http://purl.org/poso",
@@ -4021,13 +4037,13 @@
       "en" : "observes type",
       "nl" : "observeert type"
     },
-    "superproperty" : [ "144" ],
+    "superproperty" : [ "145" ],
     "domain" : "2",
     "comment" : {
       "en" : "The relation between a system and an observable property class to identify that a system observes a specific type of property."
     },
     "attributes" : [ "object" ],
-    "id" : "143"
+    "id" : "144"
   }, {
     "iri" : "http://purl.org/poso/isPositionOf",
     "baseIri" : "http://purl.org/poso",
@@ -4040,12 +4056,12 @@
     "superproperty" : [ "29" ],
     "domain" : "28",
     "attributes" : [ "object" ],
-    "id" : "112"
+    "id" : "114"
   }, {
     "range" : "17",
-    "domain" : "148",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "147"
+    "domain" : "147",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "148"
   }, {
     "iri" : "http://purl.org/poso/hasCRS",
     "baseIri" : "http://purl.org/poso",
@@ -4055,60 +4071,60 @@
       "en" : "has coordinate reference system",
       "nl" : "heeft een coördinaten referentiesysteem"
     },
-    "superproperty" : [ "119" ],
+    "superproperty" : [ "120" ],
     "domain" : "28",
     "attributes" : [ "object" ],
-    "id" : "120"
+    "id" : "121"
   }, {
-    "range" : "84",
+    "range" : "17",
     "domain" : "150",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "149"
   }, {
     "range" : "84",
-    "domain" : "105",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "152",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "151"
   }, {
-    "range" : "32",
-    "domain" : "153",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "152"
+    "range" : "84",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
   }, {
-    "range" : "32",
+    "range" : "33",
     "domain" : "155",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "154"
   }, {
-    "range" : "30",
+    "range" : "31",
     "domain" : "26",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "156"
   }, {
-    "range" : "30",
-    "domain" : "93",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "31",
+    "domain" : "95",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "157"
   }, {
-    "range" : "136",
-    "domain" : "159",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "90",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "158"
   }, {
-    "range" : "17",
-    "domain" : "161",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "160"
+    "range" : "90",
+    "domain" : "160",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "159"
   }, {
     "range" : "17",
-    "domain" : "163",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "162"
+    "domain" : "162",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
   }, {
     "range" : "17",
-    "domain" : "146",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "164"
+    "domain" : "164",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "163"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/phenomenonTime",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -4140,12 +4156,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -4166,59 +4182,59 @@
     "attributes" : [ "object", "external" ],
     "id" : "166"
   }, {
-    "range" : "99",
-    "domain" : "104",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "101",
+    "domain" : "106",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "167"
   }, {
-    "range" : "99",
+    "range" : "101",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "168"
   }, {
-    "range" : "99",
+    "range" : "101",
     "domain" : "170",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "169"
   }, {
-    "range" : "30",
-    "domain" : "123",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "31",
+    "domain" : "124",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "171"
   }, {
     "range" : "24",
     "domain" : "173",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "172"
   }, {
     "range" : "24",
     "domain" : "23",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "174"
   }, {
     "range" : "72",
-    "domain" : "106",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "108",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "175"
   }, {
-    "range" : "99",
+    "range" : "101",
     "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "176"
   }, {
-    "range" : "99",
+    "range" : "101",
     "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "177"
   }, {
-    "range" : "99",
+    "range" : "101",
     "domain" : "179",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "178"
   }, {
-    "range" : "99",
+    "range" : "101",
     "domain" : "62",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "180"
   }, {
     "iri" : "http://purl.org/poso/pitch",
@@ -4233,7 +4249,7 @@
     "comment" : {
       "en" : "Pitch is the rotation around the x-axis with respect to the object the yaw applies to."
     },
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "181"
   }, {
     "iri" : "http://purl.org/poso/xAxisValue",
@@ -4244,100 +4260,30 @@
       "en" : "x-axis value"
     },
     "maxCardinality" : "1",
-    "domain" : "99",
+    "domain" : "101",
     "comment" : {
       "en" : "Quantitative result value along the X-axis of a spatial sensor or result."
     },
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "182"
   }, {
     "range" : "188",
     "domain" : "187",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "186"
   }, {
     "range" : "188",
-    "domain" : "118",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "119",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "189"
   }, {
-    "range" : "31",
+    "range" : "32",
     "domain" : "191",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "190"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "30",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Procedure",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "usedProcedure",
-      "en" : "used procedure"
-    },
-    "domain" : "193",
-    "comment" : {
-      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "192"
-  }, {
-    "iri" : "http://purl.org/poso/zAxisValue",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "82",
-    "label" : {
-      "IRI-based" : "zAxisValue",
-      "en" : "z-axis value"
-    },
-    "maxCardinality" : "1",
-    "domain" : "99",
-    "comment" : {
-      "en" : "Quantitative result value along the Z-axis of a spatial sensor."
-    },
-    "attributes" : [ "functional", "object" ],
-    "id" : "195"
-  }, {
     "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
-    "inverse" : "197",
+    "inverse" : "194",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "8",
     "annotations" : {
@@ -4379,11 +4325,26 @@
     "comment" : {
       "en" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "192"
+  }, {
+    "iri" : "http://purl.org/poso/zAxisValue",
+    "baseIri" : "http://purl.org/poso",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "zAxisValue",
+      "en" : "z-axis value"
+    },
+    "maxCardinality" : "1",
+    "domain" : "101",
+    "comment" : {
+      "en" : "Quantitative result value along the Z-axis of a spatial sensor."
+    },
+    "attributes" : [ "object", "functional" ],
     "id" : "196"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "199",
+    "inverse" : "198",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "170",
     "annotations" : {
@@ -4418,7 +4379,7 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -4428,7 +4389,7 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       } ]
     },
@@ -4440,12 +4401,12 @@
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "198"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "197"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "90",
+    "range" : "31",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4461,32 +4422,42 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.",
+        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
         "type" : "label"
       } ],
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "value" : "http://www.w3.org/ns/sosa/Procedure",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "isSampleOf",
-      "en" : "is sample of"
+      "IRI-based" : "usedProcedure",
+      "en" : "used procedure"
     },
-    "domain" : "170",
+    "domain" : "193",
     "comment" : {
-      "en" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."
+      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
     },
-    "attributes" : [ "allValues", "functional", "object", "external" ],
-    "id" : "200"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "199"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isResultOf",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -4528,12 +4499,12 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/Result",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Result",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ]
     },
@@ -4545,13 +4516,58 @@
     "comment" : {
       "en" : "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "200"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "92",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSampleOf",
+      "en" : "is sample of"
+    },
+    "domain" : "170",
+    "comment" : {
+      "en" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."
+    },
+    "attributes" : [ "object", "functional", "external", "allValues" ],
     "id" : "201"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
     "inverse" : "56",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "90",
+    "range" : "92",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4573,12 +4589,12 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "example" : [ {
@@ -4590,17 +4606,17 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       } ]
     },
@@ -4612,7 +4628,7 @@
     "comment" : {
       "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "202"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeSampling",
@@ -4657,12 +4673,13 @@
     "comment" : {
       "en" : "Relation between a Sampler (sampling device or entity) and the Sampling act it performed."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "203"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasInput",
+    "iri" : "http://www.w3.org/ns/ssn/implementedBy",
+    "inverse" : "205",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "184",
+    "range" : "2",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4673,19 +4690,25 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation between a Procedure and an Input to it.",
+        "value" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasInput",
-      "en" : "has input"
+      "IRI-based" : "implementedBy",
+      "en" : "implemented by"
     },
-    "domain" : "30",
+    "domain" : "31",
     "comment" : {
-      "en" : "Relation between a Procedure and an Input to it."
+      "en" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "204"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/inDeployment",
@@ -4715,17 +4738,16 @@
       "IRI-based" : "inDeployment",
       "en" : "in deployment"
     },
-    "domain" : "108",
+    "domain" : "110",
     "comment" : {
       "en" : "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "205"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "206"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/implementedBy",
-    "inverse" : "207",
+    "iri" : "http://www.w3.org/ns/ssn/hasInput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "2",
+    "range" : "184",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4736,26 +4758,20 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.",
+        "value" : "Relation between a Procedure and an Input to it.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "implementedBy",
-      "en" : "implemented by"
+      "IRI-based" : "hasInput",
+      "en" : "has input"
     },
-    "domain" : "30",
+    "domain" : "31",
     "comment" : {
-      "en" : "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."
+      "en" : "Relation between a Procedure and an Input to it."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "206"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "207"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasOutput",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -4778,11 +4794,11 @@
       "IRI-based" : "hasOutput",
       "en" : "has output"
     },
-    "domain" : "30",
+    "domain" : "31",
     "comment" : {
       "en" : "Relation between a Procedure and an Output of it."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "208"
   }, {
     "iri" : "http://purl.org/poso/hasAccuracy",
@@ -4793,61 +4809,16 @@
       "en" : "has accuracy",
       "nl" : "heeft accuraatheid"
     },
-    "superproperty" : [ "92" ],
+    "superproperty" : [ "94" ],
     "domain" : "28",
     "comment" : {
       "en" : "The accuracy of an entity."
     },
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "209"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "102",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "observedProperty",
-      "en" : "observed property"
-    },
-    "domain" : "36",
-    "comment" : {
-      "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "210"
-  }, {
     "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
-    "inverse" : "212",
+    "inverse" : "211",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "44",
     "annotations" : {
@@ -4885,12 +4856,67 @@
       "IRI-based" : "madeBySensor",
       "en" : "made by sensor"
     },
-    "domain" : "36",
+    "domain" : "30",
     "comment" : {
       "en" : "Relation between an Observation and the Sensor which made the Observation."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "211"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "210"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "31",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Procedure",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usedProcedure",
+      "en" : "used procedure"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "212"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hosts",
     "inverse" : "214",
@@ -4917,6 +4943,11 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sensor",
         "type" : "iri"
       }, {
@@ -4928,11 +4959,6 @@
         "identifier" : "rangeIncludes",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampler",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuator",
         "type" : "iri"
       } ],
       "domainIncludes" : [ {
@@ -4946,17 +4972,17 @@
       "IRI-based" : "hosts",
       "en" : "hosts"
     },
-    "domain" : "108",
+    "domain" : "110",
     "comment" : {
       "en" : "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "213"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
     "inverse" : "56",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "90",
+    "range" : "92",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4978,12 +5004,12 @@
       "rangeIncludes" : [ {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
         "type" : "iri"
       }, {
         "identifier" : "rangeIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
         "type" : "iri"
       } ],
       "example" : [ {
@@ -4995,11 +5021,6 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
@@ -5007,23 +5028,28 @@
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "hasFeatureOfInterest",
       "en" : "has feature of interest"
     },
-    "domain" : "36",
+    "domain" : "30",
     "comment" : {
       "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "215"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "199",
+    "inverse" : "198",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "99",
+    "range" : "101",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5056,7 +5082,7 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -5066,7 +5092,7 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       } ]
     },
@@ -5074,67 +5100,12 @@
       "IRI-based" : "hasResult",
       "en" : "has result"
     },
-    "domain" : "36",
+    "domain" : "30",
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "216"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "30",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Procedure",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "usedProcedure",
-      "en" : "used procedure"
-    },
-    "domain" : "36",
-    "comment" : {
-      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "217"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -5157,16 +5128,16 @@
       "IRI-based" : "wasOriginatedBy",
       "en" : "was originated by"
     },
-    "domain" : "36",
+    "domain" : "30",
     "comment" : {
       "en" : "Relation between an Observation and the Stimulus that originated it."
     },
-    "attributes" : [ "allValues", "functional", "object", "external" ],
-    "id" : "218"
+    "attributes" : [ "object", "functional", "external", "allValues" ],
+    "id" : "217"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observedProperty",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "36",
+    "range" : "104",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5202,15 +5173,15 @@
       "IRI-based" : "observedProperty",
       "en" : "observed property"
     },
-    "domain" : "102",
+    "domain" : "30",
     "comment" : {
       "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "219"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "218"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isObservedBy",
-    "inverse" : "221",
+    "inverse" : "220",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "44",
     "annotations" : {
@@ -5248,12 +5219,57 @@
       "IRI-based" : "isObservedBy",
       "en" : "is observed by"
     },
-    "domain" : "102",
+    "domain" : "104",
     "comment" : {
       "en" : "Relation between an ObservableProperty and the Sensor able to observe it."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "220"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "219"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "30",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ObservableProperty",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "observedProperty",
+      "en" : "observed property"
+    },
+    "domain" : "104",
+    "comment" : {
+      "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "221"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -5282,11 +5298,11 @@
       "IRI-based" : "isProxyFor",
       "en" : "is proxy for"
     },
-    "domain" : "102",
+    "domain" : "104",
     "comment" : {
       "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "222"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
@@ -5310,12 +5326,12 @@
       "IRI-based" : "hasSystemCapability",
       "en" : "has system capability"
     },
-    "superproperty" : [ "92" ],
+    "superproperty" : [ "94" ],
     "domain" : "2",
     "comment" : {
       "en" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "223"
   }, {
     "iri" : "http://purl.org/poso/inDeployment",
@@ -5337,9 +5353,9 @@
     "attributes" : [ "object" ],
     "id" : "224"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "55",
+    "range" : "2",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5350,20 +5366,20 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation from an OperatingRange of a System to a OperatingPropery describing the operating range of the System.",
+        "value" : "Relation from a System to an OperatingRange describing the normal operating environment of the System.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasOperatingProperty",
-      "en" : "has operating property"
+      "IRI-based" : "hasOperatingRange",
+      "en" : "has operating range"
     },
-    "superproperty" : [ "92" ],
+    "superproperty" : [ "94" ],
     "domain" : "5",
     "comment" : {
-      "en" : "Relation from an OperatingRange of a System to a OperatingPropery describing the operating range of the System."
+      "en" : "Relation from a System to an OperatingRange describing the normal operating environment of the System."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "225"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
@@ -5387,12 +5403,12 @@
       "IRI-based" : "hasOperatingProperty",
       "en" : "has operating property"
     },
-    "superproperty" : [ "92" ],
+    "superproperty" : [ "94" ],
     "domain" : "55",
     "comment" : {
       "en" : "Relation from an OperatingRange of a System to a OperatingPropery describing the operating range of the System."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "226"
   }, {
     "iri" : "http://purl.org/poso/madeBySystem",
@@ -5403,7 +5419,7 @@
       "en" : "made by system",
       "nl" : "gemaakt door systeem"
     },
-    "domain" : "36",
+    "domain" : "30",
     "comment" : {
       "en" : "A relation to a re-usable system that computed the observation."
     },
@@ -5420,16 +5436,16 @@
     },
     "maxCardinality" : "1",
     "minCardinality" : "1",
-    "domain" : "99",
+    "domain" : "101",
     "comment" : {
       "en" : "Quantitative anglue result value for axis-angle representation."
     },
-    "attributes" : [ "functional", "object" ],
+    "attributes" : [ "object", "functional" ],
     "id" : "228"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasDeployment",
+    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "24",
+    "range" : "2",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5440,24 +5456,24 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation between a System and a Deployment, recording that the System is deployed in that Deployment.",
+        "value" : "Relation between a System and its component parts.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasDeployment",
-      "en" : "has deployment"
+      "IRI-based" : "hasSubSystem",
+      "en" : "has subsystem"
     },
     "domain" : "2",
     "comment" : {
-      "en" : "Relation between a System and a Deployment, recording that the System is deployed in that Deployment."
+      "en" : "Relation between a System and its component parts."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "229"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/isHostedBy",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "108",
+    "range" : "110",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5485,6 +5501,11 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Sampler",
         "type" : "iri"
       }, {
@@ -5497,11 +5518,6 @@
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/sosa/Actuator",
         "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sensor",
-        "type" : "iri"
       } ]
     },
     "label" : {
@@ -5512,37 +5528,8 @@
     "comment" : {
       "en" : "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "230"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "47",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation from a System to a SurvivalRange.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSurvivalRange",
-      "en" : "has survival range"
-    },
-    "superproperty" : [ "92" ],
-    "domain" : "2",
-    "comment" : {
-      "en" : "Relation from a System to a SurvivalRange."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "231"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -5565,12 +5552,41 @@
       "IRI-based" : "hasOperatingRange",
       "en" : "has operating range"
     },
-    "superproperty" : [ "92" ],
+    "superproperty" : [ "94" ],
     "domain" : "2",
     "comment" : {
       "en" : "Relation from a System to an OperatingRange describing the normal operating environment of the System."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "231"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "47",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a System to a SurvivalRange.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSurvivalRange",
+      "en" : "has survival range"
+    },
+    "superproperty" : [ "94" ],
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relation from a System to a SurvivalRange."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "232"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
@@ -5598,12 +5614,12 @@
     "comment" : {
       "en" : "Relation between a System and its component parts."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "233"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
+    "iri" : "http://www.w3.org/ns/ssn/detects",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "36",
+    "range" : "44",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5614,52 +5630,24 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation between an Observation and the Stimulus that originated it.",
+        "value" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "wasOriginatedBy",
-      "en" : "was originated by"
+      "IRI-based" : "detects",
+      "en" : "detects"
     },
     "domain" : "188",
     "comment" : {
-      "en" : "Relation between an Observation and the Stimulus that originated it."
+      "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
     },
-    "attributes" : [ "allValues", "functional", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "234"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasSubSystem",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "2",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a System and its component parts.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSubSystem",
-      "en" : "has subsystem"
-    },
-    "domain" : "2",
-    "comment" : {
-      "en" : "Relation between a System and its component parts."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "235"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/implements",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "30",
+    "range" : "31",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5688,12 +5676,73 @@
     "comment" : {
       "en" : "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "235"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasDeployment",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a System and a Deployment, recording that the System is deployed in that Deployment.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDeployment",
+      "en" : "has deployment"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relation between a System and a Deployment, recording that the System is deployed in that Deployment."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "236"
+  }, {
+    "range" : "184",
+    "domain" : "183",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/wasOriginatedBy",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "30",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an Observation and the Stimulus that originated it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "wasOriginatedBy",
+      "en" : "was originated by"
+    },
+    "domain" : "188",
+    "comment" : {
+      "en" : "Relation between an Observation and the Stimulus that originated it."
+    },
+    "attributes" : [ "object", "functional", "external", "allValues" ],
+    "id" : "238"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/isProxyFor",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "102",
+    "range" : "104",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5722,53 +5771,25 @@
     "comment" : {
       "en" : "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "237"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/detects",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "44",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "detects",
-      "en" : "detects"
-    },
-    "domain" : "188",
-    "comment" : {
-      "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "238"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "239"
   }, {
     "iri" : "http://purl.org/poso/hasAcceleration",
     "inverse" : "27",
     "baseIri" : "http://purl.org/poso",
-    "range" : "104",
+    "range" : "106",
     "label" : {
       "IRI-based" : "hasAcceleration",
       "en" : "has acceleration",
       "nl" : "heeft versnelling"
     },
-    "superproperty" : [ "92" ],
-    "domain" : "90",
+    "superproperty" : [ "94" ],
+    "domain" : "92",
     "comment" : {
       "en" : "Property that links a feature of interest to a unique acceleration property related to this feature."
     },
     "attributes" : [ "object" ],
-    "id" : "239"
+    "id" : "240"
   }, {
     "iri" : "http://purl.org/poso/hasVelocity",
     "inverse" : "48",
@@ -5779,18 +5800,18 @@
       "en" : "has velocity",
       "nl" : "heeft snelheid"
     },
-    "superproperty" : [ "92" ],
-    "domain" : "90",
+    "superproperty" : [ "94" ],
+    "domain" : "92",
     "comment" : {
       "en" : "Indicates the velocity of a feature of interest.",
       "nl" : "Duid de snelheid van een object aan."
     },
     "attributes" : [ "object" ],
-    "id" : "240"
+    "id" : "241"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/isPropertyOf",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "90",
+    "range" : "92",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5810,40 +5831,11 @@
       "en" : "is property of"
     },
     "domain" : "6",
-    "subproperty" : [ "48", "112", "91", "27" ],
+    "subproperty" : [ "48", "114", "93", "27" ],
     "comment" : {
       "en" : "Relation between a Property and the entity it belongs to."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "241"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/deployedSystem",
-    "inverse" : "243",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "2",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a Deployment and a deployed System.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "deployedSystem",
-      "en" : "deployed system"
-    },
-    "domain" : "24",
-    "comment" : {
-      "en" : "Relation between a Deployment and a deployed System."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "242"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/forProperty",
@@ -5874,21 +5866,50 @@
       "en" : "for property"
     },
     "domain" : "24",
-    "subproperty" : [ "221", "143" ],
+    "subproperty" : [ "220", "144" ],
     "comment" : {
       "en" : "A relation between some aspect of an entity and a Property."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "243"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
+    "inverse" : "245",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "110",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Deployment and the Platform on which the Systems are deployed.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "deployedOnPlatform",
+      "en" : "deployed on platform"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Relation between a Deployment and the Platform on which the Systems are deployed."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "244"
   }, {
-    "range" : "108",
-    "domain" : "107",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "245"
+    "range" : "106",
+    "domain" : "247",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "246"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasOutput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "30",
+    "range" : "31",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5911,17 +5932,17 @@
     "comment" : {
       "en" : "Relation between a Procedure and an Output of it."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "246"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "248"
   }, {
-    "range" : "90",
-    "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "247"
+    "range" : "110",
+    "domain" : "109",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "249"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/hasInput",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "30",
+    "range" : "31",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5944,17 +5965,17 @@
     "comment" : {
       "en" : "Relation between a Procedure and an Input to it."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "248"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "250"
   }, {
-    "range" : "90",
-    "domain" : "22",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "249"
+    "range" : "92",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "251"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/observes",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "102",
+    "range" : "104",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -5990,22 +6011,22 @@
       "IRI-based" : "observes",
       "en" : "observes"
     },
-    "superproperty" : [ "144" ],
+    "superproperty" : [ "145" ],
     "domain" : "44",
     "comment" : {
       "en" : "Relation between a Sensor and an ObservableProperty that it is capable of sensing."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "250"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "252"
   }, {
-    "range" : "90",
-    "domain" : "179",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "251"
+    "range" : "92",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "253"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeObservation",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "36",
+    "range" : "30",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6045,18 +6066,18 @@
     "comment" : {
       "en" : "Relation between a Sensor and an Observation made by the Sensor."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "252"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "254"
   }, {
-    "range" : "90",
-    "domain" : "170",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "253"
+    "range" : "92",
+    "domain" : "179",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "255"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/deployedOnPlatform",
-    "inverse" : "255",
+    "iri" : "http://www.w3.org/ns/ssn/deployedSystem",
+    "inverse" : "257",
     "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "108",
+    "range" : "2",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6067,25 +6088,25 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation between a Deployment and the Platform on which the Systems are deployed.",
+        "value" : "Relation between a Deployment and a deployed System.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "deployedOnPlatform",
-      "en" : "deployed on platform"
+      "IRI-based" : "deployedSystem",
+      "en" : "deployed system"
     },
     "domain" : "24",
     "comment" : {
-      "en" : "Relation between a Deployment and the Platform on which the Systems are deployed."
+      "en" : "Relation between a Deployment and a deployed System."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "254"
-  }, {
-    "range" : "153",
-    "domain" : "257",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "256"
+  }, {
+    "range" : "92",
+    "domain" : "170",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "258"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/detects",
     "baseIri" : "http://www.w3.org/ns/ssn",
@@ -6112,38 +6133,38 @@
     "comment" : {
       "en" : "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "258"
-  }, {
-    "range" : "184",
-    "domain" : "183",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "259"
   }, {
-    "range" : "26",
-    "domain" : "35",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "155",
+    "domain" : "261",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "260"
   }, {
     "range" : "26",
-    "domain" : "34",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "261"
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "262"
+  }, {
+    "range" : "26",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "263"
   }, {
     "range" : "37",
     "domain" : "39",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "262"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "264"
   }, {
     "range" : "37",
     "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "263"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "265"
   }, {
     "range" : "26",
     "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "264"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "266"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/qualityOfObservation",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -6171,55 +6192,21 @@
       "en" : "Relation linking an Observation to the adjudged quality of the Result. This is complimentary to the SystemCapability information recorded for the Sensor that made the Observation."
     },
     "attributes" : [ "object", "external" ],
-    "id" : "265"
-  }, {
-    "range" : "26",
-    "domain" : "33",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "266"
-  }, {
-    "range" : "26",
-    "domain" : "32",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "267"
   }, {
     "range" : "26",
-    "domain" : "31",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "268"
+  }, {
+    "range" : "26",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "269"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "52",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Describes the prevailing environmental conditions for SystemCapabilites, OperatingRanges and SurvivalRanges.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "Used for example to say that a sensor has a particular accuracy in particular conditions.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "inCondition",
-      "en" : "in condition"
-    },
-    "domain" : "45",
-    "comment" : {
-      "en" : "Describes the prevailing environmental conditions for SystemCapabilites, OperatingRanges and SurvivalRanges."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
+    "range" : "26",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "271"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/forProperty",
@@ -6250,122 +6237,12 @@
       "en" : "for property"
     },
     "domain" : "45",
-    "subproperty" : [ "221", "143" ],
+    "subproperty" : [ "220", "144" ],
     "comment" : {
       "en" : "A relation between some aspect of an entity and a Property."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "272"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "45",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSystemProperty",
-      "en" : "has system property"
-    },
-    "superproperty" : [ "92" ],
-    "domain" : "12",
-    "comment" : {
-      "en" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "273"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "12",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSystemProperty",
-      "en" : "has system property"
-    },
-    "superproperty" : [ "92" ],
-    "domain" : "45",
-    "comment" : {
-      "en" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "274"
-  }, {
-    "iri" : "http://purl.org/poso/isRelativeTo",
-    "baseIri" : "http://purl.org/poso",
-    "range" : "90",
-    "annotations" : {
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "A person can have a relative distance to another feature of interest. When a feature is moving (i.e. when the geometry changes based on time) the distance remains relative to the feature and not the geometry at a specific point in time.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isRelativeTo",
-      "en" : "is relative to",
-      "nl" : "is relatief met"
-    },
-    "domain" : "17",
-    "comment" : {
-      "en" : "Indicates a relative position to be relative to another feature of interest."
-    },
-    "attributes" : [ "object" ],
-    "id" : "275"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
-    "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "2",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/systems/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation from a System to a SurvivalRange.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSurvivalRange",
-      "en" : "has survival range"
-    },
-    "superproperty" : [ "92" ],
-    "domain" : "47",
-    "comment" : {
-      "en" : "Relation from a System to a SurvivalRange."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "276"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -6394,16 +6271,16 @@
       "IRI-based" : "inCondition",
       "en" : "in condition"
     },
-    "domain" : "47",
+    "domain" : "45",
     "comment" : {
       "en" : "Describes the prevailing environmental conditions for SystemCapabilites, OperatingRanges and SurvivalRanges."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "277"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "274"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "2",
+    "range" : "45",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6414,20 +6291,101 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions.",
+        "value" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasSystemCapability",
-      "en" : "has system capability"
+      "IRI-based" : "hasSystemProperty",
+      "en" : "has system property"
     },
-    "superproperty" : [ "92" ],
+    "superproperty" : [ "94" ],
+    "domain" : "12",
+    "comment" : {
+      "en" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "275"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "12",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSystemProperty",
+      "en" : "has system property"
+    },
+    "superproperty" : [ "94" ],
     "domain" : "45",
     "comment" : {
-      "en" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions."
+      "en" : "Relation from an SystemCapability of a System to a SystemProperty describing the capabilities of the System."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "276"
+  }, {
+    "iri" : "http://purl.org/poso/isRelativeTo",
+    "baseIri" : "http://purl.org/poso",
+    "range" : "92",
+    "annotations" : {
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A person can have a relative distance to another feature of interest. When a feature is moving (i.e. when the geometry changes based on time) the distance remains relative to the feature and not the geometry at a specific point in time.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isRelativeTo",
+      "en" : "is relative to",
+      "nl" : "is relatief met"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Indicates a relative position to be relative to another feature of interest."
+    },
+    "attributes" : [ "object" ],
+    "id" : "277"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "84",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a SurvivalRange of a System to a SurvivalProperty describing the survival range of the System.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSurvivalProperty",
+      "en" : "has survival property"
+    },
+    "superproperty" : [ "94" ],
+    "domain" : "47",
+    "comment" : {
+      "en" : "Relation from a SurvivalRange of a System to a SurvivalProperty describing the survival range of the System."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "278"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
@@ -6457,14 +6415,14 @@
       "IRI-based" : "inCondition",
       "en" : "in condition"
     },
-    "domain" : "5",
+    "domain" : "47",
     "comment" : {
       "en" : "Describes the prevailing environmental conditions for SystemCapabilites, OperatingRanges and SurvivalRanges."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "279"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
     "range" : "2",
     "annotations" : {
@@ -6477,25 +6435,25 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation from a System to an OperatingRange describing the normal operating environment of the System.",
+        "value" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasOperatingRange",
-      "en" : "has operating range"
+      "IRI-based" : "hasSystemCapability",
+      "en" : "has system capability"
     },
-    "superproperty" : [ "92" ],
-    "domain" : "5",
+    "superproperty" : [ "94" ],
+    "domain" : "45",
     "comment" : {
-      "en" : "Relation from a System to an OperatingRange describing the normal operating environment of the System."
+      "en" : "Relation from a System to a SystemCapability describing the capabilities of the System under certain Conditions."
     },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "280"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+    "iri" : "http://www.w3.org/ns/ssn/systems/inCondition",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
-    "range" : "84",
+    "range" : "52",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6506,21 +6464,84 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relation from a SurvivalRange of a System to a SurvivalProperty describing the survival range of the System.",
+        "value" : "Describes the prevailing environmental conditions for SystemCapabilites, OperatingRanges and SurvivalRanges.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Used for example to say that a sensor has a particular accuracy in particular conditions.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "hasSurvivalProperty",
-      "en" : "has survival property"
+      "IRI-based" : "inCondition",
+      "en" : "in condition"
     },
-    "superproperty" : [ "92" ],
+    "domain" : "5",
+    "comment" : {
+      "en" : "Describes the prevailing environmental conditions for SystemCapabilites, OperatingRanges and SurvivalRanges."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "281"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "55",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from an OperatingRange of a System to a OperatingPropery describing the operating range of the System.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasOperatingProperty",
+      "en" : "has operating property"
+    },
+    "superproperty" : [ "94" ],
+    "domain" : "5",
+    "comment" : {
+      "en" : "Relation from an OperatingRange of a System to a OperatingPropery describing the operating range of the System."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "282"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+    "baseIri" : "http://www.w3.org/ns/ssn/systems",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/systems/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a System to a SurvivalRange.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSurvivalRange",
+      "en" : "has survival range"
+    },
+    "superproperty" : [ "94" ],
     "domain" : "47",
     "comment" : {
-      "en" : "Relation from a SurvivalRange of a System to a SurvivalProperty describing the survival range of the System."
+      "en" : "Relation from a System to a SurvivalRange."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "281"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "283"
   }, {
     "iri" : "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
     "baseIri" : "http://www.w3.org/ns/ssn/systems",
@@ -6543,53 +6564,53 @@
       "IRI-based" : "hasSurvivalProperty",
       "en" : "has survival property"
     },
-    "superproperty" : [ "92" ],
+    "superproperty" : [ "94" ],
     "domain" : "84",
     "comment" : {
       "en" : "Relation from a SurvivalRange of a System to a SurvivalProperty describing the survival range of the System."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "282"
-  }, {
-    "range" : "35",
-    "domain" : "101",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "283"
-  }, {
-    "range" : "35",
-    "domain" : "100",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "284"
   }, {
-    "range" : "6",
-    "domain" : "102",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "36",
+    "domain" : "103",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "285"
+  }, {
+    "range" : "36",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "286"
+  }, {
+    "range" : "6",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "287"
   }, {
     "range" : "6",
     "domain" : "45",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "286"
-  }, {
-    "range" : "4",
-    "domain" : "95",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "287"
-  }, {
-    "range" : "4",
-    "domain" : "97",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "288"
   }, {
     "range" : "4",
-    "domain" : "96",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "289"
   }, {
+    "range" : "4",
+    "domain" : "99",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "290"
+  }, {
+    "range" : "4",
+    "domain" : "98",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "291"
+  }, {
     "iri" : "http://www.w3.org/ns/sosa/hasResult",
-    "inverse" : "199",
+    "inverse" : "198",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "99",
+    "range" : "101",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -6622,7 +6643,7 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -6632,7 +6653,7 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       } ]
     },
@@ -6640,67 +6661,12 @@
       "IRI-based" : "hasResult",
       "en" : "has result"
     },
-    "domain" : "145",
+    "domain" : "146",
     "comment" : {
       "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "290"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "30",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Procedure",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "usedProcedure",
-      "en" : "used procedure"
-    },
-    "domain" : "145",
-    "comment" : {
-      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "291"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "292"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/madeByActuator",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -6740,290 +6706,15 @@
       "IRI-based" : "madeByActuator",
       "en" : "made by actuator"
     },
-    "domain" : "145",
+    "domain" : "146",
     "comment" : {
       "en" : "Relation linking an Actuation to the Actuator that made that Actuation."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "292"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
-    "inverse" : "56",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "90",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
-        "type" : "label"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
-        "type" : "iri"
-      }, {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasFeatureOfInterest",
-      "en" : "has feature of interest"
-    },
-    "domain" : "145",
-    "comment" : {
-      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
+    "attributes" : [ "object", "external", "allValues" ],
     "id" : "293"
   }, {
-    "iri" : "http://www.w3.org/ns/ssn/forProperty",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "50",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A relation between some aspect of an entity and a Property.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "forProperty",
-      "en" : "for property"
-    },
-    "domain" : "1",
-    "subproperty" : [ "221", "143" ],
-    "comment" : {
-      "en" : "A relation between some aspect of an entity and a Property."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "294"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/madeActuation",
-    "inverse" : "296",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "145",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an Actuator and the Actuation it has made.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuator",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "madeActuation",
-      "en" : "made actuation"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "Relation between an Actuator and the Actuation it has made."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "295"
-  }, {
-    "iri" : "http://www.w3.org/ns/ssn/hasProperty",
-    "inverse" : "29",
-    "baseIri" : "http://www.w3.org/ns/ssn",
-    "range" : "6",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/ssn/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an entity and a Property of that entity.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasProperty",
-      "en" : "has property"
-    },
-    "domain" : "90",
-    "subproperty" : [ "298", "111", "240", "209", "299", "300", "301", "302", "239", "89", "303" ],
-    "comment" : {
-      "en" : "Relation between an entity and a Property of that entity."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "297"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/hasSample",
-    "inverse" : "305",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "170",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between a FeatureOfInterest and the Sample used to represent it.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sample",
-        "type" : "iri"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasSample",
-      "en" : "has sample"
-    },
-    "domain" : "90",
-    "comment" : {
-      "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
-    },
-    "attributes" : [ "allValues", "inverse functional", "object", "external" ],
-    "id" : "304"
-  }, {
-    "iri" : "http://www.w3.org/ns/sosa/isActedOnBy",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "145",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      }, {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state.",
-        "type" : "label"
-      } ],
-      "rangeIncludes" : [ {
-        "identifier" : "rangeIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
-        "type" : "iri"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "en",
-        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
-        "type" : "label"
-      } ],
-      "domainIncludes" : [ {
-        "identifier" : "domainIncludes",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isActedOnBy",
-      "en" : "is acted on by"
-    },
-    "domain" : "50",
-    "comment" : {
-      "en" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."
-    },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "306"
-  }, {
     "iri" : "http://www.w3.org/ns/sosa/actsOnProperty",
-    "inverse" : "308",
+    "inverse" : "295",
     "baseIri" : "http://www.w3.org/ns/sosa",
     "range" : "50",
     "annotations" : {
@@ -7067,21 +6758,351 @@
       "IRI-based" : "actsOnProperty",
       "en" : "acts on property"
     },
-    "domain" : "145",
+    "domain" : "146",
     "comment" : {
       "en" : "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon."
     },
-    "attributes" : [ "allValues", "object", "external" ],
-    "id" : "307"
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "294"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/usedProcedure",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "31",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Procedure",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usedProcedure",
+      "en" : "used procedure"
+    },
+    "domain" : "146",
+    "comment" : {
+      "en" : "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "296"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/forProperty",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "50",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between some aspect of an entity and a Property.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "forProperty",
+      "en" : "for property"
+    },
+    "domain" : "1",
+    "subproperty" : [ "220", "144" ],
+    "comment" : {
+      "en" : "A relation between some aspect of an entity and a Property."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "297"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeActuation",
+    "inverse" : "299",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "146",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an Actuator and the Actuation it has made.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuator",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeActuation",
+      "en" : "made actuation"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relation between an Actuator and the Actuation it has made."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "298"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasSample",
+    "inverse" : "301",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "170",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a FeatureOfInterest and the Sample used to represent it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSample",
+      "en" : "has sample"
+    },
+    "domain" : "92",
+    "comment" : {
+      "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
+    },
+    "attributes" : [ "object", "inverse functional", "external", "allValues" ],
+    "id" : "300"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasProperty",
+    "inverse" : "29",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "6",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an entity and a Property of that entity.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasProperty",
+      "en" : "has property"
+    },
+    "domain" : "92",
+    "subproperty" : [ "303", "113", "241", "209", "304", "305", "306", "307", "240", "91", "308" ],
+    "comment" : {
+      "en" : "Relation between an entity and a Property of that entity."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "302"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isActedOnBy",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "146",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/ActuatableProperty",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "In the activity (Actuation) of automatically closing a window if the temperature in a room drops below 20 degrees Celsius, the property on which the Actuator acts upon is the state of the window as it changes from being open to being closed. ",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isActedOnBy",
+      "en" : "is acted on by"
+    },
+    "domain" : "50",
+    "comment" : {
+      "en" : "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "309"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "56",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "92",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
+    },
+    "domain" : "146",
+    "comment" : {
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
+    },
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "310"
   }, {
     "range" : "12",
     "domain" : "74",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "309"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "311"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/resultTime",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "268",
+    "range" : "270",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -7103,7 +7124,7 @@
       "domainIncludes" : [ {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
@@ -7113,7 +7134,7 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
         "type" : "iri"
       } ]
     },
@@ -7127,52 +7148,52 @@
       "en" : "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "310"
+    "id" : "312"
   }, {
     "range" : "12",
     "domain" : "73",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "311"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "313"
   }, {
     "range" : "4",
-    "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "312"
+    "domain" : "96",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "314"
   }, {
     "range" : "4",
     "domain" : "59",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "313"
-  }, {
-    "range" : "12",
-    "domain" : "70",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "314"
-  }, {
-    "range" : "12",
-    "domain" : "69",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "315"
   }, {
     "range" : "12",
-    "domain" : "72",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "316"
   }, {
     "range" : "12",
-    "domain" : "71",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "69",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "317"
   }, {
     "range" : "12",
-    "domain" : "68",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "318"
   }, {
     "range" : "12",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "319"
+  }, {
+    "range" : "12",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "320"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "321"
   }, {
     "iri" : "http://purl.org/poso/roll",
     "baseIri" : "http://purl.org/poso",
@@ -7186,16 +7207,16 @@
     "comment" : {
       "en" : "Roll is the rotation around the y-axis with respect to the object the roll applies to."
     },
-    "attributes" : [ "functional", "object" ],
-    "id" : "320"
+    "attributes" : [ "object", "functional" ],
+    "id" : "322"
   }, {
     "range" : "12",
     "domain" : "67",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "321"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "323"
   }, {
     "iri" : "http://purl.org/poso/hasRelativePosition",
-    "inverse" : "275",
+    "inverse" : "277",
     "baseIri" : "http://purl.org/poso",
     "range" : "17",
     "label" : {
@@ -7203,19 +7224,19 @@
       "en" : "has relative position",
       "nl" : "heeft relatieve positie"
     },
-    "superproperty" : [ "111" ],
-    "domain" : "90",
+    "superproperty" : [ "113" ],
+    "domain" : "92",
     "attributes" : [ "object" ],
-    "id" : "113"
+    "id" : "115"
   }, {
     "range" : "12",
     "domain" : "64",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "322"
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "324"
   }, {
     "iri" : "http://www.w3.org/ns/sosa/hasSimpleResult",
     "baseIri" : "http://www.w3.org/ns/sosa",
-    "range" : "270",
+    "range" : "272",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -7248,12 +7269,12 @@
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
         "type" : "iri"
       }, {
         "identifier" : "domainIncludes",
         "language" : "undefined",
-        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
         "type" : "iri"
       } ]
     },
@@ -7266,21 +7287,21 @@
       "en" : "The simple value of an Observation or Actuation or act of Sampling."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "323"
-  }, {
-    "range" : "12",
-    "domain" : "63",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "324"
-  }, {
-    "range" : "12",
-    "domain" : "66",
-    "attributes" : [ "anonymous", "object" ],
     "id" : "325"
   }, {
     "range" : "12",
-    "domain" : "65",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "326"
+  }, {
+    "range" : "12",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "327"
+  }, {
+    "range" : "12",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "328"
   } ]
 }
