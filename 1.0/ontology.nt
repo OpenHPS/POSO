@@ -131,6 +131,18 @@
 <http://purl.org/poso/hasPosition> <http://www.w3.org/2000/01/rdf-schema#label> "has position"@en .
 <http://purl.org/poso/hasPosition> <http://www.w3.org/2000/01/rdf-schema#label> "heeft positie"@nl .
 # 
+# http://purl.org/poso/hasRSS
+<http://purl.org/poso/hasRSS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasRSS> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/poso/hasRelativePosition> .
+<http://purl.org/poso/hasRSS> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/poso/RelativeSignalStrength> .
+<http://purl.org/poso/hasRSS> <http://www.w3.org/2000/01/rdf-schema#label> "has relative signal strength"@en .
+# 
+# http://purl.org/poso/hasRelativeDistance
+<http://purl.org/poso/hasRelativeDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasRelativeDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/poso/hasRelativePosition> .
+<http://purl.org/poso/hasRelativeDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/poso/RelativeDistance> .
+<http://purl.org/poso/hasRelativeDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has relative distance"@en .
+# 
 # http://purl.org/poso/hasRelativePosition
 <http://purl.org/poso/hasRelativePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/hasRelativePosition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/poso/hasPosition> .

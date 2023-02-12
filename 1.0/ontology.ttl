@@ -151,6 +151,20 @@
                         "heeft positie"@nl .
 
 
+###  http://purl.org/poso/hasRSS
+:hasRSS rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :hasRelativePosition ;
+        rdfs:range :RelativeSignalStrength ;
+        rdfs:label "has relative signal strength"@en .
+
+
+###  http://purl.org/poso/hasRelativeDistance
+:hasRelativeDistance rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasRelativePosition ;
+                     rdfs:range :RelativeDistance ;
+                     rdfs:label "has relative distance"@en .
+
+
 ###  http://purl.org/poso/hasRelativePosition
 :hasRelativePosition rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :hasPosition ;

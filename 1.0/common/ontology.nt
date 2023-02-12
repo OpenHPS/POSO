@@ -92,25 +92,29 @@
 # 
 # http://purl.org/poso/common/major
 <http://purl.org/poso/common/major> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/poso/common/major> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/common/iBeacon> .
 <http://purl.org/poso/common/major> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
 _:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/common/major> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/common/major> <http://www.w3.org/2000/01/rdf-schema#label> "major"@en .
 # 
 # http://purl.org/poso/common/minor
 <http://purl.org/poso/common/minor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/poso/common/minor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/common/iBeacon> .
 <http://purl.org/poso/common/minor> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid2 .
 _:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/common/major> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/common/minor> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/common/minor> <http://www.w3.org/2000/01/rdf-schema#label> "minor"@en .
 # 
 # http://purl.org/poso/common/proximityUUID
 <http://purl.org/poso/common/proximityUUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/poso/common/proximityUUID> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid3 .
 _:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#hexBinary> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/common/major> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/common/proximityUUID> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/poso/common/proximityUUID> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity UUID"@en .
+<http://purl.org/poso/common/proximityUUID> <http://www.w3.org/2000/01/rdf-schema#label> "proximity UUID"@en .
 # 
 # 
 # 

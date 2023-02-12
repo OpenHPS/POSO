@@ -105,17 +105,13 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#major" title="http://purl.org/poso/common/major">
-         <span>major</span>
-      </a>
+      <a href="#major" title="http://purl.org/poso/common/major">major</a>
    </li>
    <li>
-      <a href="#minor" title="http://purl.org/poso/common/minor">
-         <span>minor</span>
-      </a>
+      <a href="#minor" title="http://purl.org/poso/common/minor">minor</a>
    </li>
    <li>
-      <a href="#proximityUUID" title="http://purl.org/poso/common/proximityUUID">Proximity UUID</a>
+      <a href="#proximityUUID" title="http://purl.org/poso/common/proximityUUID">proximity UUID</a>
    </li>
 </ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
@@ -286,6 +282,12 @@ This section provides details for each class and property defined by Positioning
                title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#major" title="http://purl.org/poso/common/major">major</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#minor" title="http://purl.org/poso/common/minor">minor</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
       </dl>
    </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
@@ -310,17 +312,13 @@ This section provides details for each class and property defined by Positioning
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#major" title="http://purl.org/poso/common/major">
-            <span>major</span>
-         </a>
+         <a href="#major" title="http://purl.org/poso/common/major">major</a>
       </li>
       <li>
-         <a href="#minor" title="http://purl.org/poso/common/minor">
-            <span>minor</span>
-         </a>
+         <a href="#minor" title="http://purl.org/poso/common/minor">minor</a>
       </li>
       <li>
-         <a href="#proximityUUID" title="http://purl.org/poso/common/proximityUUID">Proximity UUID</a>
+         <a href="#proximityUUID" title="http://purl.org/poso/common/proximityUUID">proximity UUID</a>
       </li>
    </ul>
    <div class="entity" id="major">
@@ -333,6 +331,10 @@ This section provides details for each class and property defined by Positioning
       <div class="description">
          <dl>
             <dt>has domain</dt>
+            <dd>
+               <a href="#iBeacon" title="http://purl.org/poso/common/iBeacon">iBeacon</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dd>
                <a href="#major" title="http://purl.org/poso/common/major">major</a>
                <sup class="type-dp" title="data property">dp</sup> 
@@ -355,7 +357,11 @@ This section provides details for each class and property defined by Positioning
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#major" title="http://purl.org/poso/common/major">major</a>
+               <a href="#iBeacon" title="http://purl.org/poso/common/iBeacon">iBeacon</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#minor" title="http://purl.org/poso/common/minor">minor</a>
                <sup class="type-dp" title="data property">dp</sup> 
                <span class="logic">some</span> 
                <a href="http://www.w3.org/2001/XMLSchema#integer"
@@ -366,7 +372,7 @@ This section provides details for each class and property defined by Positioning
       </div>
    </div>
    <div class="entity" id="proximityUUID">
-      <h3>Proximity UUID<sup class="type-dp" title="data property">dp</sup>
+      <h3>proximity UUID<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -376,7 +382,7 @@ This section provides details for each class and property defined by Positioning
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#major" title="http://purl.org/poso/common/major">major</a>
+               <a href="#proximityUUID" title="http://purl.org/poso/common/proximityUUID">proximity UUID</a>
                <sup class="type-dp" title="data property">dp</sup> 
                <span class="logic">some</span> 
                <a href="http://www.w3.org/2001/XMLSchema#hexBinary"

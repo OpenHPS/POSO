@@ -245,6 +245,28 @@
     
 
 
+    <!-- http://purl.org/poso/hasRSS -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/poso/hasRSS">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/poso/hasRelativePosition"/>
+        <rdfs:range rdf:resource="http://purl.org/poso/RelativeSignalStrength"/>
+        <rdfs:label xml:lang="en">has relative signal strength</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/poso/hasRelativeDistance -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/poso/hasRelativeDistance">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/poso/hasRelativePosition"/>
+        <rdfs:range rdf:resource="http://purl.org/poso/RelativeDistance"/>
+        <rdfs:label xml:lang="en">has relative distance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/poso/hasRelativePosition -->
 
 

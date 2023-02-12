@@ -287,6 +287,12 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#madeBySystem" title="http://purl.org/poso/madeBySystem">gemaakt door systeem</a>
    </li>
    <li>
+      <a href="#hasRelativeDistance" title="http://purl.org/poso/hasRelativeDistance">has relative distance</a>
+   </li>
+   <li>
+      <a href="#hasRSS" title="http://purl.org/poso/hasRSS">has relative signal strength</a>
+   </li>
+   <li>
       <a href="#hasAccuracy" title="http://purl.org/poso/hasAccuracy">heeft accuraatheid</a>
    </li>
    <li>
@@ -1537,6 +1543,11 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
             <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
             <sup class="type-c" title="klasse">c</sup>
          </dd>
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#hasRelativeDistance" title="http://purl.org/poso/hasRelativeDistance">has relative distance</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="RelativeAngle">
@@ -1618,6 +1629,11 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dd>
             <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
             <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#hasRSS" title="http://purl.org/poso/hasRSS">has relative signal strength</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
          </dd>
       </dl>
    </div>
@@ -1961,6 +1977,12 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#madeBySystem" title="http://purl.org/poso/madeBySystem">gemaakt door systeem</a>
       </li>
       <li>
+         <a href="#hasRelativeDistance" title="http://purl.org/poso/hasRelativeDistance">has relative distance</a>
+      </li>
+      <li>
+         <a href="#hasRSS" title="http://purl.org/poso/hasRSS">has relative signal strength</a>
+      </li>
+      <li>
          <a href="#hasAccuracy" title="http://purl.org/poso/hasAccuracy">heeft accuraatheid</a>
       </li>
       <li>
@@ -2053,6 +2075,50 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
                <a href="http://www.w3.org/ns/ssn/System"
                   target="_blank"
                   title="http://www.w3.org/ns/ssn/System">system</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRelativeDistance">
+      <h3>has relative distance<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasRelativeDistance</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="#hasRelativePosition" title="http://purl.org/poso/hasRelativePosition">heeft relatieve positie</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#RelativeDistance" title="http://purl.org/poso/RelativeDistance">Relatieve afstand</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRSS">
+      <h3>has relative signal strength<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasRSS</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="#hasRelativePosition" title="http://purl.org/poso/hasRelativePosition">heeft relatieve positie</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#RelativeSignalStrength" title="http://purl.org/poso/RelativeSignalStrength">Relatieve signaalsterkte</a>
                <sup class="type-c" title="klasse">c</sup>
             </dd>
          </dl>
@@ -2219,6 +2285,12 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
             <dt>heeft supereigenschappen</dt>
             <dd>
                <a href="#hasPosition" title="http://purl.org/poso/hasPosition">heeft positie</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+            <dt>heeft subeigenschappen</dt>
+            <dd>
+               <a href="#hasRelativeDistance" title="http://purl.org/poso/hasRelativeDistance">has relative distance</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#hasRSS" title="http://purl.org/poso/hasRSS">has relative signal strength</a>
                <sup class="type-op" title="objecteigenschap">op</sup>
             </dd>
             <dt>heeft bereik</dt>

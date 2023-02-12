@@ -190,12 +190,14 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/poso/common/major">
+        <rdfs:domain rdf:resource="http://purl.org/poso/common/iBeacon"/>
         <rdfs:domain>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/poso/common/major"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:domain>
+        <rdfs:label xml:lang="en">major</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -204,12 +206,14 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/poso/common/minor">
+        <rdfs:domain rdf:resource="http://purl.org/poso/common/iBeacon"/>
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/poso/common/major"/>
+                <owl:onProperty rdf:resource="http://purl.org/poso/common/minor"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:domain>
+        <rdfs:label xml:lang="en">minor</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -220,11 +224,11 @@
     <owl:DatatypeProperty rdf:about="http://purl.org/poso/common/proximityUUID">
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/poso/common/major"/>
+                <owl:onProperty rdf:resource="http://purl.org/poso/common/proximityUUID"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
             </owl:Restriction>
         </rdfs:domain>
-        <rdfs:label xml:lang="en">Proximity UUID</rdfs:label>
+        <rdfs:label xml:lang="en">proximity UUID</rdfs:label>
     </owl:DatatypeProperty>
     
 
