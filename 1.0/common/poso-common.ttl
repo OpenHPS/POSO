@@ -106,27 +106,31 @@ rdfp:validationRule rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/poso/common/major
 :major rdf:type owl:DatatypeProperty ;
-       rdfs:domain [ rdf:type owl:Restriction ;
+       rdfs:domain :iBeacon ,
+                   [ rdf:type owl:Restriction ;
                      owl:onProperty :major ;
                      owl:someValuesFrom xsd:integer
-                   ] .
+                   ] ;
+       rdfs:label "major"@en .
 
 
 ###  http://purl.org/poso/common/minor
 :minor rdf:type owl:DatatypeProperty ;
-       rdfs:domain [ rdf:type owl:Restriction ;
-                     owl:onProperty :major ;
+       rdfs:domain :iBeacon ,
+                   [ rdf:type owl:Restriction ;
+                     owl:onProperty :minor ;
                      owl:someValuesFrom xsd:integer
-                   ] .
+                   ] ;
+       rdfs:label "minor"@en .
 
 
 ###  http://purl.org/poso/common/proximityUUID
 :proximityUUID rdf:type owl:DatatypeProperty ;
                rdfs:domain [ rdf:type owl:Restriction ;
-                             owl:onProperty :major ;
+                             owl:onProperty :proximityUUID ;
                              owl:someValuesFrom xsd:hexBinary
                            ] ;
-               rdfs:label "Proximity UUID"@en .
+               rdfs:label "proximity UUID"@en .
 
 
 #################################################################
