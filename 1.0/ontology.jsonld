@@ -236,7 +236,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-01-26T00:00:00"
+    "@value" : "2023-09-18T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -427,6 +427,40 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/RFLandmark"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/CalibrationMagnitudeProcedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Calibration magnitude procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/CalibrationProcedure"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/CalibrationOffsetProcedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Calibration offset procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/CalibrationProcedure"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/CalibrationProcedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Calibration is the act of using sensor data obtained by a user to configure a system to output data with a reliable result."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Calibration procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Procedure"
   } ]
 }, {
   "@id" : "http://purl.org/poso/CellIdentification",
@@ -1286,6 +1320,24 @@
     "@id" : "http://www.w3.org/ns/sosa/Result"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/VirtualLandmark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Virtual landmark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/Landmark"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "An example of a virtual landmark is a marker at a specific location."
+  } ]
+}, {
   "@id" : "http://purl.org/poso/VisualInput",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1645,6 +1697,23 @@
     "@id" : "http://www.w3.org/ns/ssn/isPropertyOf"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/madeByProcedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Input type outputted by another procedure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Input"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "made by procecure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Procedure"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/madeBySystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1702,7 +1771,7 @@
     "@value" : "pitch"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://purl.org/poso/roll",
@@ -1719,7 +1788,7 @@
     "@value" : "roll"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://purl.org/poso/scalar",
@@ -1732,7 +1801,7 @@
     "@value" : "scalar"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@value" : "w"
@@ -1752,7 +1821,7 @@
     "@value" : "x-axis value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://purl.org/poso/yAxisValue",
@@ -1786,7 +1855,7 @@
     "@value" : "yaw"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://purl.org/poso/zAxisValue",
@@ -1803,7 +1872,7 @@
     "@value" : "z-axis value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",

@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2023-01-26T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2023-09-18T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release  2023-01-26T00:00:00</h2>
+<h2>Release  2023-09-18T00:00:00</h2>
 
 
 <dl>
@@ -115,6 +115,16 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#BluetoothReceiver" title="http://purl.org/poso/BluetoothReceiver">Bluetooth receiver</a>
    </li>
    <li>
+      <a href="#CalibrationMagnitudeProcedure"
+         title="http://purl.org/poso/CalibrationMagnitudeProcedure">Calibration magnitude procedure</a>
+   </li>
+   <li>
+      <a href="#CalibrationOffsetProcedure" title="http://purl.org/poso/CalibrationOffsetProcedure">Calibration offset procedure</a>
+   </li>
+   <li>
+      <a href="#CalibrationProcedure" title="http://purl.org/poso/CalibrationProcedure">Calibration procedure</a>
+   </li>
+   <li>
       <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
    </li>
    <li>
@@ -151,7 +161,8 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#InertialPositioningSystem" title="http://purl.org/poso/InertialPositioningSystem">Inertial positioning system</a>
    </li>
    <li>
-      <a href="#IntegratedPositioningSystem" title="http://purl.org/poso/IntegratedPositioningSystem">Integrated positioning system</a>
+      <a href="#IntegratedPositioningSystem"
+         title="http://purl.org/poso/IntegratedPositioningSystem">Integrated positioning system</a>
    </li>
    <li>
       <a href="#Landmark" title="http://purl.org/poso/Landmark">Landmark</a>
@@ -271,6 +282,9 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Versnelling</a>
    </li>
    <li>
+      <a href="#VirtualLandmark" title="http://purl.org/poso/VirtualLandmark">Virtual landmark</a>
+   </li>
+   <li>
       <a href="#VisualInput" title="http://purl.org/poso/VisualInput">Visual input</a>
    </li>
    <li>
@@ -338,6 +352,9 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#isAccelerationOf" title="http://purl.org/poso/isAccelerationOf">is versnelling van</a>
    </li>
    <li>
+      <a href="#madeByProcedure" title="http://purl.org/poso/madeByProcedure">made by procecure</a>
+   </li>
+   <li>
       <a href="#observesType" title="http://purl.org/poso/observesType">observeert type</a>
    </li>
    <li>
@@ -393,6 +410,16 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#BluetoothReceiver" title="http://purl.org/poso/BluetoothReceiver">Bluetooth receiver</a>
       </li>
       <li>
+         <a href="#CalibrationMagnitudeProcedure"
+            title="http://purl.org/poso/CalibrationMagnitudeProcedure">Calibration magnitude procedure</a>
+      </li>
+      <li>
+         <a href="#CalibrationOffsetProcedure" title="http://purl.org/poso/CalibrationOffsetProcedure">Calibration offset procedure</a>
+      </li>
+      <li>
+         <a href="#CalibrationProcedure" title="http://purl.org/poso/CalibrationProcedure">Calibration procedure</a>
+      </li>
+      <li>
          <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
       </li>
       <li>
@@ -429,7 +456,8 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#InertialPositioningSystem" title="http://purl.org/poso/InertialPositioningSystem">Inertial positioning system</a>
       </li>
       <li>
-         <a href="#IntegratedPositioningSystem" title="http://purl.org/poso/IntegratedPositioningSystem">Integrated positioning system</a>
+         <a href="#IntegratedPositioningSystem"
+            title="http://purl.org/poso/IntegratedPositioningSystem">Integrated positioning system</a>
       </li>
       <li>
          <a href="#Landmark" title="http://purl.org/poso/Landmark">Landmark</a>
@@ -547,6 +575,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </li>
       <li>
          <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Versnelling</a>
+      </li>
+      <li>
+         <a href="#VirtualLandmark" title="http://purl.org/poso/VirtualLandmark">Virtual landmark</a>
       </li>
       <li>
          <a href="#VisualInput" title="http://purl.org/poso/VisualInput">Visual input</a>
@@ -699,6 +730,62 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dt>heeft superklassen</dt>
          <dd>
             <a href="#RFLandmark" title="http://purl.org/poso/RFLandmark">RF landmark</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CalibrationMagnitudeProcedure">
+      <h3>Calibration magnitude procedure<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/CalibrationMagnitudeProcedure</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#CalibrationProcedure" title="http://purl.org/poso/CalibrationProcedure">Calibration procedure</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CalibrationOffsetProcedure">
+      <h3>Calibration offset procedure<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/CalibrationOffsetProcedure</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#CalibrationProcedure" title="http://purl.org/poso/CalibrationProcedure">Calibration procedure</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CalibrationProcedure">
+      <h3>Calibration procedure<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/CalibrationProcedure</p>
+      <div class="comment">
+         <span class="markdown">Calibration is the act of using sensor data obtained by a user to configure a system to output data with a reliable result.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Procedure"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Procedure">procedure</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#CalibrationMagnitudeProcedure"
+               title="http://purl.org/poso/CalibrationMagnitudeProcedure">Calibration magnitude procedure</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#CalibrationOffsetProcedure" title="http://purl.org/poso/CalibrationOffsetProcedure">Calibration offset procedure</a>
             <sup class="type-c" title="klasse">c</sup>
          </dd>
       </dl>
@@ -1003,6 +1090,7 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dd>
             <a href="#AuditoryLandmark" title="http://purl.org/poso/AuditoryLandmark">Auditory landmark</a>
             <sup class="type-c" title="klasse">c</sup>, <a href="#RFLandmark" title="http://purl.org/poso/RFLandmark">RF landmark</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#VirtualLandmark" title="http://purl.org/poso/VirtualLandmark">Virtual landmark</a>
             <sup class="type-c" title="klasse">c</sup>, <a href="#VisualLandmark" title="http://purl.org/poso/VisualLandmark">Visual landmark</a>
             <sup class="type-c" title="klasse">c</sup>
          </dd>
@@ -1428,7 +1516,8 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <dd>
             <a href="#IndoorPositioningSystem" title="http://purl.org/poso/IndoorPositioningSystem">Indoor positioning system</a>
             <sup class="type-c" title="klasse">c</sup>, <a href="#InertialPositioningSystem" title="http://purl.org/poso/InertialPositioningSystem">Inertial positioning system</a>
-            <sup class="type-c" title="klasse">c</sup>, <a href="#IntegratedPositioningSystem" title="http://purl.org/poso/IntegratedPositioningSystem">Integrated positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#IntegratedPositioningSystem"
+               title="http://purl.org/poso/IntegratedPositioningSystem">Integrated positioning system</a>
             <sup class="type-c" title="klasse">c</sup>, <a href="#OpticalPositioningSystem" title="http://purl.org/poso/OpticalPositioningSystem">Optical positioning system</a>
             <sup class="type-c" title="klasse">c</sup>, <a href="#SatellitePositioningSystem" title="http://purl.org/poso/SatellitePositioningSystem">Satellite positioning system</a>
             <sup class="type-c" title="klasse">c</sup>
@@ -1900,6 +1989,30 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
+   <div class="entity" id="VirtualLandmark">
+      <h3>Virtual landmark<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/VirtualLandmark</p>
+      <div class="comment">
+         <span class="markdown">A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors.</span>
+      </div>
+      <dl>
+         <dt>Voorbeeld</dt>
+         <dd>
+            <pre>An example of a virtual landmark is a marker at a specific location.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Landmark" title="http://purl.org/poso/Landmark">Landmark</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="VisualInput">
       <h3>Visual input<sup class="type-c" title="klasse">c</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
@@ -2026,6 +2139,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </li>
       <li>
          <a href="#isAccelerationOf" title="http://purl.org/poso/isAccelerationOf">is versnelling van</a>
+      </li>
+      <li>
+         <a href="#madeByProcedure" title="http://purl.org/poso/madeByProcedure">made by procecure</a>
       </li>
       <li>
          <a href="#observesType" title="http://purl.org/poso/observesType">observeert type</a>
@@ -2566,6 +2682,33 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dl>
       </div>
    </div>
+   <div class="entity" id="madeByProcedure">
+      <h3>made by procecure<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/madeByProcedure</p>
+      <div class="comment">
+         <span class="markdown">Input type outputted by another procedure</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/Input"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/Input">input</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Procedure"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Procedure">procedure</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="observesType">
       <h3>observeert type<sup class="type-op" title="objecteigenschap">op</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
@@ -2623,9 +2766,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
             </dd>
             <dt>heeft bereik</dt>
             <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+               <a href="http://www.w3.org/2002/07/owl#Thing"
                   target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
                <sup class="type-c" title="klasse">c</sup>
             </dd>
          </dl>
@@ -2653,9 +2796,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
             </dd>
             <dt>heeft bereik</dt>
             <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+               <a href="http://www.w3.org/2002/07/owl#Thing"
                   target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
                <sup class="type-c" title="klasse">c</sup>
             </dd>
          </dl>
@@ -2681,9 +2824,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
             </dd>
             <dt>heeft bereik</dt>
             <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+               <a href="http://www.w3.org/2002/07/owl#Thing"
                   target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
                <sup class="type-c" title="klasse">c</sup>
             </dd>
          </dl>
@@ -2712,9 +2855,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
             </dd>
             <dt>heeft bereik</dt>
             <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+               <a href="http://www.w3.org/2002/07/owl#Thing"
                   target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
                <sup class="type-c" title="klasse">c</sup>
             </dd>
          </dl>
@@ -2773,9 +2916,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
             </dd>
             <dt>heeft bereik</dt>
             <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+               <a href="http://www.w3.org/2002/07/owl#Thing"
                   target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
                <sup class="type-c" title="klasse">c</sup>
             </dd>
          </dl>
@@ -2804,9 +2947,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
             </dd>
             <dt>heeft bereik</dt>
             <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+               <a href="http://www.w3.org/2002/07/owl#Thing"
                   target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
                <sup class="type-c" title="klasse">c</sup>
             </dd>
          </dl>

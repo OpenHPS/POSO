@@ -8,7 +8,7 @@
 <http://purl.org/poso/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/poso/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
 <http://purl.org/poso/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2023-01-26T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2023-09-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/poso/> <http://purl.org/dc/terms/title> "Positioning System Ontology"@en .
 <http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" .
 <http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -210,6 +210,13 @@
 <http://purl.org/poso/isVelocityOf> <http://www.w3.org/2000/01/rdf-schema#label> "is de snelheid van"@nl .
 <http://purl.org/poso/isVelocityOf> <http://www.w3.org/2000/01/rdf-schema#label> "is velocity of"@en .
 # 
+# http://purl.org/poso/madeByProcedure
+<http://purl.org/poso/madeByProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/madeByProcedure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/Input> .
+<http://purl.org/poso/madeByProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Procedure> .
+<http://purl.org/poso/madeByProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "Input type outputted by another procedure"@en .
+<http://purl.org/poso/madeByProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "made by procecure"@en .
+# 
 # http://purl.org/poso/madeBySystem
 <http://purl.org/poso/madeBySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/madeBySystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
@@ -231,7 +238,7 @@
 <http://purl.org/poso/pitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/pitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
-<http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
 <http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#comment> "Pitch is the rotation around the x-axis with respect to the object the yaw applies to."@en .
 <http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#label> "pitch"@en .
 # 
@@ -239,7 +246,7 @@
 <http://purl.org/poso/roll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/roll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
-<http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
 <http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#comment> "Roll is the rotation around the y-axis with respect to the object the roll applies to."@en .
 <http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#label> "roll"@en .
 # 
@@ -247,7 +254,7 @@
 <http://purl.org/poso/scalar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/scalar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/scalar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Result> .
-<http://purl.org/poso/scalar> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/scalar> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
 <http://purl.org/poso/scalar> <http://www.w3.org/2000/01/rdf-schema#label> "scalar"@en .
 <http://purl.org/poso/scalar> <http://www.w3.org/2004/02/skos/core#altLabel> "w" .
 # 
@@ -255,7 +262,7 @@
 <http://purl.org/poso/xAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/xAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/xAxisValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Result> .
-<http://purl.org/poso/xAxisValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/xAxisValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
 <http://purl.org/poso/xAxisValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative result value along the X-axis of a spatial sensor or result."@en .
 <http://purl.org/poso/xAxisValue> <http://www.w3.org/2000/01/rdf-schema#label> "x-axis value"@en .
 # 
@@ -271,7 +278,7 @@
 <http://purl.org/poso/yaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/yaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
-<http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
 <http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#comment> "Yaw is the rotation around the z-axis with respect to the object the yaw applies to."@en .
 <http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#label> "yaw"@en .
 # 
@@ -279,7 +286,7 @@
 <http://purl.org/poso/zAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/zAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/zAxisValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Result> .
-<http://purl.org/poso/zAxisValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/zAxisValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
 <http://purl.org/poso/zAxisValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative result value along the Z-axis of a spatial sensor."@en .
 <http://purl.org/poso/zAxisValue> <http://www.w3.org/2000/01/rdf-schema#label> "z-axis value"@en .
 # 
@@ -378,6 +385,22 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/poso/BluetoothReceiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/BluetoothReceiver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/RFLandmark> .
 <http://purl.org/poso/BluetoothReceiver> <http://www.w3.org/2000/01/rdf-schema#label> "Bluetooth receiver"@en .
+# 
+# http://purl.org/poso/CalibrationMagnitudeProcedure
+<http://purl.org/poso/CalibrationMagnitudeProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/CalibrationMagnitudeProcedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/CalibrationProcedure> .
+<http://purl.org/poso/CalibrationMagnitudeProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Calibration magnitude procedure"@en .
+# 
+# http://purl.org/poso/CalibrationOffsetProcedure
+<http://purl.org/poso/CalibrationOffsetProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/CalibrationOffsetProcedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/CalibrationProcedure> .
+<http://purl.org/poso/CalibrationOffsetProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Calibration offset procedure"@en .
+# 
+# http://purl.org/poso/CalibrationProcedure
+<http://purl.org/poso/CalibrationProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/CalibrationProcedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Procedure> .
+<http://purl.org/poso/CalibrationProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "Calibration is the act of using sensor data obtained by a user to configure a system to output data with a reliable result."@en .
+<http://purl.org/poso/CalibrationProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Calibration procedure"@en .
 # 
 # http://purl.org/poso/CellIdentification
 <http://purl.org/poso/CellIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -772,6 +795,13 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/poso/Velocity> <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/Velocity> .
 <http://purl.org/poso/Velocity> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear or angular velocity of a feature."@en .
 <http://purl.org/poso/Velocity> <http://www.w3.org/2000/01/rdf-schema#label> "Velocity"@en .
+# 
+# http://purl.org/poso/VirtualLandmark
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Landmark> .
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/2000/01/rdf-schema#comment> "A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors."@en .
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual landmark"@en .
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/2004/02/skos/core#example> "An example of a virtual landmark is a marker at a specific location."@en .
 # 
 # http://purl.org/poso/VisualInput
 <http://purl.org/poso/VisualInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
