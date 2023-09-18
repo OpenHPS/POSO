@@ -265,7 +265,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 :pitch rdf:type owl:ObjectProperty ,
                 owl:FunctionalProperty ;
        rdfs:domain :EulerOrientation ;
-       rdfs:range rdfs:Class ;
+       rdfs:range owl:Thing ;
        rdfs:comment "Pitch is the rotation around the x-axis with respect to the object the yaw applies to."@en ;
        rdfs:label "pitch"@en .
 
@@ -274,7 +274,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 :roll rdf:type owl:ObjectProperty ,
                owl:FunctionalProperty ;
       rdfs:domain :EulerOrientation ;
-      rdfs:range rdfs:Class ;
+      rdfs:range owl:Thing ;
       rdfs:comment "Roll is the rotation around the y-axis with respect to the object the roll applies to."@en ;
       rdfs:label "roll"@en .
 
@@ -283,7 +283,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 :scalar rdf:type owl:ObjectProperty ,
                  owl:FunctionalProperty ;
         rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
-        rdfs:range rdfs:Class ;
+        rdfs:range owl:Thing ;
         rdfs:label "scalar"@en ;
         skos:altLabel "w" .
 
@@ -292,7 +292,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 :xAxisValue rdf:type owl:ObjectProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
-            rdfs:range rdfs:Class ;
+            rdfs:range owl:Thing ;
             rdfs:comment "Quantitative result value along the X-axis of a spatial sensor or result."@en ;
             rdfs:label "x-axis value"@en .
 
@@ -310,7 +310,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 :yaw rdf:type owl:ObjectProperty ,
               owl:FunctionalProperty ;
      rdfs:domain :EulerOrientation ;
-     rdfs:range rdfs:Class ;
+     rdfs:range owl:Thing ;
      rdfs:comment "Yaw is the rotation around the z-axis with respect to the object the yaw applies to."@en ;
      rdfs:label "yaw"@en .
 
@@ -319,7 +319,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 :zAxisValue rdf:type owl:ObjectProperty ,
                      owl:FunctionalProperty ;
             rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
-            rdfs:range rdfs:Class ;
+            rdfs:range owl:Thing ;
             rdfs:comment "Quantitative result value along the Z-axis of a spatial sensor."@en ;
             rdfs:label "z-axis value"@en .
 
