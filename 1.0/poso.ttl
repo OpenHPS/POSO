@@ -17,7 +17,7 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2023-01-26T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2023-09-18T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
@@ -242,6 +242,14 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                          "is velocity of"@en .
 
 
+###  http://purl.org/poso/madeByProcedure
+:madeByProcedure rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://www.w3.org/ns/ssn/Input> ;
+                 rdfs:range <http://www.w3.org/ns/sosa/Procedure> ;
+                 rdfs:comment "Input type outputted by another procedure"@en ;
+                 rdfs:label "made by procecure"@en .
+
+
 ###  http://purl.org/poso/madeBySystem
 :madeBySystem rdf:type owl:ObjectProperty ;
               rdfs:domain <http://www.w3.org/ns/sosa/Observation> ;
@@ -423,6 +431,25 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 :BluetoothReceiver rdf:type owl:Class ;
                    rdfs:subClassOf :RFLandmark ;
                    rdfs:label "Bluetooth receiver"@en .
+
+
+###  http://purl.org/poso/CalibrationMagnitudeProcedure
+:CalibrationMagnitudeProcedure rdf:type owl:Class ;
+                               rdfs:subClassOf :CalibrationProcedure ;
+                               rdfs:label "Calibration magnitude procedure"@en .
+
+
+###  http://purl.org/poso/CalibrationOffsetProcedure
+:CalibrationOffsetProcedure rdf:type owl:Class ;
+                            rdfs:subClassOf :CalibrationProcedure ;
+                            rdfs:label "Calibration offset procedure"@en .
+
+
+###  http://purl.org/poso/CalibrationProcedure
+:CalibrationProcedure rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
+                      rdfs:comment "Calibration is the act of using sensor data obtained by a user to configure a system to output data with a reliable result."@en ;
+                      rdfs:label "Calibration procedure"@en .
 
 
 ###  http://purl.org/poso/CellIdentification
@@ -867,6 +894,14 @@ skos:altLabel rdf:type owl:AnnotationProperty .
           <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/Velocity> ;
           rdfs:comment "Linear or angular velocity of a feature."@en ;
           rdfs:label "Velocity"@en .
+
+
+###  http://purl.org/poso/VirtualLandmark
+:VirtualLandmark rdf:type owl:Class ;
+                 rdfs:subClassOf :Landmark ;
+                 rdfs:comment "A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors."@en ;
+                 rdfs:label "Virtual landmark"@en ;
+                 skos:example "An example of a virtual landmark is a marker at a specific location."@en .
 
 
 ###  http://purl.org/poso/VisualInput
