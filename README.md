@@ -1,4 +1,9 @@
 # POSO: A Generic Positioning System Ontology
+
+<div style="margin-left: auto; margin-right: auto; width: 30%">
+    <img src="./docs/images/logo.svg" width="100%">
+</div>
+
 *POSO is a generic ontology positioning system ontology. Other than many geospatial ontologies, POSO focuses on the semantics needed to express a positioning system, their techiques and the location data along with other information it can output.*
 ## Repository Contents
 - `/1.0/`: POSO 1.0 ontology and related modules
