@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/common/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/common/","name":"Positioning System Ontology Common Technologies, Algorithms and Systems", "headline":"The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.", "datePublished":"2023-01-16T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/common/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/common/","name":"Positioning System Ontology Common Technologies, Algorithms and Systems", "headline":"The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.", "datePublished":"2023-10-28T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology Common Technologies, Algorithms and Systems</h1>
-<h2>Release 2023-01-16T00:00:00</h2>
+<h2>Release 2023-10-28T00:00:00</h2>
 
 
 <dl>
@@ -97,7 +97,22 @@ This ontology has the following classes and properties.</span>
       <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
    </li>
    <li>
+      <a href="#EddystoneEID" title="http://purl.org/poso/common/EddystoneEID">Eddystone-EID</a>
+   </li>
+   <li>
+      <a href="#EddystoneTLM" title="http://purl.org/poso/common/EddystoneTLM">Eddystone-TLM</a>
+   </li>
+   <li>
+      <a href="#EddystoneUID" title="http://purl.org/poso/common/EddystoneUID">Eddystone-UID</a>
+   </li>
+   <li>
+      <a href="#EddystoneURL" title="http://purl.org/poso/common/EddystoneURL">Eddystone-URL</a>
+   </li>
+   <li>
       <a href="#iBeacon" title="http://purl.org/poso/common/iBeacon">iBeacon</a>
+   </li>
+   <li>
+      <a href="#SemBeacon" title="http://purl.org/poso/common/SemBeacon">SemBeacon</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
@@ -221,7 +236,22 @@ This section provides details for each class and property defined by Positioning
          <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
       </li>
       <li>
+         <a href="#EddystoneEID" title="http://purl.org/poso/common/EddystoneEID">Eddystone-EID</a>
+      </li>
+      <li>
+         <a href="#EddystoneTLM" title="http://purl.org/poso/common/EddystoneTLM">Eddystone-TLM</a>
+      </li>
+      <li>
+         <a href="#EddystoneUID" title="http://purl.org/poso/common/EddystoneUID">Eddystone-UID</a>
+      </li>
+      <li>
+         <a href="#EddystoneURL" title="http://purl.org/poso/common/EddystoneURL">Eddystone-URL</a>
+      </li>
+      <li>
          <a href="#iBeacon" title="http://purl.org/poso/common/iBeacon">iBeacon</a>
+      </li>
+      <li>
+         <a href="#SemBeacon" title="http://purl.org/poso/common/SemBeacon">SemBeacon</a>
       </li>
    </ul>
    <div class="entity" id="AltBeacon">
@@ -262,6 +292,83 @@ This section provides details for each class and property defined by Positioning
                title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EddystoneEID" title="http://purl.org/poso/common/EddystoneEID">Eddystone-EID</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EddystoneTLM" title="http://purl.org/poso/common/EddystoneTLM">Eddystone-TLM</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EddystoneUID" title="http://purl.org/poso/common/EddystoneUID">Eddystone-UID</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EddystoneURL" title="http://purl.org/poso/common/EddystoneURL">Eddystone-URL</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EddystoneEID">
+      <h3>Eddystone-EID<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EddystoneEID</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EddystoneTLM">
+      <h3>Eddystone-TLM<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EddystoneTLM</p>
+      <div class="comment">
+         <span class="markdown">Eddystone-TLM provides telemetry information. It can include the battery voltage, temperature, advertisement count and uptime.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EddystoneUID">
+      <h3>Eddystone-UID<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EddystoneUID</p>
+      <div class="comment">
+         <span class="markdown">Eddystone UID provides a 10 byte namespace and 6 byte instance identifier.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EddystoneURL">
+      <h3>Eddystone-URL<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EddystoneURL</p>
+      <div class="comment">
+         <span class="markdown">Eddystone-URL can broadcast a short encoded URL.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="iBeacon">
@@ -287,6 +394,23 @@ This section provides details for each class and property defined by Positioning
             <a href="#major" title="http://purl.org/poso/common/major">major</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#minor" title="http://purl.org/poso/common/minor">minor</a>
             <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SemBeacon">
+      <h3>SemBeacon<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/SemBeacon</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://purl.org/poso/BluetoothBeacon"
+               target="_blank"
+               title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -343,6 +467,12 @@ This section provides details for each class and property defined by Positioning
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
          </dl>
       </div>
    </div>
@@ -368,6 +498,12 @@ This section provides details for each class and property defined by Positioning
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
          </dl>
       </div>
    </div>
@@ -389,6 +525,8 @@ This section provides details for each class and property defined by Positioning
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#hexBinary">hex binary</a>
             </dd>
+            <dt>has range</dt>
+            <dd/>
          </dl>
       </div>
    </div>

@@ -27,14 +27,31 @@
   } ]
 }, {
   "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#hexBinary"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid6"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "http://www.w3.org/2001/XMLSchema#maxLength" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "32"
+  } ]
+}, {
+  "@id" : "_:genid7",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/rdfp/GraphDescription"
   } ],
   "https://w3id.org/rdfp/validationRule" : [ {
-    "@id" : "_:genid5"
+    "@id" : "_:genid8"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid8",
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://www.w3.org/ns/shacl#NodeShape"
   } ],
@@ -136,7 +153,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-01-16T00:00:00"
+    "@value" : "2023-10-28T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -165,7 +182,7 @@
     "@value" : "Absolute position output"
   } ],
   "https://w3id.org/rdfp/presentedBy" : [ {
-    "@id" : "_:genid4"
+    "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/AltBeacon",
@@ -266,6 +283,58 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/poso/BluetoothBeacon"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/common/EddystoneEID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Eddystone-EID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/common/EddystoneBeacon"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/common/EddystoneTLM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Eddystone-TLM provides telemetry information. It can include the battery voltage, temperature, advertisement count and uptime."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Eddystone-TLM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/common/EddystoneBeacon"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/common/EddystoneUID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Eddystone UID provides a 10 byte namespace and 6 byte instance identifier."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Eddystone-UID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/common/EddystoneBeacon"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/common/EddystoneURL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Eddystone-URL can broadcast a short encoded URL."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Eddystone-URL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/common/EddystoneBeacon"
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/FootMountedPDR",
@@ -634,6 +703,19 @@
     "@value" : "Support Vector Machine fingerprinting"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/common/SemBeacon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SemBeacon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://purl.org/sembeacon/SemBeacon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/BluetoothBeacon"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/common/SonyNimway",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -705,6 +787,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "major"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/minor",
@@ -717,6 +802,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "minor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
   "@id" : "http://purl.org/poso/common/proximityUUID",
@@ -727,6 +815,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "proximity UUID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid4"
   } ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",

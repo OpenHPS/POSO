@@ -14,7 +14,7 @@
                                 <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                                 <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                                 <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                                <http://purl.org/dc/terms/modified> "2023-01-16T00:00:00"^^xsd:dateTime ;
+                                <http://purl.org/dc/terms/modified> "2023-10-28T00:00:00"^^xsd:dateTime ;
                                 <http://purl.org/dc/terms/title> "Positioning System Ontology Common Technologies, Algorithms and Systems"@en ;
                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "posoc" ;
                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/common/"^^xsd:anyURI .
@@ -108,6 +108,7 @@
                      owl:onProperty :major ;
                      owl:someValuesFrom xsd:integer
                    ] ;
+       rdfs:range xsd:int ;
        rdfs:label "major"@en .
 
 
@@ -118,6 +119,7 @@
                      owl:onProperty :minor ;
                      owl:someValuesFrom xsd:integer
                    ] ;
+       rdfs:range xsd:int ;
        rdfs:label "minor"@en .
 
 
@@ -127,6 +129,12 @@
                              owl:onProperty :proximityUUID ;
                              owl:someValuesFrom xsd:hexBinary
                            ] ;
+               rdfs:range [ rdf:type rdfs:Datatype ;
+                            owl:onDatatype xsd:hexBinary ;
+                            owl:withRestrictions ( [ xsd:maxLength "32"^^xsd:int
+                                                   ]
+                                                 )
+                          ] ;
                rdfs:label "proximity UUID"@en .
 
 
@@ -210,6 +218,40 @@
                  rdfs:seeAlso <http://dbpedia.org/resource/Eddystone_(Google)> .
 
 
+###  http://purl.org/poso/common/EddystoneEID
+:EddystoneEID rdf:type owl:Class ;
+              rdfs:subClassOf :EddystoneBeacon ;
+              rdfs:label "Eddystone-EID"@en .
+
+
+###  http://purl.org/poso/common/EddystoneTLM
+:EddystoneTLM rdf:type owl:Class ;
+              rdfs:subClassOf :EddystoneBeacon ;
+              rdfs:comment "Eddystone-TLM provides telemetry information. It can include the battery voltage, temperature, advertisement count and uptime."@en ;
+              rdfs:label "Eddystone-TLM"@en .
+
+
+###  http://purl.org/poso/common/EddystoneUID
+:EddystoneUID rdf:type owl:Class ;
+              rdfs:subClassOf :EddystoneBeacon ;
+              rdfs:comment "Eddystone UID provides a 10 byte namespace and 6 byte instance identifier."@en ;
+              rdfs:label "Eddystone-UID"@en .
+
+
+###  http://purl.org/poso/common/EddystoneURL
+:EddystoneURL rdf:type owl:Class ;
+              rdfs:subClassOf :EddystoneBeacon ;
+              rdfs:comment "Eddystone-URL can broadcast a short encoded URL."@en ;
+              rdfs:label "Eddystone-URL"@en .
+
+
+###  http://purl.org/poso/common/SemBeacon
+:SemBeacon rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.org/poso/BluetoothBeacon> ;
+           rdfs:label "SemBeacon"@en ;
+           rdfs:seeAlso <http://purl.org/sembeacon/SemBeacon> .
+
+
 ###  http://purl.org/poso/common/iBeacon
 :iBeacon rdf:type owl:Class ;
          rdfs:subClassOf <http://purl.org/poso/BluetoothBeacon> ;
@@ -235,12 +277,12 @@
                                  <http://purl.org/poso/PositionOutput> ,
                                  <https://w3id.org/rdfp/GraphDescription> ;
                         rdfs:label "Absolute position output"@en ;
-                        <https://w3id.org/rdfp/presentedBy> _:genid4 .
+                        <https://w3id.org/rdfp/presentedBy> _:genid7 .
 
-_:genid4 rdf:type <https://w3id.org/rdfp/GraphDescription> ;
-          <https://w3id.org/rdfp/validationRule> _:genid5 .
+_:genid7 rdf:type <https://w3id.org/rdfp/GraphDescription> ;
+          <https://w3id.org/rdfp/validationRule> _:genid8 .
 
-_:genid5 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
+_:genid8 rdf:type <http://www.w3.org/ns/shacl#NodeShape> ;
           <http://www.w3.org/ns/shacl#targetClass> <http://purl.org/poso/AbsolutePosition> .
 
 

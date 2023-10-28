@@ -20,7 +20,7 @@
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-16T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-28T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology Common Technologies, Algorithms and Systems</terms:title>
         <vann:preferredNamespacePrefix>posoc</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/common/</vann:preferredNamespaceUri>
@@ -197,6 +197,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">major</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -213,6 +214,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:label xml:lang="en">minor</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -228,6 +230,16 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
             </owl:Restriction>
         </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</xsd:maxLength>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
         <rdfs:label xml:lang="en">proximity UUID</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -374,6 +386,60 @@
     
 
 
+    <!-- http://purl.org/poso/common/EddystoneEID -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/EddystoneEID">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/common/EddystoneBeacon"/>
+        <rdfs:label xml:lang="en">Eddystone-EID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/EddystoneTLM -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/EddystoneTLM">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/common/EddystoneBeacon"/>
+        <rdfs:comment xml:lang="en">Eddystone-TLM provides telemetry information. It can include the battery voltage, temperature, advertisement count and uptime.</rdfs:comment>
+        <rdfs:label xml:lang="en">Eddystone-TLM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/EddystoneUID -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/EddystoneUID">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/common/EddystoneBeacon"/>
+        <rdfs:comment xml:lang="en">Eddystone UID provides a 10 byte namespace and 6 byte instance identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">Eddystone-UID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/EddystoneURL -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/EddystoneURL">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/common/EddystoneBeacon"/>
+        <rdfs:comment xml:lang="en">Eddystone-URL can broadcast a short encoded URL.</rdfs:comment>
+        <rdfs:label xml:lang="en">Eddystone-URL</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/SemBeacon -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/SemBeacon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/BluetoothBeacon"/>
+        <rdfs:label xml:lang="en">SemBeacon</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.org/sembeacon/SemBeacon"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/common/iBeacon -->
 
 
@@ -419,13 +485,13 @@
         <rdf:type rdf:resource="http://purl.org/poso/PositionOutput"/>
         <rdf:type rdf:resource="https://w3id.org/rdfp/GraphDescription"/>
         <rdfs:label xml:lang="en">Absolute position output</rdfs:label>
-        <rdfp:presentedBy rdf:nodeID="genid4"/>
+        <rdfp:presentedBy rdf:nodeID="genid7"/>
     </owl:NamedIndividual>
-    <rdf:Description rdf:nodeID="genid4">
+    <rdf:Description rdf:nodeID="genid7">
         <rdf:type rdf:resource="https://w3id.org/rdfp/GraphDescription"/>
-        <rdfp:validationRule rdf:nodeID="genid5"/>
+        <rdfp:validationRule rdf:nodeID="genid8"/>
     </rdf:Description>
-    <rdf:Description rdf:nodeID="genid5">
+    <rdf:Description rdf:nodeID="genid8">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
         <shacl:targetClass rdf:resource="http://purl.org/poso/AbsolutePosition"/>
     </rdf:Description>
