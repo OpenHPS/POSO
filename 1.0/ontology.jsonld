@@ -236,7 +236,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-09-18T00:00:00"
+    "@value" : "2023-11-16T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -913,6 +913,20 @@
     "@id" : "http://www.w3.org/ns/ssn/Deployment"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/OutdoorPositioningSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An outdoor positioning system defines a system that is used to determine a position outside a building without specifying the underlying technology."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Outdoor positioning system"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/PositioningSystem"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/PDR",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1085,6 +1099,20 @@
     "@id" : "http://www.w3.org/ns/sosa/Procedure"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/RelativeAcceleration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relative acceleration is a quantitative acceleration relative to another feature of interest."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Relative acceleration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/RelativePosition"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/RelativeAngle",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1251,6 +1279,20 @@
     "@id" : "http://www.w3.org/ns/sosa/Procedure"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/SensorInput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Sensor input is input data provided by a sosa:Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sensor input"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Input"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/TrackedFeature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1345,7 +1387,7 @@
     "@value" : "Visual input"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/Input"
+    "@id" : "http://purl.org/poso/SensorInput"
   } ]
 }, {
   "@id" : "http://purl.org/poso/VisualLandmark",
@@ -1664,9 +1706,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Indicates a relative position to be relative to another feature of interest."
+    "@value" : "Indicates a position or orientation to be relative to another feature of interest."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/poso/AbsolutePosition"
+  }, {
+    "@id" : "http://purl.org/poso/Orientation"
+  }, {
     "@id" : "http://purl.org/poso/RelativePosition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {

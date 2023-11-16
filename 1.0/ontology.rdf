@@ -22,7 +22,7 @@
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-18T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-16T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology</terms:title>
         <vann:preferredNamespacePrefix>poso</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/</vann:preferredNamespaceUri>
@@ -358,9 +358,11 @@
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/poso/isRelativeTo">
+        <rdfs:domain rdf:resource="http://purl.org/poso/AbsolutePosition"/>
+        <rdfs:domain rdf:resource="http://purl.org/poso/Orientation"/>
         <rdfs:domain rdf:resource="http://purl.org/poso/RelativePosition"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-        <rdfs:comment xml:lang="en">Indicates a relative position to be relative to another feature of interest.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates a position or orientation to be relative to another feature of interest.</rdfs:comment>
         <rdfs:label xml:lang="nl">is relatief met</rdfs:label>
         <rdfs:label xml:lang="en">is relative to</rdfs:label>
         <skos:example xml:lang="en">A person can have a relative distance to another feature of interest. When a feature is moving (i.e. when the geometry changes based on time) the distance remains relative to the feature and not the geometry at a specific point in time.</skos:example>
@@ -1040,6 +1042,17 @@
     
 
 
+    <!-- http://purl.org/poso/OutdoorPositioningSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/OutdoorPositioningSystem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningSystem"/>
+        <rdfs:comment xml:lang="en">An outdoor positioning system defines a system that is used to determine a position outside a building without specifying the underlying technology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Outdoor positioning system</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/PDR -->
 
 
@@ -1195,6 +1208,17 @@
     
 
 
+    <!-- http://purl.org/poso/RelativeAcceleration -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/RelativeAcceleration">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/RelativePosition"/>
+        <rdfs:comment xml:lang="en">A relative acceleration is a quantitative acceleration relative to another feature of interest.</rdfs:comment>
+        <rdfs:label xml:lang="en">Relative acceleration</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/RelativeAngle -->
 
 
@@ -1312,6 +1336,17 @@
     
 
 
+    <!-- http://purl.org/poso/SensorInput -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/SensorInput">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Input"/>
+        <rdfs:comment xml:lang="en">Sensor input is input data provided by a sosa:Sensor</rdfs:comment>
+        <rdfs:label xml:lang="en">Sensor input</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/TrackedFeature -->
 
 
@@ -1383,7 +1418,7 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/VisualInput">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Input"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/SensorInput"/>
         <rdfs:label xml:lang="en">Visual input</rdfs:label>
     </owl:Class>
     

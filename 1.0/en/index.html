@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2023-09-18T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2023-11-16T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release 2023-09-18T00:00:00</h2>
+<h2>Release 2023-11-16T00:00:00</h2>
 
 
 <dl>
@@ -213,6 +213,9 @@ This ontology has the following classes and properties.</span>
       <a href="#OutdoorDeployment" title="http://purl.org/poso/OutdoorDeployment">Outdoor deployment</a>
    </li>
    <li>
+      <a href="#OutdoorPositioningSystem" title="http://purl.org/poso/OutdoorPositioningSystem">Outdoor positioning system</a>
+   </li>
+   <li>
       <a href="#PDR" title="http://purl.org/poso/PDR">Pedestrian dead reckoning</a>
    </li>
    <li>
@@ -243,6 +246,9 @@ This ontology has the following classes and properties.</span>
       <a href="#RadioPropagation" title="http://purl.org/poso/RadioPropagation">Radio propagation</a>
    </li>
    <li>
+      <a href="#RelativeAcceleration" title="http://purl.org/poso/RelativeAcceleration">Relative acceleration</a>
+   </li>
+   <li>
       <a href="#RelativeAngle" title="http://purl.org/poso/RelativeAngle">Relative angle</a>
    </li>
    <li>
@@ -265,6 +271,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#SensorFusion" title="http://purl.org/poso/SensorFusion">Sensor fusion</a>
+   </li>
+   <li>
+      <a href="#SensorInput" title="http://purl.org/poso/SensorInput">Sensor input</a>
    </li>
    <li>
       <a href="#SLAM" title="http://purl.org/poso/SLAM">Simultaneous localisation and mapping</a>
@@ -508,6 +517,9 @@ This section provides details for each class and property defined by Positioning
          <a href="#OutdoorDeployment" title="http://purl.org/poso/OutdoorDeployment">Outdoor deployment</a>
       </li>
       <li>
+         <a href="#OutdoorPositioningSystem" title="http://purl.org/poso/OutdoorPositioningSystem">Outdoor positioning system</a>
+      </li>
+      <li>
          <a href="#PDR" title="http://purl.org/poso/PDR">Pedestrian dead reckoning</a>
       </li>
       <li>
@@ -538,6 +550,9 @@ This section provides details for each class and property defined by Positioning
          <a href="#RadioPropagation" title="http://purl.org/poso/RadioPropagation">Radio propagation</a>
       </li>
       <li>
+         <a href="#RelativeAcceleration" title="http://purl.org/poso/RelativeAcceleration">Relative acceleration</a>
+      </li>
+      <li>
          <a href="#RelativeAngle" title="http://purl.org/poso/RelativeAngle">Relative angle</a>
       </li>
       <li>
@@ -560,6 +575,9 @@ This section provides details for each class and property defined by Positioning
       </li>
       <li>
          <a href="#SensorFusion" title="http://purl.org/poso/SensorFusion">Sensor fusion</a>
+      </li>
+      <li>
+         <a href="#SensorInput" title="http://purl.org/poso/SensorInput">Sensor input</a>
       </li>
       <li>
          <a href="#SLAM" title="http://purl.org/poso/SLAM">Simultaneous localisation and mapping</a>
@@ -618,6 +636,7 @@ This section provides details for each class and property defined by Positioning
          <dt>is in domain of</dt>
          <dd>
             <a href="#inDeployment" title="http://purl.org/poso/inDeployment">in deployment</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isRelativeTo" title="http://purl.org/poso/isRelativeTo">is relative to</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1395,6 +1414,11 @@ This section provides details for each class and property defined by Positioning
             <sup class="type-c" title="class">c</sup>, <a href="#QuaternionOrientation" title="http://purl.org/poso/QuaternionOrientation">Quaternion orientation</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isRelativeTo" title="http://purl.org/poso/isRelativeTo">is relative to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasOrientation" title="http://purl.org/poso/hasOrientation">has orientation</a>
@@ -1418,6 +1442,24 @@ This section provides details for each class and property defined by Positioning
             <a href="http://www.w3.org/ns/ssn/Deployment"
                target="_blank"
                title="http://www.w3.org/ns/ssn/Deployment">deployment</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OutdoorPositioningSystem">
+      <h3>Outdoor positioning system<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/OutdoorPositioningSystem</p>
+      <div class="comment">
+         <span class="markdown">An outdoor positioning system defines a system that is used to determine a position outside a building without specifying the underlying technology.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PositioningSystem" title="http://purl.org/poso/PositioningSystem">Positioning system</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1551,6 +1593,7 @@ This section provides details for each class and property defined by Positioning
             <sup class="type-c" title="class">c</sup>, <a href="#IntegratedPositioningSystem"
                title="http://purl.org/poso/IntegratedPositioningSystem">Integrated positioning system</a>
             <sup class="type-c" title="class">c</sup>, <a href="#OpticalPositioningSystem" title="http://purl.org/poso/OpticalPositioningSystem">Optical positioning system</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OutdoorPositioningSystem" title="http://purl.org/poso/OutdoorPositioningSystem">Outdoor positioning system</a>
             <sup class="type-c" title="class">c</sup>, <a href="#SatellitePositioningSystem" title="http://purl.org/poso/SatellitePositioningSystem">Satellite positioning system</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -1648,6 +1691,24 @@ This section provides details for each class and property defined by Positioning
          </dd>
       </dl>
    </div>
+   <div class="entity" id="RelativeAcceleration">
+      <h3>Relative acceleration<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RelativeAcceleration</p>
+      <div class="comment">
+         <span class="markdown">A relative acceleration is a quantitative acceleration relative to another feature of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relative position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="RelativeAngle">
       <h3>Relative angle<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1717,7 +1778,8 @@ This section provides details for each class and property defined by Positioning
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#RelativeAngle" title="http://purl.org/poso/RelativeAngle">Relative angle</a>
+            <a href="#RelativeAcceleration" title="http://purl.org/poso/RelativeAcceleration">Relative acceleration</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RelativeAngle" title="http://purl.org/poso/RelativeAngle">Relative angle</a>
             <sup class="type-c" title="class">c</sup>, <a href="#RelativeDistance" title="http://purl.org/poso/RelativeDistance">Relative distance</a>
             <sup class="type-c" title="class">c</sup>, <a href="#RelativeSignalStrength" title="http://purl.org/poso/RelativeSignalStrength">Relative signal strength</a>
             <sup class="type-c" title="class">c</sup>, <a href="#RelativeVelocity" title="http://purl.org/poso/RelativeVelocity">Relative velocity</a>
@@ -1854,6 +1916,30 @@ This section provides details for each class and property defined by Positioning
             <a href="#HighLevelFusion" title="http://purl.org/poso/HighLevelFusion">High level sensor fusion</a>
             <sup class="type-c" title="class">c</sup>, <a href="#LowLevelFusion" title="http://purl.org/poso/LowLevelFusion">Low level sensor fusion</a>
             <sup class="type-c" title="class">c</sup>, <a href="#MidLevelFusion" title="http://purl.org/poso/MidLevelFusion">Mid level sensor fusion</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SensorInput">
+      <h3>Sensor input<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/SensorInput</p>
+      <div class="comment">
+         <span class="markdown">Sensor input is input data provided by a sosa:Sensor</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Input"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Input">input</a>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#VisualInput" title="http://purl.org/poso/VisualInput">Visual input</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2023,9 +2109,8 @@ This section provides details for each class and property defined by Positioning
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://www.w3.org/ns/ssn/Input"
-               target="_blank"
-               title="http://www.w3.org/ns/ssn/Input">input</a>
+            <a href="#SensorInput" title="http://purl.org/poso/SensorInput">Sensor input</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -2601,7 +2686,7 @@ This section provides details for each class and property defined by Positioning
       <p>
          <strong>IRI:</strong> http://purl.org/poso/isRelativeTo</p>
       <div class="comment">
-         <span class="markdown">Indicates a relative position to be relative to another feature of interest.</span>
+         <span class="markdown">Indicates a position or orientation to be relative to another feature of interest.</span>
       </div>
       <dl>
          <dt>Example</dt>
@@ -2612,6 +2697,14 @@ This section provides details for each class and property defined by Positioning
       <div class="description">
          <dl>
             <dt>has domain</dt>
+            <dd>
+               <a href="#AbsolutePosition" title="http://purl.org/poso/AbsolutePosition">Absolute position</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dd>
                <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relative position</a>
                <sup class="type-c" title="class">c</sup>
