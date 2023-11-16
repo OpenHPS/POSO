@@ -17,7 +17,7 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2023-09-18T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2023-11-16T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
@@ -227,9 +227,11 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/poso/isRelativeTo
 :isRelativeTo rdf:type owl:ObjectProperty ;
-              rdfs:domain :RelativePosition ;
+              rdfs:domain :AbsolutePosition ,
+                          :Orientation ,
+                          :RelativePosition ;
               rdfs:range <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
-              rdfs:comment "Indicates a relative position to be relative to another feature of interest."@en ;
+              rdfs:comment "Indicates a position or orientation to be relative to another feature of interest."@en ;
               rdfs:label "is relatief met"@nl ,
                          "is relative to"@en ;
               skos:example "A person can have a relative distance to another feature of interest. When a feature is moving (i.e. when the geometry changes based on time) the distance remains relative to the feature and not the geometry at a specific point in time."@en .
@@ -679,6 +681,13 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                    rdfs:label "Outdoor deployment"@en .
 
 
+###  http://purl.org/poso/OutdoorPositioningSystem
+:OutdoorPositioningSystem rdf:type owl:Class ;
+                          rdfs:subClassOf :PositioningSystem ;
+                          rdfs:comment "An outdoor positioning system defines a system that is used to determine a position outside a building without specifying the underlying technology."@en ;
+                          rdfs:label "Outdoor positioning system"@en .
+
+
 ###  http://purl.org/poso/PDR
 :PDR rdf:type owl:Class ;
      rdfs:subClassOf :DeadReckoning ;
@@ -780,6 +789,13 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                   rdfs:label "Radio propagation"@en .
 
 
+###  http://purl.org/poso/RelativeAcceleration
+:RelativeAcceleration rdf:type owl:Class ;
+                      rdfs:subClassOf :RelativePosition ;
+                      rdfs:comment "A relative acceleration is a quantitative acceleration relative to another feature of interest."@en ;
+                      rdfs:label "Relative acceleration"@en .
+
+
 ###  http://purl.org/poso/RelativeAngle
 :RelativeAngle rdf:type owl:Class ;
                rdfs:subClassOf :RelativePosition ;
@@ -859,6 +875,13 @@ skos:altLabel rdf:type owl:AnnotationProperty .
               rdfs:label "Sensor fusion"@en .
 
 
+###  http://purl.org/poso/SensorInput
+:SensorInput rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/ssn/Input> ;
+             rdfs:comment "Sensor input is input data provided by a sosa:Sensor"@en ;
+             rdfs:label "Sensor input"@en .
+
+
 ###  http://purl.org/poso/TrackedFeature
 :TrackedFeature rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
@@ -906,7 +929,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/poso/VisualInput
 :VisualInput rdf:type owl:Class ;
-             rdfs:subClassOf <http://www.w3.org/ns/ssn/Input> ;
+             rdfs:subClassOf :SensorInput ;
              rdfs:label "Visual input"@en .
 
 
