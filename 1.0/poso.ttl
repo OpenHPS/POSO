@@ -17,7 +17,7 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2023-11-16T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2023-11-30T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
@@ -674,6 +674,12 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                         "Orientation"@en .
 
 
+###  http://purl.org/poso/OrientationOutput
+:OrientationOutput rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/ns/ssn/Output> ;
+                   rdfs:label "Orientation output"@en .
+
+
 ###  http://purl.org/poso/OutdoorDeployment
 :OutdoorDeployment rdf:type owl:Class ;
                    rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
@@ -922,9 +928,10 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 ###  http://purl.org/poso/VirtualLandmark
 :VirtualLandmark rdf:type owl:Class ;
                  rdfs:subClassOf :Landmark ;
-                 rdfs:comment "A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors."@en ;
+                 rdfs:comment "A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors without additional context."@en ;
                  rdfs:label "Virtual landmark"@en ;
-                 skos:example "An example of a virtual landmark is a marker at a specific location."@en .
+                 skos:example "An example of a virtual landmark is a marker at a specific location."@en ,
+                              "Image features can be considered landmarks as they are used by odometry and VSLAM algorithms."@en .
 
 
 ###  http://purl.org/poso/VisualInput
