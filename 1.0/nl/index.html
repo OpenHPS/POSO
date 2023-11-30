@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2023-11-16T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2023-11-30T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release  2023-11-16T00:00:00</h2>
+<h2>Release  2023-11-30T00:00:00</h2>
 
 
 <dl>
@@ -205,6 +205,9 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
    </li>
    <li>
       <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientatie</a>
+   </li>
+   <li>
+      <a href="#OrientationOutput" title="http://purl.org/poso/OrientationOutput">Orientation output</a>
    </li>
    <li>
       <a href="#OutdoorDeployment" title="http://purl.org/poso/OutdoorDeployment">Outdoor deployment</a>
@@ -509,6 +512,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </li>
       <li>
          <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientatie</a>
+      </li>
+      <li>
+         <a href="#OrientationOutput" title="http://purl.org/poso/OrientationOutput">Orientation output</a>
       </li>
       <li>
          <a href="#OutdoorDeployment" title="http://purl.org/poso/OutdoorDeployment">Outdoor deployment</a>
@@ -1394,6 +1400,22 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
+   <div class="entity" id="OrientationOutput">
+      <h3>Orientation output<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/OrientationOutput</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Output"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Output">output</a>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="OutdoorDeployment">
       <h3>Outdoor deployment<sup class="type-c" title="klasse">c</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
@@ -2083,12 +2105,15 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       <p>
          <strong>IRI:</strong> http://purl.org/poso/VirtualLandmark</p>
       <div class="comment">
-         <span class="markdown">A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors.</span>
+         <span class="markdown">A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors without additional context.</span>
       </div>
       <dl>
          <dt>Voorbeeld</dt>
          <dd>
             <pre>An example of a virtual landmark is a marker at a specific location.</pre>
+         </dd>
+         <dd>
+            <pre>Image features can be considered landmarks as they are used by odometry and VSLAM algorithms.</pre>
          </dd>
       </dl>
       <dl class="description">

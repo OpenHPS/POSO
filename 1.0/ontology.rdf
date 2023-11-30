@@ -22,7 +22,7 @@
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-16T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-30T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology</terms:title>
         <vann:preferredNamespacePrefix>poso</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/</vann:preferredNamespaceUri>
@@ -1031,6 +1031,16 @@
     
 
 
+    <!-- http://purl.org/poso/OrientationOutput -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/OrientationOutput">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Output"/>
+        <rdfs:label xml:lang="en">Orientation output</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/OutdoorDeployment -->
 
 
@@ -1407,9 +1417,10 @@
 
     <owl:Class rdf:about="http://purl.org/poso/VirtualLandmark">
         <rdfs:subClassOf rdf:resource="http://purl.org/poso/Landmark"/>
-        <rdfs:comment xml:lang="en">A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors without additional context.</rdfs:comment>
         <rdfs:label xml:lang="en">Virtual landmark</rdfs:label>
         <skos:example xml:lang="en">An example of a virtual landmark is a marker at a specific location.</skos:example>
+        <skos:example xml:lang="en">Image features can be considered landmarks as they are used by odometry and VSLAM algorithms.</skos:example>
     </owl:Class>
     
 

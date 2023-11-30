@@ -41,16 +41,16 @@
         "value" : "2023-10-28T00:00:00",
         "type" : "label"
       } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "undefined",
-        "value" : "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology",
-        "type" : "label"
-      } ],
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "en",
         "value" : "The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {

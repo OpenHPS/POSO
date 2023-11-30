@@ -236,7 +236,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2023-11-16T00:00:00"
+    "@value" : "2023-11-30T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -899,6 +899,16 @@
     "@id" : "http://www.w3.org/ns/sosa/Result"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/OrientationOutput",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Orientation output"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Output"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/OutdoorDeployment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1366,7 +1376,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors."
+    "@value" : "A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors without additional context."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1378,6 +1388,9 @@
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "An example of a virtual landmark is a marker at a specific location."
+  }, {
+    "@language" : "en",
+    "@value" : "Image features can be considered landmarks as they are used by odometry and VSLAM algorithms."
   } ]
 }, {
   "@id" : "http://purl.org/poso/VisualInput",
