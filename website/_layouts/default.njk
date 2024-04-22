@@ -3,9 +3,13 @@
   {% include "head.njk" %}
 
   <body>
-    <section class="content" id="content">
-      {{ content | safe }}
-    </section>
+    {% include "header.njk" %}
+
+    <main>
+      <section class="py-5 container">
+        {{ content | safe }}
+      </section>
+    </main>
 
     {% include "footer.njk" %}
   </body>

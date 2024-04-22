@@ -1,0 +1,27 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+h2:not(:first-child) {
+    margin-top: 1em;
+}
+
+p.abstract {
+    font-weight: bold;
+}
+
+.btn.btn-icon i {
+    margin-right: 0.5em;
+}
+
+.card-header {
+    position: relative;
+}
+
+.card-header img.profile {
+    height: calc(100% + 2px);
+    display: block;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    border: solid 1px var(--bs-border-color-translucent);
+    border-radius: 0 var(--bs-card-inner-border-radius) 0 0;
+}

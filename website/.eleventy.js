@@ -6,7 +6,6 @@ const markdownIt = require("markdown-it");
 const pluginTOC = require('eleventy-plugin-toc');
 const pluginSASS = require("eleventy-sass");
 const pluginNavigation = require("@11ty/eleventy-navigation");
-const pluginHTMLValidate = require('eleventy-plugin-html-validate');
 
 const nunjucks = require("nunjucks");
 const markdown = require('nunjucks-markdown');
