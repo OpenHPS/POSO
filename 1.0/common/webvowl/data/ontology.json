@@ -126,10 +126,10 @@
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
     "id" : "22",
@@ -248,16 +248,16 @@
     "instances" : 0,
     "id" : "20"
   }, {
+    "iri" : "http://purl.org/poso/LocationBasedService",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "id" : "21"
+  }, {
     "iri" : "http://purl.org/poso/common/iBeacon",
     "baseIri" : "http://purl.org/poso/common",
     "instances" : 0,
     "id" : "12",
     "superClasses" : [ "2" ]
-  }, {
-    "iri" : "http://purl.org/poso/LocationBasedService",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "21"
   }, {
     "iri" : "https://w3id.org/rdfp/GraphDescription",
     "baseIri" : "https://w3id.org/rdfp",
