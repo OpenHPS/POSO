@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2023-11-30T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2024-06-20T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release  2023-11-30T00:00:00</h2>
+<h2>Release  2024-06-20T00:00:00</h2>
 
 
 <dl>
@@ -138,6 +138,9 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
    </li>
    <li>
       <a href="#AngularAcceleration" title="http://purl.org/poso/AngularAcceleration">Draaiversnelling</a>
+   </li>
+   <li>
+      <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
    </li>
    <li>
       <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
@@ -370,6 +373,9 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
       <a href="#observesType" title="http://purl.org/poso/observesType">observeert type</a>
    </li>
    <li>
+      <a href="#order" title="http://purl.org/poso/order">order</a>
+   </li>
+   <li>
       <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
    </li>
    <li>
@@ -389,6 +395,25 @@ Deze ontologie heeft de volgende klassen en eigenschappen.</span>
    </li>
    <li>
       <a href="#zAxisValue" title="http://purl.org/poso/zAxisValue">z-axis value</a>
+   </li>
+</ul><h4>Concrete exemplaren</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#XYZ" title="http://purl.org/poso/XYZ">X-Y-Z</a>
+   </li>
+   <li>
+      <a href="#XZY" title="http://purl.org/poso/XZY">X-Z-Y</a>
+   </li>
+   <li>
+      <a href="#YXZ" title="http://purl.org/poso/YXZ">Y-X-Z</a>
+   </li>
+   <li>
+      <a href="#YZX" title="http://purl.org/poso/YZX">Y-Z-X</a>
+   </li>
+   <li>
+      <a href="#ZXY" title="http://purl.org/poso/ZXY">Z-X-Y</a>
+   </li>
+   <li>
+      <a href="#ZYX" title="http://purl.org/poso/ZYX">Z-Y-X</a>
    </li>
 </ul><iframe align="center" width="100%" height ="500px" src="../webvowl/index.html"></iframe> 
 </div>
@@ -445,6 +470,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
       </li>
       <li>
          <a href="#AngularAcceleration" title="http://purl.org/poso/AngularAcceleration">Draaiversnelling</a>
+      </li>
+      <li>
+         <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
       </li>
       <li>
          <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
@@ -916,6 +944,34 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
       </dl>
    </div>
+   <div class="entity" id="EulerOrder">
+      <h3>Euler order<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/EulerOrder</p>
+      <div class="comment">
+         <span class="markdown">The order in which to apply Euler rotations.</span>
+      </div>
+      <dl class="description">
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#order" title="http://purl.org/poso/order">order</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+         <dt>heeft leden</dt>
+         <dd>
+            <a href="#XYZ" title="http://purl.org/poso/XYZ">X-Y-Z</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#XZY" title="http://purl.org/poso/XZY">X-Z-Y</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#YXZ" title="http://purl.org/poso/YXZ">Y-X-Z</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#YZX" title="http://purl.org/poso/YZX">Y-Z-X</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#ZXY" title="http://purl.org/poso/ZXY">Z-X-Y</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#ZYX" title="http://purl.org/poso/ZYX">Z-Y-X</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="EulerOrientation">
       <h3>Euler orientation<sup class="type-c" title="klasse">c</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
@@ -931,7 +987,8 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dd>
          <dt>is in domein van</dt>
          <dd>
-            <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
+            <a href="#order" title="http://purl.org/poso/order">order</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
             <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#roll" title="http://purl.org/poso/roll">roll</a>
             <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#yaw" title="http://purl.org/poso/yaw">yaw</a>
             <sup class="type-op" title="objecteigenschap">op</sup>
@@ -2257,6 +2314,9 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          <a href="#observesType" title="http://purl.org/poso/observesType">observeert type</a>
       </li>
       <li>
+         <a href="#order" title="http://purl.org/poso/order">order</a>
+      </li>
+      <li>
          <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
       </li>
       <li>
@@ -2862,6 +2922,28 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dl>
       </div>
    </div>
+   <div class="entity" id="order">
+      <h3>order<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/order</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="pitch">
       <h3>pitch<sup class="type-op" title="objecteigenschap">op</sup>
          <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
@@ -3073,11 +3155,142 @@ Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Posi
          </dl>
       </div>
    </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h2>Concrete Exemplaren</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#XYZ" title="http://purl.org/poso/XYZ">X-Y-Z</a>
+      </li>
+      <li>
+         <a href="#XZY" title="http://purl.org/poso/XZY">X-Z-Y</a>
+      </li>
+      <li>
+         <a href="#YXZ" title="http://purl.org/poso/YXZ">Y-X-Z</a>
+      </li>
+      <li>
+         <a href="#YZX" title="http://purl.org/poso/YZX">Y-Z-X</a>
+      </li>
+      <li>
+         <a href="#ZXY" title="http://purl.org/poso/ZXY">Z-X-Y</a>
+      </li>
+      <li>
+         <a href="#ZYX" title="http://purl.org/poso/ZYX">Z-Y-X</a>
+      </li>
+   </ul>
+   <div class="entity" id="XYZ">
+      <h3>X-Y-Z<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/XYZ</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="XZY">
+      <h3>X-Z-Y<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/XZY</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="YXZ">
+      <h3>Y-X-Z<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/YXZ</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="YZX">
+      <h3>Y-Z-X<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/YZX</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ZXY">
+      <h3>Z-X-Y<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/ZXY</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ZYX">
+      <h3>Z-Y-X<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/ZYX</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div id="legend">
 <h2>Legenda <span class="backlink"> terug naar <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Klassen">c</sup>: Klassen <br/>
 <sup class="type-op" title="Objecteigenschappen">op</sup>: Objecteigenschappen <br/>
+<sup class="type-ni" title="Concrete exemplaren">ni</sup>: Concrete exemplaren
 </div>
 </div>
 </div>

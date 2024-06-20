@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2023-11-30T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2024-06-20T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="en/"><b>en</b></a> <a href="nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release 2023-11-30T00:00:00</h2>
+<h2>Release 2024-06-20T00:00:00</h2>
 
 
 <dl>
@@ -138,6 +138,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
+   </li>
+   <li>
+      <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
    </li>
    <li>
       <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
@@ -370,6 +373,9 @@ This ontology has the following classes and properties.</span>
       <a href="#observesType" title="http://purl.org/poso/observesType">observes type</a>
    </li>
    <li>
+      <a href="#order" title="http://purl.org/poso/order">order</a>
+   </li>
+   <li>
       <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
    </li>
    <li>
@@ -389,6 +395,25 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#zAxisValue" title="http://purl.org/poso/zAxisValue">z-axis value</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#XYZ" title="http://purl.org/poso/XYZ">X-Y-Z</a>
+   </li>
+   <li>
+      <a href="#XZY" title="http://purl.org/poso/XZY">X-Z-Y</a>
+   </li>
+   <li>
+      <a href="#YXZ" title="http://purl.org/poso/YXZ">Y-X-Z</a>
+   </li>
+   <li>
+      <a href="#YZX" title="http://purl.org/poso/YZX">Y-Z-X</a>
+   </li>
+   <li>
+      <a href="#ZXY" title="http://purl.org/poso/ZXY">Z-X-Y</a>
+   </li>
+   <li>
+      <a href="#ZYX" title="http://purl.org/poso/ZYX">Z-Y-X</a>
    </li>
 </ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
 </div>
@@ -445,6 +470,9 @@ This section provides details for each class and property defined by Positioning
       </li>
       <li>
          <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
+      </li>
+      <li>
+         <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
       </li>
       <li>
          <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
@@ -923,6 +951,34 @@ This section provides details for each class and property defined by Positioning
          </dd>
       </dl>
    </div>
+   <div class="entity" id="EulerOrder">
+      <h3>Euler order<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/EulerOrder</p>
+      <div class="comment">
+         <span class="markdown">The order in which to apply Euler rotations.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#order" title="http://purl.org/poso/order">order</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#XYZ" title="http://purl.org/poso/XYZ">X-Y-Z</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#XZY" title="http://purl.org/poso/XZY">X-Z-Y</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#YXZ" title="http://purl.org/poso/YXZ">Y-X-Z</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#YZX" title="http://purl.org/poso/YZX">Y-Z-X</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ZXY" title="http://purl.org/poso/ZXY">Z-X-Y</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ZYX" title="http://purl.org/poso/ZYX">Z-Y-X</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="EulerOrientation">
       <h3>Euler orientation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -938,7 +994,8 @@ This section provides details for each class and property defined by Positioning
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
+            <a href="#order" title="http://purl.org/poso/order">order</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#roll" title="http://purl.org/poso/roll">roll</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#yaw" title="http://purl.org/poso/yaw">yaw</a>
             <sup class="type-op" title="object property">op</sup>
@@ -2257,6 +2314,9 @@ This section provides details for each class and property defined by Positioning
          <a href="#observesType" title="http://purl.org/poso/observesType">observes type</a>
       </li>
       <li>
+         <a href="#order" title="http://purl.org/poso/order">order</a>
+      </li>
+      <li>
          <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
       </li>
       <li>
@@ -2862,6 +2922,28 @@ This section provides details for each class and property defined by Positioning
          </dl>
       </div>
    </div>
+   <div class="entity" id="order">
+      <h3>order<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/order</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="pitch">
       <h3>pitch<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -3073,11 +3155,142 @@ This section provides details for each class and property defined by Positioning
          </dl>
       </div>
    </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#XYZ" title="http://purl.org/poso/XYZ">X-Y-Z</a>
+      </li>
+      <li>
+         <a href="#XZY" title="http://purl.org/poso/XZY">X-Z-Y</a>
+      </li>
+      <li>
+         <a href="#YXZ" title="http://purl.org/poso/YXZ">Y-X-Z</a>
+      </li>
+      <li>
+         <a href="#YZX" title="http://purl.org/poso/YZX">Y-Z-X</a>
+      </li>
+      <li>
+         <a href="#ZXY" title="http://purl.org/poso/ZXY">Z-X-Y</a>
+      </li>
+      <li>
+         <a href="#ZYX" title="http://purl.org/poso/ZYX">Z-Y-X</a>
+      </li>
+   </ul>
+   <div class="entity" id="XYZ">
+      <h3>X-Y-Z<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/XYZ</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="XZY">
+      <h3>X-Z-Y<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/XZY</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="YXZ">
+      <h3>Y-X-Z<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/YXZ</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="YZX">
+      <h3>Y-Z-X<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/YZX</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ZXY">
+      <h3>Z-X-Y<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/ZXY</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ZYX">
+      <h3>Z-Y-X<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/ZYX</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
 </div>
