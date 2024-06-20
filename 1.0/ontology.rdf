@@ -167,7 +167,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Result"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-        <rdfs:comment xml:lang="en">Quantitative anglue result value for axis-angle representation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Quantitative angle result value for axis-angle representation.</rdfs:comment>
         <rdfs:label xml:lang="en">angle</rdfs:label>
         <rdfs:label xml:lang="nl">hoek</rdfs:label>
     </owl:ObjectProperty>
@@ -406,6 +406,16 @@
     
 
 
+    <!-- http://purl.org/poso/nutation -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/poso/nutation">
+        <rdfs:domain rdf:resource="http://purl.org/poso/EulerOrientation"/>
+        <rdfs:label xml:lang="en">nutation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/poso/observesType -->
 
 
@@ -438,8 +448,18 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/poso/EulerOrientation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="en">Pitch is the rotation around the x-axis with respect to the object the yaw applies to.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Pitch is the rotation around the axis with respect to the object the yaw applies to.</rdfs:comment>
         <rdfs:label xml:lang="en">pitch</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/poso/precession -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/poso/precession">
+        <rdfs:domain rdf:resource="http://purl.org/poso/EulerOrientation"/>
+        <rdfs:label xml:lang="en">precession</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -451,7 +471,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/poso/EulerOrientation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="en">Roll is the rotation around the y-axis with respect to the object the roll applies to.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Roll is the rotation around the axis with respect to the object the roll applies to.</rdfs:comment>
         <rdfs:label xml:lang="en">roll</rdfs:label>
     </owl:ObjectProperty>
     
@@ -466,6 +486,16 @@
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="en">scalar</rdfs:label>
         <skos:altLabel>w</skos:altLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/poso/spin -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/poso/spin">
+        <rdfs:domain rdf:resource="http://purl.org/poso/EulerOrientation"/>
+        <rdfs:label xml:lang="en">spin</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -503,7 +533,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/poso/EulerOrientation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:comment xml:lang="en">Yaw is the rotation around the z-axis with respect to the object the yaw applies to.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Yaw is the rotation around the axis with respect to the object the yaw applies to.</rdfs:comment>
         <rdfs:label xml:lang="en">yaw</rdfs:label>
     </owl:ObjectProperty>
     
@@ -762,13 +792,31 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/nutation"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/poso/pitch"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/precession"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/poso/roll"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/spin"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1532,6 +1580,17 @@
     
 
 
+    <!-- http://purl.org/poso/XYX -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/XYX">
+        <rdf:type rdf:resource="http://purl.org/poso/EulerOrder"/>
+        <rdfs:comment xml:lang="en">The Euler rotation order for proper Euler angles.</rdfs:comment>
+        <rdfs:label>X-Y-X</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/poso/XYZ -->
 
 
@@ -1576,6 +1635,17 @@
     
 
 
+    <!-- http://purl.org/poso/YZY -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/YZY">
+        <rdf:type rdf:resource="http://purl.org/poso/EulerOrder"/>
+        <rdfs:comment xml:lang="en">The Euler rotation order for proper Euler angles.</rdfs:comment>
+        <rdfs:label>Y-Z-Y</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/poso/ZXY -->
 
 
@@ -1583,6 +1653,17 @@
         <rdf:type rdf:resource="http://purl.org/poso/EulerOrder"/>
         <rdfs:comment xml:lang="en">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</rdfs:comment>
         <rdfs:label>Z-X-Y</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/ZXZ -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/ZXZ">
+        <rdf:type rdf:resource="http://purl.org/poso/EulerOrder"/>
+        <rdfs:comment xml:lang="en">The Euler rotation order for proper Euler angles.</rdfs:comment>
+        <rdfs:label>Z-X-Z</rdfs:label>
     </owl:NamedIndividual>
     
 

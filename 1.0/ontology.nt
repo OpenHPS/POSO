@@ -81,7 +81,7 @@
 <http://purl.org/poso/angle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Result> .
 <http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
-<http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative anglue result value for axis-angle representation."@en .
+<http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative angle result value for axis-angle representation."@en .
 <http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#label> "angle"@en .
 <http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#label> "hoek"@nl .
 # 
@@ -227,6 +227,11 @@
 <http://purl.org/poso/madeBySystem> <http://www.w3.org/2000/01/rdf-schema#label> "gemaakt door systeem"@nl .
 <http://purl.org/poso/madeBySystem> <http://www.w3.org/2000/01/rdf-schema#label> "made by system"@en .
 # 
+# http://purl.org/poso/nutation
+<http://purl.org/poso/nutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/nutation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
+<http://purl.org/poso/nutation> <http://www.w3.org/2000/01/rdf-schema#label> "nutation"@en .
+# 
 # http://purl.org/poso/observesType
 <http://purl.org/poso/observesType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/forProperty> .
@@ -247,15 +252,20 @@
 <http://purl.org/poso/pitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
 <http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-<http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#comment> "Pitch is the rotation around the x-axis with respect to the object the yaw applies to."@en .
+<http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#comment> "Pitch is the rotation around the axis with respect to the object the yaw applies to."@en .
 <http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#label> "pitch"@en .
+# 
+# http://purl.org/poso/precession
+<http://purl.org/poso/precession> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/precession> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
+<http://purl.org/poso/precession> <http://www.w3.org/2000/01/rdf-schema#label> "precession"@en .
 # 
 # http://purl.org/poso/roll
 <http://purl.org/poso/roll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/poso/roll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
 <http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-<http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#comment> "Roll is the rotation around the y-axis with respect to the object the roll applies to."@en .
+<http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#comment> "Roll is the rotation around the axis with respect to the object the roll applies to."@en .
 <http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#label> "roll"@en .
 # 
 # http://purl.org/poso/scalar
@@ -265,6 +275,11 @@
 <http://purl.org/poso/scalar> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
 <http://purl.org/poso/scalar> <http://www.w3.org/2000/01/rdf-schema#label> "scalar"@en .
 <http://purl.org/poso/scalar> <http://www.w3.org/2004/02/skos/core#altLabel> "w" .
+# 
+# http://purl.org/poso/spin
+<http://purl.org/poso/spin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/spin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
+<http://purl.org/poso/spin> <http://www.w3.org/2000/01/rdf-schema#label> "spin"@en .
 # 
 # http://purl.org/poso/xAxisValue
 <http://purl.org/poso/xAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -287,7 +302,7 @@
 <http://purl.org/poso/yaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
 <http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-<http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#comment> "Yaw is the rotation around the z-axis with respect to the object the yaw applies to."@en .
+<http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#comment> "Yaw is the rotation around the axis with respect to the object the yaw applies to."@en .
 <http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#label> "yaw"@en .
 # 
 # http://purl.org/poso/zAxisValue
@@ -441,25 +456,37 @@ _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/order>
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
 _:genid7 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/pitch> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/nutation> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
 _:genid8 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/roll> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/pitch> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
 _:genid9 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/yaw> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/precession> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/roll> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/spin> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/yaw> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#label> "Euler orientation"@en .
 # 
 # http://purl.org/poso/Fingerprint
 <http://purl.org/poso/Fingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/poso/Fingerprint> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/AbsolutePosition> .
-_:genid10 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/hasPosition> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/Fingerprint> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/AbsolutePosition> .
+_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/hasPosition> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/Fingerprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 <http://purl.org/poso/Fingerprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
 <http://purl.org/poso/Fingerprint> <http://www.w3.org/2000/01/rdf-schema#comment> "A fingerprint is a scene analysis at a particular absolute position."@en .
@@ -501,11 +528,11 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/poso/IntegratedPositioningSystem
 <http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningSystem> .
-<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/SensorFusion> .
-_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/implements> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/SensorFusion> .
+_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/implements> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en .
 <http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://isotc211.geolexica.org/concepts/250/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Integrated positioning system"@en .
@@ -665,11 +692,11 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/poso/PositioningSystem
 <http://purl.org/poso/PositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
-<http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/ssn/Deployment> .
-_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasDeployment> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/ssn/Deployment> .
+_:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasDeployment> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A positioning system is a system of instrumental and computational components for determining position."@en .
 <http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://isotc211.geolexica.org/concepts/349/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Positioning system"@en .
@@ -690,22 +717,22 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/poso/QuaternionOrientation
 <http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Orientation> .
-<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/scalar> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/xAxisValue> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/yAxisValue> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
 _:genid16 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/zAxisValue> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/scalar> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/xAxisValue> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/yAxisValue> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/zAxisValue> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#label> "Quaternion orientation"@en .
 # 
 # http://purl.org/poso/RFLandmark
@@ -746,11 +773,11 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/poso/RelativePosition
 <http://purl.org/poso/RelativePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Position> .
-<http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
-_:genid17 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
-_:genid17 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/isRelativeTo> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+_:genid20 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/isRelativeTo> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "A relative position is a position of a feature of interest with respect to the positions of other objects that this position is relative to."@en .
 <http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Een relatieve positie is een positie van een punt, met respect tot de posities van andere objecten die relatief zijn."@nl .
 <http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://isotc211.geolexica.org/concepts/377/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -808,11 +835,11 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/poso/TrackedFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
 <http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
-<http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
-_:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/Position> .
-_:genid18 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/hasPosition> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/Position> .
+_:genid21 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/hasPosition> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "A feature of interest that is being tracked by a positioning system. This is the feature for which a position is observed."@en .
 <http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#label> "Tracked feature"@en .
 <http://purl.org/poso/TrackedFeature> <http://www.w3.org/2004/02/skos/core#example> "The phone of a person that is being tracked in an indoor positioning system is the tracked feature."@en .
@@ -886,6 +913,12 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
+# http://purl.org/poso/XYX
+<http://purl.org/poso/XYX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/XYX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/XYX> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation order for proper Euler angles."@en .
+<http://purl.org/poso/XYX> <http://www.w3.org/2000/01/rdf-schema#label> "X-Y-X" .
+# 
 # http://purl.org/poso/XYZ
 <http://purl.org/poso/XYZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/XYZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
@@ -910,11 +943,23 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/poso/YZX> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en .
 <http://purl.org/poso/YZX> <http://www.w3.org/2000/01/rdf-schema#label> "Y-Z-X" .
 # 
+# http://purl.org/poso/YZY
+<http://purl.org/poso/YZY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/YZY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/YZY> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation order for proper Euler angles."@en .
+<http://purl.org/poso/YZY> <http://www.w3.org/2000/01/rdf-schema#label> "Y-Z-Y" .
+# 
 # http://purl.org/poso/ZXY
 <http://purl.org/poso/ZXY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/poso/ZXY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
 <http://purl.org/poso/ZXY> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en .
 <http://purl.org/poso/ZXY> <http://www.w3.org/2000/01/rdf-schema#label> "Z-X-Y" .
+# 
+# http://purl.org/poso/ZXZ
+<http://purl.org/poso/ZXZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/ZXZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/ZXZ> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation order for proper Euler angles."@en .
+<http://purl.org/poso/ZXZ> <http://www.w3.org/2000/01/rdf-schema#label> "Z-X-Z" .
 # 
 # http://purl.org/poso/ZYX
 <http://purl.org/poso/ZYX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
