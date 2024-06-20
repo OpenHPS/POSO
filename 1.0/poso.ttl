@@ -17,7 +17,7 @@
                          <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en ;
                          <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." ;
                          <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> ;
-                         <http://purl.org/dc/terms/modified> "2023-11-30T00:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/modified> "2024-06-20T00:00:00"^^xsd:dateTime ;
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
@@ -96,7 +96,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                 owl:FunctionalProperty ;
        rdfs:domain <http://www.w3.org/ns/sosa/Result> ;
        rdfs:range rdfs:Class ;
-       rdfs:comment "Quantitative anglue result value for axis-angle representation."@en ;
+       rdfs:comment "Quantitative angle result value for axis-angle representation."@en ;
        rdfs:label "angle"@en ,
                   "hoek"@nl .
 
@@ -261,6 +261,12 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                          "made by system"@en .
 
 
+###  http://purl.org/poso/nutation
+:nutation rdf:type owl:ObjectProperty ;
+          rdfs:domain :EulerOrientation ;
+          rdfs:label "nutation"@en .
+
+
 ###  http://purl.org/poso/observesType
 :observesType rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://www.w3.org/ns/ssn/forProperty> ;
@@ -271,13 +277,26 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                          "observes type"@en .
 
 
+###  http://purl.org/poso/order
+:order rdf:type owl:ObjectProperty ;
+       rdfs:domain :EulerOrientation ;
+       rdfs:range :EulerOrder ;
+       rdfs:label "order"@en .
+
+
 ###  http://purl.org/poso/pitch
 :pitch rdf:type owl:ObjectProperty ,
                 owl:FunctionalProperty ;
        rdfs:domain :EulerOrientation ;
        rdfs:range owl:Thing ;
-       rdfs:comment "Pitch is the rotation around the x-axis with respect to the object the yaw applies to."@en ;
+       rdfs:comment "Pitch is the rotation around the axis with respect to the object the yaw applies to."@en ;
        rdfs:label "pitch"@en .
+
+
+###  http://purl.org/poso/precession
+:precession rdf:type owl:ObjectProperty ;
+            rdfs:domain :EulerOrientation ;
+            rdfs:label "precession"@en .
 
 
 ###  http://purl.org/poso/roll
@@ -285,7 +304,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                owl:FunctionalProperty ;
       rdfs:domain :EulerOrientation ;
       rdfs:range owl:Thing ;
-      rdfs:comment "Roll is the rotation around the y-axis with respect to the object the roll applies to."@en ;
+      rdfs:comment "Roll is the rotation around the axis with respect to the object the roll applies to."@en ;
       rdfs:label "roll"@en .
 
 
@@ -296,6 +315,12 @@ skos:altLabel rdf:type owl:AnnotationProperty .
         rdfs:range owl:Thing ;
         rdfs:label "scalar"@en ;
         skos:altLabel "w" .
+
+
+###  http://purl.org/poso/spin
+:spin rdf:type owl:ObjectProperty ;
+      rdfs:domain :EulerOrientation ;
+      rdfs:label "spin"@en .
 
 
 ###  http://purl.org/poso/xAxisValue
@@ -321,7 +346,7 @@ skos:altLabel rdf:type owl:AnnotationProperty .
               owl:FunctionalProperty ;
      rdfs:domain :EulerOrientation ;
      rdfs:range owl:Thing ;
-     rdfs:comment "Yaw is the rotation around the z-axis with respect to the object the yaw applies to."@en ;
+     rdfs:comment "Yaw is the rotation around the axis with respect to the object the yaw applies to."@en ;
      rdfs:label "yaw"@en .
 
 
@@ -472,15 +497,38 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                skos:altLabel "Deduced reckoning"@en .
 
 
+###  http://purl.org/poso/EulerOrder
+:EulerOrder rdf:type owl:Class ;
+            rdfs:comment "The order in which to apply Euler rotations."@en ;
+            rdfs:label "Euler order"@en .
+
+
 ###  http://purl.org/poso/EulerOrientation
 :EulerOrientation rdf:type owl:Class ;
                   rdfs:subClassOf :Orientation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :order ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :EulerOrder
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :nutation ;
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :pitch ;
                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
+                                    owl:onProperty :precession ;
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty :roll ;
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :spin ;
                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                   ] ,
                                   [ rdf:type owl:Restriction ;
@@ -972,6 +1020,73 @@ rdfs:Class rdf:type owl:Class .
 
 ###  http://www.w3.org/ns/ssn/System
 <http://www.w3.org/ns/ssn/System> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/poso/XYX
+:XYX rdf:type owl:NamedIndividual ,
+              :EulerOrder ;
+     rdfs:comment "The Euler rotation order for proper Euler angles."@en ;
+     rdfs:label "X-Y-X" .
+
+
+###  http://purl.org/poso/XYZ
+:XYZ rdf:type owl:NamedIndividual ,
+              :EulerOrder ;
+     rdfs:comment "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en ;
+     rdfs:label "X-Y-Z" .
+
+
+###  http://purl.org/poso/XZY
+:XZY rdf:type owl:NamedIndividual ,
+              :EulerOrder ;
+     rdfs:comment "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en ;
+     rdfs:label "X-Z-Y" .
+
+
+###  http://purl.org/poso/YXZ
+:YXZ rdf:type owl:NamedIndividual ,
+              :EulerOrder ;
+     rdfs:comment "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en ;
+     rdfs:label "Y-X-Z" .
+
+
+###  http://purl.org/poso/YZX
+:YZX rdf:type owl:NamedIndividual ,
+              :EulerOrder ;
+     rdfs:comment "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en ;
+     rdfs:label "Y-Z-X" .
+
+
+###  http://purl.org/poso/YZY
+:YZY rdf:type owl:NamedIndividual ,
+              :EulerOrder ;
+     rdfs:comment "The Euler rotation order for proper Euler angles."@en ;
+     rdfs:label "Y-Z-Y" .
+
+
+###  http://purl.org/poso/ZXY
+:ZXY rdf:type owl:NamedIndividual ,
+              :EulerOrder ;
+     rdfs:comment "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en ;
+     rdfs:label "Z-X-Y" .
+
+
+###  http://purl.org/poso/ZXZ
+:ZXZ rdf:type owl:NamedIndividual ,
+              :EulerOrder ;
+     rdfs:comment "The Euler rotation order for proper Euler angles."@en ;
+     rdfs:label "Z-X-Z" .
+
+
+###  http://purl.org/poso/ZYX
+:ZYX rdf:type owl:NamedIndividual ,
+              :EulerOrder ;
+     rdfs:comment "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en ;
+     rdfs:label "Z-Y-X" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
