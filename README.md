@@ -1,27 +1,27 @@
 # POSO: A Generic Positioning System Ontology
 
 <div style="margin-left: auto; margin-right: auto; width: 30%">
-    <img src="./docs/images/logo.svg" width="100%">
+    <img src="./1.1/docs/images/logo.svg" width="100%">
 </div>
 
 *POSO is a generic ontology positioning system ontology. Other than many geospatial ontologies, POSO focuses on the semantics needed to express a positioning system, their techiques and the location data along with other information it can output.*
 ## Repository Contents
-- `/1.0/`: POSO 1.0 ontology and related modules
-    - `/1.0/poso.ttl`: POSO core ontolog
-    - `/1.0/common/poso-common.ttl`: POSO-common ontology with individuals for algorithms, techniques and existing systems
-    - `/1.0/m3lite/poso-m3lite.ttl`: POSO-m3lite alignment (Work In Progress)
-    - `/1.0/hdgi/poso-hdgi.ttl`: POSO-hdgi alignment (Work In Progress)
-- `/docs/`: Documentation related files for the wiki
-    - `/docs/images/`: POSO ontology documentation images
+- `/1.1/`: POSO 1.1 ontology and related modules
+    - `/1.1/docs/`: Documentation related files for the wiki
+        - `/1.1/docs/images/`: POSO ontology documentation images
+    - `/1.1/poso.ttl`: POSO core ontolog
+    - `/1.1/common/poso-common.ttl`: POSO-common ontology with individuals for algorithms, techniques and existing systems
+    - `/1.0/m3lite/poso-m3lite.ttl`: POSO-m3lite alignment
+- `/1.0/`: [Deprecated] POSO 1.0 ontology and related modules
 - `/website/`: Website and build scripts for deployment
 
 ## Documentation
 Ontology documentation is provided using WIDOCO [1] and generated in the `./website` directory upon building the website.
 
-**POSO Ontology (en)**: [https://openhps.github.io/POSO/1.0/en/](https://openhps.github.io/POSO/1.0/en/)\
-**POSO-common module (en)**: [https://openhps.github.io/POSO/1.0/common/en/](https://openhps.github.io/POSO/1.0/common/en/)
+**POSO Ontology (en)**: [https://openhps.github.io/POSO/1.1/en/](https://openhps.github.io/POSO/1.1/en/)\
+**POSO-common module (en)**: [https://openhps.github.io/POSO/1.1/common/en/](https://openhps.github.io/POSO/1.1/common/en/)
 
-![](docs/images/systems_and_procedures.svg)
+![](1.1/docs/images/systems_and_procedures.svg)
 
 ## Methodology
 The POSO ontology has been designed with the common data requirements of various positioning system technologies, datasets and frame-

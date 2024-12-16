@@ -21,7 +21,7 @@
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
-                         <http://schema.org/image> "https://raw.githubusercontent.com/OpenHPS/POSO/main/1.0/docs/images/systems_and_procedures.svg" .
+                         <http://schema.org/image> "https://raw.githubusercontent.com/OpenHPS/POSO/main/1.1/docs/images/systems_and_procedures.svg" .
 
 #################################################################
 #    Annotation properties
@@ -471,13 +471,13 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/poso/CalibrationMagnitudeProcedure
 :CalibrationMagnitudeProcedure rdf:type owl:Class ;
-                               rdfs:subClassOf :CalibrationProcedure ;
+                               rdfs:subClassOf :NormalizationProcedure ;
                                rdfs:label "Calibration magnitude procedure"@en .
 
 
 ###  http://purl.org/poso/CalibrationOffsetProcedure
 :CalibrationOffsetProcedure rdf:type owl:Class ;
-                            rdfs:subClassOf :CalibrationProcedure ;
+                            rdfs:subClassOf :NormalizationProcedure ;
                             rdfs:label "Calibration offset procedure"@en .
 
 
@@ -711,6 +711,13 @@ skos:altLabel rdf:type owl:AnnotationProperty .
                  rdfs:comment "Multilateration is the procedure of determining a position using relative distances to other known positions."@en ;
                  rdfs:label "Multilateration"@en ;
                  skos:altLabel "Hyperbolic positioning"@en .
+
+
+###  http://purl.org/poso/NormalizationProcedure
+:NormalizationProcedure rdf:type owl:Class ;
+                        rdfs:subClassOf :CalibrationProcedure ;
+                        rdfs:comment "Normalization procedure is a calibration procedure to normalize data."@en ;
+                        rdfs:label "Normalization procedure"@en .
 
 
 ###  http://purl.org/poso/Odometry
