@@ -252,6 +252,7 @@ poso:VSLAM rdf:type owl:Class .
 :SemBeacon rdf:type owl:Class ;
            rdfs:subClassOf poso:BluetoothBeacon ;
            rdfs:label "SemBeacon"@en ;
+           rdfs:comment "A SemBeacon is a semantic beacon based on AltBeacon and Eddystone-URL."@en ;
            rdfs:seeAlso <http://purl.org/sembeacon/SemBeacon> .
 
 
