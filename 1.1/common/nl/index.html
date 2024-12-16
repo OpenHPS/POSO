@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="../resources/primer.css" media="screen" />    <link rel="stylesheet" href="../resources/rec.css" media="screen" />    <link rel="stylesheet" href="../resources/extra.css" media="screen" />    <link rel="stylesheet" href="../resources/owl.css" media="screen" />    <title>Positioning System Ontology Common Technologies, Algorithms and Systems</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/common/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/common/","name":"Positioning System Ontology Common Technologies, Algorithms and Systems", "headline":"The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.", "datePublished":"2024-12-16T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+
+<script src="../resources/jquery.js"></script> 
+<script src="../resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Inhoudsopgave</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
+<h1>Positioning System Ontology Common Technologies, Algorithms and Systems</h1>
+<h2>Release  2024-12-16T00:00:00</h2>
+
+
+<dl>
+<dt>Deze versie:</dt>
+<dd><a href="http://purl.org/poso/1.1/common/">http://purl.org/poso/1.1/common/</a></dd>
+<dt>Auteurs:</dt>
+<dd>Maxim Van de Wynckel</dd>
+
+<dt>Bijdragers:</dt>
+<dd>Beat Signer</dd>
+
+<dt>Download serialisatie:</dt><dd><span><a href="../ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="../ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="../ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="../ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Licentie: </dt><dd><a href="http://purl.org/NET/rdflicense/MIT1.0" target="_blank"><img src="https://img.shields.io/badge/License-http://purl.org/NET/rdflicense/MIT1.0-blue.svg" alt="http://purl.org/NET/rdflicense/MIT1.0" /></a>
+</dd><dt>Visualisatie:</dt><dd><a href="../webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="../OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Citeren als:</dt>
+<dd>Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology</dd>
+</dl>
+
+<a href="../provenance/provenance-nl.html" target="_blank">Herkomst van deze pagina</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Samenvatting</h2><span class="markdown">
+The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Positioning System Ontology Common Technologies, Algorithms and Systems: Overzicht <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
+<span class="markdown">
+Deze ontologie heeft de volgende klassen en eigenschappen.</span>
+<h4>Klassen</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#AltBeacon" title="http://purl.org/poso/common/AltBeacon">AltBeacon</a>
+   </li>
+   <li>
+      <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+   </li>
+   <li>
+      <a href="#EddystoneEID" title="http://purl.org/poso/common/EddystoneEID">Eddystone-EID</a>
+   </li>
+   <li>
+      <a href="#EddystoneTLM" title="http://purl.org/poso/common/EddystoneTLM">Eddystone-TLM</a>
+   </li>
+   <li>
+      <a href="#EddystoneUID" title="http://purl.org/poso/common/EddystoneUID">Eddystone-UID</a>
+   </li>
+   <li>
+      <a href="#EddystoneURL" title="http://purl.org/poso/common/EddystoneURL">Eddystone-URL</a>
+   </li>
+   <li>
+      <a href="#iBeacon" title="http://purl.org/poso/common/iBeacon">iBeacon</a>
+   </li>
+   <li>
+      <a href="#SemBeacon" title="http://purl.org/poso/common/SemBeacon">SemBeacon</a>
+   </li>
+</ul><h4>Objecteigenschappen</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#hasReferenceRSSI" title="http://purl.org/poso/common/hasReferenceRSSI">has reference RSSI</a>
+   </li>
+</ul><h4>Data-eigenschappen</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#major" title="http://purl.org/poso/common/major">major</a>
+   </li>
+   <li>
+      <a href="#minor" title="http://purl.org/poso/common/minor">minor</a>
+   </li>
+   <li>
+      <a href="#proximityUUID" title="http://purl.org/poso/common/proximityUUID">proximity UUID</a>
+   </li>
+</ul><h4>Concrete exemplaren</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#AbsolutePositionOutput"
+         title="http://purl.org/poso/common/AbsolutePositionOutput">Absolute position output</a>
+   </li>
+   <li>
+      <a href="#Anyplace" title="http://purl.org/poso/common/Anyplace">Anyplace</a>
+   </li>
+   <li>
+      <a href="#BDS" title="http://purl.org/poso/common/BDS">BeiDou Navigation Satellite System</a>
+   </li>
+   <li>
+      <a href="#CSIFingerprinting" title="http://purl.org/poso/common/CSIFingerprinting">Channel State Information fingerprinting</a>
+   </li>
+   <li>
+      <a href="#EarthDeployment" title="http://purl.org/poso/common/EarthDeployment">Earth deployment</a>
+   </li>
+   <li>
+      <a href="#FootMountedPDR" title="http://purl.org/poso/common/FootMountedPDR">Foot-mounted pedestrian dead reckoning</a>
+   </li>
+   <li>
+      <a href="#Galileo" title="http://purl.org/poso/common/Galileo">Galileo</a>
+   </li>
+   <li>
+      <a href="#GeolocationAPI" title="http://purl.org/poso/common/GeolocationAPI">Geolocation API</a>
+   </li>
+   <li>
+      <a href="#GLONASS" title="http://purl.org/poso/common/GLONASS">Global Navigation Satellite System</a>
+   </li>
+   <li>
+      <a href="#GPS" title="http://purl.org/poso/common/GPS">Global Positioning System</a>
+   </li>
+   <li>
+      <a href="#HectorSLAM" title="http://purl.org/poso/common/HectorSLAM">Hector SLAM</a>
+   </li>
+   <li>
+      <a href="#IRNSS" title="http://purl.org/poso/common/IRNSS">Indian Regional Navigation Satellite System</a>
+   </li>
+   <li>
+      <a href="#IndoorAtlas" title="http://purl.org/poso/common/IndoorAtlas">IndoorAtlas</a>
+   </li>
+   <li>
+      <a href="#KNNFingerprinting" title="http://purl.org/poso/common/KNNFingerprinting">k-NN fingerprinting</a>
+   </li>
+   <li>
+      <a href="#LDPL" title="http://purl.org/poso/common/LDPL">Log-distance path loss model</a>
+   </li>
+   <li>
+      <a href="#MidpointLateration" title="http://purl.org/poso/common/MidpointLateration">Midpoint lateration</a>
+   </li>
+   <li>
+      <a href="#NavIC" title="http://purl.org/poso/common/NavIC">Navigation Indian Constellation</a>
+   </li>
+   <li>
+      <a href="#NLSMultilateration" title="http://purl.org/poso/common/NLSMultilateration">Non-linear least squares multilateration</a>
+   </li>
+   <li>
+      <a href="#OpenHPS" title="http://purl.org/poso/common/OpenHPS">OpenHPS</a>
+   </li>
+   <li>
+      <a href="#OpenVSLAM" title="http://purl.org/poso/common/OpenVSLAM">OpenVSLAM</a>
+   </li>
+   <li>
+      <a href="#ORBSLAM2" title="http://purl.org/poso/common/ORBSLAM2">ORB-SLAM2</a>
+   </li>
+   <li>
+      <a href="#ORBSLAM3" title="http://purl.org/poso/common/ORBSLAM3">ORB-SLAM3</a>
+   </li>
+   <li>
+      <a href="#ProbabilisticFingerprinting"
+         title="http://purl.org/poso/common/ProbabilisticFingerprinting">Probabilistic fingerprinting</a>
+   </li>
+   <li>
+      <a href="#QZSS" title="http://purl.org/poso/common/QZSS">Quasi-Zenith Satellite System</a>
+   </li>
+   <li>
+      <a href="#RFCellIdentification" title="http://purl.org/poso/common/RFCellIdentification">RF cell identification</a>
+   </li>
+   <li>
+      <a href="#ROS" title="http://purl.org/poso/common/ROS">Robotics Operating System</a>
+   </li>
+   <li>
+      <a href="#SonyNimway" title="http://purl.org/poso/common/SonyNimway">Sony Nimway</a>
+   </li>
+   <li>
+      <a href="#SVMFingerprinting" title="http://purl.org/poso/common/SVMFingerprinting">Support Vector Machine fingerprinting</a>
+   </li>
+   <li>
+      <a href="#WeightedAccuracyFusion"
+         title="http://purl.org/poso/common/WeightedAccuracyFusion">Weighted accuracy fusion</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="../webvowl/index.html"></iframe> 
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Kruisverwijzing voor Positioning System Ontology Common Technologies, Algorithms and Systems klassen, objecteigenschappen en data-eigenschapen <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
+Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Positioning System Ontology Common Technologies, Algorithms and Systems.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Klassen</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AltBeacon" title="http://purl.org/poso/common/AltBeacon">AltBeacon</a>
+      </li>
+      <li>
+         <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+      </li>
+      <li>
+         <a href="#EddystoneEID" title="http://purl.org/poso/common/EddystoneEID">Eddystone-EID</a>
+      </li>
+      <li>
+         <a href="#EddystoneTLM" title="http://purl.org/poso/common/EddystoneTLM">Eddystone-TLM</a>
+      </li>
+      <li>
+         <a href="#EddystoneUID" title="http://purl.org/poso/common/EddystoneUID">Eddystone-UID</a>
+      </li>
+      <li>
+         <a href="#EddystoneURL" title="http://purl.org/poso/common/EddystoneURL">Eddystone-URL</a>
+      </li>
+      <li>
+         <a href="#iBeacon" title="http://purl.org/poso/common/iBeacon">iBeacon</a>
+      </li>
+      <li>
+         <a href="#SemBeacon" title="http://purl.org/poso/common/SemBeacon">SemBeacon</a>
+      </li>
+   </ul>
+   <div class="entity" id="AltBeacon">
+      <h3>AltBeacon<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/AltBeacon</p>
+      <div class="comment">
+         <span class="markdown">AltBeacon is an open and interoperable proximity beacon specification.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://purl.org/poso/BluetoothBeacon"
+               target="_blank"
+               title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EddystoneBeacon">
+      <h3>Eddystone<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EddystoneBeacon</p>
+      <div class="comment">
+         <span class="markdown">Eddystone was a Bluetooth Low Energy beacon profile released by Google in July 2015.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://purl.org/poso/BluetoothBeacon"
+               target="_blank"
+               title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#EddystoneEID" title="http://purl.org/poso/common/EddystoneEID">Eddystone-EID</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#EddystoneTLM" title="http://purl.org/poso/common/EddystoneTLM">Eddystone-TLM</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#EddystoneUID" title="http://purl.org/poso/common/EddystoneUID">Eddystone-UID</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#EddystoneURL" title="http://purl.org/poso/common/EddystoneURL">Eddystone-URL</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EddystoneEID">
+      <h3>Eddystone-EID<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EddystoneEID</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EddystoneTLM">
+      <h3>Eddystone-TLM<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EddystoneTLM</p>
+      <div class="comment">
+         <span class="markdown">Eddystone-TLM provides telemetry information. It can include the battery voltage, temperature, advertisement count and uptime.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EddystoneUID">
+      <h3>Eddystone-UID<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EddystoneUID</p>
+      <div class="comment">
+         <span class="markdown">Eddystone UID provides a 10 byte namespace and 6 byte instance identifier.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EddystoneURL">
+      <h3>Eddystone-URL<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EddystoneURL</p>
+      <div class="comment">
+         <span class="markdown">Eddystone-URL can broadcast a short encoded URL.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#EddystoneBeacon" title="http://purl.org/poso/common/EddystoneBeacon">Eddystone</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="iBeacon">
+      <h3>iBeacon<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/iBeacon</p>
+      <div class="comment">
+         <span class="markdown">An iBeacon is a beacon that advertises the proximity beacon packet specification.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://purl.org/poso/BluetoothBeacon"
+               target="_blank"
+               title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in domein van</dt>
+         <dd>
+            <a href="#major" title="http://purl.org/poso/common/major">major</a>
+            <sup class="type-dp" title="data-eigenschap">dp</sup>, <a href="#minor" title="http://purl.org/poso/common/minor">minor</a>
+            <sup class="type-dp" title="data-eigenschap">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SemBeacon">
+      <h3>SemBeacon<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/SemBeacon</p>
+      <div class="comment">
+         <span class="markdown">A SemBeacon is a semantic beacon based on AltBeacon and Eddystone-URL.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://purl.org/poso/BluetoothBeacon"
+               target="_blank"
+               title="http://purl.org/poso/BluetoothBeacon">bluetooth beacon</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Objecteigenschappen</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasReferenceRSSI" title="http://purl.org/poso/common/hasReferenceRSSI">has reference RSSI</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasReferenceRSSI">
+      <h3>has reference RSSI<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/hasReferenceRSSI</p>
+      <div class="comment">
+         <span class="markdown">has a reference Received Signal Strength Indicator at a specified distance.</span>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data-eigenschappen</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#major" title="http://purl.org/poso/common/major">major</a>
+      </li>
+      <li>
+         <a href="#minor" title="http://purl.org/poso/common/minor">minor</a>
+      </li>
+      <li>
+         <a href="#proximityUUID" title="http://purl.org/poso/common/proximityUUID">proximity UUID</a>
+      </li>
+   </ul>
+   <div class="entity" id="major">
+      <h3>major<sup class="type-dp" title="data-eigenschap">dp</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#dataproperties">Index data-eigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/major</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#iBeacon" title="http://purl.org/poso/common/iBeacon">iBeacon</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dd>
+               <a href="#major" title="http://purl.org/poso/common/major">major</a>
+               <sup class="type-dp" title="data-eigenschap">dp</sup> 
+               <span class="logic">some</span> 
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="minor">
+      <h3>minor<sup class="type-dp" title="data-eigenschap">dp</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#dataproperties">Index data-eigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/minor</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#iBeacon" title="http://purl.org/poso/common/iBeacon">iBeacon</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dd>
+               <a href="#minor" title="http://purl.org/poso/common/minor">minor</a>
+               <sup class="type-dp" title="data-eigenschap">dp</sup> 
+               <span class="logic">some</span> 
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="proximityUUID">
+      <h3>proximity UUID<sup class="type-dp" title="data-eigenschap">dp</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#dataproperties">Index data-eigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/proximityUUID</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#proximityUUID" title="http://purl.org/poso/common/proximityUUID">proximity UUID</a>
+               <sup class="type-dp" title="data-eigenschap">dp</sup> 
+               <span class="logic">some</span> 
+               <a href="http://www.w3.org/2001/XMLSchema#hexBinary"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#hexBinary">hex binary</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd/>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h2>Concrete Exemplaren</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#AbsolutePositionOutput"
+            title="http://purl.org/poso/common/AbsolutePositionOutput">Absolute position output</a>
+      </li>
+      <li>
+         <a href="#Anyplace" title="http://purl.org/poso/common/Anyplace">Anyplace</a>
+      </li>
+      <li>
+         <a href="#BDS" title="http://purl.org/poso/common/BDS">BeiDou Navigation Satellite System</a>
+      </li>
+      <li>
+         <a href="#CSIFingerprinting" title="http://purl.org/poso/common/CSIFingerprinting">Channel State Information fingerprinting</a>
+      </li>
+      <li>
+         <a href="#EarthDeployment" title="http://purl.org/poso/common/EarthDeployment">Earth deployment</a>
+      </li>
+      <li>
+         <a href="#FootMountedPDR" title="http://purl.org/poso/common/FootMountedPDR">Foot-mounted pedestrian dead reckoning</a>
+      </li>
+      <li>
+         <a href="#Galileo" title="http://purl.org/poso/common/Galileo">Galileo</a>
+      </li>
+      <li>
+         <a href="#GeolocationAPI" title="http://purl.org/poso/common/GeolocationAPI">Geolocation API</a>
+      </li>
+      <li>
+         <a href="#GLONASS" title="http://purl.org/poso/common/GLONASS">Global Navigation Satellite System</a>
+      </li>
+      <li>
+         <a href="#GPS" title="http://purl.org/poso/common/GPS">Global Positioning System</a>
+      </li>
+      <li>
+         <a href="#HectorSLAM" title="http://purl.org/poso/common/HectorSLAM">Hector SLAM</a>
+      </li>
+      <li>
+         <a href="#IRNSS" title="http://purl.org/poso/common/IRNSS">Indian Regional Navigation Satellite System</a>
+      </li>
+      <li>
+         <a href="#IndoorAtlas" title="http://purl.org/poso/common/IndoorAtlas">IndoorAtlas</a>
+      </li>
+      <li>
+         <a href="#KNNFingerprinting" title="http://purl.org/poso/common/KNNFingerprinting">k-NN fingerprinting</a>
+      </li>
+      <li>
+         <a href="#LDPL" title="http://purl.org/poso/common/LDPL">Log-distance path loss model</a>
+      </li>
+      <li>
+         <a href="#MidpointLateration" title="http://purl.org/poso/common/MidpointLateration">Midpoint lateration</a>
+      </li>
+      <li>
+         <a href="#NavIC" title="http://purl.org/poso/common/NavIC">Navigation Indian Constellation</a>
+      </li>
+      <li>
+         <a href="#NLSMultilateration" title="http://purl.org/poso/common/NLSMultilateration">Non-linear least squares multilateration</a>
+      </li>
+      <li>
+         <a href="#OpenHPS" title="http://purl.org/poso/common/OpenHPS">OpenHPS</a>
+      </li>
+      <li>
+         <a href="#OpenVSLAM" title="http://purl.org/poso/common/OpenVSLAM">OpenVSLAM</a>
+      </li>
+      <li>
+         <a href="#ORBSLAM2" title="http://purl.org/poso/common/ORBSLAM2">ORB-SLAM2</a>
+      </li>
+      <li>
+         <a href="#ORBSLAM3" title="http://purl.org/poso/common/ORBSLAM3">ORB-SLAM3</a>
+      </li>
+      <li>
+         <a href="#ProbabilisticFingerprinting"
+            title="http://purl.org/poso/common/ProbabilisticFingerprinting">Probabilistic fingerprinting</a>
+      </li>
+      <li>
+         <a href="#QZSS" title="http://purl.org/poso/common/QZSS">Quasi-Zenith Satellite System</a>
+      </li>
+      <li>
+         <a href="#RFCellIdentification" title="http://purl.org/poso/common/RFCellIdentification">RF cell identification</a>
+      </li>
+      <li>
+         <a href="#ROS" title="http://purl.org/poso/common/ROS">Robotics Operating System</a>
+      </li>
+      <li>
+         <a href="#SonyNimway" title="http://purl.org/poso/common/SonyNimway">Sony Nimway</a>
+      </li>
+      <li>
+         <a href="#SVMFingerprinting" title="http://purl.org/poso/common/SVMFingerprinting">Support Vector Machine fingerprinting</a>
+      </li>
+      <li>
+         <a href="#WeightedAccuracyFusion"
+            title="http://purl.org/poso/common/WeightedAccuracyFusion">Weighted accuracy fusion</a>
+      </li>
+   </ul>
+   <div class="entity" id="AbsolutePositionOutput">
+      <h3>Absolute position output<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/AbsolutePositionOutput</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositionOutput"
+               target="_blank"
+               title="http://purl.org/poso/PositionOutput">position output</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dd>
+            <a href="https://w3id.org/rdfp/GraphDescription"
+               target="_blank"
+               title="https://w3id.org/rdfp/GraphDescription">graph description</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Anyplace">
+      <h3>Anyplace<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/Anyplace</p>
+      <div class="comment">
+         <span class="markdown">Anyplace is a first-of-a-kind indoor information service offering GPS-less localization, navigation and search inside buildings using ordinary smartphones.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>
+            <a href="https://anyplace.cs.ucy.ac.cy/">https://anyplace.cs.ucy.ac.cy/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositioningPlatform"
+               target="_blank"
+               title="http://purl.org/poso/PositioningPlatform">positioning platform</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BDS">
+      <h3>BeiDou Navigation Satellite System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/BDS</p>
+      <div class="comment">
+         <span class="markdown">BeiDou, or BDS, is a global GNSS owned and operated by the People's Republic of China. BDS was formally commissioned in 2020. The operational system consists of 35 satellites. BDS was previously called Compass.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CSIFingerprinting">
+      <h3>Channel State Information fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/CSIFingerprinting</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Fingerprinting"
+               target="_blank"
+               title="http://purl.org/poso/Fingerprinting">fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EarthDeployment">
+      <h3>Earth deployment<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/EarthDeployment</p>
+      <div class="comment">
+         <span class="markdown">A generic deployment for any positioning system deployment on Earth.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>
+            <a href="https://dbpedia.org/resouce/Earth">https://dbpedia.org/resouce/Earth</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/OutdoorDeployment"
+               target="_blank"
+               title="http://purl.org/poso/OutdoorDeployment">outdoor deployment</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FootMountedPDR">
+      <h3>Foot-mounted pedestrian dead reckoning<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/FootMountedPDR</p>
+      <div class="comment">
+         <span class="markdown">Foot-mounted pedestrian dead reckoning uses a sensor on the foot of a pedestrian to detect steps.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PDR"
+               target="_blank"
+               title="http://purl.org/poso/PDR">p d r</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Galileo">
+      <h3>Galileo<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/Galileo</p>
+      <div class="comment">
+         <span class="markdown">Galileo is a global GNSS owned and operated by the European Union. The EU declared the start of Galileo Initial Services in 2016 and plans to complete the system of 24+ satellites in 2021.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeolocationAPI">
+      <h3>Geolocation API<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/GeolocationAPI</p>
+      <div class="comment">
+         <span class="markdown">The Geolocation API is a W3C specification that provides geographical location data based on the capabilities of the hosting device.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/LocationBasedService"
+               target="_blank"
+               title="http://purl.org/poso/LocationBasedService">location based service</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GLONASS">
+      <h3>Global Navigation Satellite System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/GLONASS</p>
+      <div class="comment">
+         <span class="markdown">GLONASS (Globalnaya Navigazionnaya Sputnikovaya Sistema, or Global Navigation Satellite System) is a global GNSS owned and operated by the Russian Federation. The fully operational system consists of 24+ satellites.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GPS">
+      <h3>Global Positioning System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/GPS</p>
+      <div class="comment">
+         <span class="markdown">The Global Positioning System (GPS) is a U.S.-owned utility that provides users with positioning, navigation, and timing (PNT) services. This system consists of three segments: the space segment, the control segment, and the user segment. The U.S. Space Force develops, maintains, and operates the space and control segments.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HectorSLAM">
+      <h3>Hector SLAM<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/HectorSLAM</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/VSLAM"
+               target="_blank"
+               title="http://purl.org/poso/VSLAM">v s l a m</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IRNSS">
+      <h3>Indian Regional Navigation Satellite System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/IRNSS</p>
+      <div class="comment">
+         <span class="markdown">IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning "sailor" or "navigator").</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is gelijk aan</dt>
+         <dd>
+            <a href="#NavIC" title="http://purl.org/poso/common/NavIC">Navigation Indian Constellation</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IndoorAtlas">
+      <h3>IndoorAtlas<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/IndoorAtlas</p>
+      <div class="comment">
+         <span class="markdown">Cross-platform indoor positioning SDK powered by patented 6-layer sensor fusion core. Fast development cycles. Easy to set up. Proven by 10,000+ developers.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositioningPlatform"
+               target="_blank"
+               title="http://purl.org/poso/PositioningPlatform">positioning platform</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="KNNFingerprinting">
+      <h3>k-NN fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/KNNFingerprinting</p>
+      <div class="comment">
+         <span class="markdown">k-Neirest Neighbour fingerprinting is a fingerprinting technique where a number (k) of matches are selected, as opposed to one single fingerprint match. The final output position is the (weighted) average of the k-number of selected fingerprints.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Fingerprinting"
+               target="_blank"
+               title="http://purl.org/poso/Fingerprinting">fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LDPL">
+      <h3>Log-distance path loss model<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/LDPL</p>
+      <div class="comment">
+         <span class="markdown">The log-distance path loss model is a radio propagation model that predicts the path loss a signal encounters inside a building or densely populated areas over distance.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>
+            <a href="http://dbpedia.org/resource/Log-distance_path_loss_model">http://dbpedia.org/resource/Log-distance_path_loss_model</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/RadioPropagation"
+               target="_blank"
+               title="http://purl.org/poso/RadioPropagation">radio propagation</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MidpointLateration">
+      <h3>Midpoint lateration<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/MidpointLateration</p>
+      <div class="comment">
+         <span class="markdown">Midpoint lateration uses the midpoint of two points.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Lateration"
+               target="_blank"
+               title="http://purl.org/poso/Lateration">lateration</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NavIC">
+      <h3>Navigation Indian Constellation<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/NavIC</p>
+      <div class="comment">
+         <span class="markdown">IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning "sailor" or "navigator").</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is gelijk aan</dt>
+         <dd>
+            <a href="#IRNSS" title="http://purl.org/poso/common/IRNSS">Indian Regional Navigation Satellite System</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NLSMultilateration">
+      <h3>Non-linear least squares multilateration<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/NLSMultilateration</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Multilateration"
+               target="_blank"
+               title="http://purl.org/poso/Multilateration">multilateration</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OpenHPS">
+      <h3>OpenHPS<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/OpenHPS</p>
+      <div class="comment">
+         <span class="markdown">OpenHPS is an open source hybrid positioning system to help developers fuse various positioning technologies and algorithms. The system offers a modular data processing framework with each modules ranging from computer vision to common algorithms such as fingerprinting or data persistence of sampled data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositioningPlatform"
+               target="_blank"
+               title="http://purl.org/poso/PositioningPlatform">positioning platform</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OpenVSLAM">
+      <h3>OpenVSLAM<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/OpenVSLAM</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/VSLAM"
+               target="_blank"
+               title="http://purl.org/poso/VSLAM">v s l a m</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ORBSLAM2">
+      <h3>ORB-SLAM2<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/ORBSLAM2</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/VSLAM"
+               target="_blank"
+               title="http://purl.org/poso/VSLAM">v s l a m</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ORBSLAM3">
+      <h3>ORB-SLAM3<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/ORBSLAM3</p>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/VSLAM"
+               target="_blank"
+               title="http://purl.org/poso/VSLAM">v s l a m</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ProbabilisticFingerprinting">
+      <h3>Probabilistic fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/ProbabilisticFingerprinting</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Fingerprinting"
+               target="_blank"
+               title="http://purl.org/poso/Fingerprinting">fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="QZSS">
+      <h3>Quasi-Zenith Satellite System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/QZSS</p>
+      <div class="comment">
+         <span class="markdown">QZSS is a regional GNSS owned by the Government of Japan and operated by QZS System Service Inc. (QSS). QZSS complements GPS to improve coverage in East Asia and Oceania. Japan declared the official start of QZSS services in 2018 with 4 operational satellites, and plans to expand the constellation to 7 satellites by 2023 for autonomous capability.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/SatellitePositioningSystem"
+               target="_blank"
+               title="http://purl.org/poso/SatellitePositioningSystem">satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RFCellIdentification">
+      <h3>RF cell identification<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/RFCellIdentification</p>
+      <div class="comment">
+         <span class="markdown">RF cell identification is a technique that determines the position based on the closest RF landmark in range.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/CellIdentification"
+               target="_blank"
+               title="http://purl.org/poso/CellIdentification">cell identification</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ROS">
+      <h3>Robotics Operating System<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/ROS</p>
+      <div class="comment">
+         <span class="markdown">ROS (Robot Operating System) provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositioningPlatform"
+               target="_blank"
+               title="http://purl.org/poso/PositioningPlatform">positioning platform</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SonyNimway">
+      <h3>Sony Nimway<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/SonyNimway</p>
+      <div class="comment">
+         <span class="markdown">Nimway from Sony is a complete smart office solution for the people-centred workplace. Acting as your personal assistant throughout the workday, it facilitates many otherwise time-consuming tasks, like finding your way to a meeting room, locating a colleague or booking a desk.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/common/</dd>
+      </dl>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/PositioningPlatform"
+               target="_blank"
+               title="http://purl.org/poso/PositioningPlatform">positioning platform</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SVMFingerprinting">
+      <h3>Support Vector Machine fingerprinting<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/SVMFingerprinting</p>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/Fingerprinting"
+               target="_blank"
+               title="http://purl.org/poso/Fingerprinting">fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WeightedAccuracyFusion">
+      <h3>Weighted accuracy fusion<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/common/WeightedAccuracyFusion</p>
+      <div class="comment">
+         <span class="markdown">Decision level fusion based on weighted average of the accuracy^-1.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="http://purl.org/poso/HighLevelFusion"
+               target="_blank"
+               title="http://purl.org/poso/HighLevelFusion">high level fusion</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legenda <span class="backlink"> terug naar <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Klassen">c</sup>: Klassen <br/>
+<sup class="type-op" title="Objecteigenschappen">op</sup>: Objecteigenschappen <br/>
+<sup class="type-dp" title="Data-eigenschappen">dp</sup>: Data-eigenschappen <br/>
+<sup class="type-ni" title="Concrete exemplaren">ni</sup>: Concrete exemplaren
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Dankbetuiging <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
+<p>
+De auteurs willen graag <a href="http://www.essepuntato.it/">Silvio Peroni</a> bedanken voor het ontwikkelen van <a href="http://www.essepuntato.it/lode">LODE</a>, een Live OWL Documentation Environment, welke in dit document wordt gebruikt voor het weergeven van de sectie met kruisverwijzingen, en <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> voor het ontwikkelen van <a href="https://github.com/dgarijo/Widoco">Widoco</a>, het programma waarmee het sjabloon is gecreÃ«erd welke is toegepast op dit document.</p>
+</div>
+
+
+</div>
+</body>
+</html>

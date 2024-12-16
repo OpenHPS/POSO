@@ -7,7 +7,7 @@
 @base <http://purl.org/poso/> .
 
 <http://purl.org/poso/> rdf:type owl:Ontology ;
-                         owl:versionIRI <http://purl.org/poso/1.0/> ;
+                         owl:versionIRI <http://purl.org/poso/1.1/> ;
                          owl:imports <http://www.w3.org/ns/ssn/> ,
                                      <http://www.w3.org/ns/ssn/systems/> ;
                          <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated."@en ;
@@ -20,7 +20,7 @@
                          <http://purl.org/dc/terms/title> "Positioning System Ontology"@en ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^xsd:anyURI ;
-                         <http://schema.org/image> "https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg" .
+                         <http://schema.org/image> "https://raw.githubusercontent.com/OpenHPS/POSO/main/1.0/docs/images/systems_and_procedures.svg" .
 
 #################################################################
 #    Annotation properties
@@ -380,13 +380,6 @@
                          "Versnelling"@nl .
 
 
-###  http://purl.org/poso/AngleBasedTechnique
-:AngleBasedTechnique rdf:type owl:Class ;
-                     rdfs:subClassOf :PositioningTechnique ;
-                     rdfs:comment "Angles based positioning techniques includes all positioning techniques that use angles to determine a position."@en ;
-                     rdfs:label "Angle based positioning techniques"@en .
-
-
 ###  http://purl.org/poso/AngularAcceleration
 :AngularAcceleration rdf:type owl:Class ;
                      rdfs:subClassOf :Acceleration ;
@@ -395,12 +388,12 @@
                                 "Draaiversnelling"@nl .
 
 
-###  http://purl.org/poso/AngularMovement
-:AngularMovement rdf:type owl:Class ;
-                 rdfs:subClassOf :Movement ;
-                 rdfs:comment "Angular movement around a certain origin point."@en ;
-                 rdfs:label "Angular movement"@en ,
-                            "Draaibeweging"@nl .
+###  http://purl.org/poso/AngularMotion
+:AngularMotion rdf:type owl:Class ;
+               rdfs:subClassOf :Motion ;
+               rdfs:comment "Angular motion around a certain origin point."@en ;
+               rdfs:label "Angular motion"@en ,
+                          "Draaibeweging"@nl .
 
 
 ###  http://purl.org/poso/AngularVelocity
@@ -414,9 +407,10 @@
 
 ###  http://purl.org/poso/Angulation
 :Angulation rdf:type owl:Class ;
-            rdfs:subClassOf :Triangulation ;
-            rdfs:comment "Angulation is a triangulation method to determine a position based on the relative angles to other objects."@en ;
-            rdfs:label "Angulation"@en .
+            rdfs:subClassOf :PositioningTechnique ;
+            rdfs:comment "Angle-based positioning techniques are positioning techniques that use angles to determine a position."@en ;
+            rdfs:label "Angulation"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Angle-based positioning techniques"@en .
 
 
 ###  http://purl.org/poso/AuditoryLandmark
@@ -453,6 +447,14 @@
                       rdfs:label "Axis-angle orientation"@en .
 
 
+###  http://purl.org/poso/Beamforming
+:Beamforming rdf:type owl:Class ;
+             rdfs:subClassOf :Angulation ;
+             rdfs:comment "Beamforming is a signal processing technique that uses an array of antennas to form a directional beam of radio waves. By adjusting the direction of the beam and measuring the angle of arrival or departure of the signal, the position of a receiver can be estimated."@en ;
+             rdfs:isDefinedBy "https://ieeexplore.ieee.org/document/9369486"^^xsd:anyURI ;
+             rdfs:label "Beamforming"@en .
+
+
 ###  http://purl.org/poso/BluetoothBeacon
 :BluetoothBeacon rdf:type owl:Class ;
                  rdfs:subClassOf :RFLandmark ;
@@ -487,7 +489,7 @@
 
 ###  http://purl.org/poso/CellIdentification
 :CellIdentification rdf:type owl:Class ;
-                    rdfs:subClassOf :ToplogyBasedTechnique ;
+                    rdfs:subClassOf :PositioningTechnique ;
                     rdfs:comment "Cell identification is a positioning procedure using the position of one landmark that is within the cell."@en ;
                     rdfs:label "Cell identification"@en ;
                     <http://www.w3.org/2004/02/skos/core#altLabel> "Cell Of Origin (COO)"@en ;
@@ -497,17 +499,10 @@
 
 ###  http://purl.org/poso/DeadReckoning
 :DeadReckoning rdf:type owl:Class ;
-               rdfs:subClassOf :MotionBasedTechnique ;
+               rdfs:subClassOf :PositioningTechnique ;
                rdfs:comment "Dead reckoning is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."@en ;
                rdfs:label "Dead reckoning"@en ;
                <http://www.w3.org/2004/02/skos/core#altLabel> "Deduced reckoning"@en .
-
-
-###  http://purl.org/poso/DistanceBasedTechnique
-:DistanceBasedTechnique rdf:type owl:Class ;
-                        rdfs:subClassOf :PositioningTechnique ;
-                        rdfs:comment "Distance based positioning techniques includes all positioning techniques that use distances to determine a position."@en ;
-                        rdfs:label "Distance based positioning techniques"@en .
 
 
 ###  http://purl.org/poso/EulerOrder
@@ -566,7 +561,7 @@
 
 ###  http://purl.org/poso/Fingerprinting
 :Fingerprinting rdf:type owl:Class ;
-                rdfs:subClassOf :ToplogyBasedTechnique ;
+                rdfs:subClassOf :PositioningTechnique ;
                 rdfs:comment "Fingerprinting is a positioning Procedure where sensor data is collected at a specific position and orientation. During the offline-stage of a positioning system, the significant data features are extracted and stored for that position. In the online-stage, the closest match(es) of the features are determined to predict the position."@en ;
                 rdfs:label "Fingerprinting"@en .
 
@@ -578,6 +573,13 @@
                  rdfs:isDefinedBy "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^xsd:anyURI ;
                  rdfs:label "High level sensor fusion"@en ;
                  <http://www.w3.org/2004/02/skos/core#altLabel> "Decision level sensor fusion"@en .
+
+
+###  http://purl.org/poso/HybridDeployment
+:HybridDeployment rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/ssn/Deployment> ;
+                  rdfs:comment "A hybrid deployment covers an indoor and outdoor deployment."@en ;
+                  rdfs:label "Hybrid deployment"@en .
 
 
 ###  http://purl.org/poso/IndoorDeployment
@@ -627,9 +629,10 @@
 
 ###  http://purl.org/poso/Lateration
 :Lateration rdf:type owl:Class ;
-            rdfs:subClassOf :DistanceBasedTechnique ;
+            rdfs:subClassOf :PositioningTechnique ;
             rdfs:isDefinedBy "https://www.sciencedirect.com/topics/engineering/lateration"^^xsd:anyURI ;
-            rdfs:label "Lateration"@en .
+            rdfs:label "Lateration"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Distance-based positioning"@en .
 
 
 ###  http://purl.org/poso/LinearAcceleration
@@ -639,12 +642,12 @@
                     rdfs:label "Linear acceleration"@en .
 
 
-###  http://purl.org/poso/LinearMovement
-:LinearMovement rdf:type owl:Class ;
-                rdfs:subClassOf :Movement ;
-                rdfs:comment "Linear movement along a certain axis."@en ;
-                rdfs:label "Lineaire beweging"@nl ,
-                           "Linear movement"@en .
+###  http://purl.org/poso/LinearMotion
+:LinearMotion rdf:type owl:Class ;
+              rdfs:subClassOf :Motion ;
+              rdfs:comment "Linear motion along a certain axis."@en ;
+              rdfs:label "Lineaire beweging"@nl ,
+                         "Linear motion"@en .
 
 
 ###  http://purl.org/poso/LinearVelocity
@@ -661,7 +664,7 @@
                       rdfs:subClassOf <http://www.w3.org/ns/ssn/System> ;
                       rdfs:comment "A location based service (LBS) is a service that provides the location of a person or object. It provides this information without the required knowledge of the underlying technologies and algorithms."@en ;
                       rdfs:isDefinedBy "https://isotc211.geolexica.org/concepts/278/"^^xsd:anyURI ;
-                      rdfs:label "Location based service"@en .
+                      rdfs:label "Location-based service"@en .
 
 
 ###  http://purl.org/poso/LowLevelFusion
@@ -693,19 +696,12 @@
                 rdfs:label "Mid level sensor fusion"@en .
 
 
-###  http://purl.org/poso/MotionBasedTechnique
-:MotionBasedTechnique rdf:type owl:Class ;
-                      rdfs:subClassOf :PositioningTechnique ;
-                      rdfs:comment "Motion-based positioning estimates a device's location by tracking its movement over time relative to a known starting point."@en ;
-                      rdfs:label "Motion-based positioning technique"@en .
-
-
-###  http://purl.org/poso/Movement
-:Movement rdf:type owl:Class ;
-          rdfs:subClassOf <http://www.w3.org/ns/ssn/Stimulus> ;
-          rdfs:comment "Movement stimulus triggering an update of a position."@en ;
-          rdfs:label "Beweging"@nl ,
-                     "Movement"@en .
+###  http://purl.org/poso/Motion
+:Motion rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.w3.org/ns/ssn/Stimulus> ;
+        rdfs:comment "Motion stimulus triggering an update of a position."@en ;
+        rdfs:label "Beweging"@nl ,
+                   "Motion"@en .
 
 
 ###  http://purl.org/poso/Multilateration
@@ -854,6 +850,13 @@
             <http://www.w3.org/2004/02/skos/core#example> "An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position."@en .
 
 
+###  http://purl.org/poso/RadioFrequencyFingerprinting
+:RadioFrequencyFingerprinting rdf:type owl:Class ;
+                              rdfs:subClassOf :Fingerprinting ;
+                              rdfs:comment "Radio frequency fingerprinting or RF fingerprinting is a technique where RF signals are used to create a unique fingerprint at a current location."@en ;
+                              rdfs:label "RF fingerprinting"@en .
+
+
 ###  http://purl.org/poso/RadioPropagation
 :RadioPropagation rdf:type owl:Class ;
                   rdfs:subClassOf <http://www.w3.org/ns/sosa/Procedure> ;
@@ -955,13 +958,6 @@
              rdfs:label "Sensor input"@en .
 
 
-###  http://purl.org/poso/ToplogyBasedTechnique
-:ToplogyBasedTechnique rdf:type owl:Class ;
-                       rdfs:subClassOf :PositioningTechnique ;
-                       rdfs:comment "Toplogy-based positioning techniques are techniques that make use of the known infrastructure or \"topology\" of a network."@en ;
-                       rdfs:label "Topology based positioning techniques"@en .
-
-
 ###  http://purl.org/poso/TrackedFeature
 :TrackedFeature rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ,
@@ -978,9 +974,10 @@
 
 ###  http://purl.org/poso/Triangulation
 :Triangulation rdf:type owl:Class ;
-               rdfs:subClassOf :AngleBasedTechnique ;
+               rdfs:subClassOf :Angulation ;
                rdfs:comment "Triangulation is the procedure of determining a position using relative angles to a feature of interest with a known position."@en ;
-               rdfs:label "Triangulation"@en .
+               rdfs:label "Triangulation"@en ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "Angle-based positioning"@en .
 
 
 ###  http://purl.org/poso/Trilateration

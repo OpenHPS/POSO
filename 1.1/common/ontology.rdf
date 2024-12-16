@@ -1,0 +1,843 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/poso/common/"
+     xml:base="http://purl.org/poso/common/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfp="https://w3id.org/rdfp/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:shacl="http://www.w3.org/ns/shacl#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://purl.org/poso/common/">
+        <owl:versionIRI rdf:resource="http://purl.org/poso/1.1/common/"/>
+        <terms:abstract xml:lang="en">The common allignment module is a module that extends POSO with implementations of specific positioning techniques and algorithms - as well as known deployed systems and available platforms.</terms:abstract>
+        <terms:bibliographicCitation>Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology</terms:bibliographicCitation>
+        <terms:contributor xml:lang="en">Beat Signer</terms:contributor>
+        <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
+        <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-16T00:00:00</terms:modified>
+        <terms:title xml:lang="en">Positioning System Ontology Common Technologies, Algorithms and Systems</terms:title>
+        <vann:preferredNamespacePrefix>posoc</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/common/</vann:preferredNamespaceUri>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#targetClass -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#targetClass"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/hasDeployment -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/ssn/hasDeployment"/>
+    
+
+
+    <!-- https://w3id.org/rdfp/presentedBy -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rdfp/presentedBy"/>
+    
+
+
+    <!-- https://w3id.org/rdfp/validationRule -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/rdfp/validationRule"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/poso/common/hasReferenceRSSI -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/poso/common/hasReferenceRSSI">
+        <rdfs:comment xml:lang="en">has a reference Received Signal Strength Indicator at a specified distance.</rdfs:comment>
+        <rdfs:label xml:lang="en">has reference RSSI</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/poso/common/major -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/poso/common/major">
+        <rdfs:domain rdf:resource="http://purl.org/poso/common/iBeacon"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/common/major"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">major</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/poso/common/minor -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/poso/common/minor">
+        <rdfs:domain rdf:resource="http://purl.org/poso/common/iBeacon"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/common/minor"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">minor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/poso/common/proximityUUID -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/poso/common/proximityUUID">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/poso/common/proximityUUID"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">32</xsd:maxLength>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">proximity UUID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/poso/BluetoothBeacon -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/BluetoothBeacon"/>
+    
+
+
+    <!-- http://purl.org/poso/CellIdentification -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/CellIdentification"/>
+    
+
+
+    <!-- http://purl.org/poso/DeadReckoning -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/DeadReckoning"/>
+    
+
+
+    <!-- http://purl.org/poso/Fingerprinting -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/Fingerprinting"/>
+    
+
+
+    <!-- http://purl.org/poso/HighLevelFusion -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/HighLevelFusion"/>
+    
+
+
+    <!-- http://purl.org/poso/Lateration -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/Lateration"/>
+    
+
+
+    <!-- http://purl.org/poso/LocationBasedService -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/LocationBasedService"/>
+    
+
+
+    <!-- http://purl.org/poso/Multilateration -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/Multilateration"/>
+    
+
+
+    <!-- http://purl.org/poso/OutdoorDeployment -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/OutdoorDeployment"/>
+    
+
+
+    <!-- http://purl.org/poso/PDR -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/PDR"/>
+    
+
+
+    <!-- http://purl.org/poso/PositionOutput -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/PositionOutput"/>
+    
+
+
+    <!-- http://purl.org/poso/PositioningPlatform -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/PositioningPlatform"/>
+    
+
+
+    <!-- http://purl.org/poso/RadioPropagation -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/RadioPropagation"/>
+    
+
+
+    <!-- http://purl.org/poso/SatellitePositioningSystem -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/SatellitePositioningSystem"/>
+    
+
+
+    <!-- http://purl.org/poso/VSLAM -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/VSLAM"/>
+    
+
+
+    <!-- http://purl.org/poso/common/AltBeacon -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/AltBeacon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/BluetoothBeacon"/>
+        <rdfs:comment xml:lang="en">AltBeacon is an open and interoperable proximity beacon specification.</rdfs:comment>
+        <rdfs:label xml:lang="en">AltBeacon</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://altbeacon.org/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/EddystoneBeacon -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/EddystoneBeacon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/BluetoothBeacon"/>
+        <rdfs:comment xml:lang="en">Eddystone was a Bluetooth Low Energy beacon profile released by Google in July 2015.</rdfs:comment>
+        <rdfs:label xml:lang="en">Eddystone</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Eddystone_(Google)"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/EddystoneEID -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/EddystoneEID">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/common/EddystoneBeacon"/>
+        <rdfs:label xml:lang="en">Eddystone-EID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/EddystoneTLM -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/EddystoneTLM">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/common/EddystoneBeacon"/>
+        <rdfs:comment xml:lang="en">Eddystone-TLM provides telemetry information. It can include the battery voltage, temperature, advertisement count and uptime.</rdfs:comment>
+        <rdfs:label xml:lang="en">Eddystone-TLM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/EddystoneUID -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/EddystoneUID">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/common/EddystoneBeacon"/>
+        <rdfs:comment xml:lang="en">Eddystone UID provides a 10 byte namespace and 6 byte instance identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">Eddystone-UID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/EddystoneURL -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/EddystoneURL">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/common/EddystoneBeacon"/>
+        <rdfs:comment xml:lang="en">Eddystone-URL can broadcast a short encoded URL.</rdfs:comment>
+        <rdfs:label xml:lang="en">Eddystone-URL</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/SemBeacon -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/SemBeacon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/BluetoothBeacon"/>
+        <rdfs:comment xml:lang="en">A SemBeacon is a semantic beacon based on AltBeacon and Eddystone-URL.</rdfs:comment>
+        <rdfs:label xml:lang="en">SemBeacon</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.org/sembeacon/SemBeacon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/common/iBeacon -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/common/iBeacon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/BluetoothBeacon"/>
+        <rdfs:comment xml:lang="en">An iBeacon is a beacon that advertises the proximity beacon packet specification.</rdfs:comment>
+        <rdfs:label xml:lang="en">iBeacon</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://developer.apple.com/ibeacon/</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#NodeShape -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/shacl#NodeShape"/>
+    
+
+
+    <!-- https://w3id.org/rdfp/GraphDescription -->
+
+
+    <owl:Class rdf:about="https://w3id.org/rdfp/GraphDescription"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/poso/common/AbsolutePositionOutput -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/AbsolutePositionOutput">
+        <rdf:type rdf:resource="http://purl.org/poso/PositionOutput"/>
+        <rdf:type rdf:resource="https://w3id.org/rdfp/GraphDescription"/>
+        <rdfs:label xml:lang="en">Absolute position output</rdfs:label>
+        <rdfp:presentedBy>
+            <rdf:Description/>
+        </rdfp:presentedBy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/Anyplace -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/Anyplace">
+        <rdf:type rdf:resource="http://purl.org/poso/PositioningPlatform"/>
+        <rdfs:comment xml:lang="en">Anyplace is a first-of-a-kind indoor information service offering GPS-less localization, navigation and search inside buildings using ordinary smartphones.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://anyplace.cs.ucy.ac.cy/"/>
+        <rdfs:label xml:lang="en">Anyplace</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/BDS -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/BDS">
+        <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
+        <rdfs:comment xml:lang="en">BeiDou, or BDS, is a global GNSS owned and operated by the People&apos;s Republic of China. BDS was formally commissioned in 2020. The operational system consists of 35 satellites. BDS was previously called Compass.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BeiDou Navigation Satellite System</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/CSIFingerprinting -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/CSIFingerprinting">
+        <rdf:type rdf:resource="http://purl.org/poso/Fingerprinting"/>
+        <rdfs:label xml:lang="en">Channel State Information fingerprinting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/EarthDeployment -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/EarthDeployment">
+        <rdf:type rdf:resource="http://purl.org/poso/OutdoorDeployment"/>
+        <rdfs:comment xml:lang="en">A generic deployment for any positioning system deployment on Earth.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://dbpedia.org/resouce/Earth"/>
+        <rdfs:label xml:lang="en">Earth deployment</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/FootMountedPDR -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/FootMountedPDR">
+        <rdf:type rdf:resource="http://purl.org/poso/PDR"/>
+        <rdfs:comment xml:lang="en">Foot-mounted pedestrian dead reckoning uses a sensor on the foot of a pedestrian to detect steps.</rdfs:comment>
+        <rdfs:label xml:lang="en">Foot-mounted pedestrian dead reckoning</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/GLONASS -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/GLONASS">
+        <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
+        <rdfs:comment xml:lang="en">GLONASS (Globalnaya Navigazionnaya Sputnikovaya Sistema, or Global Navigation Satellite System) is a global GNSS owned and operated by the Russian Federation. The fully operational system consists of 24+ satellites.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Global Navigation Satellite System</rdfs:label>
+        <rdfs:label xml:lang="ru">Globalnaya Navigazionnaya Sputnikovaya Sistema</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/GPS -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/GPS">
+        <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
+        <rdfs:comment xml:lang="en">The Global Positioning System (GPS) is a U.S.-owned utility that provides users with positioning, navigation, and timing (PNT) services. This system consists of three segments: the space segment, the control segment, and the user segment. The U.S. Space Force develops, maintains, and operates the space and control segments.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://www.gps.gov/systems/gps/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Global Positioning System</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/Galileo -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/Galileo">
+        <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
+        <rdfs:comment xml:lang="en">Galileo is a global GNSS owned and operated by the European Union. The EU declared the start of Galileo Initial Services in 2016 and plans to complete the system of 24+ satellites in 2021.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Galileo</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/GeolocationAPI -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/GeolocationAPI">
+        <rdf:type rdf:resource="http://purl.org/poso/LocationBasedService"/>
+        <rdfs:comment xml:lang="en">The Geolocation API is a W3C specification that provides geographical location data based on the capabilities of the hosting device.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/TR/geolocation/</rdfs:isDefinedBy>
+        <rdfs:label>Geolocation API</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/HectorSLAM -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/HectorSLAM">
+        <rdf:type rdf:resource="http://purl.org/poso/VSLAM"/>
+        <rdfs:label xml:lang="en">Hector SLAM</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://wiki.ros.org/hector_slam</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/IRNSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/IRNSS">
+        <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
+        <owl:sameAs rdf:resource="http://purl.org/poso/common/NavIC"/>
+        <rdfs:comment xml:lang="en">IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning &quot;sailor&quot; or &quot;navigator&quot;).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Indian Regional Navigation Satellite System</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/NavIC -->
+
+
+    <rdf:Description rdf:about="http://purl.org/poso/common/NavIC"/>
+    
+
+
+    <!-- http://purl.org/poso/common/IndoorAtlas -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/IndoorAtlas">
+        <rdf:type rdf:resource="http://purl.org/poso/PositioningPlatform"/>
+        <rdfs:comment xml:lang="en">Cross-platform indoor positioning SDK powered by patented 6-layer sensor fusion core. Fast development cycles. Easy to set up. Proven by 10,000+ developers.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.indooratlas.com/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">IndoorAtlas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/KNNFingerprinting -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/KNNFingerprinting">
+        <rdf:type rdf:resource="http://purl.org/poso/Fingerprinting"/>
+        <rdfs:comment xml:lang="en">k-Neirest Neighbour fingerprinting is a fingerprinting technique where a number (k) of matches are selected, as opposed to one single fingerprint match. The final output position is the (weighted) average of the k-number of selected fingerprints.</rdfs:comment>
+        <rdfs:label xml:lang="en">k-NN fingerprinting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/LDPL -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/LDPL">
+        <rdf:type rdf:resource="http://purl.org/poso/RadioPropagation"/>
+        <rdfs:comment xml:lang="en">The log-distance path loss model is a radio propagation model that predicts the path loss a signal encounters inside a building or densely populated areas over distance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://dbpedia.org/resource/Log-distance_path_loss_model"/>
+        <rdfs:label xml:lang="en">Log-distance path loss model</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/MidpointLateration -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/MidpointLateration">
+        <rdf:type rdf:resource="http://purl.org/poso/Lateration"/>
+        <rdfs:comment xml:lang="en">Midpoint lateration uses the midpoint of two points.</rdfs:comment>
+        <rdfs:label xml:lang="en">Midpoint lateration</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/NLSMultilateration -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/NLSMultilateration">
+        <rdf:type rdf:resource="http://purl.org/poso/Multilateration"/>
+        <rdfs:label xml:lang="en">Non-linear least squares multilateration</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/NavIC -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/NavIC">
+        <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
+        <rdfs:comment xml:lang="en">IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland. The system consists of 7 satellites. In 2016, India renamed IRNSS as the Navigation Indian Constellation (NavIC, meaning &quot;sailor&quot; or &quot;navigator&quot;).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Navigation Indian Constellation</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/ORBSLAM2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/ORBSLAM2">
+        <rdf:type rdf:resource="http://purl.org/poso/VSLAM"/>
+        <rdfs:label xml:lang="en">ORB-SLAM2</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/raulmur/ORB_SLAM2</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/ORBSLAM3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/ORBSLAM3">
+        <rdf:type rdf:resource="http://purl.org/poso/VSLAM"/>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/UZ-SLAMLab/ORB_SLAM3</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ORB-SLAM3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/OpenHPS -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/OpenHPS">
+        <rdf:type rdf:resource="http://purl.org/poso/PositioningPlatform"/>
+        <rdfs:comment xml:lang="en">OpenHPS is an open source hybrid positioning system to help developers fuse various positioning technologies and algorithms. The system offers a modular data processing framework with each modules ranging from computer vision to common algorithms such as fingerprinting or data persistence of sampled data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://openhps.org</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">OpenHPS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/OpenVSLAM -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/OpenVSLAM">
+        <rdf:type rdf:resource="http://purl.org/poso/VSLAM"/>
+        <rdfs:label xml:lang="en">OpenVSLAM</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://stella-cv.readthedocs.io/en/latest/index.html</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">stella-vslam</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/ProbabilisticFingerprinting -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/ProbabilisticFingerprinting">
+        <rdf:type rdf:resource="http://purl.org/poso/Fingerprinting"/>
+        <rdfs:label xml:lang="en">Probabilistic fingerprinting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/QZSS -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/QZSS">
+        <rdf:type rdf:resource="http://purl.org/poso/SatellitePositioningSystem"/>
+        <rdfs:comment xml:lang="en">QZSS is a regional GNSS owned by the Government of Japan and operated by QZS System Service Inc. (QSS). QZSS complements GPS to improve coverage in East Asia and Oceania. Japan declared the official start of QZSS services in 2018 with 4 operational satellites, and plans to expand the constellation to 7 satellites by 2023 for autonomous capability.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.gps.gov/systems/gnss/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Quasi-Zenith Satellite System</rdfs:label>
+        <ssn:hasDeployment rdf:resource="http://purl.org/poso/common/EarthDeployment"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/RFCellIdentification -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/RFCellIdentification">
+        <rdf:type rdf:resource="http://purl.org/poso/CellIdentification"/>
+        <rdfs:comment xml:lang="en">RF cell identification is a technique that determines the position based on the closest RF landmark in range.</rdfs:comment>
+        <rdfs:label xml:lang="en">RF cell identification</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/ROS -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/ROS">
+        <rdf:type rdf:resource="http://purl.org/poso/PositioningPlatform"/>
+        <rdfs:comment xml:lang="en">ROS (Robot Operating System) provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ros.org/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Robotics Operating System</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/SVMFingerprinting -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/SVMFingerprinting">
+        <rdf:type rdf:resource="http://purl.org/poso/Fingerprinting"/>
+        <rdfs:label xml:lang="en">Support Vector Machine fingerprinting</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/SonyNimway -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/SonyNimway">
+        <rdf:type rdf:resource="http://purl.org/poso/PositioningPlatform"/>
+        <rdfs:comment xml:lang="en">Nimway from Sony is a complete smart office solution for the people-centred workplace. Acting as your personal assistant throughout the workday, it facilitates many otherwise time-consuming tasks, like finding your way to a meeting room, locating a colleague or booking a desk.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.sonynetworkcom.com/nimway</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Sony Nimway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/poso/common/WeightedAccuracyFusion -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/poso/common/WeightedAccuracyFusion">
+        <rdf:type rdf:resource="http://purl.org/poso/HighLevelFusion"/>
+        <rdfs:comment xml:lang="en">Decision level fusion based on weighted average of the accuracy^-1.</rdfs:comment>
+        <rdfs:label xml:lang="en">Weighted accuracy fusion</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="https://w3id.org/rdfp/GraphDescription"/>
+        <rdfp:validationRule rdf:nodeID="genid9"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid9">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:targetClass rdf:resource="http://purl.org/poso/AbsolutePosition"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

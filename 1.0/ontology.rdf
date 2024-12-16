@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="http://purl.org/poso/">
-        <owl:versionIRI rdf:resource="http://purl.org/poso/1.0/"/>
+        <owl:versionIRI rdf:resource="http://purl.org/poso/1.1/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/ssn/systems/"/>
         <terms:abstract xml:lang="en">The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.</terms:abstract>
@@ -26,7 +26,7 @@
         <terms:title xml:lang="en">Positioning System Ontology</terms:title>
         <vann:preferredNamespacePrefix>poso</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/</vann:preferredNamespaceUri>
-        <schema:image>https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg</schema:image>
+        <schema:image>https://raw.githubusercontent.com/OpenHPS/POSO/main/1.0/docs/images/systems_and_procedures.svg</schema:image>
     </owl:Ontology>
     
 
@@ -590,17 +590,6 @@
     
 
 
-    <!-- http://purl.org/poso/AngleBasedTechnique -->
-
-
-    <owl:Class rdf:about="http://purl.org/poso/AngleBasedTechnique">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
-        <rdfs:comment xml:lang="en">Angles based positioning techniques includes all positioning techniques that use angles to determine a position.</rdfs:comment>
-        <rdfs:label xml:lang="en">Angle based positioning techniques</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/poso/AngularAcceleration -->
 
 
@@ -613,13 +602,13 @@
     
 
 
-    <!-- http://purl.org/poso/AngularMovement -->
+    <!-- http://purl.org/poso/AngularMotion -->
 
 
-    <owl:Class rdf:about="http://purl.org/poso/AngularMovement">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/Movement"/>
-        <rdfs:comment xml:lang="en">Angular movement around a certain origin point.</rdfs:comment>
-        <rdfs:label xml:lang="en">Angular movement</rdfs:label>
+    <owl:Class rdf:about="http://purl.org/poso/AngularMotion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/Motion"/>
+        <rdfs:comment xml:lang="en">Angular motion around a certain origin point.</rdfs:comment>
+        <rdfs:label xml:lang="en">Angular motion</rdfs:label>
         <rdfs:label xml:lang="nl">Draaibeweging</rdfs:label>
     </owl:Class>
     
@@ -642,9 +631,10 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Angulation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/Triangulation"/>
-        <rdfs:comment xml:lang="en">Angulation is a triangulation method to determine a position based on the relative angles to other objects.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
+        <rdfs:comment xml:lang="en">Angle-based positioning techniques are positioning techniques that use angles to determine a position.</rdfs:comment>
         <rdfs:label xml:lang="en">Angulation</rdfs:label>
+        <skos:altLabel xml:lang="en">Angle-based positioning techniques</skos:altLabel>
     </owl:Class>
     
 
@@ -697,6 +687,18 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The axis-angle orientation is an orientation representation where the x, y and z values are rotated with a certain angle.</rdfs:comment>
         <rdfs:label xml:lang="en">Axis-angle orientation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/Beamforming -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/Beamforming">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/Angulation"/>
+        <rdfs:comment xml:lang="en">Beamforming is a signal processing technique that uses an array of antennas to form a directional beam of radio waves. By adjusting the direction of the beam and measuring the angle of arrival or departure of the signal, the position of a receiver can be estimated.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ieeexplore.ieee.org/document/9369486</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Beamforming</rdfs:label>
     </owl:Class>
     
 
@@ -757,7 +759,7 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/CellIdentification">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/ToplogyBasedTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
         <rdfs:comment xml:lang="en">Cell identification is a positioning procedure using the position of one landmark that is within the cell.</rdfs:comment>
         <rdfs:label xml:lang="en">Cell identification</rdfs:label>
         <skos:altLabel xml:lang="en">Cell Of Origin (COO)</skos:altLabel>
@@ -771,21 +773,10 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/DeadReckoning">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/MotionBasedTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
         <rdfs:comment xml:lang="en">Dead reckoning is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation&apos;s indicating its heading and velocity.</rdfs:comment>
         <rdfs:label xml:lang="en">Dead reckoning</rdfs:label>
         <skos:altLabel xml:lang="en">Deduced reckoning</skos:altLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/poso/DistanceBasedTechnique -->
-
-
-    <owl:Class rdf:about="http://purl.org/poso/DistanceBasedTechnique">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
-        <rdfs:comment xml:lang="en">Distance based positioning techniques includes all positioning techniques that use distances to determine a position.</rdfs:comment>
-        <rdfs:label xml:lang="en">Distance based positioning techniques</rdfs:label>
     </owl:Class>
     
 
@@ -876,7 +867,7 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Fingerprinting">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/ToplogyBasedTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
         <rdfs:comment xml:lang="en">Fingerprinting is a positioning Procedure where sensor data is collected at a specific position and orientation. During the offline-stage of a positioning system, the significant data features are extracted and stored for that position. In the online-stage, the closest match(es) of the features are determined to predict the position.</rdfs:comment>
         <rdfs:label xml:lang="en">Fingerprinting</rdfs:label>
     </owl:Class>
@@ -892,6 +883,17 @@
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">High level sensor fusion</rdfs:label>
         <skos:altLabel xml:lang="en">Decision level sensor fusion</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/HybridDeployment -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/HybridDeployment">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <rdfs:comment xml:lang="en">A hybrid deployment covers an indoor and outdoor deployment.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hybrid deployment</rdfs:label>
     </owl:Class>
     
 
@@ -967,9 +969,10 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Lateration">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/DistanceBasedTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.sciencedirect.com/topics/engineering/lateration</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Lateration</rdfs:label>
+        <skos:altLabel xml:lang="en">Distance-based positioning</skos:altLabel>
     </owl:Class>
     
 
@@ -985,14 +988,14 @@
     
 
 
-    <!-- http://purl.org/poso/LinearMovement -->
+    <!-- http://purl.org/poso/LinearMotion -->
 
 
-    <owl:Class rdf:about="http://purl.org/poso/LinearMovement">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/Movement"/>
-        <rdfs:comment xml:lang="en">Linear movement along a certain axis.</rdfs:comment>
+    <owl:Class rdf:about="http://purl.org/poso/LinearMotion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/Motion"/>
+        <rdfs:comment xml:lang="en">Linear motion along a certain axis.</rdfs:comment>
         <rdfs:label xml:lang="nl">Lineaire beweging</rdfs:label>
-        <rdfs:label xml:lang="en">Linear movement</rdfs:label>
+        <rdfs:label xml:lang="en">Linear motion</rdfs:label>
     </owl:Class>
     
 
@@ -1017,7 +1020,7 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
         <rdfs:comment xml:lang="en">A location based service (LBS) is a service that provides the location of a person or object. It provides this information without the required knowledge of the underlying technologies and algorithms.</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://isotc211.geolexica.org/concepts/278/</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">Location based service</rdfs:label>
+        <rdfs:label xml:lang="en">Location-based service</rdfs:label>
     </owl:Class>
     
 
@@ -1067,25 +1070,14 @@
     
 
 
-    <!-- http://purl.org/poso/MotionBasedTechnique -->
+    <!-- http://purl.org/poso/Motion -->
 
 
-    <owl:Class rdf:about="http://purl.org/poso/MotionBasedTechnique">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
-        <rdfs:comment xml:lang="en">Motion-based positioning estimates a device&apos;s location by tracking its movement over time relative to a known starting point.</rdfs:comment>
-        <rdfs:label xml:lang="en">Motion-based positioning technique</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/poso/Movement -->
-
-
-    <owl:Class rdf:about="http://purl.org/poso/Movement">
+    <owl:Class rdf:about="http://purl.org/poso/Motion">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Stimulus"/>
-        <rdfs:comment xml:lang="en">Movement stimulus triggering an update of a position.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Motion stimulus triggering an update of a position.</rdfs:comment>
         <rdfs:label xml:lang="nl">Beweging</rdfs:label>
-        <rdfs:label xml:lang="en">Movement</rdfs:label>
+        <rdfs:label xml:lang="en">Motion</rdfs:label>
     </owl:Class>
     
 
@@ -1314,6 +1306,17 @@
     
 
 
+    <!-- http://purl.org/poso/RadioFrequencyFingerprinting -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/RadioFrequencyFingerprinting">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/Fingerprinting"/>
+        <rdfs:comment xml:lang="en">Radio frequency fingerprinting or RF fingerprinting is a technique where RF signals are used to create a unique fingerprint at a current location.</rdfs:comment>
+        <rdfs:label xml:lang="en">RF fingerprinting</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/RadioPropagation -->
 
 
@@ -1465,17 +1468,6 @@
     
 
 
-    <!-- http://purl.org/poso/ToplogyBasedTechnique -->
-
-
-    <owl:Class rdf:about="http://purl.org/poso/ToplogyBasedTechnique">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
-        <rdfs:comment xml:lang="en">Toplogy-based positioning techniques are techniques that make use of the known infrastructure or &quot;topology&quot; of a network.</rdfs:comment>
-        <rdfs:label xml:lang="en">Topology based positioning techniques</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/poso/TrackedFeature -->
 
 
@@ -1500,9 +1492,10 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Triangulation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/AngleBasedTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/Angulation"/>
         <rdfs:comment xml:lang="en">Triangulation is the procedure of determining a position using relative angles to a feature of interest with a known position.</rdfs:comment>
         <rdfs:label xml:lang="en">Triangulation</rdfs:label>
+        <skos:altLabel xml:lang="en">Angle-based positioning</skos:altLabel>
     </owl:Class>
     
 

@@ -1,0 +1,1003 @@
+<http://purl.org/poso/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/poso/> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/poso/1.1/> .
+<http://purl.org/poso/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/> .
+<http://purl.org/poso/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/systems/> .
+<http://purl.org/poso/> <http://purl.org/dc/terms/abstract> "The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated."@en .
+<http://purl.org/poso/> <http://purl.org/dc/terms/bibliographicCitation> "Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology" .
+<http://purl.org/poso/> <http://purl.org/dc/terms/contributor> "Beat Signer"@en .
+<http://purl.org/poso/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
+<http://purl.org/poso/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
+<http://purl.org/poso/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
+<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2024-12-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/> <http://purl.org/dc/terms/title> "Positioning System Ontology"@en .
+<http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" .
+<http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/> <http://schema.org/image> "https://raw.githubusercontent.com/OpenHPS/POSO/main/1.1/docs/images/systems_and_procedures.svg" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://qudt.org/schema/qudt/example
+<http://qudt.org/schema/qudt/example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://qudt.org/schema/qudt/hasQuantityKind
+<http://qudt.org/schema/qudt/hasQuantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/image
+<http://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/poso/angle
+<http://purl.org/poso/angle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/angle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative angle result value for axis-angle representation."@en .
+<http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#label> "angle"@en .
+<http://purl.org/poso/angle> <http://www.w3.org/2000/01/rdf-schema#label> "hoek"@nl .
+# 
+# http://purl.org/poso/hasAcceleration
+<http://purl.org/poso/hasAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasAcceleration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://purl.org/poso/hasAcceleration> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/poso/isAccelerationOf> .
+<http://purl.org/poso/hasAcceleration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://purl.org/poso/hasAcceleration> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/poso/Acceleration> .
+<http://purl.org/poso/hasAcceleration> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a feature of interest to a unique acceleration property related to this feature."@en .
+<http://purl.org/poso/hasAcceleration> <http://www.w3.org/2000/01/rdf-schema#label> "has acceleration"@en .
+<http://purl.org/poso/hasAcceleration> <http://www.w3.org/2000/01/rdf-schema#label> "heeft versnelling"@nl .
+# 
+# http://purl.org/poso/hasAccuracy
+<http://purl.org/poso/hasAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasAccuracy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://purl.org/poso/hasAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/poso/hasAccuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "The accuracy of an entity."@en .
+<http://purl.org/poso/hasAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "has accuracy"@en .
+<http://purl.org/poso/hasAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "heeft accuraatheid"@nl .
+# 
+# http://purl.org/poso/hasCRS
+<http://purl.org/poso/hasCRS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasCRS> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/poso/hasSRS> .
+<http://purl.org/poso/hasCRS> <http://www.w3.org/2000/01/rdf-schema#label> "has coordinate reference system"@en .
+<http://purl.org/poso/hasCRS> <http://www.w3.org/2000/01/rdf-schema#label> "heeft een coördinaten referentiesysteem"@nl .
+# 
+# http://purl.org/poso/hasOrientation
+<http://purl.org/poso/hasOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasOrientation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://purl.org/poso/hasOrientation> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/poso/isOrientationOf> .
+<http://purl.org/poso/hasOrientation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://purl.org/poso/hasOrientation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/poso/Orientation> .
+<http://purl.org/poso/hasOrientation> <http://www.w3.org/2000/01/rdf-schema#comment> "Duid de orientatie aan van een object aan."@nl .
+<http://purl.org/poso/hasOrientation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the orientation of a feature of interest."@en .
+<http://purl.org/poso/hasOrientation> <http://www.w3.org/2000/01/rdf-schema#label> "has orientation"@en .
+<http://purl.org/poso/hasOrientation> <http://www.w3.org/2000/01/rdf-schema#label> "heeft orientatie"@nl .
+# 
+# http://purl.org/poso/hasPosition
+<http://purl.org/poso/hasPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasPosition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://purl.org/poso/hasPosition> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/poso/isPositionOf> .
+<http://purl.org/poso/hasPosition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://purl.org/poso/hasPosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/poso/Position> .
+<http://purl.org/poso/hasPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Duid de absolute of relatieve positie van een object aan."@nl .
+<http://purl.org/poso/hasPosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the absolute or relative position of a feature of interest."@en .
+<http://purl.org/poso/hasPosition> <http://www.w3.org/2000/01/rdf-schema#label> "has position"@en .
+<http://purl.org/poso/hasPosition> <http://www.w3.org/2000/01/rdf-schema#label> "heeft positie"@nl .
+# 
+# http://purl.org/poso/hasRSS
+<http://purl.org/poso/hasRSS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasRSS> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/poso/hasRelativePosition> .
+<http://purl.org/poso/hasRSS> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/poso/RelativeSignalStrength> .
+<http://purl.org/poso/hasRSS> <http://www.w3.org/2000/01/rdf-schema#label> "has relative signal strength"@en .
+# 
+# http://purl.org/poso/hasRelativeDistance
+<http://purl.org/poso/hasRelativeDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasRelativeDistance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/poso/hasRelativePosition> .
+<http://purl.org/poso/hasRelativeDistance> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/poso/RelativeDistance> .
+<http://purl.org/poso/hasRelativeDistance> <http://www.w3.org/2000/01/rdf-schema#label> "has relative distance"@en .
+# 
+# http://purl.org/poso/hasRelativePosition
+<http://purl.org/poso/hasRelativePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasRelativePosition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/poso/hasPosition> .
+<http://purl.org/poso/hasRelativePosition> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/poso/isRelativeTo> .
+<http://purl.org/poso/hasRelativePosition> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/poso/RelativePosition> .
+<http://purl.org/poso/hasRelativePosition> <http://www.w3.org/2000/01/rdf-schema#label> "has relative position"@en .
+<http://purl.org/poso/hasRelativePosition> <http://www.w3.org/2000/01/rdf-schema#label> "heeft relatieve positie"@nl .
+# 
+# http://purl.org/poso/hasSRS
+<http://purl.org/poso/hasSRS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasSRS> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/poso/hasSRS> <http://qudt.org/schema/qudt/example> <http://www.opengis.net/def/crs/OGC/1.3/CRS84> .
+<http://purl.org/poso/hasSRS> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies an entity that has a spatial reference system in order to interpret the result."@en .
+<http://purl.org/poso/hasSRS> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial reference system"@en .
+<http://purl.org/poso/hasSRS> <http://www.w3.org/2000/01/rdf-schema#label> "heeft een ruimtelijk referentiepunt"@nl .
+# 
+# http://purl.org/poso/hasVelocity
+<http://purl.org/poso/hasVelocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/hasVelocity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/hasProperty> .
+<http://purl.org/poso/hasVelocity> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/poso/isVelocityOf> .
+<http://purl.org/poso/hasVelocity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://purl.org/poso/hasVelocity> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/poso/Velocity> .
+<http://purl.org/poso/hasVelocity> <http://www.w3.org/2000/01/rdf-schema#comment> "Duid de snelheid van een object aan."@nl .
+<http://purl.org/poso/hasVelocity> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the velocity of a feature of interest."@en .
+<http://purl.org/poso/hasVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "has velocity"@en .
+<http://purl.org/poso/hasVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "heeft snelheid"@nl .
+# 
+# http://purl.org/poso/inDeployment
+<http://purl.org/poso/inDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/inDeployment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/AbsolutePosition> .
+<http://purl.org/poso/inDeployment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Deployment> .
+<http://purl.org/poso/inDeployment> <http://purl.org/vocab/vann/preferredNamespaceUri> "Identifies an absolute position within a deployment"@en .
+<http://purl.org/poso/inDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "in deployment"@en .
+# 
+# http://purl.org/poso/isAccelerationOf
+<http://purl.org/poso/isAccelerationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/isAccelerationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/isPropertyOf> .
+<http://purl.org/poso/isAccelerationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is acceleration of"@en .
+<http://purl.org/poso/isAccelerationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is versnelling van"@nl .
+# 
+# http://purl.org/poso/isOrientationOf
+<http://purl.org/poso/isOrientationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/isOrientationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/isPropertyOf> .
+<http://purl.org/poso/isOrientationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is orientatie van"@nl .
+<http://purl.org/poso/isOrientationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is orientation of"@en .
+# 
+# http://purl.org/poso/isPositionOf
+<http://purl.org/poso/isPositionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/isPositionOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/isPropertyOf> .
+<http://purl.org/poso/isPositionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is positie van"@nl .
+<http://purl.org/poso/isPositionOf> <http://www.w3.org/2000/01/rdf-schema#label> "is position of"@en .
+# 
+# http://purl.org/poso/isRelativeTo
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/AbsolutePosition> .
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/Orientation> .
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/RelativePosition> .
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a position or orientation to be relative to another feature of interest."@en .
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#label> "is relatief met"@nl .
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2000/01/rdf-schema#label> "is relative to"@en .
+<http://purl.org/poso/isRelativeTo> <http://www.w3.org/2004/02/skos/core#example> "A person can have a relative distance to another feature of interest. When a feature is moving (i.e. when the geometry changes based on time) the distance remains relative to the feature and not the geometry at a specific point in time."@en .
+# 
+# http://purl.org/poso/isVelocityOf
+<http://purl.org/poso/isVelocityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/isVelocityOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/isPropertyOf> .
+<http://purl.org/poso/isVelocityOf> <http://www.w3.org/2000/01/rdf-schema#label> "is de snelheid van"@nl .
+<http://purl.org/poso/isVelocityOf> <http://www.w3.org/2000/01/rdf-schema#label> "is velocity of"@en .
+# 
+# http://purl.org/poso/madeByProcedure
+<http://purl.org/poso/madeByProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/madeByProcedure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/Input> .
+<http://purl.org/poso/madeByProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Procedure> .
+<http://purl.org/poso/madeByProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "Input type outputted by another procedure"@en .
+<http://purl.org/poso/madeByProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "made by procecure"@en .
+# 
+# http://purl.org/poso/madeBySystem
+<http://purl.org/poso/madeBySystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/madeBySystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://purl.org/poso/madeBySystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/System> .
+<http://purl.org/poso/madeBySystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to a re-usable system that computed the observation."@en .
+<http://purl.org/poso/madeBySystem> <http://www.w3.org/2000/01/rdf-schema#label> "gemaakt door systeem"@nl .
+<http://purl.org/poso/madeBySystem> <http://www.w3.org/2000/01/rdf-schema#label> "made by system"@en .
+# 
+# http://purl.org/poso/nutation
+<http://purl.org/poso/nutation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/nutation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
+<http://purl.org/poso/nutation> <http://www.w3.org/2000/01/rdf-schema#label> "nutation"@en .
+# 
+# http://purl.org/poso/observesType
+<http://purl.org/poso/observesType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/ssn/forProperty> .
+<http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ssn/System> .
+<http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a system and an observable property class to identify that a system observes a specific type of property."@en .
+<http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#label> "observeert type"@nl .
+<http://purl.org/poso/observesType> <http://www.w3.org/2000/01/rdf-schema#label> "observes type"@en .
+# 
+# http://purl.org/poso/order
+<http://purl.org/poso/order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/order> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
+<http://purl.org/poso/order> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/order> <http://www.w3.org/2000/01/rdf-schema#label> "order"@en .
+# 
+# http://purl.org/poso/pitch
+<http://purl.org/poso/pitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/pitch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
+<http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#comment> "Pitch is the rotation around the axis with respect to the object the yaw applies to."@en .
+<http://purl.org/poso/pitch> <http://www.w3.org/2000/01/rdf-schema#label> "pitch"@en .
+# 
+# http://purl.org/poso/precession
+<http://purl.org/poso/precession> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/precession> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
+<http://purl.org/poso/precession> <http://www.w3.org/2000/01/rdf-schema#label> "precession"@en .
+# 
+# http://purl.org/poso/roll
+<http://purl.org/poso/roll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/roll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
+<http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#comment> "Roll is the rotation around the axis with respect to the object the roll applies to."@en .
+<http://purl.org/poso/roll> <http://www.w3.org/2000/01/rdf-schema#label> "roll"@en .
+# 
+# http://purl.org/poso/scalar
+<http://purl.org/poso/scalar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/scalar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/poso/scalar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/scalar> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/poso/scalar> <http://www.w3.org/2000/01/rdf-schema#label> "scalar"@en .
+<http://purl.org/poso/scalar> <http://www.w3.org/2004/02/skos/core#altLabel> "w" .
+# 
+# http://purl.org/poso/spin
+<http://purl.org/poso/spin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/spin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
+<http://purl.org/poso/spin> <http://www.w3.org/2000/01/rdf-schema#label> "spin"@en .
+# 
+# http://purl.org/poso/xAxisValue
+<http://purl.org/poso/xAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/xAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/poso/xAxisValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/xAxisValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/poso/xAxisValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative result value along the X-axis of a spatial sensor or result."@en .
+<http://purl.org/poso/xAxisValue> <http://www.w3.org/2000/01/rdf-schema#label> "x-axis value"@en .
+# 
+# http://purl.org/poso/yAxisValue
+<http://purl.org/poso/yAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/yAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/poso/yAxisValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/yAxisValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://purl.org/poso/yAxisValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative result value along the Y-axis of a spatial sensor or result."@en .
+<http://purl.org/poso/yAxisValue> <http://www.w3.org/2000/01/rdf-schema#label> "y-axis value"@en .
+# 
+# http://purl.org/poso/yaw
+<http://purl.org/poso/yaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/yaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/poso/EulerOrientation> .
+<http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#comment> "Yaw is the rotation around the axis with respect to the object the yaw applies to."@en .
+<http://purl.org/poso/yaw> <http://www.w3.org/2000/01/rdf-schema#label> "yaw"@en .
+# 
+# http://purl.org/poso/zAxisValue
+<http://purl.org/poso/zAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/poso/zAxisValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://purl.org/poso/zAxisValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/zAxisValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://purl.org/poso/zAxisValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantitative result value along the Z-axis of a spatial sensor."@en .
+<http://purl.org/poso/zAxisValue> <http://www.w3.org/2000/01/rdf-schema#label> "z-axis value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/poso/AbsolutePosition
+<http://purl.org/poso/AbsolutePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/AbsolutePosition> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://purl.org/poso/AbsolutePosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Position> .
+<http://purl.org/poso/AbsolutePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "An absolute position describes the position of an entity based on a fixed point in space. Usually this space is the Earth and the position is expressed in latitude and longitude."@en .
+<http://purl.org/poso/AbsolutePosition> <http://www.w3.org/2000/01/rdf-schema#label> "Absolute position"@en .
+# 
+# http://purl.org/poso/Acceleration
+<http://purl.org/poso/Acceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Acceleration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://purl.org/poso/Acceleration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/Acceleration> <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/Acceleration> .
+<http://purl.org/poso/Acceleration> <http://www.w3.org/2000/01/rdf-schema#comment> "Acceleration is the (instantaneous) rate of change of velocity."@en .
+<http://purl.org/poso/Acceleration> <http://www.w3.org/2000/01/rdf-schema#label> "Acceleration"@en .
+<http://purl.org/poso/Acceleration> <http://www.w3.org/2000/01/rdf-schema#label> "Versnelling"@nl .
+# 
+# http://purl.org/poso/AngularAcceleration
+<http://purl.org/poso/AngularAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/AngularAcceleration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Acceleration> .
+<http://purl.org/poso/AngularAcceleration> <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/AngularAcceleration> .
+<http://purl.org/poso/AngularAcceleration> <http://www.w3.org/2000/01/rdf-schema#label> "Angular acceleration"@en .
+<http://purl.org/poso/AngularAcceleration> <http://www.w3.org/2000/01/rdf-schema#label> "Draaiversnelling"@nl .
+# 
+# http://purl.org/poso/AngularMotion
+<http://purl.org/poso/AngularMotion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/AngularMotion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Motion> .
+<http://purl.org/poso/AngularMotion> <http://www.w3.org/2000/01/rdf-schema#comment> "Angular motion around a certain origin point."@en .
+<http://purl.org/poso/AngularMotion> <http://www.w3.org/2000/01/rdf-schema#label> "Angular motion"@en .
+<http://purl.org/poso/AngularMotion> <http://www.w3.org/2000/01/rdf-schema#label> "Draaibeweging"@nl .
+# 
+# http://purl.org/poso/AngularVelocity
+<http://purl.org/poso/AngularVelocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/AngularVelocity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Velocity> .
+<http://purl.org/poso/AngularVelocity> <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/AngularVelocity> .
+<http://purl.org/poso/AngularVelocity> <http://www.w3.org/2000/01/rdf-schema#comment> "Angular velocity is the momentum around a point of origin."@en .
+<http://purl.org/poso/AngularVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "Angular velocity"@en .
+<http://purl.org/poso/AngularVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "Draaisnelheid"@nl .
+# 
+# http://purl.org/poso/Angulation
+<http://purl.org/poso/Angulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Angulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/Angulation> <http://www.w3.org/2000/01/rdf-schema#comment> "Angle-based positioning techniques are positioning techniques that use angles to determine a position."@en .
+<http://purl.org/poso/Angulation> <http://www.w3.org/2000/01/rdf-schema#label> "Angulation"@en .
+<http://purl.org/poso/Angulation> <http://www.w3.org/2004/02/skos/core#altLabel> "Angle-based positioning techniques"@en .
+# 
+# http://purl.org/poso/AuditoryLandmark
+<http://purl.org/poso/AuditoryLandmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/AuditoryLandmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Landmark> .
+<http://purl.org/poso/AuditoryLandmark> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial landmark that can be observed by sound."@en .
+<http://purl.org/poso/AuditoryLandmark> <http://www.w3.org/2000/01/rdf-schema#label> "Auditory landmark"@en .
+# 
+# http://purl.org/poso/AxisAngleOrientation
+<http://purl.org/poso/AxisAngleOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/AxisAngleOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Orientation> .
+<http://purl.org/poso/AxisAngleOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/angle> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/AxisAngleOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/angle> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/AxisAngleOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/xAxisValue> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/AxisAngleOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/yAxisValue> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/AxisAngleOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/zAxisValue> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/AxisAngleOrientation> <http://www.w3.org/2000/01/rdf-schema#comment> "The axis-angle orientation is an orientation representation where the x, y and z values are rotated with a certain angle."@en .
+<http://purl.org/poso/AxisAngleOrientation> <http://www.w3.org/2000/01/rdf-schema#label> "Axis-angle orientation"@en .
+# 
+# http://purl.org/poso/Beamforming
+<http://purl.org/poso/Beamforming> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Beamforming> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Angulation> .
+<http://purl.org/poso/Beamforming> <http://www.w3.org/2000/01/rdf-schema#comment> "Beamforming is a signal processing technique that uses an array of antennas to form a directional beam of radio waves. By adjusting the direction of the beam and measuring the angle of arrival or departure of the signal, the position of a receiver can be estimated."@en .
+<http://purl.org/poso/Beamforming> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://ieeexplore.ieee.org/document/9369486"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/Beamforming> <http://www.w3.org/2000/01/rdf-schema#label> "Beamforming"@en .
+# 
+# http://purl.org/poso/BluetoothBeacon
+<http://purl.org/poso/BluetoothBeacon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/BluetoothBeacon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/RFLandmark> .
+<http://purl.org/poso/BluetoothBeacon> <http://www.w3.org/2000/01/rdf-schema#comment> "A Bluetooth beacon is an RF landmark that advertises its transmission power and other optional information. Based on the signal strength receivers of this advertisement can determine the approximate distance."@en .
+<http://purl.org/poso/BluetoothBeacon> <http://www.w3.org/2000/01/rdf-schema#label> "Bluetooth beacon"@en .
+# 
+# http://purl.org/poso/BluetoothReceiver
+<http://purl.org/poso/BluetoothReceiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/BluetoothReceiver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/RFLandmark> .
+<http://purl.org/poso/BluetoothReceiver> <http://www.w3.org/2000/01/rdf-schema#label> "Bluetooth receiver"@en .
+# 
+# http://purl.org/poso/CalibrationMagnitudeProcedure
+<http://purl.org/poso/CalibrationMagnitudeProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/CalibrationMagnitudeProcedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/NormalizationProcedure> .
+<http://purl.org/poso/CalibrationMagnitudeProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Calibration magnitude procedure"@en .
+# 
+# http://purl.org/poso/CalibrationOffsetProcedure
+<http://purl.org/poso/CalibrationOffsetProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/CalibrationOffsetProcedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/NormalizationProcedure> .
+<http://purl.org/poso/CalibrationOffsetProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Calibration offset procedure"@en .
+# 
+# http://purl.org/poso/CalibrationProcedure
+<http://purl.org/poso/CalibrationProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/CalibrationProcedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Procedure> .
+<http://purl.org/poso/CalibrationProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "Calibration is the act of using sensor data obtained by a user to configure a system to output data with a reliable result."@en .
+<http://purl.org/poso/CalibrationProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Calibration procedure"@en .
+# 
+# http://purl.org/poso/CellIdentification
+<http://purl.org/poso/CellIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/CellIdentification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/CellIdentification> <http://www.w3.org/2000/01/rdf-schema#comment> "Cell identification is a positioning procedure using the position of one landmark that is within the cell."@en .
+<http://purl.org/poso/CellIdentification> <http://www.w3.org/2000/01/rdf-schema#label> "Cell identification"@en .
+<http://purl.org/poso/CellIdentification> <http://www.w3.org/2004/02/skos/core#altLabel> "Cell Of Origin (COO)"@en .
+<http://purl.org/poso/CellIdentification> <http://www.w3.org/2004/02/skos/core#example> "An example of cell identification is using the position of a Bluetooth beacon whenever this beacon has a high signal strength."@en .
+<http://purl.org/poso/CellIdentification> <http://www.w3.org/2004/02/skos/core#example> "An example of cell identification is using the position of a QR-code when this code is scanned (and the user is presumably within a short distance)."@en .
+# 
+# http://purl.org/poso/DeadReckoning
+<http://purl.org/poso/DeadReckoning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/DeadReckoning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/DeadReckoning> <http://www.w3.org/2000/01/rdf-schema#comment> "Dead reckoning is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."@en .
+<http://purl.org/poso/DeadReckoning> <http://www.w3.org/2000/01/rdf-schema#label> "Dead reckoning"@en .
+<http://purl.org/poso/DeadReckoning> <http://www.w3.org/2004/02/skos/core#altLabel> "Deduced reckoning"@en .
+# 
+# http://purl.org/poso/EulerOrder
+<http://purl.org/poso/EulerOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/EulerOrder> <http://www.w3.org/2000/01/rdf-schema#comment> "The order in which to apply Euler rotations."@en .
+<http://purl.org/poso/EulerOrder> <http://www.w3.org/2000/01/rdf-schema#label> "Euler order"@en .
+# 
+# http://purl.org/poso/EulerOrientation
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Orientation> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/EulerOrder> .
+_:genid6 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/order> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/nutation> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/pitch> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/precession> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/roll> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/spin> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/yaw> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/EulerOrientation> <http://www.w3.org/2000/01/rdf-schema#label> "Euler orientation"@en .
+# 
+# http://purl.org/poso/Fingerprint
+<http://purl.org/poso/Fingerprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Fingerprint> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/AbsolutePosition> .
+_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/hasPosition> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/Fingerprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://purl.org/poso/Fingerprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/Fingerprint> <http://www.w3.org/2000/01/rdf-schema#comment> "A fingerprint is a scene analysis at a particular absolute position."@en .
+<http://purl.org/poso/Fingerprint> <http://www.w3.org/2000/01/rdf-schema#label> "Fingerprint"@en .
+# 
+# http://purl.org/poso/Fingerprinting
+<http://purl.org/poso/Fingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Fingerprinting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/Fingerprinting> <http://www.w3.org/2000/01/rdf-schema#comment> "Fingerprinting is a positioning Procedure where sensor data is collected at a specific position and orientation. During the offline-stage of a positioning system, the significant data features are extracted and stored for that position. In the online-stage, the closest match(es) of the features are determined to predict the position."@en .
+<http://purl.org/poso/Fingerprinting> <http://www.w3.org/2000/01/rdf-schema#label> "Fingerprinting"@en .
+# 
+# http://purl.org/poso/HighLevelFusion
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/SensorFusion> .
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2000/01/rdf-schema#comment> "High level sensor fusion is about fusing both objects and their trajectories. We're not only relying on detections, but also on predictions and tracking."@en .
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2000/01/rdf-schema#label> "High level sensor fusion"@en .
+<http://purl.org/poso/HighLevelFusion> <http://www.w3.org/2004/02/skos/core#altLabel> "Decision level sensor fusion"@en .
+# 
+# http://purl.org/poso/HybridDeployment
+<http://purl.org/poso/HybridDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/HybridDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Deployment> .
+<http://purl.org/poso/HybridDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "A hybrid deployment covers an indoor and outdoor deployment."@en .
+<http://purl.org/poso/HybridDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Hybrid deployment"@en .
+# 
+# http://purl.org/poso/IndoorDeployment
+<http://purl.org/poso/IndoorDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/IndoorDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Deployment> .
+<http://purl.org/poso/IndoorDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the spatial deployment of a System in an indoor environment."@en .
+<http://purl.org/poso/IndoorDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Indoor deployment"@en .
+# 
+# http://purl.org/poso/IndoorPositioningSystem
+<http://purl.org/poso/IndoorPositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/IndoorPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningSystem> .
+<http://purl.org/poso/IndoorPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A positioning system that is meant to perform indoor positioning of a feature of interest."@en .
+<http://purl.org/poso/IndoorPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Indoor positioning system"@en .
+# 
+# http://purl.org/poso/InertialPositioningSystem
+<http://purl.org/poso/InertialPositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/InertialPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningSystem> .
+<http://purl.org/poso/InertialPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An inertial positioning system is a positioning system employing accelerometers, gyroscopes, and computer as integral components to determine coordinates of points or objects relative to an initial known reference point"@en .
+<http://purl.org/poso/InertialPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://isotc211.geolexica.org/concepts/240/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/InertialPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Inertial positioning system"@en .
+# 
+# http://purl.org/poso/IntegratedPositioningSystem
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningSystem> .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/SensorFusion> .
+_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/implements> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An integrated positioning system is a positioning system that incorporates multiple positioning technologies."@en .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://isotc211.geolexica.org/concepts/250/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Integrated positioning system"@en .
+<http://purl.org/poso/IntegratedPositioningSystem> <http://www.w3.org/2004/02/skos/core#altLabel> "Hybrid positioning system"@en .
+# 
+# http://purl.org/poso/Landmark
+<http://purl.org/poso/Landmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Landmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://purl.org/poso/Landmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://purl.org/poso/Landmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/Landmark> <http://www.w3.org/2000/01/rdf-schema#comment> "A landmark is a feature with a known position, that can be used to identify the position of an object that has a relative position with this feature."@en .
+<http://purl.org/poso/Landmark> <http://www.w3.org/2000/01/rdf-schema#label> "Landmark"@en .
+# 
+# http://purl.org/poso/Lateration
+<http://purl.org/poso/Lateration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Lateration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/Lateration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.sciencedirect.com/topics/engineering/lateration"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/Lateration> <http://www.w3.org/2000/01/rdf-schema#label> "Lateration"@en .
+<http://purl.org/poso/Lateration> <http://www.w3.org/2004/02/skos/core#altLabel> "Distance-based positioning"@en .
+# 
+# http://purl.org/poso/LinearAcceleration
+<http://purl.org/poso/LinearAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/LinearAcceleration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Acceleration> .
+<http://purl.org/poso/LinearAcceleration> <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/LinearAcceleration> .
+<http://purl.org/poso/LinearAcceleration> <http://www.w3.org/2000/01/rdf-schema#label> "Linear acceleration"@en .
+# 
+# http://purl.org/poso/LinearMotion
+<http://purl.org/poso/LinearMotion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/LinearMotion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Motion> .
+<http://purl.org/poso/LinearMotion> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear motion along a certain axis."@en .
+<http://purl.org/poso/LinearMotion> <http://www.w3.org/2000/01/rdf-schema#label> "Lineaire beweging"@nl .
+<http://purl.org/poso/LinearMotion> <http://www.w3.org/2000/01/rdf-schema#label> "Linear motion"@en .
+# 
+# http://purl.org/poso/LinearVelocity
+<http://purl.org/poso/LinearVelocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/LinearVelocity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Velocity> .
+<http://purl.org/poso/LinearVelocity> <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/LinearVelocity> .
+<http://purl.org/poso/LinearVelocity> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear velocity is the momentum along one ore more axis."@en .
+<http://purl.org/poso/LinearVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "Lineaire snelheid"@nl .
+<http://purl.org/poso/LinearVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "Linear velocity"@en .
+# 
+# http://purl.org/poso/LocationBasedService
+<http://purl.org/poso/LocationBasedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/LocationBasedService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://purl.org/poso/LocationBasedService> <http://www.w3.org/2000/01/rdf-schema#comment> "A location based service (LBS) is a service that provides the location of a person or object. It provides this information without the required knowledge of the underlying technologies and algorithms."@en .
+<http://purl.org/poso/LocationBasedService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://isotc211.geolexica.org/concepts/278/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/LocationBasedService> <http://www.w3.org/2000/01/rdf-schema#label> "Location-based service"@en .
+# 
+# http://purl.org/poso/LowLevelFusion
+<http://purl.org/poso/LowLevelFusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/LowLevelFusion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/SensorFusion> .
+<http://purl.org/poso/LowLevelFusion> <http://www.w3.org/2000/01/rdf-schema#comment> "Low Level Sensor Fusion is about fusing the raw data coming from multiple sensors. For example, we fuse point clouds coming from LiDARs and pixels coming from cameras."@en .
+<http://purl.org/poso/LowLevelFusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/LowLevelFusion> <http://www.w3.org/2000/01/rdf-schema#label> "Low level sensor fusion"@en .
+# 
+# http://purl.org/poso/MagneticOdometry
+<http://purl.org/poso/MagneticOdometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/MagneticOdometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Odometry> .
+<http://purl.org/poso/MagneticOdometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Magnetic field odometry is the procedure of detecting movement by analyizing how the magnetic field is changing from one Observation to another."@en .
+<http://purl.org/poso/MagneticOdometry> <http://www.w3.org/2000/01/rdf-schema#label> "Magnetic odometry"@en .
+# 
+# http://purl.org/poso/MapOutput
+<http://purl.org/poso/MapOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/MapOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Output> .
+<http://purl.org/poso/MapOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Map output"@en .
+# 
+# http://purl.org/poso/MidLevelFusion
+<http://purl.org/poso/MidLevelFusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/MidLevelFusion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/SensorFusion> .
+<http://purl.org/poso/MidLevelFusion> <http://www.w3.org/2000/01/rdf-schema#comment> "Mid-Level sensor fusion is about fusing the objects detected independently on sensor data."@en .
+<http://purl.org/poso/MidLevelFusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/MidLevelFusion> <http://www.w3.org/2000/01/rdf-schema#label> "Mid level sensor fusion"@en .
+# 
+# http://purl.org/poso/Motion
+<http://purl.org/poso/Motion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Motion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Stimulus> .
+<http://purl.org/poso/Motion> <http://www.w3.org/2000/01/rdf-schema#comment> "Motion stimulus triggering an update of a position."@en .
+<http://purl.org/poso/Motion> <http://www.w3.org/2000/01/rdf-schema#label> "Beweging"@nl .
+<http://purl.org/poso/Motion> <http://www.w3.org/2000/01/rdf-schema#label> "Motion"@en .
+# 
+# http://purl.org/poso/Multilateration
+<http://purl.org/poso/Multilateration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Multilateration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Lateration> .
+<http://purl.org/poso/Multilateration> <http://www.w3.org/2000/01/rdf-schema#comment> "Multilateration is the procedure of determining a position using relative distances to other known positions."@en .
+<http://purl.org/poso/Multilateration> <http://www.w3.org/2000/01/rdf-schema#label> "Multilateration"@en .
+<http://purl.org/poso/Multilateration> <http://www.w3.org/2004/02/skos/core#altLabel> "Hyperbolic positioning"@en .
+# 
+# http://purl.org/poso/NormalizationProcedure
+<http://purl.org/poso/NormalizationProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/NormalizationProcedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/CalibrationProcedure> .
+<http://purl.org/poso/NormalizationProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "Normalization procedure is a calibration procedure to normalize data."@en .
+<http://purl.org/poso/NormalizationProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Normalization procedure"@en .
+# 
+# http://purl.org/poso/Odometry
+<http://purl.org/poso/Odometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Odometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/DeadReckoning> .
+<http://purl.org/poso/Odometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Odometry is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."@en .
+<http://purl.org/poso/Odometry> <http://www.w3.org/2000/01/rdf-schema#label> "Odometry"@en .
+# 
+# http://purl.org/poso/OpticalPositioningSystem
+<http://purl.org/poso/OpticalPositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/OpticalPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningSystem> .
+<http://purl.org/poso/OpticalPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An optical positioning system is a positioning system that determines the position of an object by means of the properties of light."@en .
+<http://purl.org/poso/OpticalPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://isotc211.geolexica.org/concepts/320/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/OpticalPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Optical positioning system"@en .
+# 
+# http://purl.org/poso/Orientation
+<http://purl.org/poso/Orientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Orientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://purl.org/poso/Orientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/Orientation> <http://www.w3.org/2000/01/rdf-schema#comment> "De orientatie van een object in 2D of 3D."@nl .
+<http://purl.org/poso/Orientation> <http://www.w3.org/2000/01/rdf-schema#comment> "The orientation of a feature of interest in 2D or 3D space."@en .
+<http://purl.org/poso/Orientation> <http://www.w3.org/2000/01/rdf-schema#label> "Orientatie"@nl .
+<http://purl.org/poso/Orientation> <http://www.w3.org/2000/01/rdf-schema#label> "Orientation"@en .
+# 
+# http://purl.org/poso/OrientationOutput
+<http://purl.org/poso/OrientationOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/OrientationOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Output> .
+<http://purl.org/poso/OrientationOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Orientation output"@en .
+# 
+# http://purl.org/poso/OutdoorDeployment
+<http://purl.org/poso/OutdoorDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/OutdoorDeployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Deployment> .
+<http://purl.org/poso/OutdoorDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the deployment of a System in an outdoor environment."@en .
+<http://purl.org/poso/OutdoorDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "Outdoor deployment"@en .
+# 
+# http://purl.org/poso/OutdoorPositioningSystem
+<http://purl.org/poso/OutdoorPositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/OutdoorPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningSystem> .
+<http://purl.org/poso/OutdoorPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "An outdoor positioning system defines a system that is used to determine a position outside a building without specifying the underlying technology."@en .
+<http://purl.org/poso/OutdoorPositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Outdoor positioning system"@en .
+# 
+# http://purl.org/poso/PDR
+<http://purl.org/poso/PDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/PDR> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/DeadReckoning> .
+<http://purl.org/poso/PDR> <http://www.w3.org/2000/01/rdf-schema#comment> "Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement."@en .
+<http://purl.org/poso/PDR> <http://www.w3.org/2000/01/rdf-schema#label> "Pedestrian dead reckoning"@en .
+# 
+# http://purl.org/poso/PolygonalAccuracy
+<http://purl.org/poso/PolygonalAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/PolygonalAccuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/Accuracy> .
+<http://purl.org/poso/PolygonalAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "Polygonal accuracy"@en .
+# 
+# http://purl.org/poso/Position
+<http://purl.org/poso/Position> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Position> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://purl.org/poso/Position> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/Position> <http://www.w3.org/2000/01/rdf-schema#comment> "A position indicates where an entity is located."@en .
+<http://purl.org/poso/Position> <http://www.w3.org/2000/01/rdf-schema#label> "Positie"@nl .
+<http://purl.org/poso/Position> <http://www.w3.org/2000/01/rdf-schema#label> "Position"@en .
+# 
+# http://purl.org/poso/PositionOutput
+<http://purl.org/poso/PositionOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/PositionOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Output> .
+<http://purl.org/poso/PositionOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Position output"@en .
+# 
+# http://purl.org/poso/PositioningPlatform
+<http://purl.org/poso/PositioningPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/PositioningPlatform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Platform> .
+<http://purl.org/poso/PositioningPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "A positioning platform is a framework, architecture or platform used to develop and host a positioning system."@en .
+<http://purl.org/poso/PositioningPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "Positioning platform"@en .
+# 
+# http://purl.org/poso/PositioningSystem
+<http://purl.org/poso/PositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/System> .
+<http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/ssn/Deployment> .
+_:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasDeployment> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A positioning system is a system of instrumental and computational components for determining position."@en .
+<http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://isotc211.geolexica.org/concepts/349/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/PositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Positioning system"@en .
+# 
+# http://purl.org/poso/PositioningTechnique
+<http://purl.org/poso/PositioningTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/PositioningTechnique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Procedure> .
+<http://purl.org/poso/PositioningTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "A positioning technique is a procedure to sample sensor data to an output position."@en .
+<http://purl.org/poso/PositioningTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "Positioning technique"@en .
+# 
+# http://purl.org/poso/Proximity
+<http://purl.org/poso/Proximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Proximity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Stimulus> .
+<http://purl.org/poso/Proximity> <http://www.w3.org/2000/01/rdf-schema#comment> "Stimulus whenever two Feature of Interests are within close proximity."@en .
+<http://purl.org/poso/Proximity> <http://www.w3.org/2000/01/rdf-schema#label> "Proximity" .
+<http://purl.org/poso/Proximity> <http://www.w3.org/2004/02/skos/core#example> "A Feature Of Interest can be within close proximity of another Feature Of Interest without movement whenever the other Feature moved wihin the proximity of the first Feature."@en .
+# 
+# http://purl.org/poso/QuaternionOrientation
+<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Orientation> .
+<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/scalar> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/xAxisValue> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/yAxisValue> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/zAxisValue> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/QuaternionOrientation> <http://www.w3.org/2000/01/rdf-schema#label> "Quaternion orientation"@en .
+# 
+# http://purl.org/poso/RFLandmark
+<http://purl.org/poso/RFLandmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/RFLandmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Landmark> .
+<http://purl.org/poso/RFLandmark> <http://www.w3.org/2000/01/rdf-schema#comment> "A radio frequency landmark is a transmitting landmark that can be observed by its transmitting signals."@en .
+<http://purl.org/poso/RFLandmark> <http://www.w3.org/2000/01/rdf-schema#label> "RF landmark"@en .
+<http://purl.org/poso/RFLandmark> <http://www.w3.org/2004/02/skos/core#example> "An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position."@en .
+# 
+# http://purl.org/poso/RadioFrequencyFingerprinting
+<http://purl.org/poso/RadioFrequencyFingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/RadioFrequencyFingerprinting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Fingerprinting> .
+<http://purl.org/poso/RadioFrequencyFingerprinting> <http://www.w3.org/2000/01/rdf-schema#comment> "Radio frequency fingerprinting or RF fingerprinting is a technique where RF signals are used to create a unique fingerprint at a current location."@en .
+<http://purl.org/poso/RadioFrequencyFingerprinting> <http://www.w3.org/2000/01/rdf-schema#label> "RF fingerprinting"@en .
+# 
+# http://purl.org/poso/RadioPropagation
+<http://purl.org/poso/RadioPropagation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/RadioPropagation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Procedure> .
+<http://purl.org/poso/RadioPropagation> <http://www.w3.org/2000/01/rdf-schema#comment> "The radio propagation formulas cover the computation of the radio waves through a medium (e.g. air)."@en .
+<http://purl.org/poso/RadioPropagation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://en.wikipedia.org/wiki/Radio_propagation"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/RadioPropagation> <http://www.w3.org/2000/01/rdf-schema#label> "Radio propagation"@en .
+# 
+# http://purl.org/poso/RelativeAcceleration
+<http://purl.org/poso/RelativeAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/RelativeAcceleration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/RelativePosition> .
+<http://purl.org/poso/RelativeAcceleration> <http://www.w3.org/2000/01/rdf-schema#comment> "A relative acceleration is a quantitative acceleration relative to another feature of interest."@en .
+<http://purl.org/poso/RelativeAcceleration> <http://www.w3.org/2000/01/rdf-schema#label> "Relative acceleration"@en .
+# 
+# http://purl.org/poso/RelativeAngle
+<http://purl.org/poso/RelativeAngle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/RelativeAngle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/RelativePosition> .
+<http://purl.org/poso/RelativeAngle> <http://www.w3.org/2000/01/rdf-schema#comment> "A relative angle is a quantitative angle relative to another feature of interest."@en .
+<http://purl.org/poso/RelativeAngle> <http://www.w3.org/2000/01/rdf-schema#label> "Relatieve hoek"@nl .
+<http://purl.org/poso/RelativeAngle> <http://www.w3.org/2000/01/rdf-schema#label> "Relative angle"@en .
+<http://purl.org/poso/RelativeAngle> <http://www.w3.org/2004/02/skos/core#example> "An example of relative angle is the Angle of Arrival."@en .
+# 
+# http://purl.org/poso/RelativeDistance
+<http://purl.org/poso/RelativeDistance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/RelativeDistance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/RelativePosition> .
+<http://purl.org/poso/RelativeDistance> <http://www.w3.org/2000/01/rdf-schema#comment> "A relative distance is a quantitative distance relative to another feature of interest."@en .
+<http://purl.org/poso/RelativeDistance> <http://www.w3.org/2000/01/rdf-schema#label> "Relatieve afstand"@nl .
+<http://purl.org/poso/RelativeDistance> <http://www.w3.org/2000/01/rdf-schema#label> "Relative distance"@en .
+# 
+# http://purl.org/poso/RelativePosition
+<http://purl.org/poso/RelativePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Position> .
+<http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+_:genid20 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/isRelativeTo> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "A relative position is a position of a feature of interest with respect to the positions of other objects that this position is relative to."@en .
+<http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "Een relatieve positie is een positie van een punt, met respect tot de posities van andere objecten die relatief zijn."@nl .
+<http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://isotc211.geolexica.org/concepts/377/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#label> "Relatieve positie"@nl .
+<http://purl.org/poso/RelativePosition> <http://www.w3.org/2000/01/rdf-schema#label> "Relative position"@en .
+# 
+# http://purl.org/poso/RelativeSignalStrength
+<http://purl.org/poso/RelativeSignalStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/RelativeSignalStrength> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/RelativePosition> .
+<http://purl.org/poso/RelativeSignalStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "A relative signal strength is a received signal strength transmitted by another (RF) feature of interest."@en .
+<http://purl.org/poso/RelativeSignalStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Relatieve signaalsterkte"@nl .
+<http://purl.org/poso/RelativeSignalStrength> <http://www.w3.org/2000/01/rdf-schema#label> "Relative signal strength"@en .
+# 
+# http://purl.org/poso/RelativeVelocity
+<http://purl.org/poso/RelativeVelocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/RelativeVelocity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/RelativePosition> .
+<http://purl.org/poso/RelativeVelocity> <http://www.w3.org/2000/01/rdf-schema#comment> "A relative velocity is a quantitative velocity relative to another feature of interest."@en .
+<http://purl.org/poso/RelativeVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "Relatieve snelheid"@nl .
+<http://purl.org/poso/RelativeVelocity> <http://www.w3.org/2000/01/rdf-schema#label> "Relative velocity"@en .
+# 
+# http://purl.org/poso/SLAM
+<http://purl.org/poso/SLAM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/SLAM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/SLAM> <http://www.w3.org/2000/01/rdf-schema#comment> "Simultaneous localization and mapping (SLAM) is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it."@en .
+<http://purl.org/poso/SLAM> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://dbpedia.org/page/Simultaneous_localization_and_mapping"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/SLAM> <http://www.w3.org/2000/01/rdf-schema#label> "Simultaneous localisation and mapping"@en .
+# 
+# http://purl.org/poso/SRS
+<http://purl.org/poso/SRS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/SRS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/systems/SystemProperty> .
+<http://purl.org/poso/SRS> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable and observable spatial reference system that represents the System's ability to operate its primary purpose in a specified reference system."@en .
+<http://purl.org/poso/SRS> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Reference System"@en .
+# 
+# http://purl.org/poso/SatellitePositioningSystem
+<http://purl.org/poso/SatellitePositioningSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/SatellitePositioningSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningSystem> .
+<http://purl.org/poso/SatellitePositioningSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "In this context, satellite positioning implies the use of radio signals transmitted from \"active\" artificial objects orbiting the Earth and received by \"passive\" instruments on or near the Earth's surface to determine position, velocity, and/or attitude of an object."@en .
+<http://purl.org/poso/SatellitePositioningSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://isotc211.geolexica.org/concepts/392/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/SatellitePositioningSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Satellite positioning system"@en .
+# 
+# http://purl.org/poso/SensorFusion
+<http://purl.org/poso/SensorFusion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/SensorFusion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Procedure> .
+<http://purl.org/poso/SensorFusion> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensor fusion is a procedure where multiple sensor data is combined to obtain a more reliable or accurate result."@en .
+<http://purl.org/poso/SensorFusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://en.wikipedia.org/wiki/Sensor_fusion"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/poso/SensorFusion> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor fusion"@en .
+# 
+# http://purl.org/poso/SensorInput
+<http://purl.org/poso/SensorInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/SensorInput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Input> .
+<http://purl.org/poso/SensorInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensor input is input data provided by a sosa:Sensor"@en .
+<http://purl.org/poso/SensorInput> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor input"@en .
+# 
+# http://purl.org/poso/TrackedFeature
+<http://purl.org/poso/TrackedFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#onClass> <http://purl.org/poso/Position> .
+_:genid21 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/poso/hasPosition> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "A feature of interest that is being tracked by a positioning system. This is the feature for which a position is observed."@en .
+<http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#label> "Tracked feature"@en .
+<http://purl.org/poso/TrackedFeature> <http://www.w3.org/2004/02/skos/core#example> "The phone of a person that is being tracked in an indoor positioning system is the tracked feature."@en .
+# 
+# http://purl.org/poso/Triangulation
+<http://purl.org/poso/Triangulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Triangulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Angulation> .
+<http://purl.org/poso/Triangulation> <http://www.w3.org/2000/01/rdf-schema#comment> "Triangulation is the procedure of determining a position using relative angles to a feature of interest with a known position."@en .
+<http://purl.org/poso/Triangulation> <http://www.w3.org/2000/01/rdf-schema#label> "Triangulation"@en .
+<http://purl.org/poso/Triangulation> <http://www.w3.org/2004/02/skos/core#altLabel> "Angle-based positioning"@en .
+# 
+# http://purl.org/poso/Trilateration
+<http://purl.org/poso/Trilateration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Trilateration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Lateration> .
+<http://purl.org/poso/Trilateration> <http://www.w3.org/2000/01/rdf-schema#comment> "Trilateration is a positioning technique that uses exactly three reference points in 2D and four reference points in 3D to determine a position."@en .
+<http://purl.org/poso/Trilateration> <http://www.w3.org/2000/01/rdf-schema#label> "Trilateration"@en .
+# 
+# http://purl.org/poso/VSLAM
+<http://purl.org/poso/VSLAM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/VSLAM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/SLAM> .
+<http://purl.org/poso/VSLAM> <http://www.w3.org/2000/01/rdf-schema#comment> "Visual simultaneous localisation and mapping (VSLAM) is a positioning techniques that uses visual imagery to map an environment. Positioning works by detecting features of interest in image frames and comparing how these features move from one frame to another."@en .
+<http://purl.org/poso/VSLAM> <http://www.w3.org/2000/01/rdf-schema#label> "Visual simultaneous localisation and mapping"@en .
+# 
+# http://purl.org/poso/Velocity
+<http://purl.org/poso/Velocity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Velocity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://purl.org/poso/Velocity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+<http://purl.org/poso/Velocity> <http://qudt.org/schema/qudt/hasQuantityKind> <http://qudt.org/vocab/quantitykind/Velocity> .
+<http://purl.org/poso/Velocity> <http://www.w3.org/2000/01/rdf-schema#comment> "Linear or angular velocity of a feature."@en .
+<http://purl.org/poso/Velocity> <http://www.w3.org/2000/01/rdf-schema#label> "Velocity"@en .
+# 
+# http://purl.org/poso/VirtualLandmark
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Landmark> .
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/2000/01/rdf-schema#comment> "A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors without additional context."@en .
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual landmark"@en .
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/2004/02/skos/core#example> "An example of a virtual landmark is a marker at a specific location."@en .
+<http://purl.org/poso/VirtualLandmark> <http://www.w3.org/2004/02/skos/core#example> "Image features can be considered landmarks as they are used by odometry and VSLAM algorithms."@en .
+# 
+# http://purl.org/poso/VisualInput
+<http://purl.org/poso/VisualInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/VisualInput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/SensorInput> .
+<http://purl.org/poso/VisualInput> <http://www.w3.org/2000/01/rdf-schema#label> "Visual input"@en .
+# 
+# http://purl.org/poso/VisualLandmark
+<http://purl.org/poso/VisualLandmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/VisualLandmark> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Landmark> .
+<http://purl.org/poso/VisualLandmark> <http://www.w3.org/2000/01/rdf-schema#comment> "A visual landmark is a feature of interest that visually present in the space."@en .
+<http://purl.org/poso/VisualLandmark> <http://www.w3.org/2000/01/rdf-schema#label> "Visual landmark"@en .
+# 
+# http://purl.org/poso/VisualOdometry
+<http://purl.org/poso/VisualOdometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/VisualOdometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Odometry> .
+<http://purl.org/poso/VisualOdometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Visual odometry is the procedure of detecting movement by analyzing how visual features are moving from one Observation image frame to another."@en .
+<http://purl.org/poso/VisualOdometry> <http://www.w3.org/2000/01/rdf-schema#label> "Visual odometry"@en .
+# 
+# http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#Class
+<http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/ssn/System
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/poso/XYX
+<http://purl.org/poso/XYX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/XYX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/XYX> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation order for proper Euler angles."@en .
+<http://purl.org/poso/XYX> <http://www.w3.org/2000/01/rdf-schema#label> "X-Y-X" .
+# 
+# http://purl.org/poso/XYZ
+<http://purl.org/poso/XYZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/XYZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/XYZ> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en .
+<http://purl.org/poso/XYZ> <http://www.w3.org/2000/01/rdf-schema#label> "X-Y-Z" .
+# 
+# http://purl.org/poso/XZY
+<http://purl.org/poso/XZY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/XZY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/XZY> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en .
+<http://purl.org/poso/XZY> <http://www.w3.org/2000/01/rdf-schema#label> "X-Z-Y" .
+# 
+# http://purl.org/poso/YXZ
+<http://purl.org/poso/YXZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/YXZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/YXZ> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en .
+<http://purl.org/poso/YXZ> <http://www.w3.org/2000/01/rdf-schema#label> "Y-X-Z" .
+# 
+# http://purl.org/poso/YZX
+<http://purl.org/poso/YZX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/YZX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/YZX> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en .
+<http://purl.org/poso/YZX> <http://www.w3.org/2000/01/rdf-schema#label> "Y-Z-X" .
+# 
+# http://purl.org/poso/YZY
+<http://purl.org/poso/YZY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/YZY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/YZY> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation order for proper Euler angles."@en .
+<http://purl.org/poso/YZY> <http://www.w3.org/2000/01/rdf-schema#label> "Y-Z-Y" .
+# 
+# http://purl.org/poso/ZXY
+<http://purl.org/poso/ZXY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/ZXY> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/ZXY> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en .
+<http://purl.org/poso/ZXY> <http://www.w3.org/2000/01/rdf-schema#label> "Z-X-Y" .
+# 
+# http://purl.org/poso/ZXZ
+<http://purl.org/poso/ZXZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/ZXZ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/ZXZ> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation order for proper Euler angles."@en .
+<http://purl.org/poso/ZXZ> <http://www.w3.org/2000/01/rdf-schema#label> "Z-X-Z" .
+# 
+# http://purl.org/poso/ZYX
+<http://purl.org/poso/ZYX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/poso/ZYX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/poso/EulerOrder> .
+<http://purl.org/poso/ZYX> <http://www.w3.org/2000/01/rdf-schema#comment> "The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis."@en .
+<http://purl.org/poso/ZYX> <http://www.w3.org/2000/01/rdf-schema#label> "Z-Y-X" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

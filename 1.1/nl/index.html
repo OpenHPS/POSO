@@ -1,0 +1,3593 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="../resources/primer.css" media="screen" />    <link rel="stylesheet" href="../resources/rec.css" media="screen" />    <link rel="stylesheet" href="../resources/extra.css" media="screen" />    <link rel="stylesheet" href="../resources/owl.css" media="screen" />    <title>Positioning System Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2024-12-16T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+
+<script src="../resources/jquery.js"></script> 
+<script src="../resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Inhoudsopgave</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
+<h1>Positioning System Ontology</h1>
+<h2>Release  2024-12-16T00:00:00</h2>
+
+
+<dl>
+<dt>Deze versie:</dt>
+<dd><a href="http://purl.org/poso/1.1/">http://purl.org/poso/1.1/</a></dd>
+<dt>Auteurs:</dt>
+<dd>Maxim Van de Wynckel</dd>
+
+<dt>Bijdragers:</dt>
+<dd>Beat Signer</dd>
+
+<dt>GeÃ¯mporteerde ontologieÃ«n:</dt>
+<dd><a href="http://www.w3.org/ns/sosa/">&lt;http://www.w3.org/ns/sosa/&gt;</a></dd><dd><a href="http://www.w3.org/ns/ssn/">&lt;http://www.w3.org/ns/ssn/&gt;</a></dd><dd><a href="http://www.w3.org/ns/ssn/systems/">&lt;http://www.w3.org/ns/ssn/systems/&gt;</a></dd>
+
+<dt>Download serialisatie:</dt><dd><span><a href="../ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="../ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="../ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="../ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Licentie: </dt><dd><a href="http://purl.org/NET/rdflicense/MIT1.0" target="_blank"><img src="https://img.shields.io/badge/License-http://purl.org/NET/rdflicense/MIT1.0-blue.svg" alt="http://purl.org/NET/rdflicense/MIT1.0" /></a>
+</dd><dt>Visualisatie:</dt><dd><a href="../webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="../OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Citeren als:</dt>
+<dd>Maxim Van de Wynckel and Beat Signer, POSO: A Generic Positioning System Ontology</dd>
+</dl>
+
+<a href="../provenance/provenance-nl.html" target="_blank">Herkomst van deze pagina</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Samenvatting</h2><span class="markdown">
+The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Positioning System Ontology: Overzicht <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
+<span class="markdown">
+Deze ontologie heeft de volgende klassen en eigenschappen.</span>
+<h4>Klassen</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#AbsolutePosition" title="http://purl.org/poso/AbsolutePosition">Absolute position</a>
+   </li>
+   <li>
+      <a href="#Angulation" title="http://purl.org/poso/Angulation">Angulation</a>
+   </li>
+   <li>
+      <a href="#AuditoryLandmark" title="http://purl.org/poso/AuditoryLandmark">Auditory landmark</a>
+   </li>
+   <li>
+      <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
+   </li>
+   <li>
+      <a href="#Beamforming" title="http://purl.org/poso/Beamforming">Beamforming</a>
+   </li>
+   <li>
+      <a href="#Motion" title="http://purl.org/poso/Motion">Beweging</a>
+   </li>
+   <li>
+      <a href="#BluetoothBeacon" title="http://purl.org/poso/BluetoothBeacon">Bluetooth beacon</a>
+   </li>
+   <li>
+      <a href="#BluetoothReceiver" title="http://purl.org/poso/BluetoothReceiver">Bluetooth receiver</a>
+   </li>
+   <li>
+      <a href="#CalibrationMagnitudeProcedure"
+         title="http://purl.org/poso/CalibrationMagnitudeProcedure">Calibration magnitude procedure</a>
+   </li>
+   <li>
+      <a href="#CalibrationOffsetProcedure" title="http://purl.org/poso/CalibrationOffsetProcedure">Calibration offset procedure</a>
+   </li>
+   <li>
+      <a href="#CalibrationProcedure" title="http://purl.org/poso/CalibrationProcedure">Calibration procedure</a>
+   </li>
+   <li>
+      <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
+   </li>
+   <li>
+      <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
+   </li>
+   <li>
+      <a href="#AngularMotion" title="http://purl.org/poso/AngularMotion">Draaibeweging</a>
+   </li>
+   <li>
+      <a href="#AngularVelocity" title="http://purl.org/poso/AngularVelocity">Draaisnelheid</a>
+   </li>
+   <li>
+      <a href="#AngularAcceleration" title="http://purl.org/poso/AngularAcceleration">Draaiversnelling</a>
+   </li>
+   <li>
+      <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+   </li>
+   <li>
+      <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+   </li>
+   <li>
+      <a href="#Fingerprint" title="http://purl.org/poso/Fingerprint">Fingerprint</a>
+   </li>
+   <li>
+      <a href="#Fingerprinting" title="http://purl.org/poso/Fingerprinting">Fingerprinting</a>
+   </li>
+   <li>
+      <a href="#HighLevelFusion" title="http://purl.org/poso/HighLevelFusion">High level sensor fusion</a>
+   </li>
+   <li>
+      <a href="#HybridDeployment" title="http://purl.org/poso/HybridDeployment">Hybrid deployment</a>
+   </li>
+   <li>
+      <a href="#IndoorDeployment" title="http://purl.org/poso/IndoorDeployment">Indoor deployment</a>
+   </li>
+   <li>
+      <a href="#IndoorPositioningSystem" title="http://purl.org/poso/IndoorPositioningSystem">Indoor positioning system</a>
+   </li>
+   <li>
+      <a href="#InertialPositioningSystem" title="http://purl.org/poso/InertialPositioningSystem">Inertial positioning system</a>
+   </li>
+   <li>
+      <a href="#IntegratedPositioningSystem"
+         title="http://purl.org/poso/IntegratedPositioningSystem">Integrated positioning system</a>
+   </li>
+   <li>
+      <a href="#Landmark" title="http://purl.org/poso/Landmark">Landmark</a>
+   </li>
+   <li>
+      <a href="#Lateration" title="http://purl.org/poso/Lateration">Lateration</a>
+   </li>
+   <li>
+      <a href="#LinearMotion" title="http://purl.org/poso/LinearMotion">Lineaire beweging</a>
+   </li>
+   <li>
+      <a href="#LinearVelocity" title="http://purl.org/poso/LinearVelocity">Lineaire snelheid</a>
+   </li>
+   <li>
+      <a href="#LinearAcceleration" title="http://purl.org/poso/LinearAcceleration">Linear acceleration</a>
+   </li>
+   <li>
+      <a href="#LocationBasedService" title="http://purl.org/poso/LocationBasedService">Location-based service</a>
+   </li>
+   <li>
+      <a href="#LowLevelFusion" title="http://purl.org/poso/LowLevelFusion">Low level sensor fusion</a>
+   </li>
+   <li>
+      <a href="#MagneticOdometry" title="http://purl.org/poso/MagneticOdometry">Magnetic odometry</a>
+   </li>
+   <li>
+      <a href="#MapOutput" title="http://purl.org/poso/MapOutput">Map output</a>
+   </li>
+   <li>
+      <a href="#MidLevelFusion" title="http://purl.org/poso/MidLevelFusion">Mid level sensor fusion</a>
+   </li>
+   <li>
+      <a href="#Multilateration" title="http://purl.org/poso/Multilateration">Multilateration</a>
+   </li>
+   <li>
+      <a href="#NormalizationProcedure" title="http://purl.org/poso/NormalizationProcedure">Normalization procedure</a>
+   </li>
+   <li>
+      <a href="#Odometry" title="http://purl.org/poso/Odometry">Odometry</a>
+   </li>
+   <li>
+      <a href="#OpticalPositioningSystem" title="http://purl.org/poso/OpticalPositioningSystem">Optical positioning system</a>
+   </li>
+   <li>
+      <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientatie</a>
+   </li>
+   <li>
+      <a href="#OrientationOutput" title="http://purl.org/poso/OrientationOutput">Orientation output</a>
+   </li>
+   <li>
+      <a href="#OutdoorDeployment" title="http://purl.org/poso/OutdoorDeployment">Outdoor deployment</a>
+   </li>
+   <li>
+      <a href="#OutdoorPositioningSystem" title="http://purl.org/poso/OutdoorPositioningSystem">Outdoor positioning system</a>
+   </li>
+   <li>
+      <a href="#PDR" title="http://purl.org/poso/PDR">Pedestrian dead reckoning</a>
+   </li>
+   <li>
+      <a href="#PolygonalAccuracy" title="http://purl.org/poso/PolygonalAccuracy">Polygonal accuracy</a>
+   </li>
+   <li>
+      <a href="#Position" title="http://purl.org/poso/Position">Positie</a>
+   </li>
+   <li>
+      <a href="#PositionOutput" title="http://purl.org/poso/PositionOutput">Position output</a>
+   </li>
+   <li>
+      <a href="#PositioningPlatform" title="http://purl.org/poso/PositioningPlatform">Positioning platform</a>
+   </li>
+   <li>
+      <a href="#PositioningSystem" title="http://purl.org/poso/PositioningSystem">Positioning system</a>
+   </li>
+   <li>
+      <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+   </li>
+   <li>
+      <a href="#Proximity" title="http://purl.org/poso/Proximity">Proximity</a>
+   </li>
+   <li>
+      <a href="#QuaternionOrientation" title="http://purl.org/poso/QuaternionOrientation">Quaternion orientation</a>
+   </li>
+   <li>
+      <a href="#RadioPropagation" title="http://purl.org/poso/RadioPropagation">Radio propagation</a>
+   </li>
+   <li>
+      <a href="#RelativeDistance" title="http://purl.org/poso/RelativeDistance">Relatieve afstand</a>
+   </li>
+   <li>
+      <a href="#RelativeAngle" title="http://purl.org/poso/RelativeAngle">Relatieve hoek</a>
+   </li>
+   <li>
+      <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
+   </li>
+   <li>
+      <a href="#RelativeSignalStrength" title="http://purl.org/poso/RelativeSignalStrength">Relatieve signaalsterkte</a>
+   </li>
+   <li>
+      <a href="#RelativeVelocity" title="http://purl.org/poso/RelativeVelocity">Relatieve snelheid</a>
+   </li>
+   <li>
+      <a href="#RelativeAcceleration" title="http://purl.org/poso/RelativeAcceleration">Relative acceleration</a>
+   </li>
+   <li>
+      <a href="#RadioFrequencyFingerprinting"
+         title="http://purl.org/poso/RadioFrequencyFingerprinting">RF fingerprinting</a>
+   </li>
+   <li>
+      <a href="#RFLandmark" title="http://purl.org/poso/RFLandmark">RF landmark</a>
+   </li>
+   <li>
+      <a href="#SatellitePositioningSystem" title="http://purl.org/poso/SatellitePositioningSystem">Satellite positioning system</a>
+   </li>
+   <li>
+      <a href="#SensorFusion" title="http://purl.org/poso/SensorFusion">Sensor fusion</a>
+   </li>
+   <li>
+      <a href="#SensorInput" title="http://purl.org/poso/SensorInput">Sensor input</a>
+   </li>
+   <li>
+      <a href="#SLAM" title="http://purl.org/poso/SLAM">Simultaneous localisation and mapping</a>
+   </li>
+   <li>
+      <a href="#SRS" title="http://purl.org/poso/SRS">Spatial Reference System</a>
+   </li>
+   <li>
+      <a href="#TrackedFeature" title="http://purl.org/poso/TrackedFeature">Tracked feature</a>
+   </li>
+   <li>
+      <a href="#Triangulation" title="http://purl.org/poso/Triangulation">Triangulation</a>
+   </li>
+   <li>
+      <a href="#Trilateration" title="http://purl.org/poso/Trilateration">Trilateration</a>
+   </li>
+   <li>
+      <a href="#Velocity" title="http://purl.org/poso/Velocity">Velocity</a>
+   </li>
+   <li>
+      <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Versnelling</a>
+   </li>
+   <li>
+      <a href="#VirtualLandmark" title="http://purl.org/poso/VirtualLandmark">Virtual landmark</a>
+   </li>
+   <li>
+      <a href="#VisualInput" title="http://purl.org/poso/VisualInput">Visual input</a>
+   </li>
+   <li>
+      <a href="#VisualLandmark" title="http://purl.org/poso/VisualLandmark">Visual landmark</a>
+   </li>
+   <li>
+      <a href="#VisualOdometry" title="http://purl.org/poso/VisualOdometry">Visual odometry</a>
+   </li>
+   <li>
+      <a href="#VSLAM" title="http://purl.org/poso/VSLAM">Visual simultaneous localisation and mapping</a>
+   </li>
+</ul><h4>Objecteigenschappen</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#madeBySystem" title="http://purl.org/poso/madeBySystem">gemaakt door systeem</a>
+   </li>
+   <li>
+      <a href="#hasRelativeDistance" title="http://purl.org/poso/hasRelativeDistance">has relative distance</a>
+   </li>
+   <li>
+      <a href="#hasRSS" title="http://purl.org/poso/hasRSS">has relative signal strength</a>
+   </li>
+   <li>
+      <a href="#hasAccuracy" title="http://purl.org/poso/hasAccuracy">heeft accuraatheid</a>
+   </li>
+   <li>
+      <a href="#hasCRS" title="http://purl.org/poso/hasCRS">heeft een coördinaten referentiesysteem</a>
+   </li>
+   <li>
+      <a href="#hasSRS" title="http://purl.org/poso/hasSRS">heeft een ruimtelijk referentiepunt</a>
+   </li>
+   <li>
+      <a href="#hasOrientation" title="http://purl.org/poso/hasOrientation">heeft orientatie</a>
+   </li>
+   <li>
+      <a href="#hasPosition" title="http://purl.org/poso/hasPosition">heeft positie</a>
+   </li>
+   <li>
+      <a href="#hasRelativePosition" title="http://purl.org/poso/hasRelativePosition">heeft relatieve positie</a>
+   </li>
+   <li>
+      <a href="#hasVelocity" title="http://purl.org/poso/hasVelocity">heeft snelheid</a>
+   </li>
+   <li>
+      <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">heeft versnelling</a>
+   </li>
+   <li>
+      <a href="#angle" title="http://purl.org/poso/angle">hoek</a>
+   </li>
+   <li>
+      <a href="#inDeployment" title="http://purl.org/poso/inDeployment">in deployment</a>
+   </li>
+   <li>
+      <a href="#isVelocityOf" title="http://purl.org/poso/isVelocityOf">is de snelheid van</a>
+   </li>
+   <li>
+      <a href="#isOrientationOf" title="http://purl.org/poso/isOrientationOf">is orientatie van</a>
+   </li>
+   <li>
+      <a href="#isPositionOf" title="http://purl.org/poso/isPositionOf">is positie van</a>
+   </li>
+   <li>
+      <a href="#isRelativeTo" title="http://purl.org/poso/isRelativeTo">is relatief met</a>
+   </li>
+   <li>
+      <a href="#isAccelerationOf" title="http://purl.org/poso/isAccelerationOf">is versnelling van</a>
+   </li>
+   <li>
+      <a href="#madeByProcedure" title="http://purl.org/poso/madeByProcedure">made by procecure</a>
+   </li>
+   <li>
+      <a href="#nutation" title="http://purl.org/poso/nutation">nutation</a>
+   </li>
+   <li>
+      <a href="#observesType" title="http://purl.org/poso/observesType">observeert type</a>
+   </li>
+   <li>
+      <a href="#order" title="http://purl.org/poso/order">order</a>
+   </li>
+   <li>
+      <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
+   </li>
+   <li>
+      <a href="#precession" title="http://purl.org/poso/precession">precession</a>
+   </li>
+   <li>
+      <a href="#roll" title="http://purl.org/poso/roll">roll</a>
+   </li>
+   <li>
+      <a href="#scalar" title="http://purl.org/poso/scalar">scalar</a>
+   </li>
+   <li>
+      <a href="#spin" title="http://purl.org/poso/spin">spin</a>
+   </li>
+   <li>
+      <a href="#xAxisValue" title="http://purl.org/poso/xAxisValue">x-axis value</a>
+   </li>
+   <li>
+      <a href="#yAxisValue" title="http://purl.org/poso/yAxisValue">y-axis value</a>
+   </li>
+   <li>
+      <a href="#yaw" title="http://purl.org/poso/yaw">yaw</a>
+   </li>
+   <li>
+      <a href="#zAxisValue" title="http://purl.org/poso/zAxisValue">z-axis value</a>
+   </li>
+</ul><h4>Concrete exemplaren</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#XYX" title="http://purl.org/poso/XYX">X-Y-X</a>
+   </li>
+   <li>
+      <a href="#XYZ" title="http://purl.org/poso/XYZ">X-Y-Z</a>
+   </li>
+   <li>
+      <a href="#XZY" title="http://purl.org/poso/XZY">X-Z-Y</a>
+   </li>
+   <li>
+      <a href="#YXZ" title="http://purl.org/poso/YXZ">Y-X-Z</a>
+   </li>
+   <li>
+      <a href="#YZX" title="http://purl.org/poso/YZX">Y-Z-X</a>
+   </li>
+   <li>
+      <a href="#YZY" title="http://purl.org/poso/YZY">Y-Z-Y</a>
+   </li>
+   <li>
+      <a href="#ZXY" title="http://purl.org/poso/ZXY">Z-X-Y</a>
+   </li>
+   <li>
+      <a href="#ZXZ" title="http://purl.org/poso/ZXZ">Z-X-Z</a>
+   </li>
+   <li>
+      <a href="#ZYX" title="http://purl.org/poso/ZYX">Z-Y-X</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="../webvowl/index.html"></iframe> 
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Kruisverwijzing voor Positioning System Ontology klassen, objecteigenschappen en data-eigenschapen <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
+Deze sectie geeft details voor elke klasse en eigenschap gedefinieerd door  Positioning System Ontology.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Klassen</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AbsolutePosition" title="http://purl.org/poso/AbsolutePosition">Absolute position</a>
+      </li>
+      <li>
+         <a href="#Angulation" title="http://purl.org/poso/Angulation">Angulation</a>
+      </li>
+      <li>
+         <a href="#AuditoryLandmark" title="http://purl.org/poso/AuditoryLandmark">Auditory landmark</a>
+      </li>
+      <li>
+         <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
+      </li>
+      <li>
+         <a href="#Beamforming" title="http://purl.org/poso/Beamforming">Beamforming</a>
+      </li>
+      <li>
+         <a href="#Motion" title="http://purl.org/poso/Motion">Beweging</a>
+      </li>
+      <li>
+         <a href="#BluetoothBeacon" title="http://purl.org/poso/BluetoothBeacon">Bluetooth beacon</a>
+      </li>
+      <li>
+         <a href="#BluetoothReceiver" title="http://purl.org/poso/BluetoothReceiver">Bluetooth receiver</a>
+      </li>
+      <li>
+         <a href="#CalibrationMagnitudeProcedure"
+            title="http://purl.org/poso/CalibrationMagnitudeProcedure">Calibration magnitude procedure</a>
+      </li>
+      <li>
+         <a href="#CalibrationOffsetProcedure" title="http://purl.org/poso/CalibrationOffsetProcedure">Calibration offset procedure</a>
+      </li>
+      <li>
+         <a href="#CalibrationProcedure" title="http://purl.org/poso/CalibrationProcedure">Calibration procedure</a>
+      </li>
+      <li>
+         <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
+      </li>
+      <li>
+         <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
+      </li>
+      <li>
+         <a href="#AngularMotion" title="http://purl.org/poso/AngularMotion">Draaibeweging</a>
+      </li>
+      <li>
+         <a href="#AngularVelocity" title="http://purl.org/poso/AngularVelocity">Draaisnelheid</a>
+      </li>
+      <li>
+         <a href="#AngularAcceleration" title="http://purl.org/poso/AngularAcceleration">Draaiversnelling</a>
+      </li>
+      <li>
+         <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+      </li>
+      <li>
+         <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+      </li>
+      <li>
+         <a href="#Fingerprint" title="http://purl.org/poso/Fingerprint">Fingerprint</a>
+      </li>
+      <li>
+         <a href="#Fingerprinting" title="http://purl.org/poso/Fingerprinting">Fingerprinting</a>
+      </li>
+      <li>
+         <a href="#HighLevelFusion" title="http://purl.org/poso/HighLevelFusion">High level sensor fusion</a>
+      </li>
+      <li>
+         <a href="#HybridDeployment" title="http://purl.org/poso/HybridDeployment">Hybrid deployment</a>
+      </li>
+      <li>
+         <a href="#IndoorDeployment" title="http://purl.org/poso/IndoorDeployment">Indoor deployment</a>
+      </li>
+      <li>
+         <a href="#IndoorPositioningSystem" title="http://purl.org/poso/IndoorPositioningSystem">Indoor positioning system</a>
+      </li>
+      <li>
+         <a href="#InertialPositioningSystem" title="http://purl.org/poso/InertialPositioningSystem">Inertial positioning system</a>
+      </li>
+      <li>
+         <a href="#IntegratedPositioningSystem"
+            title="http://purl.org/poso/IntegratedPositioningSystem">Integrated positioning system</a>
+      </li>
+      <li>
+         <a href="#Landmark" title="http://purl.org/poso/Landmark">Landmark</a>
+      </li>
+      <li>
+         <a href="#Lateration" title="http://purl.org/poso/Lateration">Lateration</a>
+      </li>
+      <li>
+         <a href="#LinearMotion" title="http://purl.org/poso/LinearMotion">Lineaire beweging</a>
+      </li>
+      <li>
+         <a href="#LinearVelocity" title="http://purl.org/poso/LinearVelocity">Lineaire snelheid</a>
+      </li>
+      <li>
+         <a href="#LinearAcceleration" title="http://purl.org/poso/LinearAcceleration">Linear acceleration</a>
+      </li>
+      <li>
+         <a href="#LocationBasedService" title="http://purl.org/poso/LocationBasedService">Location-based service</a>
+      </li>
+      <li>
+         <a href="#LowLevelFusion" title="http://purl.org/poso/LowLevelFusion">Low level sensor fusion</a>
+      </li>
+      <li>
+         <a href="#MagneticOdometry" title="http://purl.org/poso/MagneticOdometry">Magnetic odometry</a>
+      </li>
+      <li>
+         <a href="#MapOutput" title="http://purl.org/poso/MapOutput">Map output</a>
+      </li>
+      <li>
+         <a href="#MidLevelFusion" title="http://purl.org/poso/MidLevelFusion">Mid level sensor fusion</a>
+      </li>
+      <li>
+         <a href="#Multilateration" title="http://purl.org/poso/Multilateration">Multilateration</a>
+      </li>
+      <li>
+         <a href="#NormalizationProcedure" title="http://purl.org/poso/NormalizationProcedure">Normalization procedure</a>
+      </li>
+      <li>
+         <a href="#Odometry" title="http://purl.org/poso/Odometry">Odometry</a>
+      </li>
+      <li>
+         <a href="#OpticalPositioningSystem" title="http://purl.org/poso/OpticalPositioningSystem">Optical positioning system</a>
+      </li>
+      <li>
+         <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientatie</a>
+      </li>
+      <li>
+         <a href="#OrientationOutput" title="http://purl.org/poso/OrientationOutput">Orientation output</a>
+      </li>
+      <li>
+         <a href="#OutdoorDeployment" title="http://purl.org/poso/OutdoorDeployment">Outdoor deployment</a>
+      </li>
+      <li>
+         <a href="#OutdoorPositioningSystem" title="http://purl.org/poso/OutdoorPositioningSystem">Outdoor positioning system</a>
+      </li>
+      <li>
+         <a href="#PDR" title="http://purl.org/poso/PDR">Pedestrian dead reckoning</a>
+      </li>
+      <li>
+         <a href="#PolygonalAccuracy" title="http://purl.org/poso/PolygonalAccuracy">Polygonal accuracy</a>
+      </li>
+      <li>
+         <a href="#Position" title="http://purl.org/poso/Position">Positie</a>
+      </li>
+      <li>
+         <a href="#PositionOutput" title="http://purl.org/poso/PositionOutput">Position output</a>
+      </li>
+      <li>
+         <a href="#PositioningPlatform" title="http://purl.org/poso/PositioningPlatform">Positioning platform</a>
+      </li>
+      <li>
+         <a href="#PositioningSystem" title="http://purl.org/poso/PositioningSystem">Positioning system</a>
+      </li>
+      <li>
+         <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+      </li>
+      <li>
+         <a href="#Proximity" title="http://purl.org/poso/Proximity">Proximity</a>
+      </li>
+      <li>
+         <a href="#QuaternionOrientation" title="http://purl.org/poso/QuaternionOrientation">Quaternion orientation</a>
+      </li>
+      <li>
+         <a href="#RadioPropagation" title="http://purl.org/poso/RadioPropagation">Radio propagation</a>
+      </li>
+      <li>
+         <a href="#RelativeDistance" title="http://purl.org/poso/RelativeDistance">Relatieve afstand</a>
+      </li>
+      <li>
+         <a href="#RelativeAngle" title="http://purl.org/poso/RelativeAngle">Relatieve hoek</a>
+      </li>
+      <li>
+         <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
+      </li>
+      <li>
+         <a href="#RelativeSignalStrength" title="http://purl.org/poso/RelativeSignalStrength">Relatieve signaalsterkte</a>
+      </li>
+      <li>
+         <a href="#RelativeVelocity" title="http://purl.org/poso/RelativeVelocity">Relatieve snelheid</a>
+      </li>
+      <li>
+         <a href="#RelativeAcceleration" title="http://purl.org/poso/RelativeAcceleration">Relative acceleration</a>
+      </li>
+      <li>
+         <a href="#RadioFrequencyFingerprinting"
+            title="http://purl.org/poso/RadioFrequencyFingerprinting">RF fingerprinting</a>
+      </li>
+      <li>
+         <a href="#RFLandmark" title="http://purl.org/poso/RFLandmark">RF landmark</a>
+      </li>
+      <li>
+         <a href="#SatellitePositioningSystem" title="http://purl.org/poso/SatellitePositioningSystem">Satellite positioning system</a>
+      </li>
+      <li>
+         <a href="#SensorFusion" title="http://purl.org/poso/SensorFusion">Sensor fusion</a>
+      </li>
+      <li>
+         <a href="#SensorInput" title="http://purl.org/poso/SensorInput">Sensor input</a>
+      </li>
+      <li>
+         <a href="#SLAM" title="http://purl.org/poso/SLAM">Simultaneous localisation and mapping</a>
+      </li>
+      <li>
+         <a href="#SRS" title="http://purl.org/poso/SRS">Spatial Reference System</a>
+      </li>
+      <li>
+         <a href="#TrackedFeature" title="http://purl.org/poso/TrackedFeature">Tracked feature</a>
+      </li>
+      <li>
+         <a href="#Triangulation" title="http://purl.org/poso/Triangulation">Triangulation</a>
+      </li>
+      <li>
+         <a href="#Trilateration" title="http://purl.org/poso/Trilateration">Trilateration</a>
+      </li>
+      <li>
+         <a href="#Velocity" title="http://purl.org/poso/Velocity">Velocity</a>
+      </li>
+      <li>
+         <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Versnelling</a>
+      </li>
+      <li>
+         <a href="#VirtualLandmark" title="http://purl.org/poso/VirtualLandmark">Virtual landmark</a>
+      </li>
+      <li>
+         <a href="#VisualInput" title="http://purl.org/poso/VisualInput">Visual input</a>
+      </li>
+      <li>
+         <a href="#VisualLandmark" title="http://purl.org/poso/VisualLandmark">Visual landmark</a>
+      </li>
+      <li>
+         <a href="#VisualOdometry" title="http://purl.org/poso/VisualOdometry">Visual odometry</a>
+      </li>
+      <li>
+         <a href="#VSLAM" title="http://purl.org/poso/VSLAM">Visual simultaneous localisation and mapping</a>
+      </li>
+   </ul>
+   <div class="entity" id="AbsolutePosition">
+      <h3>Absolute position<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/AbsolutePosition</p>
+      <div class="comment">
+         <span class="markdown">An absolute position describes the position of an entity based on a fixed point in space. Usually this space is the Earth and the position is expressed in latitude and longitude.</span>
+      </div>
+      <dl class="description">
+         <dt>is een equivalent van</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Geometry"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Geometry">geometry</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Position" title="http://purl.org/poso/Position">Positie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in domein van</dt>
+         <dd>
+            <a href="#inDeployment" title="http://purl.org/poso/inDeployment">in deployment</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#isRelativeTo" title="http://purl.org/poso/isRelativeTo">is relatief met</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Angulation">
+      <h3>Angulation<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Angulation</p>
+      <div class="comment">
+         <span class="markdown">Angle-based positioning techniques are positioning techniques that use angles to determine a position.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#Beamforming" title="http://purl.org/poso/Beamforming">Beamforming</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#Triangulation" title="http://purl.org/poso/Triangulation">Triangulation</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AuditoryLandmark">
+      <h3>Auditory landmark<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/AuditoryLandmark</p>
+      <div class="comment">
+         <span class="markdown">A spatial landmark that can be observed by sound.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Landmark" title="http://purl.org/poso/Landmark">Landmark</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AxisAngleOrientation">
+      <h3>Axis-angle orientation<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/AxisAngleOrientation</p>
+      <div class="comment">
+         <span class="markdown">The axis-angle orientation is an orientation representation where the x, y and z values are rotated with a certain angle.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientatie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Beamforming">
+      <h3>Beamforming<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Beamforming</p>
+      <div class="comment">
+         <span class="markdown">Beamforming is a signal processing technique that uses an array of antennas to form a directional beam of radio waves. By adjusting the direction of the beam and measuring the angle of arrival or departure of the signal, the position of a receiver can be estimated.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Angulation" title="http://purl.org/poso/Angulation">Angulation</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Motion">
+      <h3>Beweging<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Motion</p>
+      <div class="comment">
+         <span class="markdown">Motion stimulus triggering an update of a position.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Stimulus"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Stimulus">stimulus</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#AngularMotion" title="http://purl.org/poso/AngularMotion">Draaibeweging</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#LinearMotion" title="http://purl.org/poso/LinearMotion">Lineaire beweging</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BluetoothBeacon">
+      <h3>Bluetooth beacon<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/BluetoothBeacon</p>
+      <div class="comment">
+         <span class="markdown">A Bluetooth beacon is an RF landmark that advertises its transmission power and other optional information. Based on the signal strength receivers of this advertisement can determine the approximate distance.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#RFLandmark" title="http://purl.org/poso/RFLandmark">RF landmark</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="BluetoothReceiver">
+      <h3>Bluetooth receiver<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/BluetoothReceiver</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#RFLandmark" title="http://purl.org/poso/RFLandmark">RF landmark</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CalibrationMagnitudeProcedure">
+      <h3>Calibration magnitude procedure<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/CalibrationMagnitudeProcedure</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#NormalizationProcedure" title="http://purl.org/poso/NormalizationProcedure">Normalization procedure</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CalibrationOffsetProcedure">
+      <h3>Calibration offset procedure<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/CalibrationOffsetProcedure</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#NormalizationProcedure" title="http://purl.org/poso/NormalizationProcedure">Normalization procedure</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CalibrationProcedure">
+      <h3>Calibration procedure<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/CalibrationProcedure</p>
+      <div class="comment">
+         <span class="markdown">Calibration is the act of using sensor data obtained by a user to configure a system to output data with a reliable result.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Procedure"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Procedure">procedure</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#NormalizationProcedure" title="http://purl.org/poso/NormalizationProcedure">Normalization procedure</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CellIdentification">
+      <h3>Cell identification<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/CellIdentification</p>
+      <div class="comment">
+         <span class="markdown">Cell identification is a positioning procedure using the position of one landmark that is within the cell.</span>
+      </div>
+      <dl>
+         <dt>Voorbeeld</dt>
+         <dd>
+            <pre>An example of cell identification is using the position of a Bluetooth beacon whenever this beacon has a high signal strength.</pre>
+         </dd>
+         <dd>
+            <pre>An example of cell identification is using the position of a QR-code when this code is scanned (and the user is presumably within a short distance).</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DeadReckoning">
+      <h3>Dead reckoning<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/DeadReckoning</p>
+      <div class="comment">
+         <span class="markdown">Dead reckoning is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#Odometry" title="http://purl.org/poso/Odometry">Odometry</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#PDR" title="http://purl.org/poso/PDR">Pedestrian dead reckoning</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AngularMotion">
+      <h3>Draaibeweging<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/AngularMotion</p>
+      <div class="comment">
+         <span class="markdown">Angular motion around a certain origin point.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Motion" title="http://purl.org/poso/Motion">Beweging</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AngularVelocity">
+      <h3>Draaisnelheid<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/AngularVelocity</p>
+      <div class="comment">
+         <span class="markdown">Angular velocity is the momentum around a point of origin.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Velocity" title="http://purl.org/poso/Velocity">Velocity</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AngularAcceleration">
+      <h3>Draaiversnelling<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/AngularAcceleration</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Versnelling</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EulerOrder">
+      <h3>Euler order<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/EulerOrder</p>
+      <div class="comment">
+         <span class="markdown">The order in which to apply Euler rotations.</span>
+      </div>
+      <dl class="description">
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#order" title="http://purl.org/poso/order">order</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+         <dt>heeft leden</dt>
+         <dd>
+            <a href="#XYX" title="http://purl.org/poso/XYX">X-Y-X</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#XYZ" title="http://purl.org/poso/XYZ">X-Y-Z</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#XZY" title="http://purl.org/poso/XZY">X-Z-Y</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#YXZ" title="http://purl.org/poso/YXZ">Y-X-Z</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#YZX" title="http://purl.org/poso/YZX">Y-Z-X</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#YZY" title="http://purl.org/poso/YZY">Y-Z-Y</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#ZXY" title="http://purl.org/poso/ZXY">Z-X-Y</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#ZXZ" title="http://purl.org/poso/ZXZ">Z-X-Z</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>, <a href="#ZYX" title="http://purl.org/poso/ZYX">Z-Y-X</a>
+            <sup class="type-ni" title="concreet exemplaar">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EulerOrientation">
+      <h3>Euler orientation<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/EulerOrientation</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientatie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in domein van</dt>
+         <dd>
+            <a href="#nutation" title="http://purl.org/poso/nutation">nutation</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#order" title="http://purl.org/poso/order">order</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#precession" title="http://purl.org/poso/precession">precession</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#roll" title="http://purl.org/poso/roll">roll</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#spin" title="http://purl.org/poso/spin">spin</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#yaw" title="http://purl.org/poso/yaw">yaw</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Fingerprint">
+      <h3>Fingerprint<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Fingerprint</p>
+      <div class="comment">
+         <span class="markdown">A fingerprint is a scene analysis at a particular absolute position.</span>
+      </div>
+      <dl class="description">
+         <dt>is een equivalent van</dt>
+         <dd>
+            <a href="#hasPosition" title="http://purl.org/poso/hasPosition">heeft positie</a>
+            <sup class="type-op" title="objecteigenschap">op</sup> 
+            <span class="logic">exactly</span> 1 <a href="#AbsolutePosition" title="http://purl.org/poso/AbsolutePosition">Absolute position</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="http://www.w3.org/ns/sosa/Result"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Result">result</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Fingerprinting">
+      <h3>Fingerprinting<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Fingerprinting</p>
+      <div class="comment">
+         <span class="markdown">Fingerprinting is a positioning Procedure where sensor data is collected at a specific position and orientation. During the offline-stage of a positioning system, the significant data features are extracted and stored for that position. In the online-stage, the closest match(es) of the features are determined to predict the position.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#RadioFrequencyFingerprinting"
+               title="http://purl.org/poso/RadioFrequencyFingerprinting">RF fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HighLevelFusion">
+      <h3>High level sensor fusion<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/HighLevelFusion</p>
+      <div class="comment">
+         <span class="markdown">High level sensor fusion is about fusing both objects and their trajectories. We're not only relying on detections, but also on predictions and tracking.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#SensorFusion" title="http://purl.org/poso/SensorFusion">Sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HybridDeployment">
+      <h3>Hybrid deployment<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/HybridDeployment</p>
+      <div class="comment">
+         <span class="markdown">A hybrid deployment covers an indoor and outdoor deployment.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Deployment"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Deployment">deployment</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IndoorDeployment">
+      <h3>Indoor deployment<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/IndoorDeployment</p>
+      <div class="comment">
+         <span class="markdown">Describes the spatial deployment of a System in an indoor environment.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Deployment"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Deployment">deployment</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IndoorPositioningSystem">
+      <h3>Indoor positioning system<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/IndoorPositioningSystem</p>
+      <div class="comment">
+         <span class="markdown">A positioning system that is meant to perform indoor positioning of a feature of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningSystem" title="http://purl.org/poso/PositioningSystem">Positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InertialPositioningSystem">
+      <h3>Inertial positioning system<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/InertialPositioningSystem</p>
+      <div class="comment">
+         <span class="markdown">An inertial positioning system is a positioning system employing accelerometers, gyroscopes, and computer as integral components to determine coordinates of points or objects relative to an initial known reference point</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningSystem" title="http://purl.org/poso/PositioningSystem">Positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IntegratedPositioningSystem">
+      <h3>Integrated positioning system<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/IntegratedPositioningSystem</p>
+      <div class="comment">
+         <span class="markdown">An integrated positioning system is a positioning system that incorporates multiple positioning technologies.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningSystem" title="http://purl.org/poso/PositioningSystem">Positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Landmark">
+      <h3>Landmark<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Landmark</p>
+      <div class="comment">
+         <span class="markdown">A landmark is a feature with a known position, that can be used to identify the position of an object that has a relative position with this feature.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="http://www.w3.org/ns/sosa/Result"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Result">result</a>, <a href="http://www.opengis.net/ont/geosparql#SpatialObject"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">spatial object</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#AuditoryLandmark" title="http://purl.org/poso/AuditoryLandmark">Auditory landmark</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#RFLandmark" title="http://purl.org/poso/RFLandmark">RF landmark</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#VirtualLandmark" title="http://purl.org/poso/VirtualLandmark">Virtual landmark</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#VisualLandmark" title="http://purl.org/poso/VisualLandmark">Visual landmark</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Lateration">
+      <h3>Lateration<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Lateration</p>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#Multilateration" title="http://purl.org/poso/Multilateration">Multilateration</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#Trilateration" title="http://purl.org/poso/Trilateration">Trilateration</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LinearMotion">
+      <h3>Lineaire beweging<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/LinearMotion</p>
+      <div class="comment">
+         <span class="markdown">Linear motion along a certain axis.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Motion" title="http://purl.org/poso/Motion">Beweging</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LinearVelocity">
+      <h3>Lineaire snelheid<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/LinearVelocity</p>
+      <div class="comment">
+         <span class="markdown">Linear velocity is the momentum along one ore more axis.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Velocity" title="http://purl.org/poso/Velocity">Velocity</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LinearAcceleration">
+      <h3>Linear acceleration<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/LinearAcceleration</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Versnelling</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LocationBasedService">
+      <h3>Location-based service<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/LocationBasedService</p>
+      <div class="comment">
+         <span class="markdown">A location based service (LBS) is a service that provides the location of a person or object. It provides this information without the required knowledge of the underlying technologies and algorithms.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/System"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/System">system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LowLevelFusion">
+      <h3>Low level sensor fusion<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/LowLevelFusion</p>
+      <div class="comment">
+         <span class="markdown">Low Level Sensor Fusion is about fusing the raw data coming from multiple sensors. For example, we fuse point clouds coming from LiDARs and pixels coming from cameras.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#SensorFusion" title="http://purl.org/poso/SensorFusion">Sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MagneticOdometry">
+      <h3>Magnetic odometry<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/MagneticOdometry</p>
+      <div class="comment">
+         <span class="markdown">Magnetic field odometry is the procedure of detecting movement by analyizing how the magnetic field is changing from one Observation to another.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Odometry" title="http://purl.org/poso/Odometry">Odometry</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MapOutput">
+      <h3>Map output<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/MapOutput</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Output"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Output">output</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MidLevelFusion">
+      <h3>Mid level sensor fusion<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/MidLevelFusion</p>
+      <div class="comment">
+         <span class="markdown">Mid-Level sensor fusion is about fusing the objects detected independently on sensor data.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#SensorFusion" title="http://purl.org/poso/SensorFusion">Sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Multilateration">
+      <h3>Multilateration<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Multilateration</p>
+      <div class="comment">
+         <span class="markdown">Multilateration is the procedure of determining a position using relative distances to other known positions.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Lateration" title="http://purl.org/poso/Lateration">Lateration</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NormalizationProcedure">
+      <h3>Normalization procedure<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/NormalizationProcedure</p>
+      <div class="comment">
+         <span class="markdown">Normalization procedure is a calibration procedure to normalize data.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#CalibrationProcedure" title="http://purl.org/poso/CalibrationProcedure">Calibration procedure</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#CalibrationMagnitudeProcedure"
+               title="http://purl.org/poso/CalibrationMagnitudeProcedure">Calibration magnitude procedure</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#CalibrationOffsetProcedure" title="http://purl.org/poso/CalibrationOffsetProcedure">Calibration offset procedure</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Odometry">
+      <h3>Odometry<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Odometry</p>
+      <div class="comment">
+         <span class="markdown">Odometry is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#MagneticOdometry" title="http://purl.org/poso/MagneticOdometry">Magnetic odometry</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#VisualOdometry" title="http://purl.org/poso/VisualOdometry">Visual odometry</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OpticalPositioningSystem">
+      <h3>Optical positioning system<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/OpticalPositioningSystem</p>
+      <div class="comment">
+         <span class="markdown">An optical positioning system is a positioning system that determines the position of an object by means of the properties of light.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningSystem" title="http://purl.org/poso/PositioningSystem">Positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Orientation">
+      <h3>Orientatie<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Orientation</p>
+      <div class="comment">
+         <span class="markdown">De orientatie van een object in 2D of 3D.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>, <a href="http://www.w3.org/ns/sosa/Result"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Result">result</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#AxisAngleOrientation" title="http://purl.org/poso/AxisAngleOrientation">Axis-angle orientation</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#QuaternionOrientation" title="http://purl.org/poso/QuaternionOrientation">Quaternion orientation</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in domein van</dt>
+         <dd>
+            <a href="#isRelativeTo" title="http://purl.org/poso/isRelativeTo">is relatief met</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#hasOrientation" title="http://purl.org/poso/hasOrientation">heeft orientatie</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OrientationOutput">
+      <h3>Orientation output<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/OrientationOutput</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Output"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Output">output</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OutdoorDeployment">
+      <h3>Outdoor deployment<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/OutdoorDeployment</p>
+      <div class="comment">
+         <span class="markdown">Describes the deployment of a System in an outdoor environment.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Deployment"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Deployment">deployment</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OutdoorPositioningSystem">
+      <h3>Outdoor positioning system<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/OutdoorPositioningSystem</p>
+      <div class="comment">
+         <span class="markdown">An outdoor positioning system defines a system that is used to determine a position outside a building without specifying the underlying technology.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningSystem" title="http://purl.org/poso/PositioningSystem">Positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PDR">
+      <h3>Pedestrian dead reckoning<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/PDR</p>
+      <div class="comment">
+         <span class="markdown">Pedestrian dead reckoning (PDR) is a positioning technique where the object is assumed to be a pedestrian that is walking or running. Using this knowledge, the dead reckoning involves the detection of steps and the step length to more accurately predict the movement.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PolygonalAccuracy">
+      <h3>Polygonal accuracy<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/PolygonalAccuracy</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/systems/Accuracy"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/systems/Accuracy">accuracy</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Position">
+      <h3>Positie<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Position</p>
+      <div class="comment">
+         <span class="markdown">A position indicates where an entity is located.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>, <a href="http://www.w3.org/ns/sosa/Result"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Result">result</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#AbsolutePosition" title="http://purl.org/poso/AbsolutePosition">Absolute position</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#hasPosition" title="http://purl.org/poso/hasPosition">heeft positie</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PositionOutput">
+      <h3>Position output<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/PositionOutput</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Output"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Output">output</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PositioningPlatform">
+      <h3>Positioning platform<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/PositioningPlatform</p>
+      <div class="comment">
+         <span class="markdown">A positioning platform is a framework, architecture or platform used to develop and host a positioning system.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Platform"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Platform">platform</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PositioningSystem">
+      <h3>Positioning system<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/PositioningSystem</p>
+      <div class="comment">
+         <span class="markdown">A positioning system is a system of instrumental and computational components for determining position.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/System"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/System">system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#IndoorPositioningSystem" title="http://purl.org/poso/IndoorPositioningSystem">Indoor positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#InertialPositioningSystem" title="http://purl.org/poso/InertialPositioningSystem">Inertial positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#IntegratedPositioningSystem"
+               title="http://purl.org/poso/IntegratedPositioningSystem">Integrated positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#OpticalPositioningSystem" title="http://purl.org/poso/OpticalPositioningSystem">Optical positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#OutdoorPositioningSystem" title="http://purl.org/poso/OutdoorPositioningSystem">Outdoor positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#SatellitePositioningSystem" title="http://purl.org/poso/SatellitePositioningSystem">Satellite positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PositioningTechnique">
+      <h3>Positioning technique<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/PositioningTechnique</p>
+      <div class="comment">
+         <span class="markdown">A positioning technique is a procedure to sample sensor data to an output position.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Procedure"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Procedure">procedure</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#Angulation" title="http://purl.org/poso/Angulation">Angulation</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#Fingerprinting" title="http://purl.org/poso/Fingerprinting">Fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#Lateration" title="http://purl.org/poso/Lateration">Lateration</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#SLAM" title="http://purl.org/poso/SLAM">Simultaneous localisation and mapping</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Proximity">
+      <h3>Proximity<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Proximity</p>
+      <div class="comment">
+         <span class="markdown">Stimulus whenever two Feature of Interests are within close proximity.</span>
+      </div>
+      <dl>
+         <dt>Voorbeeld</dt>
+         <dd>
+            <pre>A Feature Of Interest can be within close proximity of another Feature Of Interest without movement whenever the other Feature moved wihin the proximity of the first Feature.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Stimulus"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Stimulus">stimulus</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="QuaternionOrientation">
+      <h3>Quaternion orientation<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/QuaternionOrientation</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientatie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RadioPropagation">
+      <h3>Radio propagation<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RadioPropagation</p>
+      <div class="comment">
+         <span class="markdown">The radio propagation formulas cover the computation of the radio waves through a medium (e.g. air).</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Procedure"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Procedure">procedure</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RelativeDistance">
+      <h3>Relatieve afstand<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RelativeDistance</p>
+      <div class="comment">
+         <span class="markdown">A relative distance is a quantitative distance relative to another feature of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#hasRelativeDistance" title="http://purl.org/poso/hasRelativeDistance">has relative distance</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RelativeAngle">
+      <h3>Relatieve hoek<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RelativeAngle</p>
+      <div class="comment">
+         <span class="markdown">A relative angle is a quantitative angle relative to another feature of interest.</span>
+      </div>
+      <dl>
+         <dt>Voorbeeld</dt>
+         <dd>
+            <pre>An example of relative angle is the Angle of Arrival.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RelativePosition">
+      <h3>Relatieve positie<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RelativePosition</p>
+      <div class="comment">
+         <span class="markdown">Een relatieve positie is een positie van een punt, met respect tot de posities van andere objecten die relatief zijn.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Position" title="http://purl.org/poso/Position">Positie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#RelativeDistance" title="http://purl.org/poso/RelativeDistance">Relatieve afstand</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#RelativeAngle" title="http://purl.org/poso/RelativeAngle">Relatieve hoek</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#RelativeSignalStrength" title="http://purl.org/poso/RelativeSignalStrength">Relatieve signaalsterkte</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#RelativeVelocity" title="http://purl.org/poso/RelativeVelocity">Relatieve snelheid</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#RelativeAcceleration" title="http://purl.org/poso/RelativeAcceleration">Relative acceleration</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in domein van</dt>
+         <dd>
+            <a href="#isRelativeTo" title="http://purl.org/poso/isRelativeTo">is relatief met</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#hasRelativePosition" title="http://purl.org/poso/hasRelativePosition">heeft relatieve positie</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RelativeSignalStrength">
+      <h3>Relatieve signaalsterkte<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RelativeSignalStrength</p>
+      <div class="comment">
+         <span class="markdown">A relative signal strength is a received signal strength transmitted by another (RF) feature of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#hasRSS" title="http://purl.org/poso/hasRSS">has relative signal strength</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RelativeVelocity">
+      <h3>Relatieve snelheid<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RelativeVelocity</p>
+      <div class="comment">
+         <span class="markdown">A relative velocity is a quantitative velocity relative to another feature of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RelativeAcceleration">
+      <h3>Relative acceleration<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RelativeAcceleration</p>
+      <div class="comment">
+         <span class="markdown">A relative acceleration is a quantitative acceleration relative to another feature of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RadioFrequencyFingerprinting">
+      <h3>RF fingerprinting<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RadioFrequencyFingerprinting</p>
+      <div class="comment">
+         <span class="markdown">Radio frequency fingerprinting or RF fingerprinting is a technique where RF signals are used to create a unique fingerprint at a current location.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Fingerprinting" title="http://purl.org/poso/Fingerprinting">Fingerprinting</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RFLandmark">
+      <h3>RF landmark<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/RFLandmark</p>
+      <div class="comment">
+         <span class="markdown">A radio frequency landmark is a transmitting landmark that can be observed by its transmitting signals.</span>
+      </div>
+      <dl>
+         <dt>Voorbeeld</dt>
+         <dd>
+            <pre>An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Landmark" title="http://purl.org/poso/Landmark">Landmark</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#BluetoothBeacon" title="http://purl.org/poso/BluetoothBeacon">Bluetooth beacon</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#BluetoothReceiver" title="http://purl.org/poso/BluetoothReceiver">Bluetooth receiver</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SatellitePositioningSystem">
+      <h3>Satellite positioning system<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/SatellitePositioningSystem</p>
+      <div class="comment">
+         <span class="markdown">In this context, satellite positioning implies the use of radio signals transmitted from "active" artificial objects orbiting the Earth and received by "passive" instruments on or near the Earth's surface to determine position, velocity, and/or attitude of an object.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningSystem" title="http://purl.org/poso/PositioningSystem">Positioning system</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SensorFusion">
+      <h3>Sensor fusion<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/SensorFusion</p>
+      <div class="comment">
+         <span class="markdown">Sensor fusion is a procedure where multiple sensor data is combined to obtain a more reliable or accurate result.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Procedure"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Procedure">procedure</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#HighLevelFusion" title="http://purl.org/poso/HighLevelFusion">High level sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#LowLevelFusion" title="http://purl.org/poso/LowLevelFusion">Low level sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#MidLevelFusion" title="http://purl.org/poso/MidLevelFusion">Mid level sensor fusion</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SensorInput">
+      <h3>Sensor input<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/SensorInput</p>
+      <div class="comment">
+         <span class="markdown">Sensor input is input data provided by a sosa:Sensor</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/Input"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Input">input</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#VisualInput" title="http://purl.org/poso/VisualInput">Visual input</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SLAM">
+      <h3>Simultaneous localisation and mapping<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/SLAM</p>
+      <div class="comment">
+         <span class="markdown">Simultaneous localization and mapping (SLAM) is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is gedefinieerd door</dt>
+         <dd>http://purl.org/poso/</dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#VSLAM" title="http://purl.org/poso/VSLAM">Visual simultaneous localisation and mapping</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SRS">
+      <h3>Spatial Reference System<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/SRS</p>
+      <div class="comment">
+         <span class="markdown">An identifiable and observable spatial reference system that represents the System's ability to operate its primary purpose in a specified reference system.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/ssn/systems/SystemProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/systems/SystemProperty">system property</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TrackedFeature">
+      <h3>Tracked feature<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/TrackedFeature</p>
+      <div class="comment">
+         <span class="markdown">A feature of interest that is being tracked by a positioning system. This is the feature for which a position is observed.</span>
+      </div>
+      <dl>
+         <dt>Voorbeeld</dt>
+         <dd>
+            <pre>The phone of a person that is being tracked in an indoor positioning system is the tracked feature.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="http://www.opengis.net/ont/geosparql#SpatialObject"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#SpatialObject">spatial object</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Triangulation">
+      <h3>Triangulation<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Triangulation</p>
+      <div class="comment">
+         <span class="markdown">Triangulation is the procedure of determining a position using relative angles to a feature of interest with a known position.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Angulation" title="http://purl.org/poso/Angulation">Angulation</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Trilateration">
+      <h3>Trilateration<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Trilateration</p>
+      <div class="comment">
+         <span class="markdown">Trilateration is a positioning technique that uses exactly three reference points in 2D and four reference points in 3D to determine a position.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Lateration" title="http://purl.org/poso/Lateration">Lateration</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Velocity">
+      <h3>Velocity<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Velocity</p>
+      <div class="comment">
+         <span class="markdown">Linear or angular velocity of a feature.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>, <a href="http://www.w3.org/ns/sosa/Result"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Result">result</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#AngularVelocity" title="http://purl.org/poso/AngularVelocity">Draaisnelheid</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#LinearVelocity" title="http://purl.org/poso/LinearVelocity">Lineaire snelheid</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#hasVelocity" title="http://purl.org/poso/hasVelocity">heeft snelheid</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Acceleration">
+      <h3>Versnelling<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Acceleration</p>
+      <div class="comment">
+         <span class="markdown">Acceleration is the (instantaneous) rate of change of velocity.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>, <a href="http://www.w3.org/ns/sosa/Result"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Result">result</a>
+         </dd>
+         <dt>heeft subklassen</dt>
+         <dd>
+            <a href="#AngularAcceleration" title="http://purl.org/poso/AngularAcceleration">Draaiversnelling</a>
+            <sup class="type-c" title="klasse">c</sup>, <a href="#LinearAcceleration" title="http://purl.org/poso/LinearAcceleration">Linear acceleration</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+         <dt>is in bereik van</dt>
+         <dd>
+            <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">heeft versnelling</a>
+            <sup class="type-op" title="objecteigenschap">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VirtualLandmark">
+      <h3>Virtual landmark<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/VirtualLandmark</p>
+      <div class="comment">
+         <span class="markdown">A virtual landmark is a spatial landmark with a known absolute or relative position but which is not detectable by any sensors without additional context.</span>
+      </div>
+      <dl>
+         <dt>Voorbeeld</dt>
+         <dd>
+            <pre>An example of a virtual landmark is a marker at a specific location.</pre>
+         </dd>
+         <dd>
+            <pre>Image features can be considered landmarks as they are used by odometry and VSLAM algorithms.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Landmark" title="http://purl.org/poso/Landmark">Landmark</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VisualInput">
+      <h3>Visual input<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/VisualInput</p>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#SensorInput" title="http://purl.org/poso/SensorInput">Sensor input</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VisualLandmark">
+      <h3>Visual landmark<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/VisualLandmark</p>
+      <div class="comment">
+         <span class="markdown">A visual landmark is a feature of interest that visually present in the space.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Landmark" title="http://purl.org/poso/Landmark">Landmark</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VisualOdometry">
+      <h3>Visual odometry<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/VisualOdometry</p>
+      <div class="comment">
+         <span class="markdown">Visual odometry is the procedure of detecting movement by analyzing how visual features are moving from one Observation image frame to another.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#Odometry" title="http://purl.org/poso/Odometry">Odometry</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VSLAM">
+      <h3>Visual simultaneous localisation and mapping<sup class="type-c" title="klasse">c</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#classes">Index van klassen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/VSLAM</p>
+      <div class="comment">
+         <span class="markdown">Visual simultaneous localisation and mapping (VSLAM) is a positioning techniques that uses visual imagery to map an environment. Positioning works by detecting features of interest in image frames and comparing how these features move from one frame to another.</span>
+      </div>
+      <dl class="description">
+         <dt>heeft superklassen</dt>
+         <dd>
+            <a href="#SLAM" title="http://purl.org/poso/SLAM">Simultaneous localisation and mapping</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Objecteigenschappen</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#madeBySystem" title="http://purl.org/poso/madeBySystem">gemaakt door systeem</a>
+      </li>
+      <li>
+         <a href="#hasRelativeDistance" title="http://purl.org/poso/hasRelativeDistance">has relative distance</a>
+      </li>
+      <li>
+         <a href="#hasRSS" title="http://purl.org/poso/hasRSS">has relative signal strength</a>
+      </li>
+      <li>
+         <a href="#hasAccuracy" title="http://purl.org/poso/hasAccuracy">heeft accuraatheid</a>
+      </li>
+      <li>
+         <a href="#hasCRS" title="http://purl.org/poso/hasCRS">heeft een coördinaten referentiesysteem</a>
+      </li>
+      <li>
+         <a href="#hasSRS" title="http://purl.org/poso/hasSRS">heeft een ruimtelijk referentiepunt</a>
+      </li>
+      <li>
+         <a href="#hasOrientation" title="http://purl.org/poso/hasOrientation">heeft orientatie</a>
+      </li>
+      <li>
+         <a href="#hasPosition" title="http://purl.org/poso/hasPosition">heeft positie</a>
+      </li>
+      <li>
+         <a href="#hasRelativePosition" title="http://purl.org/poso/hasRelativePosition">heeft relatieve positie</a>
+      </li>
+      <li>
+         <a href="#hasVelocity" title="http://purl.org/poso/hasVelocity">heeft snelheid</a>
+      </li>
+      <li>
+         <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">heeft versnelling</a>
+      </li>
+      <li>
+         <a href="#angle" title="http://purl.org/poso/angle">hoek</a>
+      </li>
+      <li>
+         <a href="#inDeployment" title="http://purl.org/poso/inDeployment">in deployment</a>
+      </li>
+      <li>
+         <a href="#isVelocityOf" title="http://purl.org/poso/isVelocityOf">is de snelheid van</a>
+      </li>
+      <li>
+         <a href="#isOrientationOf" title="http://purl.org/poso/isOrientationOf">is orientatie van</a>
+      </li>
+      <li>
+         <a href="#isPositionOf" title="http://purl.org/poso/isPositionOf">is positie van</a>
+      </li>
+      <li>
+         <a href="#isRelativeTo" title="http://purl.org/poso/isRelativeTo">is relatief met</a>
+      </li>
+      <li>
+         <a href="#isAccelerationOf" title="http://purl.org/poso/isAccelerationOf">is versnelling van</a>
+      </li>
+      <li>
+         <a href="#madeByProcedure" title="http://purl.org/poso/madeByProcedure">made by procecure</a>
+      </li>
+      <li>
+         <a href="#nutation" title="http://purl.org/poso/nutation">nutation</a>
+      </li>
+      <li>
+         <a href="#observesType" title="http://purl.org/poso/observesType">observeert type</a>
+      </li>
+      <li>
+         <a href="#order" title="http://purl.org/poso/order">order</a>
+      </li>
+      <li>
+         <a href="#pitch" title="http://purl.org/poso/pitch">pitch</a>
+      </li>
+      <li>
+         <a href="#precession" title="http://purl.org/poso/precession">precession</a>
+      </li>
+      <li>
+         <a href="#roll" title="http://purl.org/poso/roll">roll</a>
+      </li>
+      <li>
+         <a href="#scalar" title="http://purl.org/poso/scalar">scalar</a>
+      </li>
+      <li>
+         <a href="#spin" title="http://purl.org/poso/spin">spin</a>
+      </li>
+      <li>
+         <a href="#xAxisValue" title="http://purl.org/poso/xAxisValue">x-axis value</a>
+      </li>
+      <li>
+         <a href="#yAxisValue" title="http://purl.org/poso/yAxisValue">y-axis value</a>
+      </li>
+      <li>
+         <a href="#yaw" title="http://purl.org/poso/yaw">yaw</a>
+      </li>
+      <li>
+         <a href="#zAxisValue" title="http://purl.org/poso/zAxisValue">z-axis value</a>
+      </li>
+   </ul>
+   <div class="entity" id="madeBySystem">
+      <h3>gemaakt door systeem<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/madeBySystem</p>
+      <div class="comment">
+         <span class="markdown">A relation to a re-usable system that computed the observation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Observation"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/System"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/System">system</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRelativeDistance">
+      <h3>has relative distance<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasRelativeDistance</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="#hasRelativePosition" title="http://purl.org/poso/hasRelativePosition">heeft relatieve positie</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#RelativeDistance" title="http://purl.org/poso/RelativeDistance">Relatieve afstand</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRSS">
+      <h3>has relative signal strength<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasRSS</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="#hasRelativePosition" title="http://purl.org/poso/hasRelativePosition">heeft relatieve positie</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#RelativeSignalStrength" title="http://purl.org/poso/RelativeSignalStrength">Relatieve signaalsterkte</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAccuracy">
+      <h3>heeft accuraatheid<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasAccuracy</p>
+      <div class="comment">
+         <span class="markdown">The accuracy of an entity.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>heeft kenmerken:
+                </strong> functioneel</p>
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/hasProperty"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCRS">
+      <h3>heeft een coördinaten referentiesysteem<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasCRS</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="#hasSRS" title="http://purl.org/poso/hasSRS">heeft een ruimtelijk referentiepunt</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSRS">
+      <h3>heeft een ruimtelijk referentiepunt<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasSRS</p>
+      <div class="comment">
+         <span class="markdown">Identifies an entity that has a spatial reference system in order to interpret the result.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>heeft subeigenschappen</dt>
+            <dd>
+               <a href="#hasCRS" title="http://purl.org/poso/hasCRS">heeft een coördinaten referentiesysteem</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasOrientation">
+      <h3>heeft orientatie<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasOrientation</p>
+      <div class="comment">
+         <span class="markdown">Duid de orientatie aan van een object aan.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/hasProperty"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
+            </dd>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientatie</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>is invers van</dt>
+            <dd>
+               <a href="#isOrientationOf" title="http://purl.org/poso/isOrientationOf">is orientatie van</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPosition">
+      <h3>heeft positie<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasPosition</p>
+      <div class="comment">
+         <span class="markdown">Duid de absolute of relatieve positie van een object aan.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/hasProperty"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
+            </dd>
+            <dt>heeft subeigenschappen</dt>
+            <dd>
+               <a href="#hasRelativePosition" title="http://purl.org/poso/hasRelativePosition">heeft relatieve positie</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#Position" title="http://purl.org/poso/Position">Positie</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>is invers van</dt>
+            <dd>
+               <a href="#isPositionOf" title="http://purl.org/poso/isPositionOf">is positie van</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRelativePosition">
+      <h3>heeft relatieve positie<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasRelativePosition</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="#hasPosition" title="http://purl.org/poso/hasPosition">heeft positie</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+            <dt>heeft subeigenschappen</dt>
+            <dd>
+               <a href="#hasRelativeDistance" title="http://purl.org/poso/hasRelativeDistance">has relative distance</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>, <a href="#hasRSS" title="http://purl.org/poso/hasRSS">has relative signal strength</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>is invers van</dt>
+            <dd>
+               <a href="#isRelativeTo" title="http://purl.org/poso/isRelativeTo">is relatief met</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasVelocity">
+      <h3>heeft snelheid<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasVelocity</p>
+      <div class="comment">
+         <span class="markdown">Duid de snelheid van een object aan.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/hasProperty"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
+            </dd>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#Velocity" title="http://purl.org/poso/Velocity">Velocity</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>is invers van</dt>
+            <dd>
+               <a href="#isVelocityOf" title="http://purl.org/poso/isVelocityOf">is de snelheid van</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAcceleration">
+      <h3>heeft versnelling<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/hasAcceleration</p>
+      <div class="comment">
+         <span class="markdown">Property that links a feature of interest to a unique acceleration property related to this feature.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/hasProperty"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/hasProperty">has property</a>
+            </dd>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Versnelling</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>is invers van</dt>
+            <dd>
+               <a href="#isAccelerationOf" title="http://purl.org/poso/isAccelerationOf">is versnelling van</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="angle">
+      <h3>hoek<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/angle</p>
+      <div class="comment">
+         <span class="markdown">Quantitative angle result value for axis-angle representation.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>heeft kenmerken:
+                </strong> functioneel</p>
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Result"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Result">result</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inDeployment">
+      <h3>in deployment<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/inDeployment</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#AbsolutePosition" title="http://purl.org/poso/AbsolutePosition">Absolute position</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/Deployment"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/Deployment">deployment</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isVelocityOf">
+      <h3>is de snelheid van<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/isVelocityOf</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/isPropertyOf"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
+            </dd>
+            <dt>is invers van</dt>
+            <dd>
+               <a href="#hasVelocity" title="http://purl.org/poso/hasVelocity">heeft snelheid</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isOrientationOf">
+      <h3>is orientatie van<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/isOrientationOf</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/isPropertyOf"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
+            </dd>
+            <dt>is invers van</dt>
+            <dd>
+               <a href="#hasOrientation" title="http://purl.org/poso/hasOrientation">heeft orientatie</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isPositionOf">
+      <h3>is positie van<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/isPositionOf</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/isPropertyOf"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
+            </dd>
+            <dt>is invers van</dt>
+            <dd>
+               <a href="#hasPosition" title="http://purl.org/poso/hasPosition">heeft positie</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isRelativeTo">
+      <h3>is relatief met<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/isRelativeTo</p>
+      <div class="comment">
+         <span class="markdown">Indicates a position or orientation to be relative to another feature of interest.</span>
+      </div>
+      <dl>
+         <dt>Voorbeeld</dt>
+         <dd>
+            <pre>A person can have a relative distance to another feature of interest. When a feature is moving (i.e. when the geometry changes based on time) the distance remains relative to the feature and not the geometry at a specific point in time.</pre>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#AbsolutePosition" title="http://purl.org/poso/AbsolutePosition">Absolute position</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dd>
+               <a href="#Orientation" title="http://purl.org/poso/Orientation">Orientatie</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dd>
+               <a href="#RelativePosition" title="http://purl.org/poso/RelativePosition">Relatieve positie</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>is invers van</dt>
+            <dd>
+               <a href="#hasRelativePosition" title="http://purl.org/poso/hasRelativePosition">heeft relatieve positie</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isAccelerationOf">
+      <h3>is versnelling van<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/isAccelerationOf</p>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/isPropertyOf"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/isPropertyOf">is property of</a>
+            </dd>
+            <dt>is invers van</dt>
+            <dd>
+               <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">heeft versnelling</a>
+               <sup class="type-op" title="objecteigenschap">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="madeByProcedure">
+      <h3>made by procecure<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/madeByProcedure</p>
+      <div class="comment">
+         <span class="markdown">Input type outputted by another procedure</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/Input"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/Input">input</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Procedure"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Procedure">procedure</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nutation">
+      <h3>nutation<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/nutation</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="observesType">
+      <h3>observeert type<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/observesType</p>
+      <div class="comment">
+         <span class="markdown">The relation between a system and an observable property class to identify that a system observes a specific type of property.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>heeft supereigenschappen</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/forProperty"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/forProperty">for property</a>
+            </dd>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/ssn/System"
+                  target="_blank"
+                  title="http://www.w3.org/ns/ssn/System">system</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="order">
+      <h3>order<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/order</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="pitch">
+      <h3>pitch<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/pitch</p>
+      <div class="comment">
+         <span class="markdown">Pitch is the rotation around the axis with respect to the object the yaw applies to.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>heeft kenmerken:
+                </strong> functioneel</p>
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="precession">
+      <h3>precession<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/precession</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="roll">
+      <h3>roll<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/roll</p>
+      <div class="comment">
+         <span class="markdown">Roll is the rotation around the axis with respect to the object the roll applies to.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>heeft kenmerken:
+                </strong> functioneel</p>
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="scalar">
+      <h3>scalar<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/scalar</p>
+      <div class="description">
+         <p>
+            <strong>heeft kenmerken:
+                </strong> functioneel</p>
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Result"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Result">result</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="spin">
+      <h3>spin<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/spin</p>
+      <div class="description">
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="xAxisValue">
+      <h3>x-axis value<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/xAxisValue</p>
+      <div class="comment">
+         <span class="markdown">Quantitative result value along the X-axis of a spatial sensor or result.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>heeft kenmerken:
+                </strong> functioneel</p>
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Result"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Result">result</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="yAxisValue">
+      <h3>y-axis value<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/yAxisValue</p>
+      <div class="comment">
+         <span class="markdown">Quantitative result value along the Y-axis of a spatial sensor or result.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>heeft kenmerken:
+                </strong> functioneel</p>
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Result"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Result">result</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Class"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="yaw">
+      <h3>yaw<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/yaw</p>
+      <div class="comment">
+         <span class="markdown">Yaw is the rotation around the axis with respect to the object the yaw applies to.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>heeft kenmerken:
+                </strong> functioneel</p>
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="#EulerOrientation" title="http://purl.org/poso/EulerOrientation">Euler orientation</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="zAxisValue">
+      <h3>z-axis value<sup class="type-op" title="objecteigenschap">op</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#objectproperties">Index objecteigenschappen</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/zAxisValue</p>
+      <div class="comment">
+         <span class="markdown">Quantitative result value along the Z-axis of a spatial sensor.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>heeft kenmerken:
+                </strong> functioneel</p>
+         <dl>
+            <dt>heeft domein</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/sosa/Result"
+                  target="_blank"
+                  title="http://www.w3.org/ns/sosa/Result">result</a>
+            </dd>
+            <dt>heeft bereik</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="klasse">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h2>Concrete Exemplaren</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#XYX" title="http://purl.org/poso/XYX">X-Y-X</a>
+      </li>
+      <li>
+         <a href="#XYZ" title="http://purl.org/poso/XYZ">X-Y-Z</a>
+      </li>
+      <li>
+         <a href="#XZY" title="http://purl.org/poso/XZY">X-Z-Y</a>
+      </li>
+      <li>
+         <a href="#YXZ" title="http://purl.org/poso/YXZ">Y-X-Z</a>
+      </li>
+      <li>
+         <a href="#YZX" title="http://purl.org/poso/YZX">Y-Z-X</a>
+      </li>
+      <li>
+         <a href="#YZY" title="http://purl.org/poso/YZY">Y-Z-Y</a>
+      </li>
+      <li>
+         <a href="#ZXY" title="http://purl.org/poso/ZXY">Z-X-Y</a>
+      </li>
+      <li>
+         <a href="#ZXZ" title="http://purl.org/poso/ZXZ">Z-X-Z</a>
+      </li>
+      <li>
+         <a href="#ZYX" title="http://purl.org/poso/ZYX">Z-Y-X</a>
+      </li>
+   </ul>
+   <div class="entity" id="XYX">
+      <h3>X-Y-X<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/XYX</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation order for proper Euler angles.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="XYZ">
+      <h3>X-Y-Z<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/XYZ</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="XZY">
+      <h3>X-Z-Y<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/XZY</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="YXZ">
+      <h3>Y-X-Z<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/YXZ</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="YZX">
+      <h3>Y-Z-X<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/YZX</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="YZY">
+      <h3>Y-Z-Y<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/YZY</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation order for proper Euler angles.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ZXY">
+      <h3>Z-X-Y<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/ZXY</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ZXZ">
+      <h3>Z-X-Z<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/ZXZ</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation order for proper Euler angles.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ZYX">
+      <h3>Z-Y-X<sup class="type-ni" title="concreet exemplaar">ni</sup>
+         <span class="backlink"> terug naar <a href="#toc">Index</a> of <a href="#namedindividuals">Index concrete exemplaren</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/ZYX</p>
+      <div class="comment">
+         <span class="markdown">The Euler rotation (Tait–Bryan) order of X-axis, Y-axis, Z-axis.</span>
+      </div>
+      <dl class="description">
+         <dt>behoort tot</dt>
+         <dd>
+            <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
+            <sup class="type-c" title="klasse">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legenda <span class="backlink"> terug naar <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Klassen">c</sup>: Klassen <br/>
+<sup class="type-op" title="Objecteigenschappen">op</sup>: Objecteigenschappen <br/>
+<sup class="type-ni" title="Concrete exemplaren">ni</sup>: Concrete exemplaren
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Dankbetuiging <span class="backlink"> terug naar <a href="#toc">Index</a></span></h2>
+<p>
+De auteurs willen graag <a href="http://www.essepuntato.it/">Silvio Peroni</a> bedanken voor het ontwikkelen van <a href="http://www.essepuntato.it/lode">LODE</a>, een Live OWL Documentation Environment, welke in dit document wordt gebruikt voor het weergeven van de sectie met kruisverwijzingen, en <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> voor het ontwikkelen van <a href="https://github.com/dgarijo/Widoco">Widoco</a>, het programma waarmee het sjabloon is gecreÃ«erd welke is toegepast op dit document.</p>
+</div>
+
+
+</div>
+</body>
+</html>

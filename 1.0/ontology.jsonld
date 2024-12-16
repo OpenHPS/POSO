@@ -293,7 +293,7 @@
     "@value" : "http://purl.org/poso/"
   } ],
   "http://schema.org/image" : [ {
-    "@value" : "https://raw.githubusercontent.com/OpenHPS/POSO/main/docs/images/systems_and_procedures.svg"
+    "@value" : "https://raw.githubusercontent.com/OpenHPS/POSO/main/1.0/docs/images/systems_and_procedures.svg"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "http://www.w3.org/ns/ssn/"
@@ -301,7 +301,7 @@
     "@id" : "http://www.w3.org/ns/ssn/systems/"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://purl.org/poso/1.0/"
+    "@id" : "http://purl.org/poso/1.1/"
   } ]
 }, {
   "@id" : "http://purl.org/poso/AbsolutePosition",
@@ -343,20 +343,6 @@
     "@id" : "http://www.w3.org/ns/sosa/Result"
   } ]
 }, {
-  "@id" : "http://purl.org/poso/AngleBasedTechnique",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Angles based positioning techniques includes all positioning techniques that use angles to determine a position."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Angle based positioning techniques"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/PositioningTechnique"
-  } ]
-}, {
   "@id" : "http://purl.org/poso/AngularAcceleration",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://qudt.org/schema/qudt/hasQuantityKind" : [ {
@@ -373,21 +359,21 @@
     "@id" : "http://purl.org/poso/Acceleration"
   } ]
 }, {
-  "@id" : "http://purl.org/poso/AngularMovement",
+  "@id" : "http://purl.org/poso/AngularMotion",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Angular movement around a certain origin point."
+    "@value" : "Angular motion around a certain origin point."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Angular movement"
+    "@value" : "Angular motion"
   }, {
     "@language" : "nl",
     "@value" : "Draaibeweging"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/Movement"
+    "@id" : "http://purl.org/poso/Motion"
   } ]
 }, {
   "@id" : "http://purl.org/poso/AngularVelocity",
@@ -414,14 +400,18 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Angulation is a triangulation method to determine a position based on the relative angles to other objects."
+    "@value" : "Angle-based positioning techniques are positioning techniques that use angles to determine a position."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Angulation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/Triangulation"
+    "@id" : "http://purl.org/poso/PositioningTechnique"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Angle-based positioning techniques"
   } ]
 }, {
   "@id" : "http://purl.org/poso/AuditoryLandmark",
@@ -460,6 +450,24 @@
     "@id" : "_:genid4"
   }, {
     "@id" : "_:genid5"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/Beamforming",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Beamforming is a signal processing technique that uses an array of antennas to form a directional beam of radio waves. By adjusting the direction of the beam and measuring the angle of arrival or departure of the signal, the position of a receiver can be estimated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "https://ieeexplore.ieee.org/document/9369486"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Beamforming"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/Angulation"
   } ]
 }, {
   "@id" : "http://purl.org/poso/BluetoothBeacon",
@@ -531,7 +539,7 @@
     "@value" : "Cell identification"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/ToplogyBasedTechnique"
+    "@id" : "http://purl.org/poso/PositioningTechnique"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -556,25 +564,11 @@
     "@value" : "Dead reckoning"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/MotionBasedTechnique"
+    "@id" : "http://purl.org/poso/PositioningTechnique"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "Deduced reckoning"
-  } ]
-}, {
-  "@id" : "http://purl.org/poso/DistanceBasedTechnique",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Distance based positioning techniques includes all positioning techniques that use distances to determine a position."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Distance based positioning techniques"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/PositioningTechnique"
   } ]
 }, {
   "@id" : "http://purl.org/poso/EulerOrder",
@@ -642,7 +636,7 @@
     "@value" : "Fingerprinting"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/ToplogyBasedTechnique"
+    "@id" : "http://purl.org/poso/PositioningTechnique"
   } ]
 }, {
   "@id" : "http://purl.org/poso/HighLevelFusion",
@@ -665,6 +659,20 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "Decision level sensor fusion"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/HybridDeployment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A hybrid deployment covers an indoor and outdoor deployment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Hybrid deployment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/ssn/Deployment"
   } ]
 }, {
   "@id" : "http://purl.org/poso/IndoorDeployment",
@@ -766,7 +774,11 @@
     "@value" : "Lateration"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/DistanceBasedTechnique"
+    "@id" : "http://purl.org/poso/PositioningTechnique"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Distance-based positioning"
   } ]
 }, {
   "@id" : "http://purl.org/poso/LinearAcceleration",
@@ -782,21 +794,21 @@
     "@id" : "http://purl.org/poso/Acceleration"
   } ]
 }, {
-  "@id" : "http://purl.org/poso/LinearMovement",
+  "@id" : "http://purl.org/poso/LinearMotion",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Linear movement along a certain axis."
+    "@value" : "Linear motion along a certain axis."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "nl",
     "@value" : "Lineaire beweging"
   }, {
     "@language" : "en",
-    "@value" : "Linear movement"
+    "@value" : "Linear motion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/Movement"
+    "@id" : "http://purl.org/poso/Motion"
   } ]
 }, {
   "@id" : "http://purl.org/poso/LinearVelocity",
@@ -831,7 +843,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Location based service"
+    "@value" : "Location-based service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/ssn/System"
@@ -897,32 +909,18 @@
     "@id" : "http://purl.org/poso/SensorFusion"
   } ]
 }, {
-  "@id" : "http://purl.org/poso/MotionBasedTechnique",
+  "@id" : "http://purl.org/poso/Motion",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Motion-based positioning estimates a device's location by tracking its movement over time relative to a known starting point."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Motion-based positioning technique"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/PositioningTechnique"
-  } ]
-}, {
-  "@id" : "http://purl.org/poso/Movement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Movement stimulus triggering an update of a position."
+    "@value" : "Motion stimulus triggering an update of a position."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "nl",
     "@value" : "Beweging"
   }, {
     "@language" : "en",
-    "@value" : "Movement"
+    "@value" : "Motion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/ssn/Stimulus"
@@ -1192,6 +1190,20 @@
     "@value" : "An RF landmark example is a Bluetooth beacon that sends out a signal. Receivers of this signal can use the known position of this landmark to determine their relative position."
   } ]
 }, {
+  "@id" : "http://purl.org/poso/RadioFrequencyFingerprinting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Radio frequency fingerprinting or RF fingerprinting is a technique where RF signals are used to create a unique fingerprint at a current location."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "RF fingerprinting"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/Fingerprinting"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/RadioPropagation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1404,20 +1416,6 @@
     "@id" : "http://www.w3.org/ns/ssn/Input"
   } ]
 }, {
-  "@id" : "http://purl.org/poso/ToplogyBasedTechnique",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Toplogy-based positioning techniques are techniques that make use of the known infrastructure or \"topology\" of a network."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Topology based positioning techniques"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/PositioningTechnique"
-  } ]
-}, {
   "@id" : "http://purl.org/poso/TrackedFeature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1451,7 +1449,11 @@
     "@value" : "Triangulation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/AngleBasedTechnique"
+    "@id" : "http://purl.org/poso/Angulation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Angle-based positioning"
   } ]
 }, {
   "@id" : "http://purl.org/poso/Trilateration",
