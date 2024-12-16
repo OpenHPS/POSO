@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2024-06-20T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/poso/","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/poso/","name":"Positioning System Ontology", "headline":"The positioning system ontology is a vocabulary for describing positioning systems and the techniques these systems use to determine a position. With POSO we aim to provide semantic meaning on how a positioning system is deployed and how results are calculated.", "datePublished":"2024-12-16T00:00:00", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Maxim Van de Wynckel"}], "contributor":[{"@type":"Person","name":"Beat Signer"}]}</script>
 
 <script src="../resources/jquery.js"></script> 
 <script src="../resources/marked.min.js"></script> 
@@ -55,7 +55,7 @@ $(function(){
 <div class="head">
 <div style="float:right">language <a href="../en/"><b>en</b></a> <a href="../nl/"><b>nl</b></a> </div>
 <h1>Positioning System Ontology</h1>
-<h2>Release 2024-06-20T00:00:00</h2>
+<h2>Release 2024-12-16T00:00:00</h2>
 
 
 <dl>
@@ -100,6 +100,9 @@ This ontology has the following classes and properties.</span>
       <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Acceleration</a>
    </li>
    <li>
+      <a href="#AngleBasedTechnique" title="http://purl.org/poso/AngleBasedTechnique">Angle based positioning techniques</a>
+   </li>
+   <li>
       <a href="#AngularAcceleration" title="http://purl.org/poso/AngularAcceleration">Angular acceleration</a>
    </li>
    <li>
@@ -138,6 +141,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
+   </li>
+   <li>
+      <a href="#DistanceBasedTechnique" title="http://purl.org/poso/DistanceBasedTechnique">Distance based positioning techniques</a>
    </li>
    <li>
       <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
@@ -196,6 +202,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#MidLevelFusion" title="http://purl.org/poso/MidLevelFusion">Mid level sensor fusion</a>
+   </li>
+   <li>
+      <a href="#MotionBasedTechnique" title="http://purl.org/poso/MotionBasedTechnique">Motion-based positioning technique</a>
    </li>
    <li>
       <a href="#Movement" title="http://purl.org/poso/Movement">Movement</a>
@@ -288,10 +297,16 @@ This ontology has the following classes and properties.</span>
       <a href="#SRS" title="http://purl.org/poso/SRS">Spatial Reference System</a>
    </li>
    <li>
+      <a href="#ToplogyBasedTechnique" title="http://purl.org/poso/ToplogyBasedTechnique">Topology based positioning techniques</a>
+   </li>
+   <li>
       <a href="#TrackedFeature" title="http://purl.org/poso/TrackedFeature">Tracked feature</a>
    </li>
    <li>
       <a href="#Triangulation" title="http://purl.org/poso/Triangulation">Triangulation</a>
+   </li>
+   <li>
+      <a href="#Trilateration" title="http://purl.org/poso/Trilateration">Trilateration</a>
    </li>
    <li>
       <a href="#Velocity" title="http://purl.org/poso/Velocity">Velocity</a>
@@ -450,6 +465,9 @@ This section provides details for each class and property defined by Positioning
          <a href="#Acceleration" title="http://purl.org/poso/Acceleration">Acceleration</a>
       </li>
       <li>
+         <a href="#AngleBasedTechnique" title="http://purl.org/poso/AngleBasedTechnique">Angle based positioning techniques</a>
+      </li>
+      <li>
          <a href="#AngularAcceleration" title="http://purl.org/poso/AngularAcceleration">Angular acceleration</a>
       </li>
       <li>
@@ -488,6 +506,9 @@ This section provides details for each class and property defined by Positioning
       </li>
       <li>
          <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
+      </li>
+      <li>
+         <a href="#DistanceBasedTechnique" title="http://purl.org/poso/DistanceBasedTechnique">Distance based positioning techniques</a>
       </li>
       <li>
          <a href="#EulerOrder" title="http://purl.org/poso/EulerOrder">Euler order</a>
@@ -546,6 +567,9 @@ This section provides details for each class and property defined by Positioning
       </li>
       <li>
          <a href="#MidLevelFusion" title="http://purl.org/poso/MidLevelFusion">Mid level sensor fusion</a>
+      </li>
+      <li>
+         <a href="#MotionBasedTechnique" title="http://purl.org/poso/MotionBasedTechnique">Motion-based positioning technique</a>
       </li>
       <li>
          <a href="#Movement" title="http://purl.org/poso/Movement">Movement</a>
@@ -638,10 +662,16 @@ This section provides details for each class and property defined by Positioning
          <a href="#SRS" title="http://purl.org/poso/SRS">Spatial Reference System</a>
       </li>
       <li>
+         <a href="#ToplogyBasedTechnique" title="http://purl.org/poso/ToplogyBasedTechnique">Topology based positioning techniques</a>
+      </li>
+      <li>
          <a href="#TrackedFeature" title="http://purl.org/poso/TrackedFeature">Tracked feature</a>
       </li>
       <li>
          <a href="#Triangulation" title="http://purl.org/poso/Triangulation">Triangulation</a>
+      </li>
+      <li>
+         <a href="#Trilateration" title="http://purl.org/poso/Trilateration">Trilateration</a>
       </li>
       <li>
          <a href="#Velocity" title="http://purl.org/poso/Velocity">Velocity</a>
@@ -722,6 +752,29 @@ This section provides details for each class and property defined by Positioning
          <dd>
             <a href="#hasAcceleration" title="http://purl.org/poso/hasAcceleration">has acceleration</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AngleBasedTechnique">
+      <h3>Angle based positioning techniques<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/AngleBasedTechnique</p>
+      <div class="comment">
+         <span class="markdown">Angles based positioning techniques includes all positioning techniques that use angles to determine a position.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Triangulation" title="http://purl.org/poso/Triangulation">Triangulation</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -941,7 +994,7 @@ This section provides details for each class and property defined by Positioning
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <a href="#ToplogyBasedTechnique" title="http://purl.org/poso/ToplogyBasedTechnique">Topology based positioning techniques</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -959,12 +1012,36 @@ This section provides details for each class and property defined by Positioning
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
+            <a href="#MotionBasedTechnique" title="http://purl.org/poso/MotionBasedTechnique">Motion-based positioning technique</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Odometry" title="http://purl.org/poso/Odometry">Odometry</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PDR" title="http://purl.org/poso/PDR">Pedestrian dead reckoning</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DistanceBasedTechnique">
+      <h3>Distance based positioning techniques<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/DistanceBasedTechnique</p>
+      <div class="comment">
+         <span class="markdown">Distance based positioning techniques includes all positioning techniques that use distances to determine a position.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
             <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#PDR" title="http://purl.org/poso/PDR">Pedestrian dead reckoning</a>
+            <a href="#Lateration" title="http://purl.org/poso/Lateration">Lateration</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1068,7 +1145,7 @@ This section provides details for each class and property defined by Positioning
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <a href="#ToplogyBasedTechnique" title="http://purl.org/poso/ToplogyBasedTechnique">Topology based positioning techniques</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1223,12 +1300,13 @@ This section provides details for each class and property defined by Positioning
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Triangulation" title="http://purl.org/poso/Triangulation">Triangulation</a>
+            <a href="#DistanceBasedTechnique" title="http://purl.org/poso/DistanceBasedTechnique">Distance based positioning techniques</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Multilateration" title="http://purl.org/poso/Multilateration">Multilateration</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Trilateration" title="http://purl.org/poso/Trilateration">Trilateration</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1386,6 +1464,29 @@ This section provides details for each class and property defined by Positioning
          </dd>
       </dl>
    </div>
+   <div class="entity" id="MotionBasedTechnique">
+      <h3>Motion-based positioning technique<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/MotionBasedTechnique</p>
+      <div class="comment">
+         <span class="markdown">Motion-based positioning estimates a device's location by tracking its movement over time relative to a known starting point.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Movement">
       <h3>Movement<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1442,7 +1543,7 @@ This section provides details for each class and property defined by Positioning
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -1721,12 +1822,11 @@ This section provides details for each class and property defined by Positioning
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#DeadReckoning" title="http://purl.org/poso/DeadReckoning">Dead reckoning</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Fingerprinting" title="http://purl.org/poso/Fingerprinting">Fingerprinting</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Odometry" title="http://purl.org/poso/Odometry">Odometry</a>
+            <a href="#AngleBasedTechnique" title="http://purl.org/poso/AngleBasedTechnique">Angle based positioning techniques</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DistanceBasedTechnique" title="http://purl.org/poso/DistanceBasedTechnique">Distance based positioning techniques</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MotionBasedTechnique" title="http://purl.org/poso/MotionBasedTechnique">Motion-based positioning technique</a>
             <sup class="type-c" title="class">c</sup>, <a href="#SLAM" title="http://purl.org/poso/SLAM">Simultaneous localisation and mapping</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Triangulation" title="http://purl.org/poso/Triangulation">Triangulation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ToplogyBasedTechnique" title="http://purl.org/poso/ToplogyBasedTechnique">Topology based positioning techniques</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2093,6 +2193,30 @@ This section provides details for each class and property defined by Positioning
          </dd>
       </dl>
    </div>
+   <div class="entity" id="ToplogyBasedTechnique">
+      <h3>Topology based positioning techniques<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/ToplogyBasedTechnique</p>
+      <div class="comment">
+         <span class="markdown">Toplogy-based positioning techniques are techniques that make use of the known infrastructure or "topology" of a network.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#CellIdentification" title="http://purl.org/poso/CellIdentification">Cell identification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Fingerprinting" title="http://purl.org/poso/Fingerprinting">Fingerprinting</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="TrackedFeature">
       <h3>Tracked feature<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -2135,13 +2259,30 @@ This section provides details for each class and property defined by Positioning
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#PositioningTechnique" title="http://purl.org/poso/PositioningTechnique">Positioning technique</a>
+            <a href="#AngleBasedTechnique" title="http://purl.org/poso/AngleBasedTechnique">Angle based positioning techniques</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Angulation" title="http://purl.org/poso/Angulation">Angulation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Lateration" title="http://purl.org/poso/Lateration">Lateration</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Trilateration">
+      <h3>Trilateration<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/poso/Trilateration</p>
+      <div class="comment">
+         <span class="markdown">Trilateration is a positioning technique that uses exactly three reference points in 2D and four reference points in 3D to determine a position.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Lateration" title="http://purl.org/poso/Lateration">Lateration</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

@@ -248,6 +248,7 @@
 ###  http://purl.org/poso/common/SemBeacon
 :SemBeacon rdf:type owl:Class ;
            rdfs:subClassOf <http://purl.org/poso/BluetoothBeacon> ;
+           rdfs:comment "A SemBeacon is a semantic beacon based on AltBeacon and Eddystone-URL."@en ;
            rdfs:label "SemBeacon"@en ;
            rdfs:seeAlso <http://purl.org/sembeacon/SemBeacon> .
 

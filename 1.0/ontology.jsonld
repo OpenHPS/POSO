@@ -279,7 +279,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-06-20T00:00:00"
+    "@value" : "2024-12-16T00:00:00"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -341,6 +341,20 @@
     "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
   }, {
     "@id" : "http://www.w3.org/ns/sosa/Result"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/AngleBasedTechnique",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Angles based positioning techniques includes all positioning techniques that use angles to determine a position."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Angle based positioning techniques"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/PositioningTechnique"
   } ]
 }, {
   "@id" : "http://purl.org/poso/AngularAcceleration",
@@ -517,7 +531,7 @@
     "@value" : "Cell identification"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/PositioningTechnique"
+    "@id" : "http://purl.org/poso/ToplogyBasedTechnique"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -542,11 +556,25 @@
     "@value" : "Dead reckoning"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/PositioningTechnique"
+    "@id" : "http://purl.org/poso/MotionBasedTechnique"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "Deduced reckoning"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/DistanceBasedTechnique",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Distance based positioning techniques includes all positioning techniques that use distances to determine a position."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Distance based positioning techniques"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/PositioningTechnique"
   } ]
 }, {
   "@id" : "http://purl.org/poso/EulerOrder",
@@ -614,7 +642,7 @@
     "@value" : "Fingerprinting"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/PositioningTechnique"
+    "@id" : "http://purl.org/poso/ToplogyBasedTechnique"
   } ]
 }, {
   "@id" : "http://purl.org/poso/HighLevelFusion",
@@ -738,7 +766,7 @@
     "@value" : "Lateration"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/Triangulation"
+    "@id" : "http://purl.org/poso/DistanceBasedTechnique"
   } ]
 }, {
   "@id" : "http://purl.org/poso/LinearAcceleration",
@@ -869,6 +897,20 @@
     "@id" : "http://purl.org/poso/SensorFusion"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/MotionBasedTechnique",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Motion-based positioning estimates a device's location by tracking its movement over time relative to a known starting point."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Motion-based positioning technique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/PositioningTechnique"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/Movement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -902,9 +944,6 @@
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
     "@value" : "Hyperbolic positioning"
-  }, {
-    "@language" : "en",
-    "@value" : "Trilateration"
   } ]
 }, {
   "@id" : "http://purl.org/poso/Odometry",
@@ -918,7 +957,7 @@
     "@value" : "Odometry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/PositioningTechnique"
+    "@id" : "http://purl.org/poso/DeadReckoning"
   } ]
 }, {
   "@id" : "http://purl.org/poso/OpticalPositioningSystem",
@@ -1365,6 +1404,20 @@
     "@id" : "http://www.w3.org/ns/ssn/Input"
   } ]
 }, {
+  "@id" : "http://purl.org/poso/ToplogyBasedTechnique",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Toplogy-based positioning techniques are techniques that make use of the known infrastructure or \"topology\" of a network."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Topology based positioning techniques"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/PositioningTechnique"
+  } ]
+}, {
   "@id" : "http://purl.org/poso/TrackedFeature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1398,7 +1451,21 @@
     "@value" : "Triangulation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/poso/PositioningTechnique"
+    "@id" : "http://purl.org/poso/AngleBasedTechnique"
+  } ]
+}, {
+  "@id" : "http://purl.org/poso/Trilateration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Trilateration is a positioning technique that uses exactly three reference points in 2D and four reference points in 3D to determine a position."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Trilateration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/poso/Lateration"
   } ]
 }, {
   "@id" : "http://purl.org/poso/VSLAM",

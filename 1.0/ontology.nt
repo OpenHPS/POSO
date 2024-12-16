@@ -8,7 +8,7 @@
 <http://purl.org/poso/> <http://purl.org/dc/terms/creator> "Maxim Van de Wynckel"@en .
 <http://purl.org/poso/> <http://purl.org/dc/terms/description> "This ontology provides the terminologies used for positioning systems." .
 <http://purl.org/poso/> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/MIT1.0> .
-<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2024-06-20T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://purl.org/poso/> <http://purl.org/dc/terms/modified> "2024-12-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://purl.org/poso/> <http://purl.org/dc/terms/title> "Positioning System Ontology"@en .
 <http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "poso" .
 <http://purl.org/poso/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/poso/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -338,6 +338,12 @@
 <http://purl.org/poso/Acceleration> <http://www.w3.org/2000/01/rdf-schema#label> "Acceleration"@en .
 <http://purl.org/poso/Acceleration> <http://www.w3.org/2000/01/rdf-schema#label> "Versnelling"@nl .
 # 
+# http://purl.org/poso/AngleBasedTechnique
+<http://purl.org/poso/AngleBasedTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/AngleBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/AngleBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "Angles based positioning techniques includes all positioning techniques that use angles to determine a position."@en .
+<http://purl.org/poso/AngleBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "Angle based positioning techniques"@en .
+# 
 # http://purl.org/poso/AngularAcceleration
 <http://purl.org/poso/AngularAcceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/AngularAcceleration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Acceleration> .
@@ -427,7 +433,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/poso/CellIdentification
 <http://purl.org/poso/CellIdentification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/poso/CellIdentification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/CellIdentification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/ToplogyBasedTechnique> .
 <http://purl.org/poso/CellIdentification> <http://www.w3.org/2000/01/rdf-schema#comment> "Cell identification is a positioning procedure using the position of one landmark that is within the cell."@en .
 <http://purl.org/poso/CellIdentification> <http://www.w3.org/2000/01/rdf-schema#label> "Cell identification"@en .
 <http://purl.org/poso/CellIdentification> <http://www.w3.org/2004/02/skos/core#altLabel> "Cell Of Origin (COO)"@en .
@@ -436,10 +442,16 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/poso/DeadReckoning
 <http://purl.org/poso/DeadReckoning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/poso/DeadReckoning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/DeadReckoning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/MotionBasedTechnique> .
 <http://purl.org/poso/DeadReckoning> <http://www.w3.org/2000/01/rdf-schema#comment> "Dead reckoning is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."@en .
 <http://purl.org/poso/DeadReckoning> <http://www.w3.org/2000/01/rdf-schema#label> "Dead reckoning"@en .
 <http://purl.org/poso/DeadReckoning> <http://www.w3.org/2004/02/skos/core#altLabel> "Deduced reckoning"@en .
+# 
+# http://purl.org/poso/DistanceBasedTechnique
+<http://purl.org/poso/DistanceBasedTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/DistanceBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/DistanceBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "Distance based positioning techniques includes all positioning techniques that use distances to determine a position."@en .
+<http://purl.org/poso/DistanceBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "Distance based positioning techniques"@en .
 # 
 # http://purl.org/poso/EulerOrder
 <http://purl.org/poso/EulerOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -494,7 +506,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/poso/Fingerprinting
 <http://purl.org/poso/Fingerprinting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/poso/Fingerprinting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/Fingerprinting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/ToplogyBasedTechnique> .
 <http://purl.org/poso/Fingerprinting> <http://www.w3.org/2000/01/rdf-schema#comment> "Fingerprinting is a positioning Procedure where sensor data is collected at a specific position and orientation. During the offline-stage of a positioning system, the significant data features are extracted and stored for that position. In the online-stage, the closest match(es) of the features are determined to predict the position."@en .
 <http://purl.org/poso/Fingerprinting> <http://www.w3.org/2000/01/rdf-schema#label> "Fingerprinting"@en .
 # 
@@ -548,7 +560,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/poso/Lateration
 <http://purl.org/poso/Lateration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/poso/Lateration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Triangulation> .
+<http://purl.org/poso/Lateration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/DistanceBasedTechnique> .
 <http://purl.org/poso/Lateration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.sciencedirect.com/topics/engineering/lateration"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/Lateration> <http://www.w3.org/2000/01/rdf-schema#label> "Lateration"@en .
 # 
@@ -605,6 +617,12 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/poso/MidLevelFusion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.thinkautonomous.ai/blog/?p=9-types-of-sensor-fusion-algorithms"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/poso/MidLevelFusion> <http://www.w3.org/2000/01/rdf-schema#label> "Mid level sensor fusion"@en .
 # 
+# http://purl.org/poso/MotionBasedTechnique
+<http://purl.org/poso/MotionBasedTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/MotionBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/MotionBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "Motion-based positioning estimates a device's location by tracking its movement over time relative to a known starting point."@en .
+<http://purl.org/poso/MotionBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "Motion-based positioning technique"@en .
+# 
 # http://purl.org/poso/Movement
 <http://purl.org/poso/Movement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/Movement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Stimulus> .
@@ -618,11 +636,10 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/poso/Multilateration> <http://www.w3.org/2000/01/rdf-schema#comment> "Multilateration is the procedure of determining a position using relative distances to other known positions."@en .
 <http://purl.org/poso/Multilateration> <http://www.w3.org/2000/01/rdf-schema#label> "Multilateration"@en .
 <http://purl.org/poso/Multilateration> <http://www.w3.org/2004/02/skos/core#altLabel> "Hyperbolic positioning"@en .
-<http://purl.org/poso/Multilateration> <http://www.w3.org/2004/02/skos/core#altLabel> "Trilateration"@en .
 # 
 # http://purl.org/poso/Odometry
 <http://purl.org/poso/Odometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/poso/Odometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/Odometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/DeadReckoning> .
 <http://purl.org/poso/Odometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Odometry is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation's indicating its heading and velocity."@en .
 <http://purl.org/poso/Odometry> <http://www.w3.org/2000/01/rdf-schema#label> "Odometry"@en .
 # 
@@ -831,6 +848,12 @@ _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/poso/SensorInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensor input is input data provided by a sosa:Sensor"@en .
 <http://purl.org/poso/SensorInput> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor input"@en .
 # 
+# http://purl.org/poso/ToplogyBasedTechnique
+<http://purl.org/poso/ToplogyBasedTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/ToplogyBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/ToplogyBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#comment> "Toplogy-based positioning techniques are techniques that make use of the known infrastructure or \"topology\" of a network."@en .
+<http://purl.org/poso/ToplogyBasedTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "Topology based positioning techniques"@en .
+# 
 # http://purl.org/poso/TrackedFeature
 <http://purl.org/poso/TrackedFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/TrackedFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
@@ -846,9 +869,15 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/poso/Triangulation
 <http://purl.org/poso/Triangulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/poso/Triangulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/PositioningTechnique> .
+<http://purl.org/poso/Triangulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/AngleBasedTechnique> .
 <http://purl.org/poso/Triangulation> <http://www.w3.org/2000/01/rdf-schema#comment> "Triangulation is the procedure of determining a position using relative angles to a feature of interest with a known position."@en .
 <http://purl.org/poso/Triangulation> <http://www.w3.org/2000/01/rdf-schema#label> "Triangulation"@en .
+# 
+# http://purl.org/poso/Trilateration
+<http://purl.org/poso/Trilateration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/poso/Trilateration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/Lateration> .
+<http://purl.org/poso/Trilateration> <http://www.w3.org/2000/01/rdf-schema#comment> "Trilateration is a positioning technique that uses exactly three reference points in 2D and four reference points in 3D to determine a position."@en .
+<http://purl.org/poso/Trilateration> <http://www.w3.org/2000/01/rdf-schema#label> "Trilateration"@en .
 # 
 # http://purl.org/poso/VSLAM
 <http://purl.org/poso/VSLAM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

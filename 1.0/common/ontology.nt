@@ -220,6 +220,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://purl.org/poso/common/SemBeacon
 <http://purl.org/poso/common/SemBeacon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/poso/common/SemBeacon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/poso/BluetoothBeacon> .
+<http://purl.org/poso/common/SemBeacon> <http://www.w3.org/2000/01/rdf-schema#comment> "A SemBeacon is a semantic beacon based on AltBeacon and Eddystone-URL."@en .
 <http://purl.org/poso/common/SemBeacon> <http://www.w3.org/2000/01/rdf-schema#label> "SemBeacon"@en .
 <http://purl.org/poso/common/SemBeacon> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/sembeacon/SemBeacon> .
 # 

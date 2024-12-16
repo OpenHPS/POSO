@@ -22,7 +22,7 @@
         <terms:creator xml:lang="en">Maxim Van de Wynckel</terms:creator>
         <terms:description>This ontology provides the terminologies used for positioning systems.</terms:description>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/MIT1.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T00:00:00</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-12-16T00:00:00</terms:modified>
         <terms:title xml:lang="en">Positioning System Ontology</terms:title>
         <vann:preferredNamespacePrefix>poso</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/poso/</vann:preferredNamespaceUri>
@@ -590,6 +590,17 @@
     
 
 
+    <!-- http://purl.org/poso/AngleBasedTechnique -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/AngleBasedTechnique">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
+        <rdfs:comment xml:lang="en">Angles based positioning techniques includes all positioning techniques that use angles to determine a position.</rdfs:comment>
+        <rdfs:label xml:lang="en">Angle based positioning techniques</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/AngularAcceleration -->
 
 
@@ -746,7 +757,7 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/CellIdentification">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/ToplogyBasedTechnique"/>
         <rdfs:comment xml:lang="en">Cell identification is a positioning procedure using the position of one landmark that is within the cell.</rdfs:comment>
         <rdfs:label xml:lang="en">Cell identification</rdfs:label>
         <skos:altLabel xml:lang="en">Cell Of Origin (COO)</skos:altLabel>
@@ -760,10 +771,21 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/DeadReckoning">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/MotionBasedTechnique"/>
         <rdfs:comment xml:lang="en">Dead reckoning is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation&apos;s indicating its heading and velocity.</rdfs:comment>
         <rdfs:label xml:lang="en">Dead reckoning</rdfs:label>
         <skos:altLabel xml:lang="en">Deduced reckoning</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/DistanceBasedTechnique -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/DistanceBasedTechnique">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
+        <rdfs:comment xml:lang="en">Distance based positioning techniques includes all positioning techniques that use distances to determine a position.</rdfs:comment>
+        <rdfs:label xml:lang="en">Distance based positioning techniques</rdfs:label>
     </owl:Class>
     
 
@@ -854,7 +876,7 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Fingerprinting">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/ToplogyBasedTechnique"/>
         <rdfs:comment xml:lang="en">Fingerprinting is a positioning Procedure where sensor data is collected at a specific position and orientation. During the offline-stage of a positioning system, the significant data features are extracted and stored for that position. In the online-stage, the closest match(es) of the features are determined to predict the position.</rdfs:comment>
         <rdfs:label xml:lang="en">Fingerprinting</rdfs:label>
     </owl:Class>
@@ -945,7 +967,7 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Lateration">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/Triangulation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/DistanceBasedTechnique"/>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.sciencedirect.com/topics/engineering/lateration</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Lateration</rdfs:label>
     </owl:Class>
@@ -1045,6 +1067,17 @@
     
 
 
+    <!-- http://purl.org/poso/MotionBasedTechnique -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/MotionBasedTechnique">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
+        <rdfs:comment xml:lang="en">Motion-based positioning estimates a device&apos;s location by tracking its movement over time relative to a known starting point.</rdfs:comment>
+        <rdfs:label xml:lang="en">Motion-based positioning technique</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/Movement -->
 
 
@@ -1065,7 +1098,6 @@
         <rdfs:comment xml:lang="en">Multilateration is the procedure of determining a position using relative distances to other known positions.</rdfs:comment>
         <rdfs:label xml:lang="en">Multilateration</rdfs:label>
         <skos:altLabel xml:lang="en">Hyperbolic positioning</skos:altLabel>
-        <skos:altLabel xml:lang="en">Trilateration</skos:altLabel>
     </owl:Class>
     
 
@@ -1074,7 +1106,7 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Odometry">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/DeadReckoning"/>
         <rdfs:comment xml:lang="en">Odometry is the Procedure of calculating the current position of a moving FeatureOfInterest by using its previous position and Sensor Observation&apos;s indicating its heading and velocity.</rdfs:comment>
         <rdfs:label xml:lang="en">Odometry</rdfs:label>
     </owl:Class>
@@ -1433,6 +1465,17 @@
     
 
 
+    <!-- http://purl.org/poso/ToplogyBasedTechnique -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/ToplogyBasedTechnique">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
+        <rdfs:comment xml:lang="en">Toplogy-based positioning techniques are techniques that make use of the known infrastructure or &quot;topology&quot; of a network.</rdfs:comment>
+        <rdfs:label xml:lang="en">Topology based positioning techniques</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/poso/TrackedFeature -->
 
 
@@ -1457,9 +1500,20 @@
 
 
     <owl:Class rdf:about="http://purl.org/poso/Triangulation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/poso/PositioningTechnique"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/AngleBasedTechnique"/>
         <rdfs:comment xml:lang="en">Triangulation is the procedure of determining a position using relative angles to a feature of interest with a known position.</rdfs:comment>
         <rdfs:label xml:lang="en">Triangulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/poso/Trilateration -->
+
+
+    <owl:Class rdf:about="http://purl.org/poso/Trilateration">
+        <rdfs:subClassOf rdf:resource="http://purl.org/poso/Lateration"/>
+        <rdfs:comment xml:lang="en">Trilateration is a positioning technique that uses exactly three reference points in 2D and four reference points in 3D to determine a position.</rdfs:comment>
+        <rdfs:label xml:lang="en">Trilateration</rdfs:label>
     </owl:Class>
     
 
