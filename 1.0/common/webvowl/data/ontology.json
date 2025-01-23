@@ -264,12 +264,12 @@
     "instances" : 0,
     "id" : "22"
   }, {
-    "iri" : "http://purl.org/poso/SatellitePositioningSystem",
+    "iri" : "http://purl.org/poso/PositioningPlatform",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "23"
   }, {
-    "iri" : "http://purl.org/poso/PositioningPlatform",
+    "iri" : "http://purl.org/poso/SatellitePositioningSystem",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "24"
