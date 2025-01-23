@@ -1,0 +1,29 @@
+name: Example
+description: Provide an example using the POSO ontology
+title: "[Example] "
+labels: ["example", "POSO"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide an example using the POSO ontology. Make sure to include all relevant namespaces and follow the POSO ontology guidelines.
+        Accepted examples will be included in the POSO ontology documentation.
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example
+      description: Provide your example here
+      placeholder: |
+        ```turtle
+            <http://example.com/beacons/80cc9ceBf9c9> a poso:BluetoothBeacon ;
+              rdfs:label "80:CC:9C:EB:F9:C9"@en ;
+              poso:hasPosition [ a poso:AbsolutePosition ;
+                poso:hasAccuracy [ ... ] ;
+                poso:xAxisValue [ ... ] ;
+                poso:yAxisValue [ ... ] ;
+                poso:zAxisValue [ ... ] ] .
+        ```
+    validations:
+      required: true

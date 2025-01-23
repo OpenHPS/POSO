@@ -5,6 +5,12 @@ email, or any other method with the owners of this repository before making a ch
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
+## Use Cases
+
+With POSO, we aim to provide a generic positioning system ontology that can support a wide variety of use cases.
+Since positioning systems are constantly evolving, we welcome any use cases that are currently not yet supported by
+creating a "use case" issue.
+
 ## Pull Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a 

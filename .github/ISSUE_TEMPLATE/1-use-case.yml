@@ -2,7 +2,6 @@ name: Use Case
 description: Describe a use case for the POSO ontology that is currently not handled.
 title: "[UC] "
 labels: ["use case"]
-assignees: ""
 
 body:
   - type: markdown
