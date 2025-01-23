@@ -1,0 +1,47 @@
+name: Use Case
+description: Describe a use case for the POSO ontology that is currently not handled.
+title: "[UC] "
+labels: ["use case"]
+assignees: ""
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Use Case
+
+        Please describe the use case in detail.
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: Provide a short title for the use case
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Provide a detailed description of the use case
+      placeholder: "e.g. A user wants to authenticate with the storage providder of a positioning system."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: List the steps involved in the use case
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: Expected Result
+      description: Describe the expected result of the use case
+      placeholder: "e.g. The user is successfully authenticated with a positioning system."
+    validations:
+      required: true
