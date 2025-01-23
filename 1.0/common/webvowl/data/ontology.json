@@ -105,10 +105,10 @@
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "17",
@@ -126,10 +126,10 @@
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
     "id" : "22",
@@ -167,21 +167,21 @@
     "instances" : 0,
     "id" : "8"
   }, {
-    "iri" : "http://purl.org/poso/CellIdentification",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "9"
-  }, {
     "iri" : "http://purl.org/poso/common/AltBeacon",
     "baseIri" : "http://purl.org/poso/common",
     "instances" : 0,
-    "id" : "10",
+    "id" : "9",
     "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/poso/CellIdentification",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "id" : "10"
   }, {
     "iri" : "http://purl.org/poso/BluetoothBeacon",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
-    "subClasses" : [ "1", "10", "11", "12" ],
+    "subClasses" : [ "1", "9", "11", "12" ],
     "id" : "2"
   }, {
     "iri" : "http://purl.org/poso/VSLAM",
@@ -210,17 +210,17 @@
     "instances" : 0,
     "id" : "16"
   }, {
-    "iri" : "http://purl.org/poso/common/EddystoneTLM",
-    "baseIri" : "http://purl.org/poso/common",
-    "instances" : 0,
-    "id" : "6",
-    "superClasses" : [ "1" ]
-  }, {
     "iri" : "http://purl.org/poso/common/SemBeacon",
     "baseIri" : "http://purl.org/poso/common",
     "instances" : 0,
     "id" : "11",
     "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/poso/common/EddystoneTLM",
+    "baseIri" : "http://purl.org/poso/common",
+    "instances" : 0,
+    "id" : "6",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://purl.org/poso/Lateration",
     "baseIri" : "http://purl.org/poso",
@@ -248,28 +248,28 @@
     "instances" : 0,
     "id" : "20"
   }, {
-    "iri" : "http://purl.org/poso/LocationBasedService",
-    "baseIri" : "http://purl.org/poso",
-    "instances" : 0,
-    "id" : "21"
-  }, {
     "iri" : "http://purl.org/poso/common/iBeacon",
     "baseIri" : "http://purl.org/poso/common",
     "instances" : 0,
     "id" : "12",
     "superClasses" : [ "2" ]
   }, {
+    "iri" : "http://purl.org/poso/LocationBasedService",
+    "baseIri" : "http://purl.org/poso",
+    "instances" : 0,
+    "id" : "21"
+  }, {
     "iri" : "https://w3id.org/rdfp/GraphDescription",
     "baseIri" : "https://w3id.org/rdfp",
     "instances" : 0,
     "id" : "22"
   }, {
-    "iri" : "http://purl.org/poso/SatellitePositioningSystem",
+    "iri" : "http://purl.org/poso/PositioningPlatform",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "23"
   }, {
-    "iri" : "http://purl.org/poso/PositioningPlatform",
+    "iri" : "http://purl.org/poso/SatellitePositioningSystem",
     "baseIri" : "http://purl.org/poso",
     "instances" : 0,
     "id" : "24"
